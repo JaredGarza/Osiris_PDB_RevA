@@ -2431,7 +2431,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text_box "SHDN DEFAULT-ON DIVIDER\n\nR6 = 680 kohm, R7 = 200 kohm (both 1%)\nVBAT_FUSED -> R6 -> SHDN_LTC -> R7 -> GND\n\nV_SHDN = VBAT_FUSED * R7 / (R6 + R7)\n= VBAT_FUSED * 200 / 880\n= 0.22727 * VBAT_FUSED\n\nAt 10.56 V input: V_SHDN = 2.40 V\nAt 14.80 V input: V_SHDN = 3.36 V\nAt 16.80 V input: V_SHDN = 3.82 V\n\nSHDN > 1.2 V enables the controller.\nInput-side bias allows startup before PDB_VOUT exists.\nNominal calculation; excludes DRAWI tolerance and pin leakage."
+	(text_box "SHDN DEFAULT-ON DIVIDER\n\nR6 = 680 kohm, R7 = 200 kohm (both 1%)\nVBAT_FUSED -> R6 -> SHDN_LTC -> R7 -> GND\n\nV_SHDN = VBAT_FUSED * R7 / (R6 + R7)\n= VBAT_FUSED * 200 / 880\n= 0.22727 * VBAT_FUSED\n\nAt 10.56 V input: V_SHDN = 2.40 V\nAt 14.80 V input: V_SHDN = 3.36 V\nAt 16.80 V input: V_SHDN = 3.82 V\n\nSHDN > 1.2 V enables the controller.\nInput-side bias allows startup before PDB_VOUT exists.\nNominal calculation; excludes tolerance and pin leakage."
 		(exclude_from_sim no)
 		(at 238.76 25.7838 0)
 		(size 44.45 31.3662)
@@ -2564,16 +2564,6 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 123.19) (xy 237.49 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "12720974-dc52-445b-ac53-79d9f2c37466")
-	)
-	(wire
-		(pts
 			(xy 135.89 62.23) (xy 135.89 63.5)
 		)
 		(stroke
@@ -2604,16 +2594,6 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 124.46) (xy 232.41 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "23012e0c-4081-4e9e-b540-889124e966ac")
-	)
-	(wire
-		(pts
 			(xy 140.97 66.04) (xy 140.97 63.5)
 		)
 		(stroke
@@ -2621,6 +2601,26 @@
 			(type default)
 		)
 		(uuid "25588192-1ae8-4170-bc06-100e83de796b")
+	)
+	(wire
+		(pts
+			(xy 234.95 128.27) (xy 220.98 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2594a963-a08b-4d31-8d54-1aa9d5f5a947")
+	)
+	(wire
+		(pts
+			(xy 234.95 129.54) (xy 234.95 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28ab03e6-24e3-43f9-8f89-250d7bef9ac6")
 	)
 	(wire
 		(pts
@@ -2634,26 +2634,6 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 124.46) (xy 232.41 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f96a39f-2edd-4ae8-b3ca-60b0b3ca3ad1")
-	)
-	(wire
-		(pts
-			(xy 232.41 125.73) (xy 233.68 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ff414e3-01fe-432d-bf58-e20dc08b5874")
-	)
-	(wire
-		(pts
 			(xy 44.45 54.61) (xy 57.15 54.61)
 		)
 		(stroke
@@ -2661,16 +2641,6 @@
 			(type default)
 		)
 		(uuid "32d5fb7c-7c26-4c22-a67b-465edbe01275")
-	)
-	(wire
-		(pts
-			(xy 220.98 119.38) (xy 220.98 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "350235dd-97a8-4fb1-876e-e79597288f5d")
 	)
 	(wire
 		(pts
@@ -2691,26 +2661,6 @@
 			(type default)
 		)
 		(uuid "3e3028a6-4163-4e2f-8e87-ccfc5dd1a571")
-	)
-	(wire
-		(pts
-			(xy 220.98 119.38) (xy 222.25 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "43ac1088-48f7-4e66-9d7d-c2586aa4c2af")
-	)
-	(wire
-		(pts
-			(xy 220.98 124.46) (xy 222.25 124.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4d2e2f2e-f644-4ec3-9f1a-d757ec41e520")
 	)
 	(wire
 		(pts
@@ -2751,16 +2701,6 @@
 			(type default)
 		)
 		(uuid "56cc465c-855a-45b5-b2e6-5a9acabfcbb0")
-	)
-	(wire
-		(pts
-			(xy 220.98 124.46) (xy 220.98 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "57cd70fd-d000-4779-8478-f4f25c707d34")
 	)
 	(wire
 		(pts
@@ -2814,16 +2754,6 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 119.38) (xy 232.41 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8ce9bc46-33e5-4aed-ac79-b37e3d2161d7")
-	)
-	(wire
-		(pts
 			(xy 116.84 60.96) (xy 116.84 64.77)
 		)
 		(stroke
@@ -2834,7 +2764,7 @@
 	)
 	(wire
 		(pts
-			(xy 233.68 128.27) (xy 220.98 128.27)
+			(xy 248.92 129.54) (xy 234.95 129.54)
 		)
 		(stroke
 			(width 0)
@@ -2974,16 +2904,6 @@
 	)
 	(wire
 		(pts
-			(xy 232.41 119.38) (xy 232.41 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e70534a1-6dd0-4e73-a3c5-cca30beb8059")
-	)
-	(wire
-		(pts
 			(xy 113.03 132.08) (xy 113.03 129.54)
 		)
 		(stroke
@@ -3042,15 +2962,15 @@
 		)
 		(uuid "f7e3d9c0-0de3-4f0f-a5c4-bb49bee7ae8d")
 	)
-	(label "INA_IN_N"
-		(at 233.68 125.73 0)
+	(label "SHUNT_LO"
+		(at 248.92 107.95 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "0110b5ce-fbd1-46e5-9277-b7e7f7a309de")
+		(uuid "07dcb774-acbe-4f2d-b3bb-baca059ea5cf")
 	)
 	(label "SW_COMMON"
 		(at 55.88 54.61 180)
@@ -3112,7 +3032,7 @@
 		)
 		(uuid "3e56801c-15f9-4562-a269-3351d74b35d5")
 	)
-	(label "INA_ALERT"
+	(label "INA_ALERT_N"
 		(at 180.34 128.27 180)
 		(effects
 			(font
@@ -3121,6 +3041,16 @@
 			(justify right bottom)
 		)
 		(uuid "5a9b97d7-8654-47ce-b402-e360b12e5a23")
+	)
+	(label "INA_IN_N"
+		(at 220.98 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b459420-66c7-4bc8-98d9-bfab779e4e74")
 	)
 	(label "PDB_I2C_SDA"
 		(at 180.34 130.81 180)
@@ -3202,6 +3132,16 @@
 		)
 		(uuid "a3f4d9b0-71bb-46cf-bc0f-28f82f605898")
 	)
+	(label "INA_IN_P"
+		(at 220.98 123.19 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a564e7e7-9528-42b3-b3b4-8608f11e2300")
+	)
 	(label "GATE_DRV"
 		(at 186.69 36.83 0)
 		(effects
@@ -3211,6 +3151,16 @@
 			(justify left bottom)
 		)
 		(uuid "bdfc0221-1189-4dc3-8968-ba355ffe4f2c")
+	)
+	(label "INA_IN_N"
+		(at 241.3 107.95 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bf8f035f-d63a-4596-847b-1979141a85d0")
 	)
 	(label "PDB_3V3"
 		(at 113.03 129.54 0)
@@ -3223,7 +3173,7 @@
 		(uuid "c4159af4-53af-4c8f-939d-a3a43f459096")
 	)
 	(label "PDB_VOUT"
-		(at 233.68 128.27 0)
+		(at 248.92 129.54 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3252,6 +3202,16 @@
 		)
 		(uuid "d9c42532-10c0-48b9-88b2-c20946e5a1bf")
 	)
+	(label "INA_IN_P"
+		(at 241.3 100.33 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "db408099-5d53-4dfc-b1a6-be3d75259f46")
+	)
 	(label "SHUNT_LO"
 		(at 227.33 41.91 0)
 		(effects
@@ -3261,6 +3221,16 @@
 			(justify left bottom)
 		)
 		(uuid "db408389-a044-4f2c-8e45-90e4daa908ef")
+	)
+	(label "SHUNT_HI"
+		(at 248.92 100.33 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dbc76850-13f1-4014-b1c5-fbf45d708652")
 	)
 	(label "PDB_PROTECTED"
 		(at 72.39 54.61 0)
@@ -3291,16 +3261,6 @@
 			(justify right bottom)
 		)
 		(uuid "dff22df2-3488-41b4-bc63-d654aae91509")
-	)
-	(label "INA_IN_P"
-		(at 237.49 123.19 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e189644e-9b39-43d7-bfbd-ea709c5ccf50")
 	)
 	(label "VBAT_FUSED"
 		(at 29.21 54.61 180)
@@ -3396,7 +3356,7 @@
 			(uuid "2faa41c9-fad4-418c-8ae6-34265c4ad215")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "C1")
 					(unit 1)
@@ -3475,7 +3435,7 @@
 			(uuid "34a6c0f5-7349-42de-8747-37e490222aac")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "R6")
 					(unit 1)
@@ -3563,7 +3523,7 @@
 			(uuid "43c36d5f-797a-495b-8161-9e942c163ec7")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "R5")
 					(unit 1)
@@ -3642,7 +3602,7 @@
 			(uuid "0da93fec-4bd9-4432-b156-3ff1376cdd99")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR011")
 					(unit 1)
@@ -3721,7 +3681,7 @@
 			(uuid "c8342ed4-8825-4f61-a909-8bb6585a8446")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR02")
 					(unit 1)
@@ -3800,7 +3760,7 @@
 			(uuid "75635a12-25bd-4e23-b102-c7eac9fffe22")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR08")
 					(unit 1)
@@ -3879,7 +3839,7 @@
 			(uuid "dd28cc19-e0fb-4038-a1ae-9575935fe63b")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR07")
 					(unit 1)
@@ -3958,7 +3918,7 @@
 			(uuid "ffd1016c-c8dd-430d-963e-01cc73dc53b7")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR03")
 					(unit 1)
@@ -4064,7 +4024,7 @@
 			(uuid "f2b046d2-392a-47ba-b153-bf1a1538e1da")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "U2")
 					(unit 1)
@@ -4146,7 +4106,7 @@
 			(uuid "eac219df-5d24-4e0d-898c-a08083d3903b")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "R3")
 					(unit 1)
@@ -4225,7 +4185,7 @@
 			(uuid "678002b9-3a36-40a9-9068-c587d5b74aa1")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR04")
 					(unit 1)
@@ -4307,7 +4267,7 @@
 			(uuid "d892931a-b6c1-4f21-a707-cd26013e5b48")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "R2")
 					(unit 1)
@@ -4388,7 +4348,7 @@
 			(uuid "be020e94-a9d7-4d3a-b709-235032aaf997")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "C3")
 					(unit 1)
@@ -4469,7 +4429,7 @@
 			(uuid "3514f4e2-7803-46f9-b11e-3c061114ec7d")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "C6")
 					(unit 1)
@@ -4567,7 +4527,7 @@
 			(uuid "c4ff01f2-77ce-4ce4-b9a2-759f2d2a1981")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "Q1")
 					(unit 1)
@@ -4649,7 +4609,7 @@
 			(uuid "0fcc9ba8-4516-4b9b-8adf-8f086771ed8f")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "C2")
 					(unit 1)
@@ -4728,7 +4688,7 @@
 			(uuid "eed1721a-1f90-49db-8440-a0387547ed2f")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR01")
 					(unit 1)
@@ -4807,7 +4767,7 @@
 			(uuid "89d07ec9-6d03-424b-ba7c-a6a1e8c0f9e2")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR012")
 					(unit 1)
@@ -4886,7 +4846,7 @@
 			(uuid "c62d6b8d-55cf-4e25-ba26-2c7bd9c4ef3c")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR06")
 					(unit 1)
@@ -4917,7 +4877,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "C"
+		(property "Value" "100n"
 			(at 226.06 142.2399 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4968,7 +4928,7 @@
 			(uuid "623323b7-4e7a-488e-a059-38faefe8c1f8")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "C5")
 					(unit 1)
@@ -5047,7 +5007,7 @@
 			(uuid "91a5cc22-e37d-4985-89e1-7e937f80db1e")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "R7")
 					(unit 1)
@@ -5145,7 +5105,7 @@
 			(uuid "24496a40-3f41-4944-a0a7-dd01cbcf57ec")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "Q2")
 					(unit 1)
@@ -5224,7 +5184,7 @@
 			(uuid "ea03a3c7-c9a6-4ff2-b281-317164f0be8f")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR05")
 					(unit 1)
@@ -5327,7 +5287,7 @@
 			(uuid "15781880-e3a6-4947-927d-18fb3ee4d592")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "U3")
 					(unit 1)
@@ -5337,7 +5297,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 226.06 119.38 270)
+		(at 245.11 100.33 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5345,10 +5305,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "ae8d4459-e3b1-439f-b78e-d39aca9cebbb")
 		(property "Reference" "R9"
-			(at 226.06 113.03 90)
+			(at 245.11 95.758 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5357,8 +5316,8 @@
 				)
 			)
 		)
-		(property "Value" "R"
-			(at 226.06 115.57 90)
+		(property "Value" "10"
+			(at 245.11 97.536 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5368,7 +5327,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 226.06 117.602 90)
+			(at 245.11 98.552 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5379,7 +5338,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 119.38 0)
+			(at 245.11 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5390,7 +5349,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 226.06 119.38 0)
+			(at 245.11 100.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5407,7 +5366,7 @@
 			(uuid "8f721361-9f3d-488c-b239-caaa67e401dd")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "R9")
 					(unit 1)
@@ -5487,7 +5446,7 @@
 			(uuid "dd9d38af-99cb-43ff-bf94-354a21f7a994")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "F1")
 					(unit 1)
@@ -5569,7 +5528,7 @@
 			(uuid "d6fd7f52-1099-4847-929f-2bd5f9a3e066")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "C4")
 					(unit 1)
@@ -5651,7 +5610,7 @@
 			(uuid "64c2738e-e73d-4cd4-897f-ee1e3f50edb7")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "R1")
 					(unit 1)
@@ -5730,7 +5689,7 @@
 			(uuid "009e706e-777e-44ce-8663-e79fb001a778")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR09")
 					(unit 1)
@@ -5812,7 +5771,7 @@
 			(uuid "2281bc1a-aad5-44d0-80cc-dea6482e6db5")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "R4")
 					(unit 1)
@@ -5822,7 +5781,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 226.06 124.46 270)
+		(at 245.11 107.95 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5832,7 +5791,7 @@
 		(dnp no)
 		(uuid "c87d4792-9842-422f-99c1-7938387bf935")
 		(property "Reference" "R8"
-			(at 224.536 121.92 90)
+			(at 245.11 103.632 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5841,8 +5800,8 @@
 				)
 			)
 		)
-		(property "Value" "R"
-			(at 226.822 121.92 90)
+		(property "Value" "10"
+			(at 245.11 105.41 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5852,7 +5811,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 226.06 122.682 90)
+			(at 245.11 106.172 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5863,7 +5822,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 124.46 0)
+			(at 245.11 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5874,7 +5833,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 226.06 124.46 0)
+			(at 245.11 107.95 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5891,7 +5850,7 @@
 			(uuid "601c1347-2e12-4b62-915f-56f4c5764c6a")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "R8")
 					(unit 1)
@@ -5971,7 +5930,7 @@
 			(uuid "1eda19b6-547e-4a70-9fe6-81169ec74798")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "J1")
 					(unit 1)
@@ -6050,7 +6009,7 @@
 			(uuid "2c25cbae-6c00-4f4c-88c6-5ff6cb12d151")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR010")
 					(unit 1)
@@ -6156,7 +6115,7 @@
 			(uuid "00cddf76-70d9-4bdd-8113-b2dea883860f")
 		)
 		(instances
-			(project "Power_Distribution_Boardv1"
+			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "U1")
 					(unit 1)
