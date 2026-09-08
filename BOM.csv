@@ -1,0 +1,10 @@
+Reference,Qty,Value,Manufacturer,MPN,Footprint,Populate,Notes
+J1,1,BATTERY_IN_4S,Generic,12AWG pigtail to genuine AMASS XT60,Connector_Wire:SolderWire-4sqmm_1x02_P12mm_D3mm_OD6mm,Yes,Verify polarity and add mechanical strain relief
+J2-J5,4,ESC_OUT,Generic,14AWG pigtail,Connector_Wire:SolderWire-4sqmm_1x02_P12mm_D3mm_OD6mm,Yes,20A continuous and 30A burst prototype target per branch
+J6,1,OSIRIS_OUT,AMASS,XT60 male pigtail,Connector_Wire:SolderWire-2sqmm_1x02_P7.8mm_D2mm_OD3.9mm,Yes,Verify mating gender with populated Osiris J15
+F1,1,6.3A fast fuse,Bel Fuse,0678H6300-02,Osiris_PDB:FUSC9830X318N,Yes,Final rating requires measured Osiris current and time-current review
+D1 D2,2,SMCJ17CA,Littelfuse,SMCJ17CA,Diode_SMD:D_SMC,Yes,Provisional until transient testing
+C1,1,1000uF 35V low ESR,Panasonic,EEUFR1V102,Capacitor_THT:CP_Radial_D12.5mm_P5.00mm,Yes,2.6A ripple at 100kHz and 105C
+C2 C4,2,100nF 50V X7R,KEMET,C0805C104K5RACAUTO,Capacitor_SMD:C_0805_2012Metric,Yes,
+C3,1,1uF 50V X7R,KEMET,C0805C105K5RACAUTO,Capacitor_SMD:C_0805_2012Metric,Yes,
+C5,1,100uF 35V low ESR,TBD,TBD,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm,No,DNP until hot-plug testing establishes need

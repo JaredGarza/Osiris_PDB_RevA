@@ -1,0 +1,27 @@
+# KiCad local state, locks, autosaves, and backups
+*.kicad_prl
+*.lck
+~*.*
+*.bak
+*-backups/
+_autosave-*
+.history/
+fp-info-cache
+
+# Local task backups
+library_reorg_backup_*/
+
+# Generated and legacy netlist/report artifacts
+*.net
+*-drc.rpt
+*-erc.rpt
+/Osiris_PDB_RevA.sch
+
+# Superseded duplicate footprint library retained locally as an archive
+/Osiris_PDB.pretty/
+
+# Editor and operating-system files
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
