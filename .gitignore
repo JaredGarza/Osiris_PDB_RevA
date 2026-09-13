@@ -45,3 +45,4 @@ docs/revision-audit-20260912/update_review_notes.py
 Simulation/models/STARTUP.cir
 __pycache__/
 *.pyc
+*.xlsx.inspect.ndjson

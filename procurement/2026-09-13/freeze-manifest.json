@@ -1,0 +1,25 @@
+{
+  "baseline": "PDB-PROCUREMENT-2026-09-13",
+  "hash_method": "SHA-256; text design/BOM/library tables normalize CRLF to LF; binary/model files preserve bytes",
+  "sha256": {
+    "Osiris_PDB_RevA.kicad_sch": "97e1742c80a099ec338d5c7a428b43b8d89348d872281fc51a3aae618ab05723",
+    "Osiris_PDB_RevA.kicad_pro": "82b7a78a9c11ae3dc88ad05a7bf4d5e0ccec2c009bb846caf29bf0d54434633e",
+    "BOM.csv": "c5f86824126406b2816938acc1ddab2563f3fb65c72dbedc0c5c16d8d25b8b37",
+    "BOM_purchasing.csv": "18bd0761c60f7d3fabdda31977ae52ad8b2884c475306aca956be38677c39990",
+    "sym-lib-table": "89dde5e7a3cf9d0c9897da38c85ab45f209bdb5793d01d360309479374fec66b",
+    "fp-lib-table": "3cdfd55d096b11736c534d6c1b777daae3a1a1d66b2f3f086bf0c8189404bfe7",
+    "Libraries/PDB_Symbols.kicad_sym": "9df44797e846242565b20f580e0545782e6f11359ba2a2a3e6d21c3191ba5643",
+    "Libraries/PDB_3DModels.3dshapes/DGN0008C.stl": "673a3b4b25749b021f9c5b16baa0b2d8e42d2d2dea04b9f299bc5b15714c79d1",
+    "Libraries/PDB_3DModels.3dshapes/DGS0010A.stl": "8b2f35a1d6a1237553d326b3b727ca656003bc8b814e70526d700d657bed2534",
+    "Libraries/PDB_3DModels.3dshapes/MS_10-MSOP_ADI.step": "4207d31c20af532d5589e362bb15bbb5f0d79b055034af9385fbab0466e00a57",
+    "Libraries/PDB_3DModels.3dshapes/SOT353-1.step": "2260ec34b9897aa63647c0905e001ee13d8a5ba646fb6b6213299e81c9cb102b",
+    "Libraries/PDB_Footprints.pretty/DGN0008C_N.kicad_mod": "5bb1705afbcf4993aff6d2c5306525f84c5b542fb5eb71b4e93e21ca1d4c1fd9",
+    "Libraries/PDB_Footprints.pretty/FUSC9830X318N.kicad_mod": "786d4f60a0d8bc43ca1860ebb63e73bd34bdf0d78f011551cff8ae8b6da6819b",
+    "Libraries/PDB_Footprints.pretty/ISC015N06NM5LF2_TDSON8FL.kicad_mod": "33833a936d4184d80c225e1a8b91994865dd67834e15f4cb89eebb44c31828a9",
+    "Libraries/PDB_Footprints.pretty/MS_10-MSOP_ADI.kicad_mod": "1a2a18b8cfdd5714426893ba0de96510964717684f5dad4ea9f387df816ff397",
+    "Libraries/PDB_Footprints.pretty/OH_FC4L64_OHM.kicad_mod": "7e9d5e8281362bef9c22c687974e7bf21f0ed9468d5767bb019e802825964b73",
+    "Libraries/PDB_Footprints.pretty/VSSOP10_DGS_TEX.kicad_mod": "0e12b20e93aad79a702f5508ca4b4807c4ff9612370a1c7d645fb144c9e70908",
+    "outputs/procurement-20260913/PDB-RevA-Parts-Planning.xlsx": "06fe47118e963df4d63aab683dbdb2ade9e66d0d4db084c25c03b4f1dbab5cbe"
+  },
+  "scope": "Nominal PDB procurement baseline; new Osiris Rev B system schematic not frozen"
+}

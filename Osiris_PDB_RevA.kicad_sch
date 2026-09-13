@@ -4,6 +4,12 @@
 	(generator_version "10.0")
 	(uuid "6f58a31e-2d20-46d6-8900-dedce2deebb4")
 	(paper "A4")
+	(title_block
+		(title "Osiris PDB - procurement baseline")
+		(date "2026-09-13")
+		(rev "A-P1")
+		(comment 1 "Parts planning only; new Osiris Rev B power interface pending")
+	)
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_01x04"
 			(pin_names
@@ -3864,7 +3870,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "J2 mates 1:1 with Osiris J28 (FMU_I2C1).\nVerify Osiris R74/R75 pull-up supply and rise time.\nRev A: +3V3; imported PCB: ST_LINK_T_PWR.\nU2 address is 0x40; Osiris IC11 is 0x45 on the\ninternal FMU_I2C4 bus, so there is no clash.\nOsiris Rev A exposes no spare GPIO or +3V3 on any\nGH connector, so INA_ALERT_N and PDB_FAULT_N go\nto TP6/TP7 only. Add pull-ups at whatever consumes\nthem in a later revision."
+	(text "Reference: old Osiris J28 (FMU_I2C1).\nNew Rev B ports/power not drawn; verify interface.\nVerify Osiris R74/R75 pull-up supply and rise time.\nRev A: +3V3; imported PCB: ST_LINK_T_PWR.\nU2 address is 0x40; Osiris IC11 is 0x45 on the\ninternal FMU_I2C4 bus, so there is no clash.\nOsiris Rev A exposes no spare GPIO or +3V3 on any\nGH connector, so INA_ALERT_N and PDB_FAULT_N go\nto TP6/TP7 only. Add pull-ups at whatever consumes\nthem in a later revision."
 		(exclude_from_sim no)
 		(at 222 109 0)
 		(effects
@@ -3875,7 +3881,7 @@
 		)
 		(uuid "38fefe52-fc75-4e9e-9e01-597043ac3fc8")
 	)
-	(text "Planning case: 2.22 A at 10.56 V; load validation pending.\nF1: 4 A MINI provisional (0297004.WXNV) in a Keystone 3568 holder.\n10 A nominal electronic breaker; fault coordination pending.\nGate network per LTC4368 Figure 11: C1 at the GATE pin,\nR4 in series to the FETs, D2 across R4 for fast turn-off.\nD1 is bidirectional; a unidirectional TVS would short a\nreversed pack and defeat the reverse-battery protection.\nJ3: XT60PW-F; 1=GND, 2=VOUT. Cable to Osiris J16\n(VBATT_IN); verify polarity physically before use."
+	(text "Planning case: 2.22 A at 10.56 V; load validation pending.\nF1: 4 A MINI provisional (0297004.WXNV) in a Keystone 3568 holder.\n10 A nominal electronic breaker; fault coordination pending.\nGate network per LTC4368 Figure 11: C1 at the GATE pin,\nR4 in series to the FETs, D2 across R4 for fast turn-off.\nD1 is bidirectional; a unidirectional TVS would short a\nreversed pack and defeat the reverse-battery protection.\nJ3: XT60PW-F; 1=GND, 2=VOUT. Old reference: Osiris J16\n(VBATT_IN); verify polarity physically before use."
 		(exclude_from_sim no)
 		(at 202 126 0)
 		(effects
@@ -5156,6 +5162,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 34.29 43.1799 90)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5246,6 +5253,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 251.46 101.6 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5353,7 +5361,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07680KL"
 			(at 182.88 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -5364,7 +5372,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "1% 0.125W (at 70C), 0805 thick film"
 			(at 182.88 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -5375,7 +5383,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
 			(at 182.88 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -5400,6 +5408,8 @@
 				)
 			)
 		)
+		(property "MPN" "RC0805FR-07680KL" (at 182.88 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Manufacturer" "YAGEO" (at 182.88 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -5444,7 +5454,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L"
 			(at 113.03 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -5455,7 +5465,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "1% 0.125W (at 70C), 0805 thick film"
 			(at 113.03 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -5466,7 +5476,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
 			(at 113.03 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -5491,6 +5501,8 @@
 				)
 			)
 		)
+		(property "MPN" "RC0805FR-074K7L" (at 113.03 92.71 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Manufacturer" "YAGEO" (at 113.03 92.71 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(symbol
 		(lib_id "PDB_Symbols:FC4L64R005FER")
@@ -5942,6 +5954,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 71.12 82.0419 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6493,7 +6506,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0756K2L"
 			(at 87.63 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -6504,7 +6517,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "1% 0.125W (at 70C), 0805 thick film"
 			(at 87.63 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -6515,7 +6528,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
 			(at 87.63 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -6540,6 +6553,8 @@
 				)
 			)
 		)
+		(property "MPN" "RC0805FR-0756K2L" (at 87.63 54.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Manufacturer" "YAGEO" (at 87.63 54.61 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7074,6 +7089,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 60.96 28.7019 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7263,7 +7279,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0743K2L"
 			(at 87.63 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -7274,7 +7290,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "1% 0.125W (at 70C), 0805 thick film"
 			(at 87.63 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -7296,7 +7312,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
 			(at 87.63 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -7321,6 +7337,8 @@
 				)
 			)
 		)
+		(property "MPN" "RC0805FR-0743K2L" (at 87.63 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Manufacturer" "YAGEO" (at 87.63 39.37 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -7768,7 +7786,7 @@
 				)
 			)
 		)
-		(property "MPN" "ISC015N06NM5LF2"
+		(property "MPN" "ISC015N06NM5LF2ATMA1"
 			(at 30.48 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -7811,6 +7829,7 @@
 				)
 			)
 		)
+		(property "Selection_Status" "Full Infineon tape-and-reel order code; same ISC015N06NM5LF2 device and footprint. SOA qualification pending." (at 30.48 82.55 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -8396,7 +8415,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07200KL"
 			(at 166.37 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -8407,7 +8426,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "1% 0.125W (at 70C), 0805 thick film"
 			(at 166.37 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -8418,7 +8437,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
 			(at 166.37 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -8443,6 +8462,8 @@
 				)
 			)
 		)
+		(property "MPN" "RC0805FR-07200KL" (at 166.37 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Manufacturer" "YAGEO" (at 166.37 58.42 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(symbol
 		(lib_name "ISC015N06NM5LF2_1")
@@ -8521,7 +8542,7 @@
 				)
 			)
 		)
-		(property "MPN" "ISC015N06NM5LF2"
+		(property "MPN" "ISC015N06NM5LF2ATMA1"
 			(at 63.5 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -8564,6 +8585,7 @@
 				)
 			)
 		)
+		(property "Selection_Status" "Full Infineon tape-and-reel order code; same ISC015N06NM5LF2 device and footprint. SOA qualification pending." (at 63.5 82.55 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8822,7 +8844,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL"
 			(at 252.73 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -8833,7 +8855,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "1% 0.125W (at 70C), 0805 thick film"
 			(at 252.73 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -8844,7 +8866,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
 			(at 252.73 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -8869,6 +8891,8 @@
 				)
 			)
 		)
+		(property "MPN" "RC0805FR-0710RL" (at 252.73 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Manufacturer" "YAGEO" (at 252.73 35.56 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
@@ -8895,6 +8919,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 87.63 148.0819 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9378,7 +9403,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-072ML"
 			(at 87.63 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -9389,7 +9414,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "1% 0.125W (at 70C), 0805 thick film"
 			(at 87.63 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -9411,7 +9436,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
 			(at 87.63 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -9436,6 +9461,8 @@
 				)
 			)
 		)
+		(property "MPN" "RC0805FR-072ML" (at 87.63 24.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Manufacturer" "YAGEO" (at 87.63 24.13 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9561,7 +9588,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0722KL"
 			(at 33.02 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -9572,7 +9599,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "1% 0.125W (at 70C), 0805 thick film"
 			(at 33.02 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -9594,7 +9621,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "RGATE in the LTC4368 Figure 11 series position per requirements D2; paired with D2 across it"
+		(property "Selection_Status" "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
 			(at 33.02 99.06 0)
 			(hide yes)
 			(show_name no)
@@ -9619,6 +9646,8 @@
 				)
 			)
 		)
+		(property "MPN" "RC0805FR-0722KL" (at 33.02 99.06 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Manufacturer" "YAGEO" (at 33.02 99.06 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -9662,7 +9691,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL"
 			(at 252.73 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -9673,7 +9702,7 @@
 				)
 			)
 		)
-		(property "Description" "Resistor"
+		(property "Description" "1% 0.125W (at 70C), 0805 thick film"
 			(at 252.73 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -9684,7 +9713,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
 			(at 252.73 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -9709,6 +9738,8 @@
 				)
 			)
 		)
+		(property "MPN" "RC0805FR-0710RL" (at 252.73 49.53 0) (effects (font (size 1.27 1.27)) (hide yes)))
+		(property "Manufacturer" "YAGEO" (at 252.73 49.53 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
@@ -10057,7 +10088,7 @@
 				)
 			)
 		)
-		(property "MPN" "LTC4368IMS-1#PBF"
+		(property "MPN" "LTC4368IMS-1#TRPBF"
 			(at 111.76 31.75 0)
 			(hide yes)
 			(show_name no)
@@ -10106,6 +10137,7 @@
 				)
 			)
 		)
+		(property "Selection_Status" "Tape-and-reel order code selected for assembly; same industrial LTC4368-1 MSOP device as #PBF." (at 111.76 31.75 0) (effects (font (size 1.27 1.27)) (hide yes)))
 	)
 	(sheet_instances
 		(path "/"
@@ -10675,6 +10707,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 236.22 64.77 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10774,6 +10807,7 @@
 		)
 		(property "Value" "TestPoint"
 			(at 236.22 74.93 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10953,25 +10987,25 @@
 		(dnp no)
 		(uuid "c3db8d45-ee06-44b3-9799-505cf0662c75")
 		(property "Reference" "D3"
-			(at 106.68 152.4 270)
+			(at 116.84 151.13 270)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Value" "MBR0540"
-			(at 106.68 154.94 270)
+			(at 116.84 153.67 270)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_SOD-123"

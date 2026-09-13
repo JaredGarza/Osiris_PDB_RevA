@@ -3,6 +3,12 @@
 Active 39-component 4S avionics power protection and I2C telemetry schematic.
 Open `Osiris_PDB_RevA.kicad_pro` in KiCad 10. Project libraries use `${KIPRJMOD}`.
 
+**Parts-planning baseline: 13 September 2026.** See the
+[freeze note](procurement/2026-09-13/FREEZE-NOTE.md) and
+[parts workbook](outputs/procurement-20260913/PDB-RevA-Parts-Planning.xlsx).
+New Osiris Rev B power and top-facing ports are planned, not yet drawn; shared-part
+counts from the old imported PCB remain candidates.
+
 **Not flight-ready. No current PDB PCB layout exists.** Start with
 [Rev A readiness and completion plan](docs/REV-A-READINESS.md) and
 [current scope](DESIGN-SPEC.md).

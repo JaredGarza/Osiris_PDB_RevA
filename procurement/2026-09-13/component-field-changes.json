@@ -1,0 +1,77 @@
+{
+  "R1": {
+    "MPN": "RC0805FR-072ML",
+    "Manufacturer": "YAGEO",
+    "Description": "1% 0.125W (at 70C), 0805 thick film",
+    "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-072ML",
+    "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
+  },
+  "R2": {
+    "MPN": "RC0805FR-0743K2L",
+    "Manufacturer": "YAGEO",
+    "Description": "1% 0.125W (at 70C), 0805 thick film",
+    "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0743K2L",
+    "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
+  },
+  "R3": {
+    "MPN": "RC0805FR-0756K2L",
+    "Manufacturer": "YAGEO",
+    "Description": "1% 0.125W (at 70C), 0805 thick film",
+    "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0756K2L",
+    "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
+  },
+  "R4": {
+    "MPN": "RC0805FR-0722KL",
+    "Manufacturer": "YAGEO",
+    "Description": "1% 0.125W (at 70C), 0805 thick film",
+    "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0722KL",
+    "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
+  },
+  "R6": {
+    "MPN": "RC0805FR-07680KL",
+    "Manufacturer": "YAGEO",
+    "Description": "1% 0.125W (at 70C), 0805 thick film",
+    "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07680KL",
+    "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
+  },
+  "R7": {
+    "MPN": "RC0805FR-07200KL",
+    "Manufacturer": "YAGEO",
+    "Description": "1% 0.125W (at 70C), 0805 thick film",
+    "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07200KL",
+    "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
+  },
+  "R8": {
+    "MPN": "RC0805FR-0710RL",
+    "Manufacturer": "YAGEO",
+    "Description": "1% 0.125W (at 70C), 0805 thick film",
+    "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL",
+    "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
+  },
+  "R9": {
+    "MPN": "RC0805FR-0710RL",
+    "Manufacturer": "YAGEO",
+    "Description": "1% 0.125W (at 70C), 0805 thick film",
+    "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL",
+    "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
+  },
+  "R10": {
+    "MPN": "RC0805FR-074K7L",
+    "Manufacturer": "YAGEO",
+    "Description": "1% 0.125W (at 70C), 0805 thick film",
+    "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+    "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open."
+  },
+  "Q1": {
+    "MPN": "ISC015N06NM5LF2ATMA1",
+    "Selection_Status": "Full Infineon tape-and-reel order code; same ISC015N06NM5LF2 device and footprint. SOA qualification pending."
+  },
+  "Q2": {
+    "MPN": "ISC015N06NM5LF2ATMA1",
+    "Selection_Status": "Full Infineon tape-and-reel order code; same ISC015N06NM5LF2 device and footprint. SOA qualification pending."
+  },
+  "U1": {
+    "MPN": "LTC4368IMS-1#TRPBF",
+    "Selection_Status": "Tape-and-reel order code selected for assembly; same industrial LTC4368-1 MSOP device as #PBF."
+  }
+}

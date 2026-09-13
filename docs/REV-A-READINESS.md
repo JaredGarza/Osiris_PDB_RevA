@@ -1,5 +1,10 @@
 # Osiris PDB Rev A review — 12 September 2026
 
+> September 13 update: the new Osiris Rev B power section and top-facing ports are
+> planned and no revised schematic exists yet. The Osiris connections below describe
+> the reference implementation, not a verified new Rev B design. See the current
+> [parts-planning freeze](../procurement/2026-09-13/FREEZE-NOTE.md).
+
 **Status: schematic candidate; not ready for fabrication or flight.** Fresh ERC and
 targeted netlist checks pass. A current PCB, full device-model fault validation,
 measured load envelope, firmware integration and hardware qualification are missing.
