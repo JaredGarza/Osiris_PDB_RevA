@@ -1,0 +1,1499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\jared\Desktop\PCB\Kicad\Osiris_PDB_RevA\Osiris_PDB_RevA.kicad_sch</source>
+    <date>2026-09-10T09:54:43</date>
+    <tool>Eeschema 10.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Osiris_PDB_RevA.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>5n6</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012C0G2A562J125AA</datasheet>
+      <description>100V C0G/NP0</description>
+      <fields>
+        <field name="MPN">C2012C0G2A562J125AA</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="Selection_Status">Nominal specification verified; DC-bias and circuit validation pending</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012C0G2A562J125AA</field>
+        <field name="Description">100V C0G/NP0</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012C0G2A562J125AA"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="Selection_Status" value="Nominal specification verified; DC-bias and circuit validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0157e8f9-dff3-4a33-9329-1b93aecbd14e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C2">
+      <value>1U0</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1H105K125AB</datasheet>
+      <description>50V X7R</description>
+      <fields>
+        <field name="MPN">C2012X7R1H105K125AB</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="Selection_Status">Nominal specification verified; DC-bias and circuit validation pending</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1H105K125AB</field>
+        <field name="Description">50V X7R</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R1H105K125AB"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="Selection_Status" value="Nominal specification verified; DC-bias and circuit validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>815fdcb3-78fc-430c-ab69-eff8c9ca9466</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C3">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf</datasheet>
+      <description>16V X7R</description>
+      <fields>
+        <field name="MPN">C0603C104K4RACTU</field>
+        <field name="Manufacturer">KEMET</field>
+        <field name="Selection_Status">Nominal specification verified; DC-bias and circuit validation pending</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf</field>
+        <field name="Description">16V X7R</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C0603C104K4RACTU"/>
+      <property name="Manufacturer" value="KEMET"/>
+      <property name="Selection_Status" value="Nominal specification verified; DC-bias and circuit validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7a5c5aa4-5dfa-47a1-9f9e-d9a877e838af</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C4">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_1206_3216Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X7R1H106K160AC</datasheet>
+      <description>50V X7R</description>
+      <fields>
+        <field name="MPN">C3216X7R1H106K160AC</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="Selection_Status">Nominal specification verified; DC-bias and circuit validation pending</field>
+        <field name="Footprint">Capacitor_SMD:C_1206_3216Metric</field>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X7R1H106K160AC</field>
+        <field name="Description">50V X7R</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C3216X7R1H106K160AC"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="Selection_Status" value="Nominal specification verified; DC-bias and circuit validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bcf167ef-d57d-476e-bd50-6941bcdaa0ff</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C5">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf</datasheet>
+      <description>16V X7R</description>
+      <fields>
+        <field name="MPN">C0603C104K4RACTU</field>
+        <field name="Manufacturer">KEMET</field>
+        <field name="Selection_Status">Nominal specification verified; DC-bias and circuit validation pending</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf</field>
+        <field name="Description">16V X7R</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C0603C104K4RACTU"/>
+      <property name="Manufacturer" value="KEMET"/>
+      <property name="Selection_Status" value="Nominal specification verified; DC-bias and circuit validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9991a439-5a05-49a1-bccc-f56f701a8191</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C6">
+      <value>10u</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1A106K125AC</datasheet>
+      <description>10V X7R</description>
+      <fields>
+        <field name="MPN">C2012X7R1A106K125AC</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="Selection_Status">Nominal specification verified; DC-bias and circuit validation pending</field>
+        <field name="Footprint">Capacitor_SMD:C_0805_2012Metric</field>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1A106K125AC</field>
+        <field name="Description">10V X7R</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C2012X7R1A106K125AC"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="Selection_Status" value="Nominal specification verified; DC-bias and circuit validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7f585223-c228-4aae-ba42-2ef2a7e260c4</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C7">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA</datasheet>
+      <description>50V X7R</description>
+      <fields>
+        <field name="MPN">C1608X7R1H104K080AA</field>
+        <field name="Manufacturer">TDK</field>
+        <field name="Selection_Status">Nominal specification verified; DC-bias and circuit validation pending</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA</field>
+        <field name="Description">50V X7R</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C1608X7R1H104K080AA"/>
+      <property name="Manufacturer" value="TDK"/>
+      <property name="Selection_Status" value="Nominal specification verified; DC-bias and circuit validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b636e495-c466-4821-a5ed-7d8d31e1bfde</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C8">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf</datasheet>
+      <description>16V X7R</description>
+      <fields>
+        <field name="MPN">C0603C104K4RACTU</field>
+        <field name="Manufacturer">KEMET</field>
+        <field name="Selection_Status">Nominal specification verified; DC-bias and circuit validation pending</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf</field>
+        <field name="Description">16V X7R</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="MPN" value="C0603C104K4RACTU"/>
+      <property name="Manufacturer" value="KEMET"/>
+      <property name="Selection_Status" value="Nominal specification verified; DC-bias and circuit validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <property name="ki_fp_filters" value="C_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>72de9f95-ebe2-49e8-94d1-6f9e81e051dd</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="F1">
+      <value>5A MINI</value>
+      <footprint>Fuse:Fuseholder_Blade_Mini_Keystone_3568</footprint>
+      <datasheet>https://www.littelfuse.com/assetdocs/fuse-selection-guide?assetguid=1d99e3a6-f314-48d7-b124-9d5d56955f09</datasheet>
+      <description>5 A, 32 VDC MINI blade fuse; provisional rating</description>
+      <fields>
+        <field name="Selection_Status">PROVISIONAL 5 A: validate input current, inrush, temperature, breaking capacity and protection coordination</field>
+        <field name="Manufacturer">Littelfuse</field>
+        <field name="MPN">0297005.WXNV</field>
+        <field name="Holder_Manufacturer">Keystone Electronics</field>
+        <field name="Holder_MPN">3568</field>
+        <field name="Holder_Datasheet">${KIPRJMOD}/Datasheets/Keystone_3568.pdf</field>
+        <field name="Footprint">Fuse:Fuseholder_Blade_Mini_Keystone_3568</field>
+        <field name="Datasheet">https://www.littelfuse.com/assetdocs/fuse-selection-guide?assetguid=1d99e3a6-f314-48d7-b124-9d5d56955f09</field>
+        <field name="Description">5 A, 32 VDC MINI blade fuse; provisional rating</field>
+      </fields>
+      <libsource lib="Device" part="Fuse" description="Fuse"/>
+      <property name="Selection_Status" value="PROVISIONAL 5 A: validate input current, inrush, temperature, breaking capacity and protection coordination"/>
+      <property name="Manufacturer" value="Littelfuse"/>
+      <property name="MPN" value="0297005.WXNV"/>
+      <property name="Holder_Manufacturer" value="Keystone Electronics"/>
+      <property name="Holder_MPN" value="3568"/>
+      <property name="Holder_Datasheet" value="${KIPRJMOD}/Datasheets/Keystone_3568.pdf"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="fuse"/>
+      <property name="ki_fp_filters" value="*Fuse*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b91532a8-f4cc-4fb8-a13f-6a38825123d9</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J1">
+      <value>XT60PW-M</value>
+      <footprint>Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/AMASS_XT60PW-M.pdf</datasheet>
+      <description>Battery input; PCB right-angle XT60; pin 1 GND, pin 2 VBAT_RAW</description>
+      <fields>
+        <field name="Selection_Status">Assigned; verify cable mating, polarity and board-edge clearance</field>
+        <field name="Manufacturer">AMASS</field>
+        <field name="MPN">XT60PW-M</field>
+        <field name="Footprint">Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/AMASS_XT60PW-M.pdf</field>
+        <field name="Description">Battery input; PCB right-angle XT60; pin 1 GND, pin 2 VBAT_RAW</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Selection_Status" value="Assigned; verify cable mating, polarity and board-edge clearance"/>
+      <property name="Manufacturer" value="AMASS"/>
+      <property name="MPN" value="XT60PW-M"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d7a6f7f7-e189-4d31-add5-350b6906ff4c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J2">
+      <value>OSIRIS_CTRL</value>
+      <footprint>Connector_JST:JST_GH_BM06B-GHS-TBT_1x06-1MP_P1.25mm_Vertical</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/JST_GH.pdf</datasheet>
+      <description>JST GH 6-way control; 1 GND, 2 SDA, 3 SCL, 4 INA_ALERT_N, 5 PDB_FAULT_N, 6 NC</description>
+      <fields>
+        <field name="Selection_Status">Assigned; Osiris I2C/GPIO endpoints and custom cable mapping still require verification</field>
+        <field name="Manufacturer">JST</field>
+        <field name="MPN">BM06B-GHS-TBT(LF)(SN)</field>
+        <field name="Mating_Housing">GHR-06V-S</field>
+        <field name="Mating_Contact">SSHL-002T-P0.2</field>
+        <field name="Footprint">Connector_JST:JST_GH_BM06B-GHS-TBT_1x06-1MP_P1.25mm_Vertical</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/JST_GH.pdf</field>
+        <field name="Description">JST GH 6-way control; 1 GND, 2 SDA, 3 SCL, 4 INA_ALERT_N, 5 PDB_FAULT_N, 6 NC</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Selection_Status" value="Assigned; Osiris I2C/GPIO endpoints and custom cable mapping still require verification"/>
+      <property name="Manufacturer" value="JST"/>
+      <property name="MPN" value="BM06B-GHS-TBT(LF)(SN)"/>
+      <property name="Mating_Housing" value="GHR-06V-S"/>
+      <property name="Mating_Contact" value="SSHL-002T-P0.2"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7be6d4f3-4a5a-43dc-bba9-4a55f1935493</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="J3">
+      <value>XT60PW-F</value>
+      <footprint>Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf</datasheet>
+      <description>Protected power output; pin 1 GND, pin 2 PDB_VOUT; cable to Osiris J16 VBATT_IN</description>
+      <fields>
+        <field name="Selection_Status">Assigned with dedicated symbol pin mapping; verify physical cable polarity and board-edge clearance</field>
+        <field name="Manufacturer">AMASS</field>
+        <field name="MPN">XT60PW-F</field>
+        <field name="Footprint">Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf</field>
+        <field name="Description">Protected power output; pin 1 GND, pin 2 PDB_VOUT; cable to Osiris J16 VBATT_IN</field>
+      </fields>
+      <libsource lib="PDB_Symbols" part="XT60PW_F" description="AMASS XT60PW-F: pin 1 negative/GND; pin 2 positive"/>
+      <property name="Selection_Status" value="Assigned with dedicated symbol pin mapping; verify physical cable polarity and board-edge clearance"/>
+      <property name="Manufacturer" value="AMASS"/>
+      <property name="MPN" value="XT60PW-F"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="connector"/>
+      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>74dbfffc-d519-4ff9-9d7b-ca3bef50bdd7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q1">
+      <value>ISC015N06NM5LF2</value>
+      <footprint>PDB_Footprints:ISC015N06NM5LF2_TDSON8FL</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf</datasheet>
+      <description>Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins</description>
+      <fields>
+        <field name="Manufacturer">Infineon</field>
+        <field name="MPN">ISC015N06NM5LF2</field>
+        <field name="Footprint">PDB_Footprints:ISC015N06NM5LF2_TDSON8FL</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf</field>
+        <field name="Description">Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins</field>
+      </fields>
+      <libsource lib="" part="ISC015N06NM5LF2_1" description="Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins"/>
+      <property name="Manufacturer" value="Infineon"/>
+      <property name="MPN" value="ISC015N06NM5LF2"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>80d6f390-a6a1-46b6-91a6-b496767fd514</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="Q2">
+      <value>ISC015N06NM5LF2</value>
+      <footprint>PDB_Footprints:ISC015N06NM5LF2_TDSON8FL</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf</datasheet>
+      <description>Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins</description>
+      <fields>
+        <field name="Manufacturer">Infineon</field>
+        <field name="MPN">ISC015N06NM5LF2</field>
+        <field name="Footprint">PDB_Footprints:ISC015N06NM5LF2_TDSON8FL</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf</field>
+        <field name="Description">Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins</field>
+      </fields>
+      <libsource lib="" part="ISC015N06NM5LF2_1" description="Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins"/>
+      <property name="Manufacturer" value="Infineon"/>
+      <property name="MPN" value="ISC015N06NM5LF2"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a18b9005-3034-4867-9e68-200c6e0c3b7b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R1">
+      <value>2M0</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Tolerance">1%</field>
+        <field name="Selection_Status">Package assigned; MPN and power/tolerance validation pending</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Tolerance" value="1%"/>
+      <property name="Selection_Status" value="Package assigned; MPN and power/tolerance validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bf8bd6da-e419-4eb8-980c-ae602008f30a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R2">
+      <value>43k2</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Tolerance">1%</field>
+        <field name="Selection_Status">Package assigned; MPN and power/tolerance validation pending</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Tolerance" value="1%"/>
+      <property name="Selection_Status" value="Package assigned; MPN and power/tolerance validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7991f973-3eb7-4c5a-bf4e-d1f494cd4506</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R3">
+      <value>56k2</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Selection_Status">Package assigned; MPN and power/tolerance validation pending</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Selection_Status" value="Package assigned; MPN and power/tolerance validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6e378433-6cbe-4dfd-88b8-fc408ef6920e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R4">
+      <value>22k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Tolerance">1%</field>
+        <field name="Selection_Status">Package assigned; MPN and power/tolerance validation pending</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Tolerance" value="1%"/>
+      <property name="Selection_Status" value="Package assigned; MPN and power/tolerance validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c798ea53-5696-4ba1-90a1-d08607a62efe</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R5">
+      <value>FC4L64R005FER</value>
+      <footprint>PDB_Footprints:OH_FC4L64_OHM</footprint>
+      <datasheet>https://www.ohmite.com/res-fc4l/</datasheet>
+      <fields>
+        <field name="Manufacturer">Ohmite</field>
+        <field name="MPN">FC4L64R005FER</field>
+        <field name="Footprint">PDB_Footprints:OH_FC4L64_OHM</field>
+        <field name="Datasheet">https://www.ohmite.com/res-fc4l/</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PDB_Symbols" part="FC4L64R005FER" description=""/>
+      <property name="Manufacturer" value="Ohmite"/>
+      <property name="MPN" value="FC4L64R005FER"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="FC4L64R005FER"/>
+      <property name="ki_fp_filters" value="OH_FC4L64_OHM"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1baf6292-1eb3-4d89-b3c3-79903e0c7203</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="4"/>
+            <pin num="3"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R6">
+      <value>680k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Selection_Status">Package assigned; MPN and power/tolerance validation pending</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Selection_Status" value="Package assigned; MPN and power/tolerance validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>18f3e9d0-a447-406b-a77a-c253d9ad3ad8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R7">
+      <value>200k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Selection_Status">Package assigned; MPN and power/tolerance validation pending</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Selection_Status" value="Package assigned; MPN and power/tolerance validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9f715014-4b85-4823-8297-b12ef5debd8b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R8">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Selection_Status">Package assigned; MPN and power/tolerance validation pending</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Selection_Status" value="Package assigned; MPN and power/tolerance validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c87d4792-9842-422f-99c1-7938387bf935</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R9">
+      <value>10</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Selection_Status">Package assigned; MPN and power/tolerance validation pending</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Selection_Status" value="Package assigned; MPN and power/tolerance validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ae8d4459-e3b1-439f-b78e-d39aca9cebbb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>4k7</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <description>Resistor</description>
+      <fields>
+        <field name="Selection_Status">Package assigned; MPN and power/tolerance validation pending</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Selection_Status" value="Package assigned; MPN and power/tolerance validation pending"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>196b8a23-eec1-48a8-aa02-298caebc5db8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP1">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <description>test point</description>
+      <fields>
+        <field name="Selection_Status">Bare copper test pad; no fitted part required</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Selection_Status" value="Bare copper test pad; no fitted part required"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>755df8e8-bec9-4172-b5d6-76c9e00d2e2e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP2">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <description>test point</description>
+      <fields>
+        <field name="Selection_Status">Bare copper test pad; no fitted part required</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Selection_Status" value="Bare copper test pad; no fitted part required"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32c637e3-e7d6-4b4f-b378-e8f072c59dea</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP3">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <description>test point</description>
+      <fields>
+        <field name="Selection_Status">Bare copper test pad; no fitted part required</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Selection_Status" value="Bare copper test pad; no fitted part required"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0ca023b4-e35c-488b-a6f6-04551ce42235</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP4">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <description>test point</description>
+      <fields>
+        <field name="Selection_Status">Bare copper test pad; no fitted part required</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Selection_Status" value="Bare copper test pad; no fitted part required"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0fe4ab49-f491-48fa-b051-5444256a2b30</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="TP5">
+      <value>TestPoint</value>
+      <footprint>TestPoint:TestPoint_Pad_D1.5mm</footprint>
+      <description>test point</description>
+      <fields>
+        <field name="Selection_Status">Bare copper test pad; no fitted part required</field>
+        <field name="Footprint">TestPoint:TestPoint_Pad_D1.5mm</field>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <libsource lib="Connector" part="TestPoint" description="test point"/>
+      <property name="Selection_Status" value="Bare copper test pad; no fitted part required"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="test point tp"/>
+      <property name="ki_fp_filters" value="Pin* Test*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b2f2ab5b-ba05-45f4-bc50-b085c8d02e98</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>LTC4368IMS-1-PBF</value>
+      <footprint>PDB_Footprints:MS_10-MSOP_ADI</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/LTC4368 (Rev C).pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Analog Devices</field>
+        <field name="MPN">LTC4368IMS-1#PBF</field>
+        <field name="Footprint">PDB_Footprints:MS_10-MSOP_ADI</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/LTC4368 (Rev C).pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PDB_Symbols" part="LTC4368IMS-1-PBF" description=""/>
+      <property name="Manufacturer" value="Analog Devices"/>
+      <property name="MPN" value="LTC4368IMS-1#PBF"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="LTC4368IMS-1#PBF"/>
+      <property name="ki_fp_filters" value="MS_10_ADI MS_10_ADI-M MS_10_ADI-L"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f2316101-c65b-422a-ae62-59a32328a5c0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="10"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>INA228AIDGSR</value>
+      <footprint>PDB_Footprints:VSSOP10_DGS_TEX</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/INA228.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">INA228AIDGSR</field>
+        <field name="Footprint">PDB_Footprints:VSSOP10_DGS_TEX</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/INA228.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PDB_Symbols" part="INA228AIDGSR" description=""/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="INA228AIDGSR"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="INA228AIDGSR"/>
+      <property name="ki_fp_filters" value="VSSOP10_DGS_TEX VSSOP10_DGS_TEX-M VSSOP10_DGS_TEX-L"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>635b6a26-8a24-464b-87b7-511bc41483c5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="10"/>
+            <pin num="9"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="6"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>TPS7A1633DGNR</value>
+      <footprint>PDB_Footprints:DGN0008C_N</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/TPS7A16.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Texas Instruments</field>
+        <field name="MPN">TPS7A1633DGNR</field>
+        <field name="Footprint">PDB_Footprints:DGN0008C_N</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/TPS7A16.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="PDB_Symbols" part="TPS7A1633DGNR" description=""/>
+      <property name="Manufacturer" value="Texas Instruments"/>
+      <property name="MPN" value="TPS7A1633DGNR"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="TPS7A1633DGNR"/>
+      <property name="ki_fp_filters" value="DGN0008C_N DGN0008C_M DGN0008C_L"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a4580a54-fa9d-4c4d-8c56-6ffb4ab2a428</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="8"/>
+            <pin num="5"/>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="9"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U4">
+      <value>74AUP1G07GW</value>
+      <footprint>Package_TO_SOT_SMD:SOT-353_SC-70-5</footprint>
+      <datasheet>${KIPRJMOD}/Datasheets/Nexperia_74AUP1G07.pdf</datasheet>
+      <description>Single Buffer Gate, Open Drain, Low-Voltage CMOS</description>
+      <fields>
+        <field name="Sim.Library">.\</field>
+        <field name="Manufacturer">Nexperia</field>
+        <field name="MPN">74AUP1G07GW,125</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-353_SC-70-5</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/Nexperia_74AUP1G07.pdf</field>
+        <field name="Description">Single Buffer Gate, Open Drain, Low-Voltage CMOS</field>
+      </fields>
+      <libsource lib="74xGxx" part="74AUP1G07" description="Single Buffer Gate, Open Drain, Low-Voltage CMOS"/>
+      <property name="Sim.Library" value=".\"/>
+      <property name="Manufacturer" value="Nexperia"/>
+      <property name="MPN" value="74AUP1G07GW,125"/>
+      <property name="Sheetname" value="Osiris_PDB_RevA"/>
+      <property name="Sheetfile" value="Osiris_PDB_RevA.kicad_sch"/>
+      <property name="ki_keywords" value="Single Gate Buff LVC CMOS Open Drain"/>
+      <property name="ki_fp_filters" value="SOT?23* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7302667e-3edf-4938-9988-599f1a241a31</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="2"/>
+            <pin num="5"/>
+            <pin num="3"/>
+            <pin num="1"/>
+            <pin num="4"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="" part="ISC015N06NM5LF2_1">
+      <description>Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins</description>
+      <docs>${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf</docs>
+      <fields>
+        <field name="Reference">Q?</field>
+        <field name="Value">ISC015N06NM5LF2</field>
+        <field name="Footprint">PDB_Footprints:ISC015N06NM5LF2_TDSON8FL</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf</field>
+        <field name="Description">Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SOURCE" type="passive"/>
+        <pin num="2" name="SOURCE" type="passive"/>
+        <pin num="3" name="SOURCE" type="passive"/>
+        <pin num="4" name="GATE" type="passive"/>
+        <pin num="5" name="DRAIN" type="passive"/>
+        <pin num="6" name="DRAIN" type="passive"/>
+        <pin num="7" name="DRAIN" type="passive"/>
+        <pin num="8" name="DRAIN" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="74xGxx" part="74AUP1G07">
+      <description>Single Buffer Gate, Open Drain, Low-Voltage CMOS</description>
+      <docs>https://www.ti.com/lit/ds/symlink/sn74aup1g07</docs>
+      <footprints>
+        <fp>SOT?23*</fp>
+        <fp>Texas?R-PDSO-G5?DCK*</fp>
+        <fp>Texas?R-PDSO-N5?DRL*</fp>
+        <fp>Texas?X2SON*0.8x0.8mm*P0.48mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74AUP1G07</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">https://www.ti.com/lit/ds/symlink/sn74aup1g07</field>
+        <field name="Description">Single Buffer Gate, Open Drain, Low-Voltage CMOS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="free"/>
+        <pin num="2" name="" type="input"/>
+        <pin num="3" name="GND" type="power_in"/>
+        <pin num="4" name="" type="open_collector"/>
+        <pin num="5" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="TestPoint">
+      <description>test point</description>
+      <footprints>
+        <fp>Pin*</fp>
+        <fp>Test*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TestPoint</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">test point</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Unpolarized capacitor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Fuse">
+      <description>Fuse</description>
+      <footprints>
+        <fp>*Fuse*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">Fuse</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Fuse</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Footprint"/>
+        <field name="Datasheet"/>
+        <field name="Description">Resistor</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PDB_Symbols" part="FC4L64R005FER">
+      <docs>FC4L64R005FER</docs>
+      <footprints>
+        <fp>OH_FC4L64_OHM</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">FC4L64R005FER</field>
+        <field name="Footprint">PDB_Footprints:OH_FC4L64_OHM</field>
+        <field name="Datasheet">FC4L64R005FER</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PDB_Symbols" part="INA228AIDGSR">
+      <docs>https://www.ti.com/lit/gpn/ina228</docs>
+      <footprints>
+        <fp>VSSOP10_DGS_TEX</fp>
+        <fp>VSSOP10_DGS_TEX-M</fp>
+        <fp>VSSOP10_DGS_TEX-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">INA228AIDGSR</field>
+        <field name="Footprint">PDB_Footprints:VSSOP10_DGS_TEX</field>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/ina228</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="A1" type="input"/>
+        <pin num="2" name="A0" type="input"/>
+        <pin num="3" name="ALERT" type="open_collector"/>
+        <pin num="4" name="SDA" type="bidirectional"/>
+        <pin num="5" name="SCL" type="input"/>
+        <pin num="6" name="VS" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="VBUS" type="power_in"/>
+        <pin num="9" name="IN-" type="input"/>
+        <pin num="10" name="IN+" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="PDB_Symbols" part="LTC4368IMS-1-PBF">
+      <docs>https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4368.pdf</docs>
+      <footprints>
+        <fp>MS_10_ADI</fp>
+        <fp>MS_10_ADI-M</fp>
+        <fp>MS_10_ADI-L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LTC4368IMS-1-PBF</field>
+        <field name="Footprint">PDB_Footprints:MS_10-MSOP_ADI</field>
+        <field name="Datasheet">https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4368.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="VIN" type="power_in"/>
+        <pin num="2" name="UV" type="input"/>
+        <pin num="3" name="OV" type="input"/>
+        <pin num="4" name="RETRY" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="*SHDN" type="input"/>
+        <pin num="7" name="FAULT" type="open_collector"/>
+        <pin num="8" name="VOUT" type="power_in"/>
+        <pin num="9" name="SENSE" type="input"/>
+        <pin num="10" name="GATE" type="output"/>
+      </pins>
+    </libpart>
+    <libpart lib="PDB_Symbols" part="TPS7A1633DGNR">
+      <docs>https://www.ti.com/lit/gpn/tps7a16</docs>
+      <footprints>
+        <fp>DGN0008C_N</fp>
+        <fp>DGN0008C_M</fp>
+        <fp>DGN0008C_L</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TPS7A1633DGNR</field>
+        <field name="Footprint">PDB_Footprints:DGN0008C_N</field>
+        <field name="Datasheet">https://www.ti.com/lit/gpn/tps7a16</field>
+        <field name="Description"/>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT" type="power_out"/>
+        <pin num="2" name="DNC" type="unspecified"/>
+        <pin num="3" name="PG" type="open_collector"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="EN" type="input"/>
+        <pin num="6" name="NC" type="unspecified"/>
+        <pin num="7" name="DELAY" type="unspecified"/>
+        <pin num="8" name="IN" type="power_in"/>
+        <pin num="9" name="PAD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="PDB_Symbols" part="XT60PW_F">
+      <description>AMASS XT60PW-F: pin 1 negative/GND; pin 2 positive</description>
+      <docs>${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">XT60PW_F</field>
+        <field name="Footprint">Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal</field>
+        <field name="Datasheet">${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf</field>
+        <field name="Description">AMASS XT60PW-F: pin 1 negative/GND; pin 2 positive</field>
+      </fields>
+      <pins>
+        <pin num="1" name="-" type="passive"/>
+        <pin num="2" name="+" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="74xGxx">
+      <uri>${KICAD10_SYMBOL_DIR}/74xGxx.kicad_sym</uri>
+    </library>
+    <library logical="Connector">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>${KICAD10_SYMBOL_DIR}/Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>${KICAD10_SYMBOL_DIR}/Device.kicad_sym</uri>
+    </library>
+    <library logical="PDB_Symbols">
+      <uri>${KIPRJMOD}/Libraries/PDB_Symbols.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/GATE_DRV" class="Default">
+      <node ref="Q1" pin="4" pinfunction="GATE_4" pintype="passive"/>
+      <node ref="Q2" pin="4" pinfunction="GATE_4" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="GATE_10" pintype="output"/>
+    </net>
+    <net code="2" name="/INA_ALERT_LOCAL_N" class="Default">
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="ALERT_3" pintype="open_collector"/>
+      <node ref="U4" pin="2" pintype="input"/>
+    </net>
+    <net code="3" name="/INA_ALERT_N" class="Default">
+      <node ref="J2" pin="4" pinfunction="Pin_4_4" pintype="passive"/>
+      <node ref="U4" pin="4" pintype="open_collector"/>
+    </net>
+    <net code="4" name="/INA_IN_N" class="Default">
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U2" pin="9" pinfunction="IN-_9" pintype="input"/>
+    </net>
+    <net code="5" name="/INA_IN_P" class="Default">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U2" pin="10" pinfunction="IN+_10" pintype="input"/>
+    </net>
+    <net code="6" name="/PDB_3V3" class="Default">
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="TP5" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="VS_6" pintype="power_in"/>
+      <node ref="U3" pin="1" pinfunction="OUT_1" pintype="power_out"/>
+      <node ref="U4" pin="5" pinfunction="VCC_5" pintype="power_in"/>
+    </net>
+    <net code="7" name="/PDB_FAULT_N" class="Default">
+      <node ref="J2" pin="5" pinfunction="Pin_5_5" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="FAULT_7" pintype="open_collector"/>
+    </net>
+    <net code="8" name="/PDB_I2C_SCL" class="Default">
+      <node ref="J2" pin="3" pinfunction="Pin_3_3" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="SCL_5" pintype="input"/>
+    </net>
+    <net code="9" name="/PDB_I2C_SDA" class="Default">
+      <node ref="J2" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="SDA_4" pintype="bidirectional"/>
+    </net>
+    <net code="10" name="/PDB_PROTECTED" class="Default">
+      <node ref="Q2" pin="5" pinfunction="DRAIN_5" pintype="passive"/>
+      <node ref="Q2" pin="6" pinfunction="DRAIN_6" pintype="passive"/>
+      <node ref="Q2" pin="7" pinfunction="DRAIN_7" pintype="passive"/>
+      <node ref="Q2" pin="8" pinfunction="DRAIN_8" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="TP2" pin="1" pinfunction="1_1" pintype="passive"/>
+    </net>
+    <net code="11" name="/PDB_VOUT" class="Default">
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="J3" pin="2" pinfunction="+_2" pintype="passive"/>
+      <node ref="R5" pin="4" pintype="passive"/>
+      <node ref="TP4" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U2" pin="8" pinfunction="VBUS_8" pintype="power_in"/>
+      <node ref="U3" pin="5" pinfunction="EN_5" pintype="input"/>
+      <node ref="U3" pin="8" pinfunction="IN_8" pintype="power_in"/>
+    </net>
+    <net code="12" name="/SHDN_LTC" class="Default">
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="*SHDN_6" pintype="input"/>
+    </net>
+    <net code="13" name="/SHUNT_HI" class="Default">
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="SENSE_9" pintype="input"/>
+    </net>
+    <net code="14" name="/SHUNT_LO" class="Default">
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="R5" pin="3" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="VOUT_8" pintype="power_in"/>
+    </net>
+    <net code="15" name="/SW_COMMON" class="Default">
+      <node ref="Q1" pin="1" pinfunction="SOURCE_1" pintype="passive"/>
+      <node ref="Q1" pin="2" pinfunction="SOURCE_2" pintype="passive"/>
+      <node ref="Q1" pin="3" pinfunction="SOURCE_3" pintype="passive"/>
+      <node ref="Q2" pin="1" pinfunction="SOURCE_1" pintype="passive"/>
+      <node ref="Q2" pin="2" pinfunction="SOURCE_2" pintype="passive"/>
+      <node ref="Q2" pin="3" pinfunction="SOURCE_3" pintype="passive"/>
+    </net>
+    <net code="16" name="/VBAT_FUSED" class="Default">
+      <node ref="F1" pin="2" pintype="passive"/>
+      <node ref="Q1" pin="5" pinfunction="DRAIN_5" pintype="passive"/>
+      <node ref="Q1" pin="6" pinfunction="DRAIN_6" pintype="passive"/>
+      <node ref="Q1" pin="7" pinfunction="DRAIN_7" pintype="passive"/>
+      <node ref="Q1" pin="8" pinfunction="DRAIN_8" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="TP1" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="VIN_1" pintype="power_in"/>
+    </net>
+    <net code="17" name="/VBAT_RAW" class="Default">
+      <node ref="F1" pin="1" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="Pin_2_2" pintype="passive"/>
+    </net>
+    <net code="18" name="GND" class="Default">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1_1" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="-_1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="TP3" pin="1" pinfunction="1_1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="GND_5" pintype="power_in"/>
+      <node ref="U2" pin="1" pinfunction="A1_1" pintype="input"/>
+      <node ref="U2" pin="2" pinfunction="A0_2" pintype="input"/>
+      <node ref="U2" pin="7" pinfunction="GND_7" pintype="power_in"/>
+      <node ref="U3" pin="4" pinfunction="GND_4" pintype="power_in"/>
+      <node ref="U3" pin="9" pinfunction="PAD_9" pintype="power_in"/>
+      <node ref="U4" pin="3" pinfunction="GND_3" pintype="power_in"/>
+    </net>
+    <net code="19" name="Net-(C1-Pad1)" class="Default">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(U1-OV)" class="Default">
+      <node ref="R2" pin="2" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="OV_3" pintype="input"/>
+    </net>
+    <net code="21" name="Net-(U1-RETRY)" class="Default">
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="RETRY_4" pintype="passive"/>
+    </net>
+    <net code="22" name="Net-(U1-UV)" class="Default">
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="UV_2" pintype="input"/>
+    </net>
+    <net code="23" name="unconnected-(J2-Pin_6-Pad6)" class="Default">
+      <node ref="J2" pin="6" pinfunction="Pin_6_6" pintype="passive+no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(U3-DELAY-Pad7)" class="Default">
+      <node ref="U3" pin="7" pinfunction="DELAY_7" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(U3-DNC-Pad2)" class="Default">
+      <node ref="U3" pin="2" pinfunction="DNC_2" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(U3-NC-Pad6)" class="Default">
+      <node ref="U3" pin="6" pinfunction="NC_6" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(U3-PG-Pad3)" class="Default">
+      <node ref="U3" pin="3" pinfunction="PG_3" pintype="open_collector+no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(U4-NC-Pad1)" class="Default">
+      <node ref="U4" pin="1" pinfunction="NC_1" pintype="free+no_connect"/>
+    </net>
+  </nets>
+</export>

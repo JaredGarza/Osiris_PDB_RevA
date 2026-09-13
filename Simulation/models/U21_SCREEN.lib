@@ -1,0 +1,17 @@
+* Engineering surrogate, not a TI model. Typical SR/TD, no thermal or fast-trip.
+.subckt U21_SCREEN IN OUT UV OV EN RAMP params: SR=28100 TD=100u RON=.0284
+VONE ONE 0 1
+SUV ONE UVOK UV 0 SHYST
+RUV UVOK 0 1k
+SOV ONE OVBAD OV 0 SHYST
+ROV OVBAD 0 1k
+.model SHYST SW(Ron=1m Roff=1G Vt=1.145 Vh=.055)
+BEN NOW 0 V=V(UVOK)*(1-V(OVBAD))
+RDELAY NOW EN {TD/0.693147/1u}
+CDELAY EN 0 1u
+BRAMP 0 RAMP I=limit((V(EN)-.45)/.1,0,1)*{SR}*1u*tanh((max(V(IN),0)+.1-V(RAMP))/.05)-(1-limit((V(EN)-.45)/.1,0,1))*V(RAMP)/100
+CRAMP RAMP 0 1u
+RDC RAMP 0 1G
+BPASS IN OUT I=limit((V(EN)-.45)/.1,0,1)*max(0,min((V(IN)-V(OUT))/{RON},100*(V(RAMP)-V(OUT))))
+RLEAK IN OUT 1G
+.ends U21_SCREEN

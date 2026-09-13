@@ -10,6 +10,14 @@ fp-info-cache
 
 # Local task backups
 library_reorg_backup_*/
+component-review-backup-*/
+_restore_backup_*/
+
+# LTspice source includes .asc, .cir and .lib. Exclude output at every depth.
+Simulation/**/*.raw
+Simulation/**/*.db
+Simulation/**/*.log
+Simulation/**/*.net
 
 # Generated and legacy netlist/report artifacts
 *.net
@@ -25,3 +33,15 @@ Thumbs.db
 .DS_Store
 .vscode/
 .idea/
+
+# Local backups and extracted copies of the separate Osiris board
+fuse-connector-backup-*/
+requirements-backup-*/
+docs/osiris-power-audit/zip-source/
+docs/osiris-power-audit/*.kicad_pcb
+
+# Machine-specific migration helper and generated vendor example
+docs/revision-audit-20260912/update_review_notes.py
+Simulation/models/STARTUP.cir
+__pycache__/
+*.pyc

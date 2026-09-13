@@ -231,7 +231,9 @@
 					(type none)
 				)
 			)
-			(pin unspecified line
+		)
+		(symbol "FC4L64R005FER_1_1"
+			(pin passive line
 				(at 0 0 0)
 				(length 2.54)
 				(name ""
@@ -249,7 +251,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 0 -5.08 0)
 				(length 2.54)
 				(name ""
@@ -267,7 +269,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 17.78 -5.08 180)
 				(length 2.54)
 				(name ""
@@ -285,7 +287,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 17.78 0 180)
 				(length 2.54)
 				(name ""
@@ -487,7 +489,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin open_collector line
 				(at 0 -5.08 0)
 				(length 7.62)
 				(name "ALERT"
@@ -559,7 +561,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 40.64 -7.62 180)
 				(length 7.62)
 				(name "GND"
@@ -1110,7 +1112,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/LTC4368 (Rev C).pdf"
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4368.pdf"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1214,7 +1216,7 @@
 					(type none)
 				)
 			)
-			(pin unspecified line
+			(pin power_in line
 				(at 0 0 0)
 				(length 7.62)
 				(name "VIN"
@@ -1232,7 +1234,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin input line
 				(at 0 -2.54 0)
 				(length 7.62)
 				(name "UV"
@@ -1250,7 +1252,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin input line
 				(at 0 -5.08 0)
 				(length 7.62)
 				(name "OV"
@@ -1268,7 +1270,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin passive line
 				(at 0 -7.62 0)
 				(length 7.62)
 				(name "RETRY"
@@ -1286,7 +1288,7 @@
 					)
 				)
 			)
-			(pin power_out line
+			(pin power_in line
 				(at 0 -10.16 0)
 				(length 7.62)
 				(name "GND"
@@ -1304,10 +1306,10 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin input line
 				(at 45.72 -12.7 180)
 				(length 7.62)
-				(name "SHDN"
+				(name "*SHDN"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1322,7 +1324,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin open_collector line
 				(at 45.72 -10.16 180)
 				(length 7.62)
 				(name "FAULT"
@@ -1340,7 +1342,7 @@
 					)
 				)
 			)
-			(pin output line
+			(pin power_in line
 				(at 45.72 -7.62 180)
 				(length 7.62)
 				(name "VOUT"
@@ -1358,7 +1360,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin input line
 				(at 45.72 -5.08 180)
 				(length 7.62)
 				(name "SENSE"
@@ -1376,7 +1378,7 @@
 					)
 				)
 			)
-			(pin unspecified line
+			(pin output line
 				(at 45.72 -2.54 180)
 				(length 7.62)
 				(name "GATE"
@@ -1542,7 +1544,7 @@
 					(type none)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 20.32 12.7 180)
 				(length 5.08)
 				(name "OUT"
@@ -1697,6 +1699,164 @@
 					)
 				)
 				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "XT60PW_F"
+		(pin_names
+			(offset 1.016)
+			(hide yes)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(duplicate_pin_numbers_are_jumpers no)
+		(property "Reference" "J"
+			(at 0 2.54 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "XT60PW_F"
+			(at 0 -5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "AMASS XT60PW-F: pin 1 negative/GND; pin 2 positive"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_keywords" "connector"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "XT60PW_F_1_1"
+			(rectangle
+				(start -1.27 1.27)
+				(end 1.27 -3.81)
+				(stroke
+					(width 0.254)
+					(type default)
+				)
+				(fill
+					(type background)
+				)
+			)
+			(rectangle
+				(start -1.27 0.127)
+				(end 0 -0.127)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -1.27 -2.413)
+				(end 0 -2.667)
+				(stroke
+					(width 0.1524)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(pin passive line
+				(at -5.08 0 0)
+				(length 3.81)
+				(name "-"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -5.08 -2.54 0)
+				(length 3.81)
+				(name "+"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)

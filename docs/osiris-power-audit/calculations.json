@@ -1,0 +1,281 @@
+{
+  "assumptions": {
+    "jetson_w": 7.0,
+    "efficiency": 0.85,
+    "path_r": 0.075,
+    "rail5_ceiling_a": 2.5,
+    "rail3_ceiling_a": 2.0,
+    "pdb_aux_w": 0.1
+  },
+  "v5_nominal": 5.163636363636364,
+  "v3_nominal": 3.3066666666666666,
+  "jetson_rail_a": 1.3556338028169013,
+  "rail_w": 19.522424242424243,
+  "converted_input_w": 23.067557932263817,
+  "battery_table": [
+    {
+      "battery_v": 16.8,
+      "battery_a": 1.3815903165158088,
+      "battery_w": 23.210717317465587,
+      "path_drop_v": 0.10361927373868565,
+      "path_loss_w": 0.14315938520176894
+    },
+    {
+      "battery_v": 14.8,
+      "battery_a": 1.5711277783415232,
+      "battery_w": 23.252691119454543,
+      "path_drop_v": 0.11783458337561423,
+      "path_loss_w": 0.18513318719072777
+    },
+    {
+      "battery_v": 12.0,
+      "battery_a": 1.9459638397657932,
+      "battery_w": 23.351566077189517,
+      "path_drop_v": 0.14594728798243448,
+      "path_loss_w": 0.2840081449257022
+    },
+    {
+      "battery_v": 10.560362173038229,
+      "battery_a": 2.2193335467685866,
+      "battery_w": 23.43696603664975,
+      "path_drop_v": 0.166450016007644,
+      "path_loss_w": 0.3694081043859326
+    }
+  ],
+  "pdb_uv": 10.560362173038229,
+  "pdb_ov": 18.677935943060497,
+  "pdb_uv_1pct_corners": [
+    10.205729874295278,
+    10.925055840091051
+  ],
+  "pdb_ov_1pct_corners": [
+    18.043207163243014,
+    19.330844476796432
+  ],
+  "osiris_uv_on": 7.914285714285714,
+  "osiris_uv_off": 7.188809523809524,
+  "osiris_ov_off": 27.7,
+  "osiris_ov_recover": 25.160833333333333,
+  "inductors": [
+    {
+      "vout": 5.163636363636364,
+      "load_a": 2.5,
+      "nominal_ripple_app": 1.9014059901402225,
+      "sensitivity_ripple_app": 3.229636493175776,
+      "sensitivity_peak_a": 4.1148182465878875,
+      "sensitivity_rms_a": 2.668185274021351
+    },
+    {
+      "vout": 3.3066666666666666,
+      "load_a": 2.0,
+      "nominal_ripple_app": 1.411924873913178,
+      "sensitivity_ripple_app": 2.398227481168459,
+      "sensitivity_peak_a": 3.1991137405842296,
+      "sensitivity_rms_a": 2.116433616791693
+    }
+  ],
+  "direct_caps": {
+    "VIN": {
+      "uf": 119.99999999999999,
+      "refs": [
+        "C12",
+        "C10",
+        "C8",
+        "C22",
+        "C11",
+        "C9",
+        "C21",
+        "C23",
+        "C24",
+        "C7",
+        "C26",
+        "C25"
+      ]
+    },
+    "+5V0": {
+      "uf": 459.99999999999994,
+      "refs": [
+        "C4",
+        "C6",
+        "C2",
+        "C139",
+        "C5",
+        "C3",
+        "C141",
+        "C144",
+        "C143",
+        "C146",
+        "C148",
+        "C145",
+        "C147",
+        "C149",
+        "C140",
+        "C142"
+      ]
+    },
+    "+5V0_PROT": {
+      "uf": 22.3,
+      "refs": [
+        "C235",
+        "C162",
+        "C30",
+        "C159"
+      ]
+    },
+    "+3V3": {
+      "uf": 221.40168,
+      "refs": [
+        "C108",
+        "C109",
+        "C19",
+        "C113",
+        "C111",
+        "C91",
+        "C119",
+        "C114",
+        "C93",
+        "C99",
+        "C211",
+        "C101",
+        "C18",
+        "C105",
+        "C213",
+        "C16",
+        "C110",
+        "C112",
+        "C115",
+        "C104",
+        "C107",
+        "C17",
+        "C118",
+        "C100",
+        "C106",
+        "C210",
+        "C102",
+        "C20",
+        "C103",
+        "C94",
+        "C47",
+        "C89",
+        "C158",
+        "C199",
+        "C154",
+        "C157",
+        "C239",
+        "C77",
+        "C206",
+        "C207",
+        "C68",
+        "C155",
+        "C46",
+        "C215",
+        "C76",
+        "C45",
+        "C200",
+        "C156",
+        "C79",
+        "C88",
+        "C209",
+        "C202",
+        "C78",
+        "C201",
+        "C83",
+        "C208",
+        "C203",
+        "C152",
+        "C205",
+        "C82",
+        "C48",
+        "C216",
+        "C204",
+        "C153",
+        "C98"
+      ]
+    }
+  },
+  "gate_ramp_v_per_s_typ": 6250.0,
+  "gate_ramp_v_per_s_max_assumed": 11278.195488721805,
+  "pdb_capacitive_inrush_typ_a": 0.81875,
+  "source_manifest": [
+    {
+      "file": "Osiris.PcbDoc",
+      "sha256": "681fb4d6a38f03768a862547c71fa5408cd4cc840b9d1f8eee87290274c5fa43"
+    },
+    {
+      "file": "OS_Connectors.SchDoc",
+      "sha256": "60adb6cddcf089bf928dd66797d8a91b656ac18277387161526eaf7b9bc67a9d"
+    },
+    {
+      "file": "OS_Ethernet.SchDoc",
+      "sha256": "9630160bf1dfff95cee0131f58c69445e641193405f462b17bc07a097129f6db"
+    },
+    {
+      "file": "OS_FMU.SchDoc",
+      "sha256": "edf546c17b0950cd844047974e7f639d6b2ff1bb3b1db6f4fd39d082a14833b5"
+    },
+    {
+      "file": "OS_FMU_Sensors.SchDoc",
+      "sha256": "b04349475a835dda8d22a637dc091f5fa40817b050de68aa71e579141216efdd"
+    },
+    {
+      "file": "OS_JetsonCamera.SchDoc",
+      "sha256": "9b81aa906e6356ef49291c6a81409582376a3b86245354b1b0499d7a41c9d770"
+    },
+    {
+      "file": "OS_JetsonGPIO.SchDoc",
+      "sha256": "97d5535796a83e5bb59c79cb096fb0a621b84a53820073d2cd50bd10da61b970"
+    },
+    {
+      "file": "OS_JetsonMain.SchDoc",
+      "sha256": "57ff15d7cb9b8375404d45cb88da3a57b3bd04620b5262d517b9c1b5b91d7867"
+    },
+    {
+      "file": "OS_JetsonMisc.SchDoc",
+      "sha256": "4c8c1200b1871d9145a86e95c1c4d1579042d0a23061a6bca30c1e9f66d3addd"
+    },
+    {
+      "file": "OS_JetsonPCIE.SchDoc",
+      "sha256": "725a6a05c96690cb5ed5c66b178878917b447703ff13a14e929f8501345b483a"
+    },
+    {
+      "file": "OS_JetsonPower.SchDoc",
+      "sha256": "f18ed5b72ecef1fbcbbe1e508067bc53fbddebcdab78f34f8a6058b6ce39d4a3"
+    },
+    {
+      "file": "OS_JetsonUSB.SchDoc",
+      "sha256": "d932befc12981b64334800d8f2ce9cbee85eca250d021f4b63c92ded2cd8fa1c"
+    },
+    {
+      "file": "OS_JetsonUSBHub.SchDoc",
+      "sha256": "2e6d0d77aebb4069ab68d797346367bc73b2d954acc50ec42d31511194346142"
+    },
+    {
+      "file": "OS_M2B.SchDoc",
+      "sha256": "df270e8f88b36fa585ec396eafe258be83938892e5bd85fecc4be0e0fff2dd12"
+    },
+    {
+      "file": "OS_ModuleHub.SchDoc",
+      "sha256": "7a6bdd83a4fc1d47729d844cb06d0bb948eec5a584d8bf56089d6ec45291f111"
+    },
+    {
+      "file": "OS_PowerInput.SchDoc",
+      "sha256": "512c5bcf59a3811a301757ea80a72a856cb3206e91c3185c55cd01fbf330c9f7"
+    },
+    {
+      "file": "OS_PowerSupply.SchDoc",
+      "sha256": "bffc966a498616b3f344c2e2d6996ea28a205a134ef6e82a75f928e34d21a867"
+    },
+    {
+      "file": "OS_RadioDW1000.SchDoc",
+      "sha256": "7a0dcc08aef1e76ff17c7e13d255651d5468db95199346781fe055cb5e732004"
+    },
+    {
+      "file": "OS_RadioSX1280.SchDoc",
+      "sha256": "61fa4753a9d88ebddd873bf38b86db44817c87ced8888f0bd58f44f0fea3859e"
+    },
+    {
+      "file": "OS_USBEthBridge.SchDoc",
+      "sha256": "7f2df992e5a6a781cadafd82d066f9882a0239a3d3a738bdb0855b2badb1a4d6"
+    }
+  ]
+}

@@ -1,10 +1,40 @@
-Reference,Qty,Value,Manufacturer,MPN,Footprint,Populate,Notes
-J1,1,BATTERY_IN_4S,Generic,12AWG pigtail to genuine AMASS XT60,Connector_Wire:SolderWire-4sqmm_1x02_P12mm_D3mm_OD6mm,Yes,Verify polarity and add mechanical strain relief
-J2-J5,4,ESC_OUT,Generic,14AWG pigtail,Connector_Wire:SolderWire-4sqmm_1x02_P12mm_D3mm_OD6mm,Yes,20A continuous and 30A burst prototype target per branch
-J6,1,OSIRIS_OUT,AMASS,XT60 male pigtail,Connector_Wire:SolderWire-2sqmm_1x02_P7.8mm_D2mm_OD3.9mm,Yes,Verify mating gender with populated Osiris J15
-F1,1,6.3A fast fuse,Bel Fuse,0678H6300-02,Osiris_PDB:FUSC9830X318N,Yes,Final rating requires measured Osiris current and time-current review
-D1 D2,2,SMCJ17CA,Littelfuse,SMCJ17CA,Diode_SMD:D_SMC,Yes,Provisional until transient testing
-C1,1,1000uF 35V low ESR,Panasonic,EEUFR1V102,Capacitor_THT:CP_Radial_D12.5mm_P5.00mm,Yes,2.6A ripple at 100kHz and 105C
-C2 C4,2,100nF 50V X7R,KEMET,C0805C104K5RACAUTO,Capacitor_SMD:C_0805_2012Metric,Yes,
-C3,1,1uF 50V X7R,KEMET,C0805C105K5RACAUTO,Capacitor_SMD:C_0805_2012Metric,Yes,
-C5,1,100uF 35V low ESR,TBD,TBD,Capacitor_THT:CP_Radial_D8.0mm_P3.50mm,No,DNP until hot-plug testing establishes need
+"Reference","Value","Specification","Footprint","Manufacturer","MPN","Holder Manufacturer","Holder MPN","Holder Datasheet","Selection Status","Datasheet"
+"C1","5n6","100V C0G/NP0","Capacitor_SMD:C_0805_2012Metric","TDK","C2012C0G2A562J125AA","","","","CGATE at the U1 GATE pin per requirements D2; sets the 6.25 kV/s turn-on ramp","https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012C0G2A562J125AA"
+"C2","1U0","50V X7R","Capacitor_SMD:C_0805_2012Metric","TDK","C2012X7R1H105K125AB","","","","Nominal specification verified; DC-bias and circuit validation pending","https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1H105K125AB"
+"C3","100n","16V X7R","Capacitor_SMD:C_0603_1608Metric","KEMET","C0603C104K4RACTU","","","","Nominal specification verified; DC-bias and circuit validation pending","${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf"
+"C4","10u","50V X7R","Capacitor_SMD:C_1206_3216Metric","TDK","C3216X7R1H106K160AC","","","","10 uF local U3 input capacitor on protected PDB_VOUT.","https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X7R1H106K160AC"
+"C5","100n","16V X7R","Capacitor_SMD:C_0603_1608Metric","KEMET","C0603C104K4RACTU","","","","Nominal specification verified; DC-bias and circuit validation pending","${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf"
+"C6","10u","10V X7R","Capacitor_SMD:C_0805_2012Metric","TDK","C2012X7R1A106K125AC","","","","Nominal specification verified; DC-bias and circuit validation pending","https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1A106K125AC"
+"C7","100n","50V X7R","Capacitor_SMD:C_0603_1608Metric","TDK","C1608X7R1H104K080AA","","","","Nominal specification verified; DC-bias and circuit validation pending","https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA"
+"C8","100n","16V X7R","Capacitor_SMD:C_0603_1608Metric","KEMET","C0603C104K4RACTU","","","","Nominal specification verified; DC-bias and circuit validation pending","${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf"
+"C9","10u","50V X7R","Capacitor_SMD:C_1206_3216Metric","TDK","C3216X7R1H106K160AC","","","","Local bulk at the output connector; keeps total load capacitance at the value used in the inrush calculation","https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X7R1H106K160AC"
+"D1","SMAJ24CA","Bidirectional 400 W TVS; 24 V standoff, 26.7 V min breakdown, 38.9 V clamp","Diode_SMD:D_SMA","Bourns","SMAJ24CA","","","","Bidirectional so reverse-battery blocking is preserved; breakdown clears the 19.33 V worst-case OV corner and the clamp stays below the 60 V MOSFET rating","${KIPRJMOD}/Datasheets/Bourns_SMAJ_TVS.pdf"
+"D2","MBR0540","40 V 0.5 A Schottky across R4; cathode to the U1 GATE side","Diode_SMD:D_SOD-123","onsemi","MBR0540T1G","","","","Required by the LTC4368 Figure 11 gate network; without it fault turn-off degrades from 8 us to about 300 us","${KIPRJMOD}/Datasheets/onsemi_MBR0540.pdf"
+"D3","MBR0540","Negative-output clamp: anode GND, cathode PDB_VOUT; place close to U3 input.","Diode_SMD:D_SOD-123","onsemi","MBR0540T1G","","","","Output negative-voltage clamp; verify worst-case forward voltage and pulse current on hardware.","${KIPRJMOD}/Datasheets/onsemi_MBR0540.pdf"
+"F1","4A MINI","4 A, 32 VDC MINI blade fuse; backup protection for a fault the MOSFETs cannot interrupt","Fuse:Fuseholder_Blade_Mini_Keystone_3568","Littelfuse","0297004.WXNV","Keystone Electronics","3568","${KIPRJMOD}/Datasheets/Keystone_3568.pdf","PROVISIONAL 4 A candidate. 2.22 A is an assumed operating scenario, not a verified maximum. Validate current, startup, ambient derating and fault coordination.","${KIPRJMOD}/Datasheets/Littelfuse_297_MINI.pdf"
+"J1","XT60PW-M","Battery input; PCB right-angle XT60; pin 1 GND, pin 2 VBAT_RAW","Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal","AMASS","XT60PW-M","","","","Assigned; verify cable mating, polarity and board-edge clearance","${KIPRJMOD}/Datasheets/AMASS_XT60PW-M.pdf"
+"J2","OSIRIS_I2C","JST GH 4-way I2C; 1 NC, 2 SCL, 3 SDA, 4 GND; mates 1:1 with Osiris J28 (FMU_I2C1)","Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical","JST","BM04B-GHS-TBT(LF)(SN)","","","","Re-pinned per requirements D3 to match Osiris J28 with a stock 4-way GH cable; pin 1 faces Osiris +5V0_PROT and is left unconnected","${KIPRJMOD}/Datasheets/JST_GH.pdf"
+"J3","XT60PW-F","Protected power output; pin 1 GND, pin 2 PDB_VOUT; cable to Osiris J16 VBATT_IN","Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal","AMASS","XT60PW-F","","","","Assigned with dedicated symbol pin mapping; verify physical cable polarity and board-edge clearance","${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf"
+"Q1","ISC015N06NM5LF2","Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins","PDB_Footprints:ISC015N06NM5LF2_TDSON8FL","Infineon","ISC015N06NM5LF2","","","","","${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf"
+"Q2","ISC015N06NM5LF2","Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins","PDB_Footprints:ISC015N06NM5LF2_TDSON8FL","Infineon","ISC015N06NM5LF2","","","","","${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf"
+"R1","2M0","Resistor","Resistor_SMD:R_0805_2012Metric","","","","","","Package assigned; MPN and power/tolerance validation pending",""
+"R2","43k2","Resistor","Resistor_SMD:R_0805_2012Metric","","","","","","Package assigned; MPN and power/tolerance validation pending",""
+"R3","56k2","Resistor","Resistor_SMD:R_0805_2012Metric","","","","","","Package assigned; MPN and power/tolerance validation pending",""
+"R4","22k","Resistor","Resistor_SMD:R_0805_2012Metric","","","","","","RGATE in the LTC4368 Figure 11 series position per requirements D2; paired with D2 across it",""
+"R5","FC4L64R005FER","","PDB_Footprints:OH_FC4L64_OHM","Ohmite","FC4L64R005FER","","","","","https://www.ohmite.com/res-fc4l/"
+"R6","680k","Resistor","Resistor_SMD:R_0805_2012Metric","","","","","","Package assigned; MPN and power/tolerance validation pending",""
+"R7","200k","Resistor","Resistor_SMD:R_0805_2012Metric","","","","","","Package assigned; MPN and power/tolerance validation pending",""
+"R8","10","Resistor","Resistor_SMD:R_0805_2012Metric","","","","","","Package assigned; MPN and power/tolerance validation pending",""
+"R9","10","Resistor","Resistor_SMD:R_0805_2012Metric","","","","","","Package assigned; MPN and power/tolerance validation pending",""
+"R10","4k7","Resistor","Resistor_SMD:R_0805_2012Metric","","","","","","Package assigned; MPN and power/tolerance validation pending",""
+"TP1","TestPoint","test point","TestPoint:TestPoint_Pad_D1.5mm","","","","","","Bare copper test pad; no fitted part required",""
+"TP2","TestPoint","test point","TestPoint:TestPoint_Pad_D1.5mm","","","","","","Bare copper test pad; no fitted part required",""
+"TP3","TestPoint","test point","TestPoint:TestPoint_Pad_D1.5mm","","","","","","Bare copper test pad; no fitted part required",""
+"TP4","TestPoint","test point","TestPoint:TestPoint_Pad_D1.5mm","","","","","","Bare copper test pad; no fitted part required",""
+"TP5","TestPoint","test point","TestPoint:TestPoint_Pad_D1.5mm","","","","","","Bare copper test pad; no fitted part required",""
+"TP6","TestPoint","test point","TestPoint:TestPoint_Pad_D1.5mm","","","","","","Bare copper test pad; no fitted part required",""
+"TP7","TestPoint","test point","TestPoint:TestPoint_Pad_D1.5mm","","","","","","Bare copper test pad; no fitted part required",""
+"U1","LTC4368IMS-1-PBF","","PDB_Footprints:MS_10-MSOP_ADI","Analog Devices","LTC4368IMS-1#PBF","","","","","${KIPRJMOD}/Datasheets/LTC4368 (Rev C).pdf"
+"U2","INA228AIDGSR","","PDB_Footprints:VSSOP10_DGS_TEX","Texas Instruments","INA228AIDGSR","","","","","${KIPRJMOD}/Datasheets/INA228.pdf"
+"U3","TPS7A1633DGNR","","PDB_Footprints:DGN0008C_N","Texas Instruments","TPS7A1633DGNR","","","","Supplied from protected PDB_VOUT; loses power during a trip. Reverse-input exposure corrected.","${KIPRJMOD}/Datasheets/TPS7A16.pdf"
+"U4","74AUP1G07GW","Single Buffer Gate, Open Drain, Low-Voltage CMOS","Package_TO_SOT_SMD:SOT-353_SC-70-5","Nexperia","74AUP1G07GW,125","","","","","${KIPRJMOD}/Datasheets/Nexperia_74AUP1G07.pdf"

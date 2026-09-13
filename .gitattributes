@@ -1,0 +1,9 @@
+* text=auto
+*.pdf binary
+*.png binary
+*.stl binary
+*.step -text -whitespace
+
+# Preserve generated/vector and third-party model formatting.
+*.svg -whitespace
+Simulation/models/LM73100_TRANS.lib -whitespace

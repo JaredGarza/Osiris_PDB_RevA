@@ -1,0 +1,19 @@
+* U21 surrogate isolated validation against typical 12V datasheet rates.
+.param CSEL=0
+.param SR=table(CSEL,0,28100,1.8n,1090,3.3n,610)
+.param TD=table(CSEL,0,100u,1.8n,1.32m,3.3n,2.35m)
+V1 IN 0 PULSE(0 12 1m 1u 1u 1 2)
+R1 IN UV 470k
+R2 UV OV 60k
+R3 OV 0 24k
+X1 IN OUT UV OV EN RAMP U21_SCREEN params: SR={SR} TD={TD}
+C1 OUT 0 110u Rser=20m
+RLOAD OUT 0 1Meg
+.step param CSEL list 0 1.8n 3.3n
+.tran 0 50m 0 5u
+.options method=gear
+.save V(IN) V(OUT) V(EN) I(V1)
+.meas TRAN trise TRIG V(OUT) VAL=1.2 RISE=1 TARG V(OUT) VAL=10.8 RISE=1
+.meas TRAN vfinal AVG V(OUT) FROM 40m TO 49m
+.include U21_SCREEN.lib
+.end

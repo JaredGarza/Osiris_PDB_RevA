@@ -1,9 +1,40 @@
 # Osiris PDB Rev A
 
-4S LiPo avionics power delivery and protection board for the Osiris platform.
+Active 39-component 4S avionics power protection and I2C telemetry schematic.
+Open `Osiris_PDB_RevA.kicad_pro` in KiCad 10. Project libraries use `${KIPRJMOD}`.
 
-The board is designed in KiCad. Project-specific symbols, footprints, and 3D models are stored under `Libraries/`, and library/model paths use `${KIPRJMOD}` for portability.
+**Not flight-ready. No current PDB PCB layout exists.** Start with
+[Rev A readiness and completion plan](docs/REV-A-READINESS.md) and
+[current scope](DESIGN-SPEC.md).
 
-To use the project on another computer, clone this repository and open `Osiris_PDB_RevA.kicad_pro` in KiCad 10 or a compatible newer version. No vendor-library import should be required.
+Older competing PDB projects and local backup directories are preserved in an
+external dated archive on the original workstation; they are not required to open
+this repository. Consult that archive's move manifest to restore local copies.
+Historical apply scripts and review documents record earlier revisions and must not
+be treated as instructions to regenerate the current design.
 
-Verified vendor footprints must not be edited without checking the current official manufacturer datasheet. The optional Python generator scripts assume KiCad 10 is installed in its default Windows location; they are not required to open or edit the KiCad project.
+## Repository contents and checks
+
+The schematic, project-local libraries, engineering and purchasing BOMs, datasheets,
+simulation sources and review evidence are versioned together. Full Osiris board
+imports, editor state and LTspice binary outputs are kept out of Git. Git history
+retains the obsolete PCB; it is not a layout for the current circuit.
+
+Install KiCad 10 and run from the repository root:
+
+```sh
+kicad-cli sch erc -o erc-current.rpt Osiris_PDB_RevA.kicad_sch
+kicad-cli sch export netlist --format kicadxml -o docs/revision-audit-20260912/current.net.xml Osiris_PDB_RevA.kicad_sch
+python docs/revision-audit-20260912/check_design.py
+```
+
+The Python checker uses the standard library. Set `KICAD_FOOTPRINT_DIR` if system
+footprints are not at the default Windows or Linux location. Historical comparison
+inputs are committed XML snapshots; regenerate the current input after electrical edits.
+
+LTspice screening uses `Simulation/Osiris_PDB_RevB_Cascade.cir` (historical filename).
+It requires LTspice's LTC4368-1 model and SiR870ADP entry in `standard.mos`; adjust the
+deck's absolute `standard.mos` path for your installation. U21_SCREEN is an engineering
+surrogate. Audit simulation logs under `docs` are retained as evidence; routine output
+is ignored. See the readiness report for model limitations. Historical source-audit
+scripts also require original Osiris files from the author's workstation.

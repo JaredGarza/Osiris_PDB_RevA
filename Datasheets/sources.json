@@ -1,0 +1,139 @@
+[
+  {
+    "file": "AMASS_XT60PW-F.pdf",
+    "source": "https://www.tme.eu/Document/1191bc2fa3aee3c446e5a895fd8f7983/XT60PW-F.pdf",
+    "bytes": 3069503,
+    "sha256": "4a8f7d47c87a864eb0a5af208643dea58c74e9dd8eb7d19dca77c3bf2a00a0f2",
+    "status": "downloaded"
+  },
+  {
+    "file": "AMASS_XT60PW-M.pdf",
+    "source": "https://www.tme.eu/Document/b13629717d44ae038681dba08d18c0b6/XT60PW-M.pdf",
+    "bytes": 3012312,
+    "sha256": "492810c844696e46bed4508080d069a13c3627d42c22d8c6631018064b7d52f4",
+    "status": "downloaded"
+  },
+  {
+    "file": "Bourns_SMAJ_TVS.pdf",
+    "source": "https://www.bourns.com/docs/product-datasheets/smaj.pdf",
+    "bytes": 178686,
+    "sha256": "39fd714538fc4ff8f6f43bdae9f11b5278a0e80fe32bfec07b2391d7df069195",
+    "status": "downloaded",
+    "origin": "manufacturer"
+  },
+  {
+    "file": "INA228.pdf",
+    "source": "https://www.ti.com/lit/ds/symlink/ina228.pdf",
+    "bytes": 2473528,
+    "sha256": "a138d39eeee04f8388426fed204c2f4012e75d36e95b60b0751ef003cd277447",
+    "status": "downloaded"
+  },
+  {
+    "file": "JST_GH.pdf",
+    "source": "https://www.jst-mfg.com/product/pdf/eng/eGH.pdf",
+    "bytes": 146619,
+    "sha256": "b1dcb317b6b9a4fbbedd2dbf42c64c95306a252d23de8933b85fcf161240b722",
+    "status": "downloaded"
+  },
+  {
+    "file": "KEMET_C0603C104K4RACTU.pdf",
+    "source": "https://search.kemet.com/component-documentation/download/specsheet/C0603C104K4RACTU",
+    "bytes": 290831,
+    "sha256": "fde294aa97a291ef5f014970408758338d6df3877d26ae85e7d2973d176b7bc7",
+    "status": "downloaded"
+  },
+  {
+    "file": "Keystone_3568.pdf",
+    "source": "https://www.keyelco.com/product-pdf.cfm?p=306",
+    "bytes": 98182,
+    "sha256": "ea98d8f9c14ee114dde45b2657a424c2599e45dd140911123340254ce9c281a5",
+    "status": "downloaded"
+  },
+  {
+    "file": "Keystone_catalog.pdf",
+    "source": "https://www.keystone-europe.com/wp-content/uploads/catalog-keystone-europe.pdf",
+    "status": "downloaded",
+    "bytes": 24209366,
+    "sha256": "626e4686c4bc0e649eb1bb554c14337224d2570c5102d9898785a646259d3168"
+  },
+  {
+    "file": "Littelfuse_297_MINI.pdf",
+    "source": "https://www.ficcorp.com/content/297-datasheet.pdf",
+    "bytes": 368396,
+    "sha256": "98a7e99bc5bbdf2abc9f329de5b779ea97fc78a3ba9aa8d8fecc0ec5b9c3a778",
+    "status": "downloaded",
+    "origin": "mirror"
+  },
+  {
+    "file": "Littelfuse_MINI_0297.pdf",
+    "source": "https://www.littelfuse.com/assetdocs/littelfuse_datasheet_297_mini32v.pdf?assetguid=42c9dd21-a88e-4328-8e67-2f832444faf1",
+    "status": "superseded",
+    "reason": "Ratings, I2t and derating data now archived in Littelfuse_297_MINI.pdf"
+  },
+  {
+    "file": "Littelfuse_MINI_0297_selection_guide.pdf",
+    "source": "https://www.littelfuse.com/assetdocs/fuse-selection-guide?assetguid=1d99e3a6-f314-48d7-b124-9d5d56955f09",
+    "status": "superseded",
+    "reason": "Ratings, I2t and derating data now archived in Littelfuse_297_MINI.pdf"
+  },
+  {
+    "file": "Nexperia_74AUP1G07.pdf",
+    "source": "https://assets.nexperia.com/documents/data-sheet/74AUP1G07.pdf",
+    "bytes": 301603,
+    "sha256": "cc2424e4dd29e30417efa253acc1cfd9e5e367246055ec0e57251628ad405667",
+    "status": "downloaded"
+  },
+  {
+    "file": "Ohmite_FC4L.pdf",
+    "source": "https://www.tti.com/content/dam/ttiinc/manufacturers/ohmite/doc/ohmite-fc4l-series-current-sense-resistors-datasheet-and-specifications.pdf",
+    "bytes": 672106,
+    "sha256": "84283279cf01496185c540f160c771b5d5eb479f4080d552bde50b23dfc3c625",
+    "status": "downloaded",
+    "origin": "mirror"
+  },
+  {
+    "file": "TDK_C1608X7R1H104K080AA.pdf",
+    "source": "https://product.tdk.com/info/en/documents/chara_sheet/C1608X7R1H104K080AA.pdf",
+    "status": "failed",
+    "reason": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "TDK_C2012C0G2A562J125AA.pdf",
+    "source": "https://product.tdk.com/info/en/documents/chara_sheet/C2012C0G2A562J125AA.pdf",
+    "status": "failed",
+    "reason": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "TDK_C2012X7R1A106K125AC.pdf",
+    "source": "https://product.tdk.com/info/en/documents/chara_sheet/C2012X7R1A106K125AC.pdf",
+    "status": "failed",
+    "reason": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "TDK_C2012X7R1H105K125AB.pdf",
+    "source": "https://product.tdk.com/info/en/documents/chara_sheet/C2012X7R1H105K125AB.pdf",
+    "status": "failed",
+    "reason": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "TDK_C3216X7R1H106K160AC.pdf",
+    "source": "https://product.tdk.com/info/en/documents/chara_sheet/C3216X7R1H106K160AC.pdf",
+    "status": "failed",
+    "reason": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "TPS7A16.pdf",
+    "source": "https://www.ti.com/lit/ds/symlink/tps7a16.pdf",
+    "bytes": 1633416,
+    "sha256": "4e05cfdef8f64684f9f24b7d1f86e83badb7784c09c96f2ddbcbdbc0a3b48f80",
+    "status": "downloaded"
+  },
+  {
+    "file": "onsemi_MBR0540.pdf",
+    "source": "https://cdn-reichelt.de/documents/datenblatt/A400/MBR0540T1-D.PDF",
+    "bytes": 283432,
+    "sha256": "f2cd4c964628670eae1c1062729064a3767d8d6b0b3f9d06e9132a6900ac06c0",
+    "status": "downloaded",
+    "origin": "mirror"
+  }
+]
