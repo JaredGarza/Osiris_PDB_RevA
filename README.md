@@ -9,6 +9,9 @@ Open `Osiris_PDB_RevA.kicad_pro` in KiCad 10. Project libraries use `${KIPRJMOD}
 New Osiris Rev B power and top-facing ports are planned, not yet drawn; shared-part
 counts from the old imported PCB remain candidates.
 
+See the [PDB and Osiris completion plan](docs/PDB-AND-OSIRIS-COMPLETION-PLAN.md)
+for achieved milestones, remaining review gates, interface decisions and proposed dates.
+
 **Not flight-ready. No current PDB PCB layout exists.** Start with
 [Rev A readiness and completion plan](docs/REV-A-READINESS.md) and
 [current scope](DESIGN-SPEC.md).
