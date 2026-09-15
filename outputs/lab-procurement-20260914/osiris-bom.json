@@ -1,0 +1,1321 @@
+{
+  "sha256": "82c98a07af79acc3e7d6a1046bf02901b6d08617cb8b6946c63fdf98da97b7e5",
+  "records": 455,
+  "physical_symbols": 425,
+  "groups": [
+    {
+      "mpn": "BM09B-GHS-TBT(LF)(SN)(N)",
+      "value": "BM09B-GHS-TBT(LF)(SN)(N)",
+      "refs": "J26",
+      "sheets": [
+        "OS_Connectors.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "BM04B-GHS-TBT(LF)(SN)",
+      "value": "BM04B-GHS-TBT(LF)(SN)",
+      "refs": "J27, J29, J30, J28, J37",
+      "sheets": [
+        "OS_Connectors.SchDoc"
+      ],
+      "qty": 5,
+      "manufacturer": "",
+      "package": "SMD/SMT"
+    },
+    {
+      "mpn": "BM06B-GHS-TBT(LF)(SN)",
+      "value": "BM06B-GHS-TBT(LF)(SN)",
+      "refs": "J32, J33, J34, J35",
+      "sheets": [
+        "OS_Connectors.SchDoc"
+      ],
+      "qty": 4,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "BM07B-GHS-TBT (LF)(SN)",
+      "value": "BM07B-GHS-TBT (LF)(SN)",
+      "refs": "J31",
+      "sheets": [
+        "OS_Connectors.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "BM20B-SRDS-G-TF(LF)(SN)",
+      "value": "BM20B-SRDS-G-TF(LF)(SN)",
+      "refs": "J24, J25",
+      "sheets": [
+        "OS_Connectors.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "533980471",
+      "value": "533980471",
+      "refs": "J36",
+      "sheets": [
+        "OS_Connectors.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Molex",
+      "package": "0"
+    },
+    {
+      "mpn": "12k",
+      "value": "12k",
+      "refs": "R76, R77, R74, R75, R18, R68, R69, R56, R57, R9, R19",
+      "sheets": [
+        "OS_Connectors.SchDoc",
+        "OS_JetsonUSBHub.SchDoc",
+        "OS_PowerInput.SchDoc",
+        "OS_PowerSupply.SchDoc",
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 11,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "TXB0104RGYR",
+      "value": "TXB0104RGYR",
+      "refs": "U28, U23, U25, U24, U8, U9",
+      "sheets": [
+        "OS_Connectors.SchDoc",
+        "OS_JetsonCamera.SchDoc",
+        "OS_JetsonGPIO.SchDoc",
+        "OS_JetsonMisc.SchDoc"
+      ],
+      "qty": 6,
+      "manufacturer": "Texas Instruments",
+      "package": "RGY0014A"
+    },
+    {
+      "mpn": "100n",
+      "value": "100n",
+      "refs": "C235, C236, C131, C126, C127, C128, C129, C125, C120, C121, C122, C123, C98, C95, C100, C101, C102, C103, C104, C105, C106, C107, C108, C109, C110, C111, C112, C113, C114, C115, C119, C118, C221, C218, C220, C229, C231, C224, C226, C227, C232, C234, C211, C212, C239, C216, C217, C215, C213, C214, C89, C90, C91, C92, C93, C135, C136, C132, C133, C41, C42, C43, C44, C51, C52, C53, C54, C55, C56, C58, C59, C60, C61, C62, C63, C64, C65, C45, C46, C47, C48, C237, C238, C153, C154, C155, C156, C157, C158, C150, C159, C162, C210, C1, C13, C15, C27, C178, C186, C185, C187, C191, C190, C192, C189, C188, C195, C200, C203, C207, C208, C209, C197, C198, C170, C174, C80, C83, C68, C84, C85, C86, C87, C76, C77, C78, C79, C72, C73, C74, C75, C88, C66, C67",
+      "sheets": [
+        "OS_Connectors.SchDoc",
+        "OS_Ethernet.SchDoc",
+        "OS_FMU.SchDoc",
+        "OS_FMU_Sensors.SchDoc",
+        "OS_JetsonCamera.SchDoc",
+        "OS_JetsonGPIO.SchDoc",
+        "OS_JetsonMisc.SchDoc",
+        "OS_JetsonPower.SchDoc",
+        "OS_JetsonUSB.SchDoc",
+        "OS_JetsonUSBHub.SchDoc",
+        "OS_ModuleHub.SchDoc",
+        "OS_PowerInput.SchDoc",
+        "OS_PowerSupply.SchDoc",
+        "OS_RadioDW1000.SchDoc",
+        "OS_RadioSX1280.SchDoc",
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 134,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "2337992-8",
+      "value": "2337992-8",
+      "refs": "J7, J6",
+      "sheets": [
+        "OS_Ethernet.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "TE Connectivity",
+      "package": ""
+    },
+    {
+      "mpn": "DDR4 SODIMM 260P",
+      "value": "DDR4 SODIMM 260P",
+      "refs": "P1",
+      "sheets": [
+        "OS_Ethernet.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "10n",
+      "value": "10n",
+      "refs": "C130, C124, C223, C173, C169",
+      "sheets": [
+        "OS_Ethernet.SchDoc",
+        "OS_FMU_Sensors.SchDoc",
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 5,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "200",
+      "value": "200",
+      "refs": "R33, R34, R35, R32",
+      "sheets": [
+        "OS_Ethernet.SchDoc"
+      ],
+      "qty": 4,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "1k",
+      "value": "1k",
+      "refs": "R82, R83, R42, R43, R44",
+      "sheets": [
+        "OS_Ethernet.SchDoc",
+        "OS_ModuleHub.SchDoc"
+      ],
+      "qty": 5,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "STM32H743IIK6",
+      "value": "STM32H743IIK6",
+      "refs": "U10",
+      "sheets": [
+        "OS_FMU.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "STMicroelectronics",
+      "package": "UFBGA176+25-A0E7"
+    },
+    {
+      "mpn": "TSX-3225 24.0000MF15X-AC",
+      "value": "16MHz",
+      "refs": "X3",
+      "sheets": [
+        "OS_FMU.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Epson",
+      "package": ""
+    },
+    {
+      "mpn": "10p",
+      "value": "10p",
+      "refs": "C116, C117, C183, C184, C201, C204, C175, C176",
+      "sheets": [
+        "OS_FMU.SchDoc",
+        "OS_RadioDW1000.SchDoc",
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 8,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "2u2",
+      "value": "2u2",
+      "refs": "C96, C97, C222, C219, C230, C225, C233",
+      "sheets": [
+        "OS_FMU.SchDoc",
+        "OS_FMU_Sensors.SchDoc"
+      ],
+      "qty": 7,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "FM25V01A-GTR",
+      "value": "FM25V01A-GTR",
+      "refs": "B1",
+      "sheets": [
+        "OS_FMU.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Cypress Semiconductor",
+      "package": ""
+    },
+    {
+      "mpn": "10k",
+      "value": "10k",
+      "refs": "R27, R81, R26, R40, R79, R36, R41, R14, R51, R50, R20, R21, R23, R24, R25",
+      "sheets": [
+        "OS_FMU.SchDoc",
+        "OS_JetsonGPIO.SchDoc",
+        "OS_JetsonMisc.SchDoc",
+        "OS_JetsonPower.SchDoc",
+        "OS_M2B.SchDoc",
+        "OS_ModuleHub.SchDoc",
+        "OS_PowerSupply.SchDoc",
+        "OS_RadioSX1280.SchDoc",
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 15,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "4u7",
+      "value": "4u7",
+      "refs": "C99, C134, C152, C151",
+      "sheets": [
+        "OS_FMU.SchDoc",
+        "OS_JetsonPower.SchDoc",
+        "OS_ModuleHub.SchDoc"
+      ],
+      "qty": 4,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "MAX3051EKA+T",
+      "value": "MAX3051EKA+T",
+      "refs": "IC5, IC4, IC13",
+      "sheets": [
+        "OS_FMU.SchDoc",
+        "OS_JetsonGPIO.SchDoc"
+      ],
+      "qty": 3,
+      "manufacturer": "Analog Devices",
+      "package": ""
+    },
+    {
+      "mpn": "120",
+      "value": "120",
+      "refs": "R29, R31, R28, R30, R72, R73",
+      "sheets": [
+        "OS_FMU.SchDoc",
+        "OS_JetsonGPIO.SchDoc"
+      ],
+      "qty": 6,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "BMI088",
+      "value": "BMI088",
+      "refs": "IC15",
+      "sheets": [
+        "OS_FMU_Sensors.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "BOSCH",
+      "package": ""
+    },
+    {
+      "mpn": "TESEO-LIV3R",
+      "value": "TESEO-LIV3R",
+      "refs": "IC16",
+      "sheets": [
+        "OS_FMU_Sensors.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "STMicroelectronics",
+      "package": ""
+    },
+    {
+      "mpn": "LPS22HBTR",
+      "value": "LPS22HBTR",
+      "refs": "U27",
+      "sheets": [
+        "OS_FMU_Sensors.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "STMicroelectronics",
+      "package": "HLGA-10L-8479831"
+    },
+    {
+      "mpn": "ICM-42688-P",
+      "value": "ICM-42688-P",
+      "refs": "IC14",
+      "sheets": [
+        "OS_FMU_Sensors.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "TDK",
+      "package": ""
+    },
+    {
+      "mpn": "U.FL-R-SMT-1(80)",
+      "value": "U.FL-R-SMT-1(80)",
+      "refs": "J22, J14, J13, J12",
+      "sheets": [
+        "OS_FMU_Sensors.SchDoc",
+        "OS_RadioDW1000.SchDoc",
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 4,
+      "manufacturer": "",
+      "package": "SMD/SMT"
+    },
+    {
+      "mpn": "LIS2MDLTR",
+      "value": "LIS2MDLTR",
+      "refs": "U26",
+      "sheets": [
+        "OS_FMU_Sensors.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "STMicroelectronics",
+      "package": "LGA-12-DM00170568"
+    },
+    {
+      "mpn": "220n",
+      "value": "220n",
+      "refs": "C228, C31, C34, C32, C35, C37, C39, C33, C36, C38, C40",
+      "sheets": [
+        "OS_FMU_Sensors.SchDoc",
+        "OS_JetsonPCIE.SchDoc"
+      ],
+      "qty": 11,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "TC2030-NL-FP",
+      "value": "TC2030-NL",
+      "refs": "J23, J5, J11",
+      "sheets": [
+        "OS_FMU_Sensors.SchDoc",
+        "OS_JetsonMisc.SchDoc",
+        "OS_ModuleHub.SchDoc"
+      ],
+      "qty": 3,
+      "manufacturer": "Tag-Connect",
+      "package": ""
+    },
+    {
+      "mpn": "1-1734248-5",
+      "value": "1-1734248-5",
+      "refs": "J18, J19, J20, J21",
+      "sheets": [
+        "OS_JetsonCamera.SchDoc"
+      ],
+      "qty": 4,
+      "manufacturer": "TE",
+      "package": "0"
+    },
+    {
+      "mpn": "TMUX1309PWR",
+      "value": "TMUX1309PWR",
+      "refs": "IC12",
+      "sheets": [
+        "OS_JetsonCamera.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Texas Instruments",
+      "package": ""
+    },
+    {
+      "mpn": "36103255S",
+      "value": "36103255S",
+      "refs": "H2, H3",
+      "sheets": [
+        "OS_JetsonMain.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "Wurth Elektronik",
+      "package": ""
+    },
+    {
+      "mpn": "ST33HTPH2X32AHE4",
+      "value": "ST33HTPH2X32AHE4",
+      "refs": "IC3",
+      "sheets": [
+        "OS_JetsonMisc.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "STMicroelectronics",
+      "package": ""
+    },
+    {
+      "mpn": "10u",
+      "value": "10u",
+      "refs": "C94, C7, C8, C9, C10, C11, C12, C2, C3, C4, C5, C21, C22, C23, C24, C25, C26, C16, C17, C18, C19, C82",
+      "sheets": [
+        "OS_JetsonMisc.SchDoc",
+        "OS_PowerSupply.SchDoc",
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 22,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "90120-0123",
+      "value": "90120-0123",
+      "refs": "J4, J10, J38",
+      "sheets": [
+        "OS_JetsonMisc.SchDoc",
+        "OS_JetsonPower.SchDoc",
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 3,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "100k",
+      "value": "100k",
+      "refs": "R80, R39, R38, R37, R15",
+      "sheets": [
+        "OS_JetsonMisc.SchDoc",
+        "OS_JetsonPower.SchDoc",
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 5,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "1-2199230-5",
+      "value": "1-2199230-5",
+      "refs": "J2",
+      "sheets": [
+        "OS_JetsonPCIE.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "TE Connectivity",
+      "package": ""
+    },
+    {
+      "mpn": "2041119-1",
+      "value": "2041119-1",
+      "refs": "J39",
+      "sheets": [
+        "OS_JetsonPCIE.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "TE Connectivity",
+      "package": ""
+    },
+    {
+      "mpn": "STM32F030F4P6TR",
+      "value": "STM32F030F4P6TR",
+      "refs": "U11",
+      "sheets": [
+        "OS_JetsonPower.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "STMicroelectronics",
+      "package": ""
+    },
+    {
+      "mpn": "AMS1117-3.3",
+      "value": "AMS1117-3.3",
+      "refs": "U12, U3, U16",
+      "sheets": [
+        "OS_JetsonPower.SchDoc",
+        "OS_PowerSupply.SchDoc",
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 3,
+      "manufacturer": "Advanced Monolithic Systems",
+      "package": "AMS1117"
+    },
+    {
+      "mpn": "74LVC1T45DW-7",
+      "value": "74LVC1T45DW-7",
+      "refs": "IC6, IC7, IC1",
+      "sheets": [
+        "OS_JetsonPower.SchDoc",
+        "OS_JetsonUSB.SchDoc"
+      ],
+      "qty": 3,
+      "manufacturer": "Diodes Incorporated",
+      "package": ""
+    },
+    {
+      "mpn": "AMS1117-3.3",
+      "value": "AMS1117-1.8",
+      "refs": "U13, U20",
+      "sheets": [
+        "OS_JetsonPower.SchDoc",
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "Advanced Monolithic Systems",
+      "package": "AMS1117"
+    },
+    {
+      "mpn": "100u",
+      "value": "100u",
+      "refs": "C139, C6, C20",
+      "sheets": [
+        "OS_JetsonPower.SchDoc",
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 3,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "22u",
+      "value": "22u",
+      "refs": "C140, C141, C142, C143, C144, C145, C146, C147, C148, C149, C138, C137, C57, C29, C30, C196, C177, C81",
+      "sheets": [
+        "OS_JetsonPower.SchDoc",
+        "OS_JetsonUSBHub.SchDoc",
+        "OS_PowerSupply.SchDoc",
+        "OS_RadioDW1000.SchDoc",
+        "OS_RadioSX1280.SchDoc",
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 18,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "1054500101",
+      "value": "1054500101",
+      "refs": "J3",
+      "sheets": [
+        "OS_JetsonUSB.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Molex",
+      "package": "0"
+    },
+    {
+      "mpn": "5.1k",
+      "value": "5.1k",
+      "refs": "R16, R17",
+      "sheets": [
+        "OS_JetsonUSB.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "USB5744-I/2G",
+      "value": "USB5744-I/2G",
+      "refs": "U5",
+      "sheets": [
+        "OS_JetsonUSBHub.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "TSX-3225 24.0000MF15X-AC",
+      "value": "25MHz",
+      "refs": "X1, X4, X2",
+      "sheets": [
+        "OS_JetsonUSBHub.SchDoc",
+        "OS_ModuleHub.SchDoc",
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 3,
+      "manufacturer": "Epson",
+      "package": ""
+    },
+    {
+      "mpn": "16p",
+      "value": "16p",
+      "refs": "C49, C50, C160, C161, C70, C71",
+      "sheets": [
+        "OS_JetsonUSBHub.SchDoc",
+        "OS_ModuleHub.SchDoc",
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 6,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "AMS1117-1.2",
+      "value": "AMS1117-1.2",
+      "refs": "IC2",
+      "sheets": [
+        "OS_JetsonUSBHub.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Advanced Monolithic Systems",
+      "package": ""
+    },
+    {
+      "mpn": "2199230-3",
+      "value": "2199230-3",
+      "refs": "J8",
+      "sheets": [
+        "OS_M2B.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "TE Connectivity",
+      "package": ""
+    },
+    {
+      "mpn": "78800-0001",
+      "value": "78800-0001",
+      "refs": "J9",
+      "sheets": [
+        "OS_M2B.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Molex",
+      "package": ""
+    },
+    {
+      "mpn": "2k2",
+      "value": "2k2",
+      "refs": "R78, R46, R11, R12, R3",
+      "sheets": [
+        "OS_M2B.SchDoc",
+        "OS_ModuleHub.SchDoc",
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 5,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "GREEN",
+      "value": "GREEN",
+      "refs": "D10, D2",
+      "sheets": [
+        "OS_M2B.SchDoc",
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "STM32F446RET6",
+      "value": "STM32F446RET6",
+      "refs": "U14",
+      "sheets": [
+        "OS_ModuleHub.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "ST",
+      "package": "LQFP64-5W"
+    },
+    {
+      "mpn": "TC5050RGBF08-3CJH-AF53A",
+      "value": "XL-5050RGBC",
+      "refs": "LED1",
+      "sheets": [
+        "OS_ModuleHub.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "TCWIN",
+      "package": ""
+    },
+    {
+      "mpn": "THVD1551DGK",
+      "value": "THVD1551DGK",
+      "refs": "IC8, IC9",
+      "sheets": [
+        "OS_ModuleHub.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "Texas Instruments",
+      "package": ""
+    },
+    {
+      "mpn": "100",
+      "value": "100",
+      "refs": "R45, R47, R48, R49",
+      "sheets": [
+        "OS_ModuleHub.SchDoc"
+      ],
+      "qty": 4,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "RED",
+      "value": "RED",
+      "refs": "D3, D1",
+      "sheets": [
+        "OS_ModuleHub.SchDoc",
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "XT60PW-F",
+      "value": "XT60PW-F",
+      "refs": "J15",
+      "sheets": [
+        "OS_PowerInput.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Amass",
+      "package": ""
+    },
+    {
+      "mpn": "XT60PW-M",
+      "value": "XT60PW-M",
+      "refs": "J16",
+      "sheets": [
+        "OS_PowerInput.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Changzou Amass Elec",
+      "package": ""
+    },
+    {
+      "mpn": "CSS2725FTL250",
+      "value": "LR2725-24R00025F1",
+      "refs": "R55",
+      "sheets": [
+        "OS_PowerInput.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Stackpole Electronics",
+      "package": "0"
+    },
+    {
+      "mpn": "LM73100RPWR",
+      "value": "LM73100RPWR",
+      "refs": "U21, U22, U4",
+      "sheets": [
+        "OS_PowerInput.SchDoc",
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 3,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "24k",
+      "value": "24k",
+      "refs": "R61, R65, R70, R63, R67, R71",
+      "sheets": [
+        "OS_PowerInput.SchDoc"
+      ],
+      "qty": 6,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "470k",
+      "value": "470k",
+      "refs": "R58, R59",
+      "sheets": [
+        "OS_PowerInput.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "47k",
+      "value": "47k",
+      "refs": "R60, R62",
+      "sheets": [
+        "OS_PowerInput.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "DCJ0202",
+      "value": "DCJ0202",
+      "refs": "J17",
+      "sheets": [
+        "OS_PowerInput.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "CONEC",
+      "package": ""
+    },
+    {
+      "mpn": "INA228AIDGSR",
+      "value": "INA228AIDGSR",
+      "refs": "IC11",
+      "sheets": [
+        "OS_PowerInput.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Texas Instruments",
+      "package": ""
+    },
+    {
+      "mpn": "8k",
+      "value": "8k",
+      "refs": "R64, R66",
+      "sheets": [
+        "OS_PowerInput.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "AP64501SP-13",
+      "value": "AP64501SP-13",
+      "refs": "U1, U2",
+      "sheets": [
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "10",
+      "value": "10",
+      "refs": "R1, R5",
+      "sheets": [
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "FNR6028S3R3NT",
+      "value": "FNR6028S3R3NT",
+      "refs": "L1, L2, L3",
+      "sheets": [
+        "OS_PowerSupply.SchDoc",
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 3,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "12k 1%",
+      "value": "12k 1%",
+      "refs": "R2",
+      "sheets": [
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "20k",
+      "value": "20k",
+      "refs": "R4, R8",
+      "sheets": [
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "1n2",
+      "value": "1n2",
+      "refs": "C14, C28",
+      "sheets": [
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "47k 1%",
+      "value": "47k 1%",
+      "refs": "R6",
+      "sheets": [
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "15k 1%",
+      "value": "15k 1%",
+      "refs": "R7",
+      "sheets": [
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "330k",
+      "value": "330k",
+      "refs": "R10",
+      "sheets": [
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "30k",
+      "value": "30k",
+      "refs": "R13",
+      "sheets": [
+        "OS_PowerSupply.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "DW1000-I-TR13",
+      "value": "DW1000-I-TR13",
+      "refs": "U17",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "SKY13585-679LF",
+      "value": "SKY13585-679LF",
+      "refs": "U18",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "HHM1595A1",
+      "value": "HHM1595A1",
+      "refs": "U19",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "TDK",
+      "package": ""
+    },
+    {
+      "mpn": "1p2",
+      "value": "1p2",
+      "refs": "C181",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "16k",
+      "value": "16k",
+      "refs": "R52",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "27p",
+      "value": "27p",
+      "refs": "C182",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "18p",
+      "value": "18p",
+      "refs": "C180",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "820p",
+      "value": "820p",
+      "refs": "C179",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "270",
+      "value": "270",
+      "refs": "R53",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "11k",
+      "value": "11k",
+      "refs": "R54",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "TSX-3225 24.0000MF15X-AC",
+      "value": "38.4 MHz",
+      "refs": "X6",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Epson",
+      "package": ""
+    },
+    {
+      "mpn": "12p",
+      "value": "12p",
+      "refs": "C193, C194",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "330p",
+      "value": "330p",
+      "refs": "C202, C205",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "47u",
+      "value": "47u",
+      "refs": "C199",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "1n",
+      "value": "1n",
+      "refs": "C206",
+      "sheets": [
+        "OS_RadioDW1000.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "SX1280IMLTRT",
+      "value": "SX1280IMLTRT",
+      "refs": "IC10",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "SEMTECH",
+      "package": ""
+    },
+    {
+      "mpn": "470n",
+      "value": "470n",
+      "refs": "C172",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "TSX-3225 24.0000MF15X-AC",
+      "value": "52MHz 10pF",
+      "refs": "X5",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "Epson",
+      "package": ""
+    },
+    {
+      "mpn": "0p8 .1%",
+      "value": "0p8 .1%",
+      "refs": "C165",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "LQW15AN3N0B80D",
+      "value": "LQW15AN3N0B80D",
+      "refs": "L4",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "1p2 .1%",
+      "value": "1p2 .1%",
+      "refs": "C166, C167",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 2,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "LQW15AN2N5B00D",
+      "value": "LQW15AN2N5B00D",
+      "refs": "L5",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "0p5 \u017d +/- .05",
+      "value": "0p5 \u017d +/- .05",
+      "refs": "C163",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "100p",
+      "value": "100p",
+      "refs": "C164",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "RFX2401C",
+      "value": "RFX2401C",
+      "refs": "U15",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "",
+      "package": "QFN"
+    },
+    {
+      "mpn": "DEA162500LT-1217A1",
+      "value": "DEA162500LT-1217A1",
+      "refs": "FL1",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "TDK",
+      "package": ""
+    },
+    {
+      "mpn": "0p3",
+      "value": "0p3",
+      "refs": "C171",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "220p",
+      "value": "220p",
+      "refs": "C168",
+      "sheets": [
+        "OS_RadioSX1280.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "LAN7800/Y9X",
+      "value": "LAN7800/Y9X",
+      "refs": "U6",
+      "sheets": [
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "93AA66C-I/SN",
+      "value": "93AA66C-I/SN",
+      "refs": "U7",
+      "sheets": [
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "",
+      "package": ""
+    },
+    {
+      "mpn": "1u",
+      "value": "1u",
+      "refs": "C69",
+      "sheets": [
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    },
+    {
+      "mpn": "2k",
+      "value": "2k",
+      "refs": "R22",
+      "sheets": [
+        "OS_USBEthBridge.SchDoc"
+      ],
+      "qty": 1,
+      "manufacturer": "*",
+      "package": ""
+    }
+  ]
+}
