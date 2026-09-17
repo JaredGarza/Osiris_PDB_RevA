@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "symbols": 47,
+  "populated": 45,
+  "intentional_pin_changes": {
+    "Q1:4": "/GATE_PIN",
+    "Q2:4": "/GATE_PIN",
+    "R4:1": "/GATE_PIN",
+    "R4:2": "/GATE_RC",
+    "C1:1": "/GATE_RC"
+  },
+  "other_pin_nets_preserved": true,
+  "removed": "D2",
+  "DNP": [
+    "R17",
+    "R18"
+  ],
+  "both_BOMs_match": true,
+  "passives_checked": [
+    "C1",
+    "C2",
+    "C3",
+    "C4",
+    "C5",
+    "C6",
+    "C7",
+    "C8",
+    "C9",
+    "C10",
+    "D1",
+    "D3",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R6",
+    "R7",
+    "R8",
+    "R9",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16"
+  ],
+  "Osiris_device_network_preserved": true,
+  "limitations": "SPICE IC behavior and PCB parasitics are not validated by connectivity checks."
+}

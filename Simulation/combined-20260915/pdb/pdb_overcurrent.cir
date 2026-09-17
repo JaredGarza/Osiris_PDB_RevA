@@ -1,0 +1,34 @@
+* PDB overcurrent behaviour: does the LTC4368 circuit breaker trip before
+* the 4 A fuse reaches its melting I2t?
+* Fault is applied at t=300ms after the rail is established.
+* NOTE: the fuse does NOT open in this model. FUSE_I2T is an energy
+* indicator only -- reaching 17 A2s means "melting energy delivered",
+* it does NOT model arcing, clearing time, or interrupt capability.
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc ..\models\pdb_devices.lib
+.inc pdb_ap2.lib
+
+.step param RFAULT list 0.010 0.10 0.50 1.0 2.0
+
+VBAT VB 0 PWL(0 0 1m 14.8)
+RSRC VB VIN 20m
+XPDB VIN VOUT V3V3 GP GF COMMON FAULT ALERT SCL SDA 0 PDB_AP2
+RLOAD VOUT 0 9.5
+
+* Fault switch across the output
+SFLT VOUT NFLT FCTRL 0 SWFAULT
+RFLT NFLT 0 {RFAULT}
+VFCTL FCTRL 0 PWL(0 0 299.9m 0 300m 1)
+.model SWFAULT SW(Ron=1m Roff=1G Vt=0.5 Vh=0.1)
+
+.tran 0 1.2 0 5u
+.options method=gear reltol=0.003
+
+.meas TRAN IPK_FAULT MAX I(RSRC)           FROM 299m TO 400m
+.meas TRAN IPK_FLT   MAX I(RFLT)           FROM 299m TO 400m
+.meas TRAN FUSE_I2T  INTEG I(RSRC)*I(RSRC) FROM 299.9m TO 1.2
+.meas TRAN VOUT_POST AVG V(VOUT)           FROM 500m TO 900m
+.meas TRAN GF_POST   AVG V(GF)             FROM 500m TO 900m
+.meas TRAN VOUT_END  AVG V(VOUT)           FROM 1.15 TO 1.2
+.end

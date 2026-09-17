@@ -1,0 +1,307 @@
+* ============================================================================
+* osiris_reva.lib -- Osiris flight computer, revision A (REFERENCE CAD AS-BUILT)
+*
+* THIS IS Rev A. The Rev B power redesign DOES NOT EXIST and nothing here
+* anticipates it.
+*
+* Connectivity traced from docs/osiris-power-audit/zip-pcb-pad-nets.json,
+* zip-schematic-components.json, OS_PowerInput-zip.json, OS_PowerSupply-zip.json.
+* Engine: LTspice 26.x
+*
+* Requires from the top-level deck:
+*   .inc ../../models/U21_SCREEN.lib      (LM73100 engineering surrogate)
+* ============================================================================
+
+* ---------------------------------------------------------------------------
+* BUCK_AVG -- averaged (non-switching) synchronous buck
+*
+* ** SURROGATE. NOT A DIODES INC. MODEL. **
+* No AP64501 SPICE model or datasheet exists in this tree. This is a
+* behavioural average model capturing the four things that actually matter
+* to the upstream PDB:
+*   (a) CONSTANT-POWER input characteristic -- as VIN sags, input current
+*       RISES. This is the negative-incremental-resistance behaviour that
+*       can latch a current-limited source into a brownout, and it is the
+*       main reason the combined simulation is worth running at all.
+*   (b) soft-start ramp, so inrush is bounded
+*   (c) input UVLO
+*   (d) output current limit
+* It does NOT model: switching ripple, loop stability/phase margin,
+* the COMP network (R4/C14, R9/C28), inductor saturation, efficiency vs
+* load curve (EFF is a single constant), or any thermal behaviour.
+* Do NOT use it to assess ripple, transient response, or loop compensation.
+* ---------------------------------------------------------------------------
+.subckt BUCK_AVG IN OUT EN GND
++ PARAMS: VSET=5 EFF=0.85 ILIM=6 TSS=2m VUVLO=4.0 IQ=2m
+
+* Enable gate. Deliberately SMOOTHED (tanh, not if()): a hard comparator
+* here chatters when the rail decays through VUVLO during an OV/UV
+* disconnect and collapses the timestep to ~1e-15. The transition widths
+* below (100 mV) are numerical softening, NOT modelled UVLO hysteresis --
+* the real part's hysteresis is unknown and is not represented.
+BGO  GO 0 V=0.25*(1+tanh((V(EN)-1.2)/0.1))*(1+tanh((V(IN)-{VUVLO})/0.1))
+RGO  GO 0 1G
+
+* Soft-start ramp: rises to VSET over TSS while enabled, collapses when not
+CSS  SS 0 1u
+BSS  0 SS I=1u*( V(GO)*limit(({VSET}-V(SS))*1e6, 0, {VSET/TSS})
++                - (1-V(GO))*V(SS)*1e4 )
+RSS  SS 0 1G
+
+* Delivered output current: regulates OUT to the soft-start reference,
+* hard-limited at ILIM, cannot sink (models a buck in DCM at light load)
+BIDEL IDEL 0 V=limit( (V(SS)-V(OUT))*1000 , 0 , {ILIM} )
+RIDEL IDEL 0 1G
+BOUT  0 OUT I=V(IDEL)
+
+* Reflected input current = Pout / efficiency / Vin, plus quiescent
+BIN   IN GND I=V(OUT)*V(IDEL)/{EFF}/max(V(IN),1) + V(GO)*{IQ}
+.ends BUCK_AVG
+
+* ---------------------------------------------------------------------------
+* LDO_AMS1117 -- fixed-output 3-terminal LDO, behavioural
+* AMS1117 family: dropout ~1.1 V at 800 mA, no enable pin.
+* Models regulation, dropout and pass-through current only.
+* ---------------------------------------------------------------------------
+.subckt LDO_AMS1117 IN OUT GND PARAMS: VSET=3.3 VDROP=1.1 ILIM=0.8 IQ=5m
+BIDEL IDEL 0 V=limit( (min({VSET},V(IN)-{VDROP})-V(OUT))*500 , 0 , {ILIM} )
+RIDEL IDEL 0 1G
+BOUT  0 OUT I=V(IDEL)
+BIN   IN GND I=V(IDEL) + {IQ}
+.ends LDO_AMS1117
+
+* ---------------------------------------------------------------------------
+* DIGILOAD -- aggregated digital load
+* CPU/Jetson/radio/FPGA behaviour cannot be simulated at transistor level
+* without vendor models, so every digital consumer is lumped into an
+* explicit parameterised current sink with:
+*   - a rail-collapse guard (draws nothing below VMIN, so a dead rail does
+*     not get dragged further negative by a phantom load)
+*   - a ramp-in over TRAMP after the rail is valid (boot ramp)
+*   - an optional step of ISTEP at TSTEP (load transient)
+* This is CONSTANT CURRENT, not constant power -- digital rails are fed by
+* their own regulators, so constant-current is the right abstraction here.
+* ---------------------------------------------------------------------------
+.subckt DIGILOAD RAIL GND
++ PARAMS: IBASE=1 ISTEP=0 TSTEP=1e9 TRAMP=20m VMIN=0.8
+BVAL VAL 0 V=({IBASE} + {ISTEP}*0.5*(1+tanh((time-{TSTEP})/100u)))
+RVAL VAL 0 1G
+CRMP RMP 0 1u
+BRMP 0 RMP I=1u*limit((V(VAL)-V(RMP))/{TRAMP},-1e3,1e3)
+RRMP RMP 0 1G
+* The rail-collapse guard MUST multiply the final drawn current, not VAL.
+* If it gates VAL instead, the TRAMP lag keeps the sink pulling current out
+* of an already-dead rail for tens of ms and drives it hundreds of volts
+* negative -- which then makes the upstream pass element try to source
+* kiloamps. A real load stops drawing the instant its rail collapses.
+BLD  RAIL GND I=max(V(RMP),0)
++                * limit((V(RAIL)-{VMIN}*0.5)/({VMIN}*0.5),0,1)
+.ends DIGILOAD
+
+* ===========================================================================
+*                           OSIRIS Rev A TOP SUBCIRCUIT
+* ===========================================================================
+* Pin order:
+*   BATIN   J16.1 XT60PW-M battery inlet from the PDB   (VBATT_IN)
+*   AUXIN   J17   DCJ0202 DC barrel jack, alternate src (VCONN_OUT)
+*   V5      U1 buck output                              (+5V0)
+*   V3      U2 buck output                              (+3V3)
+*   V5PROT  U4 LM73100 output                           (+5V0_PROT)
+*   VJET    Jetson supply at P1 pins 251-260            (sits ON +5V0)
+*   GND
+*
+* ** AUXIN IS NOT USB. ** On Rev A the USB-C receptacle J3 supplies NO
+* power: +VBUS_IN reaches only IC1 74LVC1T45 and is used purely as a 1.8 V
+* VBUS-present detect to the Jetson. There is no USB load switch, no diode,
+* no OR-ing element. The genuine alternate source is the J17 barrel jack
+* feeding U22. Leaving AUXIN open/grounded is correct for battery-only runs;
+* it does not clamp anything, because U22 blocks reverse current.
+*
+* PARAMS:
+*   LOAD5   total +5V0-domain ceiling (A), INCLUDING the Jetson
+*   LOAD3   total +3V3-domain ceiling (A)
+*   IJET    Jetson share of LOAD5 (A); the remainder goes to board loads
+*   TSEQ    delay from +3V3_AON valid to U11 asserting 3V3_EN / 5V0_EN
+*   CDERATE MLCC DC-bias derating applied to every bulk rail cap
+* ===========================================================================
+.subckt OSIRIS_REVA BATIN AUXIN V5 V3 V5PROT VJET GND
++ PARAMS: LOAD5=2.5 LOAD3=2.0 IJET=1.356 TSEQ=50m CDERATE=0.60
++          RXT60=0.3m SR21=28100 TD21=100u
+
+* --- J16 XT60PW-M inlet ---------------------------------------------------
+RJ16 BATIN VBATT_IN {RXT60}
+
+* --- R55 Stackpole CSS2725FTL250, 250 uohm 4 W current-sense shunt --------
+R55  VBATT_IN VBATT_OUT 250u
+
+* --- IC11 INA228 on FMU_I2C4 (analog behaviour only) ----------------------
+* VS is on +3V3, sense across R55, VBUS on VBATT_IN.
+RI11P VBATT_IN  GND 10Meg
+RI11N VBATT_OUT GND 10Meg
+BI11Q V3 GND I=600u*limit(V(V3)/2.7,0,1)
+
+* --- J15 XT60PW-F pass-through tap on VBATT_OUT ---------------------------
+* Unloaded in this model (nothing plugged in). No stub effect.
+
+* --- U21 LM73100RPWR primary eFuse: VBATT_OUT -> VIN ----------------------
+* EN/UVLO + OVLO from one 554k string: R58 470k / R61 24k / R65 24k /
+*   R68 12k / R70 24k.  UV tap has 84k below it, OV tap 24k below it.
+*   UV rising 1.2*554/84 = 7.91 V   UV falling 1.09*554/84 = 7.19 V
+*   OV        1.2*554/24 = 27.7 V   OV recover 1.09*554/24 = 25.16 V
+* Schematic annotation in OS_PowerInput-zip.json literally reads
+*   "7.9v < VIN < 27.7v", confirming the derivation.
+*
+* ** U21 DVDT (pin 7) IS UNCONNECTED -- there is no dV/dt capacitor. **
+* So the part slews at its open-pin default. SR21=28100 V/s is the
+* U21_SCREEN surrogate default, NOT a datasheet figure (LM73100_TRANS.lib
+* is encrypted and unreadable here). Into the 120 uF VIN bank that implies
+* roughly 120u * 28100 = 3.4 A of inrush -- a headline number that rests
+* on an UNVERIFIED slew rate. Treat it as a sensitivity, not a spec.
+R58  VBATT_OUT N_UV21 470k
+R61  N_UV21    N21A   24k
+R65  N21A      N21B   24k
+R68  N21B      N_OV21 12k
+R70  N_OV21    GND    24k
+XU21 VBATT_OUT VINR N_UV21 N_OV21 N_EN21 N_RMP21 U21_SCREEN
++    PARAMS: SR={SR21} TD={TD21}
+* PGTH network R60 47k (from VIN) / R64 8k -> 8.25 V power-good threshold.
+* PG (pin 3) is unconnected on the board, so this only loads the rail.
+R60  VINR   N_PGTH21 47k
+R64  N_PGTH21 GND    8k
+
+* --- U22 LM73100RPWR alternate eFuse: AUXIN (J17 barrel) -> VIN -----------
+* Divider is bit-identical to U21's, so identical 7.91/27.7 V window.
+* U21 and U22 simply both drive VIN. There is NO priority logic, NO mux IC
+* and NO cross-enable anywhere in the CAD -- OR-ing relies entirely on each
+* part's internal reverse-current blocking.
+R59  AUXIN  N_UV22 470k
+R63  N_UV22 N22A   24k
+R67  N22A   N22B   24k
+R69  N22B   N_OV22 12k
+R71  N_OV22 GND    24k
+XU22 AUXIN VINR N_UV22 N_OV22 N_EN22 N_RMP22 U21_SCREEN
++    PARAMS: SR={SR21} TD={TD21}
+R62  VINR     N_PGTH22 47k
+R66  N_PGTH22 GND      8k
+
+* --- VIN rail bulk: 12 x 10 uF = 120 uF -----------------------------------
+* C7 C8 C9 C10 C11 C12 C21 C22 C23 C24 C25 C26 (OS_PowerSupply.SchDoc)
+CVIN VINR GND {120u*CDERATE} Rser=3m
+
+* --- U1 AP64501SP-13 buck -> +5V0 -----------------------------------------
+* EN (pin 3) IS TIED TO VIN => U1 IS ALWAYS ON whenever VIN is valid.
+* This is what bootstraps the whole board.
+* FB divider R2 12k 1% / R3 2k2 -> 0.8*(1+12000/2200) = 5.164 V
+* SS cap C13 100n; COMP R4 20k + C14 1n2; BST C1 100n + R1 10R
+* L1 FNR6028S3R3NT  ** INDUCTANCE AMBIGUOUS: MPN implies 3.3 uH but the
+* Altium parameter field says 47 uH. Not arbitrated -- irrelevant to this
+* averaged model except that ripple is not represented at all. **
+VEN1 N_EN1 VINR 0
+XU1  VINR V5 N_EN1 GND BUCK_AVG
++    PARAMS: VSET=5.1636 EFF=0.85 ILIM=6 TSS=2m VUVLO=4.5 IQ=2m
+CV5  V5 GND {460u*CDERATE} Rser=2m
+
+* --- U2 AP64501SP-13 buck -> +3V3 -----------------------------------------
+* EN (pin 3) = 3V3_EN, asserted by the U11 sequencer (see below).
+* FB divider R6 47k 1% / R7 15k 1% -> 0.8*(1+47000/15000) = 3.307 V
+XU2  VINR V3 N_3V3_EN GND BUCK_AVG
++    PARAMS: VSET=3.3067 EFF=0.85 ILIM=6 TSS=2m VUVLO=4.5 IQ=2m
+CV3  V3 GND {221.4u*CDERATE} Rser=3m
+
+* --- U12 AMS1117-3.3 -> +3V3_AON (always-on housekeeping) -----------------
+* Fed from +5V0, NOT from +5V0_PROT. This closes the bootstrap loop:
+*   VIN -> U1 (always on) -> +5V0 -> U12 -> +3V3_AON -> U11 boots ->
+*   U11 asserts 3V3_EN (U2) and 5V0_EN (U4).
+XU12 V5 V3V3AON GND LDO_AMS1117 PARAMS: VSET=3.3 VDROP=1.1 ILIM=0.8 IQ=5m
+CAON V3V3AON GND {22u*CDERATE} Rser=10m
+
+* --- U11 STM32F030F4P6TR power sequencer ----------------------------------
+* Behavioural: once +3V3_AON is valid, wait TSEQ then assert both enables.
+* Firmware is NOT simulated; TSEQ is an assumed boot delay, not measured.
+* All comparators smoothed with tanh for the same numerical reason as
+* BGO above -- hard thresholds chatter when rails decay through them.
+BSEQ N_SEQ 0 V=0.5*(1+tanh((V(V3V3AON)-2.7)/0.05))
+RSEQ N_SEQ 0 1G
+CSQD N_SEQD 0 1u
+BSQD 0 N_SEQD I=1u*(V(N_SEQ)-V(N_SEQD))/{TSEQ}
+RSQD N_SEQD 0 1G
+BEN3 N_3V3_EN 0 V=1.65*(1+tanh((V(N_SEQD)-0.632)/0.02))
+REN3 N_3V3_EN 0 1G
+BEN5 N_5V0_EN 0 V=1.65*(1+tanh((V(N_SEQD)-0.632)/0.02))
+REN5 N_5V0_EN 0 1G
+R14  N_5V0_EN GND 10k
+BI11 V3V3AON GND I=8m*limit(V(V3V3AON)/2.0,0,1)
+
+* --- U4 LM73100RPWR load switch: +5V0 -> +5V0_PROT ------------------------
+* No UVLO divider on U4 -- EN is firmware-sequenced from U11 pin 13.
+* OVLO divider R10 330k / R13 30k / R15 100k -> 1.2*460/100 = 5.52 V.
+R10  V5       N10A       330k
+R13  N10A     N_OV4      30k
+R15  N_OV4    GND        100k
+BUV4 N_UV4 0 V=V(N_5V0_EN)
+RUV4 N_UV4 0 1G
+XU4  V5 V5PROT N_UV4 N_OV4 N_EN4 N_RMP4 U21_SCREEN
++    PARAMS: SR={SR21} TD={TD21}
+CVP  V5PROT GND {22.3u*CDERATE} Rser=10m
+
+* --- P1 Jetson supply tap (DDR4 SODIMM 260P pins 251-260 on +5V0) --------
+RP1  V5 VJET 2m
+
+* --- Rail bleed / leakage paths -------------------------------------------
+* Every rail here is driven by behavioural current sources and terminated
+* by current-sink loads, so without these there is no DC path to ground at
+* t=0 and LTspice reports the rails as floating. 1 Meg is negligible
+* against the real loads (microamps) but gives the solver a DC reference.
+RBL1 VINR    GND 1Meg
+RBL2 V5      GND 1Meg
+RBL3 V3      GND 1Meg
+RBL4 V5PROT  GND 1Meg
+RBL5 V3V3AON GND 1Meg
+
+* ===========================================================================
+* AGGREGATED DIGITAL LOADS
+* ===========================================================================
+* Per-device currents DO NOT EXIST in any source in this tree. The only
+* figures available are planning ceilings, all self-labelled assumptions in
+* docs/osiris-power-audit/requirements-20260910.md and calculate_power.py:
+*     rail5_a = 2.5   "Conditional total-load ceilings, not measured loads"
+*     rail3_a = 2.0
+*     jetson_w = 7.0  -> 1.356 A on the 5.164 V rail
+* LOAD5 is split so the Jetson and the rest of the 5 V domain are NOT
+* double counted: board 5 V load = LOAD5 - IJET.
+* Of that remainder, the split between +5V0 and +5V0_PROT is ITSELF an
+* assumption (60/40 below) -- no source apportions it.
+* ---------------------------------------------------------------------------
+.param I5BOARD = {max(LOAD5-IJET, 0)}
+
+* Jetson module on +5V0 via P1. Step models a compute-load transient.
+XJET VJET GND DIGILOAD
++ PARAMS: IBASE={IJET} ISTEP={IJET*0.5} TSTEP=600m TRAMP=30m VMIN=4.0
+
+* Remaining +5V0 loads (U12/U13 LDO inputs, module-hub 5 V, D1 LED)
+XL5  V5 GND DIGILOAD
++ PARAMS: IBASE={I5BOARD*0.6} ISTEP=0 TRAMP=25m VMIN=4.0
+
+* +5V0_PROT loads (JST-GH peripherals, fan J36, RS-485 IC8/IC9,
+* U3/U16/U20/IC2 LDO inputs, module-hub pins 17/19)
+XL5P V5PROT GND DIGILOAD
++ PARAMS: IBASE={I5BOARD*0.4} ISTEP=0 TRAMP=25m VMIN=4.0
+
+* +3V3 domain: U10 FMU, U14, U5 hub, U6 bridge, U17 UWB, CAN, TPM, FRAM
+XL3  V3 GND DIGILOAD
++ PARAMS: IBASE={LOAD3} ISTEP=0 TRAMP=25m VMIN=2.5
+
+* ---------------------------------------------------------------------------
+* EXPLICITLY OMITTED / NOT MODELLED (endpoints, not silent gaps):
+*   - U13 AMS1117-1.8 -> +1V8, U3 -> +3V3A, U16 -> +3V3_RADIO_24,
+*     U20 -> +1V8_RADIO_5G0, IC2 -> +1V2. Their loads are folded into the
+*     +5V0 / +5V0_PROT aggregates above; the individual rails are not nodes.
+*   - U6 LAN7800 internal +2V5_BRIDGE LDO and +1V2_BRIDGE switcher with L3
+*     (on-die, no external node to model).
+*   - All digital function: I2C/SPI/USB/Ethernet/CAN/radio behaviour,
+*     firmware, the U11 sequencer's actual program.
+*   - J24/J25 Module Hub expansion pins 14/16/18/20 tap raw VIN. External
+*     modules can draw unbudgeted current straight off VIN. NOT modelled,
+*     and NOT bounded by LOAD5/LOAD3.
+* ---------------------------------------------------------------------------
+.ends OSIRIS_REVA

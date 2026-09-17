@@ -240,7 +240,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "A-P3-DRAFT"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -661,7 +661,7 @@
         "uuid": "6f58a31e-2d20-46d6-8900-dedce2deebb4"
       }
     ],
-    "used_designators": "C7-9,R10-11,#FLG1-4,J2-4,#PWR13-16,TP1-5,U4",
+    "used_designators": "C7-9,J2-4,#FLG1-4,R10-11,#PWR13-16,TP1-5,U4",
     "variants": []
   },
   "sheets": [

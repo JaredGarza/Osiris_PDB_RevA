@@ -1,0 +1,73 @@
+* Stress screen: +1% shunt, undrated +20% capacitors, slow/nominal/fast eFuse slew.
+* 12.14..60 V/ms eFuse sensitivity; 60 V/ms is an assumed stress value.
+* ============================================================================
+* COMBINED PDB + OSIRIS Rev A -- startup, sequencing and steady state
+* Battery -> PDB (A-P3-DRAFT) -> XT60 harness -> Osiris Rev A
+* Engine: LTspice 26.x
+* ============================================================================
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_final.lib
+.inc osiris\osiris_reva.lib
+
+* CASE 1 nominal 14.8V | 2 low pack 12.0V | 3 full pack 16.8V
+* CASE 4 nominal but high-impedance harness and weak battery
+.step param CASE list 1 2 3 4 5 6 7 8
+.param VPACK = table(CASE,1,12,2,16.8,3,12,4,16.8,5,12,6,16.8,7,12,8,16.8)
+.param RBATT  = table(CASE, 1,20m,  2,20m,  3,20m,  4,200m)
+.param RCBL   = table(CASE, 1,6m,   2,6m,   3,6m,   4,50m)
+
+VBAT  VSRC 0 PWL(0 0 1m {VPACK})
+RBATT VSRC VBIN {RBATT}
+
+XPDB  VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_CURRENT
++ PARAMS: RSHUNT=6.3125m CDERATE=1.2 CDERATE3=1.2
+
+* XT60 harness, PDB J3 -> Osiris J16
+LCBL  PDBOUT NCBL 200n Rser=1m
+RCBL  NCBL   OSIN {RCBL}
+
+* AUXIN (J17 barrel jack) left open -- battery-only scenario.
+XOS   OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
++ PARAMS: CDERATE=1.2 SR21={table(CASE,1,12140,2,12140,3,28100,4,28100,5,44780,6,44780,7,60000,8,60000)}
+RAUX  NAUX 0 1Meg
+
+.tran 0 900m 0 20u
+.options method=gear reltol=0.003
+
+* --- Rail establishment ---------------------------------------------------
+.meas TRAN VPDBOUT   AVG V(PDBOUT) FROM 400m TO 500m
+.meas TRAN VOSIN     AVG V(OSIN)   FROM 400m TO 500m
+.meas TRAN V5_SS     AVG V(V5)     FROM 400m TO 500m
+.meas TRAN V3_SS     AVG V(V3)     FROM 400m TO 500m
+.meas TRAN V5P_SS    AVG V(V5PROT) FROM 400m TO 500m
+.meas TRAN VJET_SS   AVG V(VJET)   FROM 400m TO 500m
+.meas TRAN V3V3_PDB  AVG V(PDB3V3) FROM 400m TO 500m
+
+* --- Inrush and steady-state current --------------------------------------
+.meas TRAN IIN_PEAK  MAX ABS(I(RBATT)) FROM 0 TO 400m
+.meas TRAN IIN_SS    AVG ABS(I(RBATT)) FROM 400m TO 500m
+.meas TRAN IIN_STEP  AVG ABS(I(RBATT)) FROM 700m TO 890m
+.meas TRAN IIN_STEPK MAX ABS(I(RBATT)) FROM 590m TO 700m
+
+* --- Sequencing timing ----------------------------------------------------
+.meas TRAN T_PDBON   WHEN V(PDBOUT)=5    RISE=1
+.meas TRAN T_OSVIN   WHEN V(OSIN)=7.91   RISE=1
+.meas TRAN T_5V0     WHEN V(V5)=4.9      RISE=1
+.meas TRAN T_3V3     WHEN V(V3)=3.1      RISE=1
+.meas TRAN T_5VPROT  WHEN V(V5PROT)=4.9  RISE=1
+
+* --- Harness / conduction losses -----------------------------------------
+.meas TRAN VDROP_TOT AVG V(VSRC)-V(OSIN) FROM 400m TO 500m
+.meas TRAN VDROP_PDB AVG V(VBIN)-V(PDBOUT) FROM 400m TO 500m
+.meas TRAN VDROP_CBL AVG V(PDBOUT)-V(OSIN) FROM 400m TO 500m
+
+* --- Protection margin ----------------------------------------------------
+.meas TRAN GATE_DRV  AVG V(GF)-V(COMMON) FROM 400m TO 500m
+.meas TRAN FUSE_I2T  INTEG I(RBATT)*I(RBATT) FROM 0 TO 900m
+.meas TRAN IIN_LOWV MAX if(V(PDBOUT)<2,abs(I(RBATT)),0)
+.meas TRAN INRUSH_I2T INTEG I(RBATT)*I(RBATT) FROM 0 TO 100m
+.meas TRAN POUT_STEP AVG V(PDBOUT)*I(LCBL) FROM 700m TO 890m
+.end

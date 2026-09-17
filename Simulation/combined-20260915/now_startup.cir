@@ -1,0 +1,25 @@
+* Current CAD population: startup inrush + UV window at a degraded pack.
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_now.lib
+.inc osiris\osiris_reva.lib
+
+.step param VP list 12.0 14.8 16.8
+VBAT VSRC 0 PWL(0 0 1m {VP})
+RBATT VSRC VBIN 20m
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_NOW
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+.tran 0 500m 0 20u
+.options method=gear reltol=0.003
+.meas TRAN IIN_PEAK MAX ABS(I(RBATT)) FROM 0 TO 450m
+.meas TRAN IIN_SS   AVG ABS(I(RBATT)) FROM 400m TO 450m
+.meas TRAN V5_SS    AVG V(V5)   FROM 400m TO 450m
+.meas TRAN V3_SS    AVG V(V3)   FROM 400m TO 450m
+.meas TRAN T_5V0    WHEN V(V5)=4.9 RISE=1
+.end

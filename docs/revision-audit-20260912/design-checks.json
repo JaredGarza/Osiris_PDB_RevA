@@ -16,319 +16,30 @@
       ],
       "removed": [],
       "changed": {
-        "C1": {
+        "F1": {
           "old": {
-            "value": "5n6",
-            "footprint": "Capacitor_SMD:C_0805_2012Metric",
-            "fields": {
-              "MPN": "C2012C0G2A562J125AA",
-              "Manufacturer": "TDK",
-              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
-              "Footprint": "Capacitor_SMD:C_0805_2012Metric",
-              "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012C0G2A562J125AA",
-              "Description": "100V C0G/NP0"
-            }
-          },
-          "current": {
-            "value": "5n6",
-            "footprint": "Capacitor_SMD:C_0805_2012Metric",
-            "fields": {
-              "MPN": "C2012C0G2A562J125AA",
-              "Manufacturer": "TDK",
-              "Selection_Status": "CGATE at the U1 GATE pin per requirements D2; sets the 6.25 kV/s turn-on ramp",
-              "Footprint": "Capacitor_SMD:C_0805_2012Metric",
-              "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012C0G2A562J125AA",
-              "Description": "100V C0G/NP0"
-            }
-          }
-        },
-        "R5": {
-          "old": {
-            "value": "FC4L64R005FER",
-            "footprint": "PDB_Footprints:OH_FC4L64_OHM",
-            "fields": {
-              "Footprint": "PDB_Footprints:OH_FC4L64_OHM",
-              "Datasheet": "FC4L64R005FER",
-              "Description": null
-            }
-          },
-          "current": {
-            "value": "FC4L64R005FER",
-            "footprint": "PDB_Footprints:OH_FC4L64_OHM",
-            "fields": {
-              "Manufacturer": "Ohmite",
-              "MPN": "FC4L64R005FER",
-              "Footprint": "PDB_Footprints:OH_FC4L64_OHM",
-              "Datasheet": "https://www.ohmite.com/res-fc4l/",
-              "Description": null
-            }
-          }
-        },
-        "R7": {
-          "old": {
-            "value": "200k",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": null,
-              "Description": "Resistor"
-            }
-          },
-          "current": {
-            "value": "200k",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-07200KL",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07200KL",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
-            }
-          }
-        },
-        "J2": {
-          "old": {
-            "value": "OSIRIS_CTRL",
+            "value": "Fuse",
             "footprint": null,
             "fields": {
-              "Selection_Status": "Pending Osiris mating connector and cable pinout",
+              "Selection_Status": "Pending current budget and mating/mechanical requirements",
               "Footprint": null,
               "Datasheet": null,
-              "Description": "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+              "Description": "Fuse"
             }
           },
           "current": {
-            "value": "OSIRIS_I2C",
-            "footprint": "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical",
+            "value": "4A MINI",
+            "footprint": "Fuse:Fuseholder_Blade_Mini_Keystone_3568",
             "fields": {
-              "Selection_Status": "Re-pinned per requirements D3 to match Osiris J28 with a stock 4-way GH cable; pin 1 faces Osiris +5V0_PROT and is left unconnected",
-              "Manufacturer": "JST",
-              "MPN": "BM04B-GHS-TBT(LF)(SN)",
-              "Mating_Housing": "GHR-04V-S",
-              "Mating_Contact": "SSHL-002T-P0.2",
-              "Footprint": "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical",
-              "Datasheet": "${KIPRJMOD}/Datasheets/JST_GH.pdf",
-              "Description": "JST GH 4-way I2C; 1 NC, 2 SCL, 3 SDA, 4 GND; mates 1:1 with Osiris J28 (FMU_I2C1)"
-            }
-          }
-        },
-        "R1": {
-          "old": {
-            "value": "2M0",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Tolerance": "1%",
-              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": null,
-              "Description": "Resistor"
-            }
-          },
-          "current": {
-            "value": "2M0",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Tolerance": "1%",
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-072ML",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-072ML",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
-            }
-          }
-        },
-        "R6": {
-          "old": {
-            "value": "680k",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": null,
-              "Description": "Resistor"
-            }
-          },
-          "current": {
-            "value": "680k",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-07680KL",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07680KL",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
-            }
-          }
-        },
-        "U1": {
-          "old": {
-            "value": "LTC4368IMS-1-PBF",
-            "footprint": "PDB_Footprints:MS_10-MSOP_ADI",
-            "fields": {
-              "Footprint": "PDB_Footprints:MS_10-MSOP_ADI",
-              "Datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4368.pdf",
-              "Description": null
-            }
-          },
-          "current": {
-            "value": "LTC4368IMS-1-PBF",
-            "footprint": "PDB_Footprints:MS_10-MSOP_ADI",
-            "fields": {
-              "Manufacturer": "Analog Devices",
-              "MPN": "LTC4368IMS-1#TRPBF",
-              "Selection_Status": "Tape-and-reel order code selected for assembly; same industrial LTC4368-1 MSOP device as #PBF.",
-              "Footprint": "PDB_Footprints:MS_10-MSOP_ADI",
-              "Datasheet": "${KIPRJMOD}/Datasheets/LTC4368 (Rev C).pdf",
-              "Description": null
-            }
-          }
-        },
-        "U4": {
-          "old": {
-            "value": "74AUP1G07GW",
-            "footprint": "Package_TO_SOT_SMD:SOT-353_SC-70-5",
-            "fields": {
-              "Sim.Library": ".\\",
-              "Footprint": "Package_TO_SOT_SMD:SOT-353_SC-70-5",
-              "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74aup1g07",
-              "Description": "Single Buffer Gate, Open Drain, Low-Voltage CMOS"
-            }
-          },
-          "current": {
-            "value": "74AUP1G07GW",
-            "footprint": "Package_TO_SOT_SMD:SOT-353_SC-70-5",
-            "fields": {
-              "Sim.Library": ".\\",
-              "Manufacturer": "Nexperia",
-              "MPN": "74AUP1G07GW,125",
-              "Footprint": "Package_TO_SOT_SMD:SOT-353_SC-70-5",
-              "Datasheet": "${KIPRJMOD}/Datasheets/Nexperia_74AUP1G07.pdf",
-              "Description": "Single Buffer Gate, Open Drain, Low-Voltage CMOS"
-            }
-          }
-        },
-        "R3": {
-          "old": {
-            "value": "56k2",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": null,
-              "Description": "Resistor"
-            }
-          },
-          "current": {
-            "value": "56k2",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-0756K2L",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0756K2L",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
-            }
-          }
-        },
-        "C3": {
-          "old": {
-            "value": "100n",
-            "footprint": "Capacitor_SMD:C_0603_1608Metric",
-            "fields": {
-              "MPN": "C0603C104K4RACTU",
-              "Manufacturer": "KEMET",
-              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
-              "Footprint": "Capacitor_SMD:C_0603_1608Metric",
-              "Datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0603C104K4RACTU",
-              "Description": "16V X7R"
-            }
-          },
-          "current": {
-            "value": "100n",
-            "footprint": "Capacitor_SMD:C_0603_1608Metric",
-            "fields": {
-              "MPN": "C0603C104K4RACTU",
-              "Manufacturer": "KEMET",
-              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
-              "Footprint": "Capacitor_SMD:C_0603_1608Metric",
-              "Datasheet": "${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf",
-              "Description": "16V X7R"
-            }
-          }
-        },
-        "Q2": {
-          "old": {
-            "value": "ISC015N06NM5LF2",
-            "footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
-            "fields": {
-              "Footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
-              "Datasheet": "${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf",
-              "Description": "Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins"
-            }
-          },
-          "current": {
-            "value": "ISC015N06NM5LF2",
-            "footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
-            "fields": {
-              "Manufacturer": "Infineon",
-              "MPN": "ISC015N06NM5LF2ATMA1",
-              "Selection_Status": "Full Infineon tape-and-reel order code; same ISC015N06NM5LF2 device and footprint. SOA qualification pending.",
-              "Footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
-              "Datasheet": "${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf",
-              "Description": "Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins"
-            }
-          }
-        },
-        "R10": {
-          "old": {
-            "value": "4k7",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": null,
-              "Description": "Resistor"
-            }
-          },
-          "current": {
-            "value": "4k7",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-074K7L",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
-            }
-          }
-        },
-        "R8": {
-          "old": {
-            "value": "10",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": null,
-              "Description": "Resistor"
-            }
-          },
-          "current": {
-            "value": "10",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-0710RL",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
+              "Selection_Status": "PROVISIONAL 4 A candidate. 2.22 A is an assumed operating scenario, not a verified maximum. Validate current, startup, ambient derating and fault coordination.",
+              "Manufacturer": "Littelfuse",
+              "MPN": "0297004.WXNV",
+              "Holder_Manufacturer": "Keystone Electronics",
+              "Holder_MPN": "3568",
+              "Holder_Datasheet": "${KIPRJMOD}/Datasheets/Keystone_3568.pdf",
+              "Footprint": "Fuse:Fuseholder_Blade_Mini_Keystone_3568",
+              "Datasheet": "${KIPRJMOD}/Datasheets/Littelfuse_297_MINI.pdf",
+              "Description": "4 A, 32 VDC MINI blade fuse; backup protection for a fault the MOSFETs cannot interrupt"
             }
           }
         },
@@ -384,6 +95,80 @@
             }
           }
         },
+        "C3": {
+          "old": {
+            "value": "100n",
+            "footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "fields": {
+              "MPN": "C0603C104K4RACTU",
+              "Manufacturer": "KEMET",
+              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
+              "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+              "Datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0603C104K4RACTU",
+              "Description": "16V X7R"
+            }
+          },
+          "current": {
+            "value": "100n",
+            "footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "fields": {
+              "MPN": "C0603C104K4RACTU",
+              "Manufacturer": "KEMET",
+              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
+              "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+              "Datasheet": "${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf",
+              "Description": "16V X7R"
+            }
+          }
+        },
+        "R9": {
+          "old": {
+            "value": "10",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "10",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-0710RL",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
+            }
+          }
+        },
+        "R3": {
+          "old": {
+            "value": "56k2",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "56k2",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-0756K2L",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0756K2L",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
+            }
+          }
+        },
         "R4": {
           "old": {
             "value": "22k",
@@ -410,7 +195,127 @@
             }
           }
         },
-        "Q1": {
+        "R5": {
+          "old": {
+            "value": "FC4L64R005FER",
+            "footprint": "PDB_Footprints:OH_FC4L64_OHM",
+            "fields": {
+              "Footprint": "PDB_Footprints:OH_FC4L64_OHM",
+              "Datasheet": "FC4L64R005FER",
+              "Description": null
+            }
+          },
+          "current": {
+            "value": "FC4L64R005FER",
+            "footprint": "PDB_Footprints:OH_FC4L64_OHM",
+            "fields": {
+              "Manufacturer": "Ohmite",
+              "MPN": "FC4L64R005FER",
+              "Footprint": "PDB_Footprints:OH_FC4L64_OHM",
+              "Datasheet": "https://www.ohmite.com/res-fc4l/",
+              "Description": null
+            }
+          }
+        },
+        "J2": {
+          "old": {
+            "value": "OSIRIS_CTRL",
+            "footprint": null,
+            "fields": {
+              "Selection_Status": "Pending Osiris mating connector and cable pinout",
+              "Footprint": null,
+              "Datasheet": null,
+              "Description": "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+            }
+          },
+          "current": {
+            "value": "OSIRIS_I2C",
+            "footprint": "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical",
+            "fields": {
+              "Selection_Status": "Re-pinned per requirements D3 to match Osiris J28 with a stock 4-way GH cable; pin 1 faces Osiris +5V0_PROT and is left unconnected",
+              "Manufacturer": "JST",
+              "MPN": "BM04B-GHS-TBT(LF)(SN)",
+              "Mating_Housing": "GHR-04V-S",
+              "Mating_Contact": "SSHL-002T-P0.2",
+              "Footprint": "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical",
+              "Datasheet": "${KIPRJMOD}/Datasheets/JST_GH.pdf",
+              "Description": "JST GH 4-way I2C; 1 NC, 2 SCL, 3 SDA, 4 GND; mates 1:1 with Osiris J28 (FMU_I2C1)"
+            }
+          }
+        },
+        "J3": {
+          "old": {
+            "value": "OSIRIS_POWER",
+            "footprint": null,
+            "fields": {
+              "Selection_Status": "Pending current budget and mating/mechanical requirements",
+              "Footprint": null,
+              "Datasheet": null,
+              "Description": "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+            }
+          },
+          "current": {
+            "value": "XT60PW-F",
+            "footprint": "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal",
+            "fields": {
+              "Selection_Status": "Assigned with dedicated symbol pin mapping; verify physical cable polarity and board-edge clearance",
+              "Manufacturer": "AMASS",
+              "MPN": "XT60PW-F",
+              "Footprint": "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal",
+              "Datasheet": "${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf",
+              "Description": "Protected power output; pin 1 GND, pin 2 PDB_VOUT; cable to Osiris J16 VBATT_IN"
+            }
+          }
+        },
+        "U4": {
+          "old": {
+            "value": "74AUP1G07GW",
+            "footprint": "Package_TO_SOT_SMD:SOT-353_SC-70-5",
+            "fields": {
+              "Sim.Library": ".\\",
+              "Footprint": "Package_TO_SOT_SMD:SOT-353_SC-70-5",
+              "Datasheet": "https://www.ti.com/lit/ds/symlink/sn74aup1g07",
+              "Description": "Single Buffer Gate, Open Drain, Low-Voltage CMOS"
+            }
+          },
+          "current": {
+            "value": "74AUP1G07GW",
+            "footprint": "Package_TO_SOT_SMD:SOT-353_SC-70-5",
+            "fields": {
+              "Sim.Library": ".\\",
+              "Manufacturer": "Nexperia",
+              "MPN": "74AUP1G07GW,125",
+              "Footprint": "Package_TO_SOT_SMD:SOT-353_SC-70-5",
+              "Datasheet": "${KIPRJMOD}/Datasheets/Nexperia_74AUP1G07.pdf",
+              "Description": "Single Buffer Gate, Open Drain, Low-Voltage CMOS"
+            }
+          }
+        },
+        "R10": {
+          "old": {
+            "value": "4k7",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "4k7",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-074K7L",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-074K7L",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
+            }
+          }
+        },
+        "Q2": {
           "old": {
             "value": "ISC015N06NM5LF2",
             "footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
@@ -433,29 +338,52 @@
             }
           }
         },
-        "C8": {
+        "U1": {
           "old": {
-            "value": "100n",
-            "footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "value": "LTC4368IMS-1-PBF",
+            "footprint": "PDB_Footprints:MS_10-MSOP_ADI",
             "fields": {
-              "MPN": "C0603C104K4RACTU",
-              "Manufacturer": "KEMET",
-              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
-              "Footprint": "Capacitor_SMD:C_0603_1608Metric",
-              "Datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0603C104K4RACTU",
-              "Description": "16V X7R"
+              "Footprint": "PDB_Footprints:MS_10-MSOP_ADI",
+              "Datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4368.pdf",
+              "Description": null
             }
           },
           "current": {
-            "value": "100n",
-            "footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "value": "LTC4368IMS-1-PBF",
+            "footprint": "PDB_Footprints:MS_10-MSOP_ADI",
             "fields": {
-              "MPN": "C0603C104K4RACTU",
-              "Manufacturer": "KEMET",
-              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
-              "Footprint": "Capacitor_SMD:C_0603_1608Metric",
-              "Datasheet": "${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf",
-              "Description": "16V X7R"
+              "Manufacturer": "Analog Devices",
+              "MPN": "LTC4368IMS-1#TRPBF",
+              "Selection_Status": "Tape-and-reel order code selected for assembly; same industrial LTC4368-1 MSOP device as #PBF.",
+              "Footprint": "PDB_Footprints:MS_10-MSOP_ADI",
+              "Datasheet": "${KIPRJMOD}/Datasheets/LTC4368 (Rev C).pdf",
+              "Description": null
+            }
+          }
+        },
+        "R1": {
+          "old": {
+            "value": "2M0",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Tolerance": "1%",
+              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "2M0",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Tolerance": "1%",
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-072ML",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-072ML",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
             }
           }
         },
@@ -485,30 +413,6 @@
             }
           }
         },
-        "J1": {
-          "old": {
-            "value": "XT60",
-            "footprint": null,
-            "fields": {
-              "Selection_Status": "Pending current budget and mating/mechanical requirements",
-              "Footprint": null,
-              "Datasheet": null,
-              "Description": "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-            }
-          },
-          "current": {
-            "value": "XT60PW-M",
-            "footprint": "Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal",
-            "fields": {
-              "Selection_Status": "Assigned; verify cable mating, polarity and board-edge clearance",
-              "Manufacturer": "AMASS",
-              "MPN": "XT60PW-M",
-              "Footprint": "Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal",
-              "Datasheet": "${KIPRJMOD}/Datasheets/AMASS_XT60PW-M.pdf",
-              "Description": "Battery input; PCB right-angle XT60; pin 1 GND, pin 2 VBAT_RAW"
-            }
-          }
-        },
         "U3": {
           "old": {
             "value": "TPS7A1633DGNR",
@@ -532,36 +436,9 @@
             }
           }
         },
-        "F1": {
+        "R6": {
           "old": {
-            "value": "Fuse",
-            "footprint": null,
-            "fields": {
-              "Selection_Status": "Pending current budget and mating/mechanical requirements",
-              "Footprint": null,
-              "Datasheet": null,
-              "Description": "Fuse"
-            }
-          },
-          "current": {
-            "value": "4A MINI",
-            "footprint": "Fuse:Fuseholder_Blade_Mini_Keystone_3568",
-            "fields": {
-              "Selection_Status": "PROVISIONAL 4 A candidate. 2.22 A is an assumed operating scenario, not a verified maximum. Validate current, startup, ambient derating and fault coordination.",
-              "Manufacturer": "Littelfuse",
-              "MPN": "0297004.WXNV",
-              "Holder_Manufacturer": "Keystone Electronics",
-              "Holder_MPN": "3568",
-              "Holder_Datasheet": "${KIPRJMOD}/Datasheets/Keystone_3568.pdf",
-              "Footprint": "Fuse:Fuseholder_Blade_Mini_Keystone_3568",
-              "Datasheet": "${KIPRJMOD}/Datasheets/Littelfuse_297_MINI.pdf",
-              "Description": "4 A, 32 VDC MINI blade fuse; backup protection for a fault the MOSFETs cannot interrupt"
-            }
-          }
-        },
-        "R9": {
-          "old": {
-            "value": "10",
+            "value": "680k",
             "footprint": "Resistor_SMD:R_0805_2012Metric",
             "fields": {
               "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
@@ -571,14 +448,38 @@
             }
           },
           "current": {
-            "value": "10",
+            "value": "680k",
             "footprint": "Resistor_SMD:R_0805_2012Metric",
             "fields": {
               "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-0710RL",
+              "MPN": "RC0805FR-07680KL",
               "Manufacturer": "YAGEO",
               "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07680KL",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
+            }
+          }
+        },
+        "R7": {
+          "old": {
+            "value": "200k",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "200k",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-07200KL",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07200KL",
               "Description": "1% 0.125W (at 70C), 0805 thick film"
             }
           }
@@ -605,9 +506,59 @@
             }
           }
         },
-        "J3": {
+        "R8": {
           "old": {
-            "value": "OSIRIS_POWER",
+            "value": "10",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Package assigned; MPN and power/tolerance validation pending",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "10",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-0710RL",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
+            }
+          }
+        },
+        "C8": {
+          "old": {
+            "value": "100n",
+            "footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "fields": {
+              "MPN": "C0603C104K4RACTU",
+              "Manufacturer": "KEMET",
+              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
+              "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+              "Datasheet": "https://search.kemet.com/component-documentation/download/specsheet/C0603C104K4RACTU",
+              "Description": "16V X7R"
+            }
+          },
+          "current": {
+            "value": "100n",
+            "footprint": "Capacitor_SMD:C_0603_1608Metric",
+            "fields": {
+              "MPN": "C0603C104K4RACTU",
+              "Manufacturer": "KEMET",
+              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
+              "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+              "Datasheet": "${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf",
+              "Description": "16V X7R"
+            }
+          }
+        },
+        "J1": {
+          "old": {
+            "value": "XT60",
             "footprint": null,
             "fields": {
               "Selection_Status": "Pending current budget and mating/mechanical requirements",
@@ -617,15 +568,64 @@
             }
           },
           "current": {
-            "value": "XT60PW-F",
-            "footprint": "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal",
+            "value": "XT60PW-M",
+            "footprint": "Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal",
             "fields": {
-              "Selection_Status": "Assigned with dedicated symbol pin mapping; verify physical cable polarity and board-edge clearance",
+              "Selection_Status": "Assigned; verify cable mating, polarity and board-edge clearance",
               "Manufacturer": "AMASS",
-              "MPN": "XT60PW-F",
-              "Footprint": "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal",
-              "Datasheet": "${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf",
-              "Description": "Protected power output; pin 1 GND, pin 2 PDB_VOUT; cable to Osiris J16 VBATT_IN"
+              "MPN": "XT60PW-M",
+              "Footprint": "Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal",
+              "Datasheet": "${KIPRJMOD}/Datasheets/AMASS_XT60PW-M.pdf",
+              "Description": "Battery input; PCB right-angle XT60; pin 1 GND, pin 2 VBAT_RAW"
+            }
+          }
+        },
+        "Q1": {
+          "old": {
+            "value": "ISC015N06NM5LF2",
+            "footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
+            "fields": {
+              "Footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
+              "Datasheet": "${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf",
+              "Description": "Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins"
+            }
+          },
+          "current": {
+            "value": "ISC015N06NM5LF2",
+            "footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
+            "fields": {
+              "Manufacturer": "Infineon",
+              "MPN": "ISC015N06NM5LF2ATMA1",
+              "Selection_Status": "Full Infineon tape-and-reel order code; same ISC015N06NM5LF2 device and footprint. SOA qualification pending.",
+              "Footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
+              "Datasheet": "${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf",
+              "Description": "Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins"
+            }
+          }
+        },
+        "C1": {
+          "old": {
+            "value": "5n6",
+            "footprint": "Capacitor_SMD:C_0805_2012Metric",
+            "fields": {
+              "MPN": "C2012C0G2A562J125AA",
+              "Manufacturer": "TDK",
+              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
+              "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+              "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012C0G2A562J125AA",
+              "Description": "100V C0G/NP0"
+            }
+          },
+          "current": {
+            "value": "5n6",
+            "footprint": "Capacitor_SMD:C_0805_2012Metric",
+            "fields": {
+              "MPN": "C2012C0G2A562J125AA",
+              "Manufacturer": "TDK",
+              "Selection_Status": "CGATE at the U1 GATE pin per requirements D2; sets the 6.25 kV/s turn-on ramp",
+              "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+              "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012C0G2A562J125AA",
+              "Description": "100V C0G/NP0"
             }
           }
         }
@@ -809,6 +809,48 @@
             ]
           ]
         },
+        "/GATE_PIN": {
+          "old": null,
+          "current": [
+            [
+              "C1",
+              "1"
+            ],
+            [
+              "D2",
+              "1"
+            ],
+            [
+              "R4",
+              "2"
+            ],
+            [
+              "U1",
+              "10"
+            ]
+          ]
+        },
+        "/GATE_DRV": {
+          "old": [
+            [
+              "Q1",
+              "4"
+            ],
+            [
+              "Q2",
+              "4"
+            ],
+            [
+              "R4",
+              "1"
+            ],
+            [
+              "U1",
+              "10"
+            ]
+          ],
+          "current": null
+        },
         "Net-(C1-Pad1)": {
           "old": [
             [
@@ -821,6 +863,80 @@
             ]
           ],
           "current": null
+        },
+        "/PDB_FAULT_N": {
+          "old": [
+            [
+              "J2",
+              "5"
+            ],
+            [
+              "U1",
+              "7"
+            ]
+          ],
+          "current": [
+            [
+              "TP7",
+              "1"
+            ],
+            [
+              "U1",
+              "7"
+            ]
+          ]
+        },
+        "/INA_ALERT_N": {
+          "old": [
+            [
+              "J2",
+              "4"
+            ],
+            [
+              "U4",
+              "4"
+            ]
+          ],
+          "current": [
+            [
+              "TP6",
+              "1"
+            ],
+            [
+              "U4",
+              "4"
+            ]
+          ]
+        },
+        "unconnected-(J2-Pin_6-Pad6)": {
+          "old": [
+            [
+              "J2",
+              "6"
+            ]
+          ],
+          "current": null
+        },
+        "/GATE_FET": {
+          "old": null,
+          "current": [
+            [
+              "D2",
+              "2"
+            ],
+            [
+              "Q1",
+              "4"
+            ],
+            [
+              "Q2",
+              "4"
+            ],
+            [
+              "R4",
+              "1"
+            ]
+          ]
         },
         "/VBAT_FUSED": {
           "old": [
@@ -904,14 +1020,36 @@
             ]
           ]
         },
-        "unconnected-(J2-Pin_6-Pad6)": {
+        "/PDB_I2C_SCL": {
           "old": [
             [
               "J2",
-              "6"
+              "3"
+            ],
+            [
+              "U2",
+              "5"
             ]
           ],
-          "current": null
+          "current": [
+            [
+              "J2",
+              "2"
+            ],
+            [
+              "U2",
+              "5"
+            ]
+          ]
+        },
+        "unconnected-(J2-Pin_1-Pad1)": {
+          "old": null,
+          "current": [
+            [
+              "J2",
+              "1"
+            ]
+          ]
         },
         "/PDB_VOUT": {
           "old": [
@@ -1004,144 +1142,6 @@
               "4"
             ]
           ]
-        },
-        "/INA_ALERT_N": {
-          "old": [
-            [
-              "J2",
-              "4"
-            ],
-            [
-              "U4",
-              "4"
-            ]
-          ],
-          "current": [
-            [
-              "TP6",
-              "1"
-            ],
-            [
-              "U4",
-              "4"
-            ]
-          ]
-        },
-        "/GATE_FET": {
-          "old": null,
-          "current": [
-            [
-              "D2",
-              "2"
-            ],
-            [
-              "Q1",
-              "4"
-            ],
-            [
-              "Q2",
-              "4"
-            ],
-            [
-              "R4",
-              "1"
-            ]
-          ]
-        },
-        "/GATE_DRV": {
-          "old": [
-            [
-              "Q1",
-              "4"
-            ],
-            [
-              "Q2",
-              "4"
-            ],
-            [
-              "R4",
-              "1"
-            ],
-            [
-              "U1",
-              "10"
-            ]
-          ],
-          "current": null
-        },
-        "/PDB_FAULT_N": {
-          "old": [
-            [
-              "J2",
-              "5"
-            ],
-            [
-              "U1",
-              "7"
-            ]
-          ],
-          "current": [
-            [
-              "TP7",
-              "1"
-            ],
-            [
-              "U1",
-              "7"
-            ]
-          ]
-        },
-        "/GATE_PIN": {
-          "old": null,
-          "current": [
-            [
-              "C1",
-              "1"
-            ],
-            [
-              "D2",
-              "1"
-            ],
-            [
-              "R4",
-              "2"
-            ],
-            [
-              "U1",
-              "10"
-            ]
-          ]
-        },
-        "/PDB_I2C_SCL": {
-          "old": [
-            [
-              "J2",
-              "3"
-            ],
-            [
-              "U2",
-              "5"
-            ]
-          ],
-          "current": [
-            [
-              "J2",
-              "2"
-            ],
-            [
-              "U2",
-              "5"
-            ]
-          ]
-        },
-        "unconnected-(J2-Pin_1-Pad1)": {
-          "old": null,
-          "current": [
-            [
-              "J2",
-              "1"
-            ]
-          ]
         }
       }
     },
@@ -1168,233 +1168,29 @@
       ],
       "removed": [],
       "changed": {
-        "C1": {
+        "F1": {
           "old": {
-            "value": "5n6",
+            "value": "Fuse",
             "footprint": null,
             "fields": {
               "Footprint": null,
               "Datasheet": null,
-              "Description": "Unpolarized capacitor 100V, C0G.NP0"
+              "Description": "Fuse"
             }
           },
           "current": {
-            "value": "5n6",
-            "footprint": "Capacitor_SMD:C_0805_2012Metric",
+            "value": "4A MINI",
+            "footprint": "Fuse:Fuseholder_Blade_Mini_Keystone_3568",
             "fields": {
-              "MPN": "C2012C0G2A562J125AA",
-              "Manufacturer": "TDK",
-              "Selection_Status": "CGATE at the U1 GATE pin per requirements D2; sets the 6.25 kV/s turn-on ramp",
-              "Footprint": "Capacitor_SMD:C_0805_2012Metric",
-              "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012C0G2A562J125AA",
-              "Description": "100V C0G/NP0"
-            }
-          }
-        },
-        "R5": {
-          "old": {
-            "value": "FC4L64R005FER",
-            "footprint": "PDB_Footprints:OH_FC4L64_OHM",
-            "fields": {
-              "Footprint": "PDB_Footprints:OH_FC4L64_OHM",
-              "Datasheet": "FC4L64R005FER",
-              "Description": null
-            }
-          },
-          "current": {
-            "value": "FC4L64R005FER",
-            "footprint": "PDB_Footprints:OH_FC4L64_OHM",
-            "fields": {
-              "Manufacturer": "Ohmite",
-              "MPN": "FC4L64R005FER",
-              "Footprint": "PDB_Footprints:OH_FC4L64_OHM",
-              "Datasheet": "https://www.ohmite.com/res-fc4l/",
-              "Description": null
-            }
-          }
-        },
-        "R7": {
-          "old": {
-            "value": "200k",
-            "footprint": null,
-            "fields": {
-              "Footprint": null,
-              "Datasheet": null,
-              "Description": "Resistor"
-            }
-          },
-          "current": {
-            "value": "200k",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-07200KL",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07200KL",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
-            }
-          }
-        },
-        "R1": {
-          "old": {
-            "value": "2M0",
-            "footprint": null,
-            "fields": {
-              "Footprint": null,
-              "Datasheet": null,
-              "Description": "Resistor"
-            }
-          },
-          "current": {
-            "value": "2M0",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Tolerance": "1%",
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-072ML",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-072ML",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
-            }
-          }
-        },
-        "R6": {
-          "old": {
-            "value": "680k",
-            "footprint": null,
-            "fields": {
-              "Footprint": null,
-              "Datasheet": null,
-              "Description": "Resistor"
-            }
-          },
-          "current": {
-            "value": "680k",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-07680KL",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07680KL",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
-            }
-          }
-        },
-        "U1": {
-          "old": {
-            "value": "LTC4368IMS-1-PBF",
-            "footprint": "PDB_Footprints:MS_10-MSOP_ADI",
-            "fields": {
-              "Footprint": "PDB_Footprints:MS_10-MSOP_ADI",
-              "Datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4368.pdf",
-              "Description": null
-            }
-          },
-          "current": {
-            "value": "LTC4368IMS-1-PBF",
-            "footprint": "PDB_Footprints:MS_10-MSOP_ADI",
-            "fields": {
-              "Manufacturer": "Analog Devices",
-              "MPN": "LTC4368IMS-1#TRPBF",
-              "Selection_Status": "Tape-and-reel order code selected for assembly; same industrial LTC4368-1 MSOP device as #PBF.",
-              "Footprint": "PDB_Footprints:MS_10-MSOP_ADI",
-              "Datasheet": "${KIPRJMOD}/Datasheets/LTC4368 (Rev C).pdf",
-              "Description": null
-            }
-          }
-        },
-        "R3": {
-          "old": {
-            "value": "56k2",
-            "footprint": null,
-            "fields": {
-              "Footprint": null,
-              "Datasheet": null,
-              "Description": "Resistor"
-            }
-          },
-          "current": {
-            "value": "56k2",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-0756K2L",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0756K2L",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
-            }
-          }
-        },
-        "C3": {
-          "old": {
-            "value": "100n",
-            "footprint": null,
-            "fields": {
-              "Footprint": null,
-              "Datasheet": null,
-              "Description": "Unpolarized capacitor"
-            }
-          },
-          "current": {
-            "value": "100n",
-            "footprint": "Capacitor_SMD:C_0603_1608Metric",
-            "fields": {
-              "MPN": "C0603C104K4RACTU",
-              "Manufacturer": "KEMET",
-              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
-              "Footprint": "Capacitor_SMD:C_0603_1608Metric",
-              "Datasheet": "${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf",
-              "Description": "16V X7R"
-            }
-          }
-        },
-        "Q2": {
-          "old": {
-            "value": "ISC015N06NM5LF2",
-            "footprint": null,
-            "fields": {
-              "Footprint": null,
-              "Datasheet": null,
-              "Description": "Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins"
-            }
-          },
-          "current": {
-            "value": "ISC015N06NM5LF2",
-            "footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
-            "fields": {
-              "Manufacturer": "Infineon",
-              "MPN": "ISC015N06NM5LF2ATMA1",
-              "Selection_Status": "Full Infineon tape-and-reel order code; same ISC015N06NM5LF2 device and footprint. SOA qualification pending.",
-              "Footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
-              "Datasheet": "${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf",
-              "Description": "Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins"
-            }
-          }
-        },
-        "R8": {
-          "old": {
-            "value": "10",
-            "footprint": null,
-            "fields": {
-              "Footprint": null,
-              "Datasheet": null,
-              "Description": "Resistor"
-            }
-          },
-          "current": {
-            "value": "10",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
-            "fields": {
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-0710RL",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
+              "Selection_Status": "PROVISIONAL 4 A candidate. 2.22 A is an assumed operating scenario, not a verified maximum. Validate current, startup, ambient derating and fault coordination.",
+              "Manufacturer": "Littelfuse",
+              "MPN": "0297004.WXNV",
+              "Holder_Manufacturer": "Keystone Electronics",
+              "Holder_MPN": "3568",
+              "Holder_Datasheet": "${KIPRJMOD}/Datasheets/Keystone_3568.pdf",
+              "Footprint": "Fuse:Fuseholder_Blade_Mini_Keystone_3568",
+              "Datasheet": "${KIPRJMOD}/Datasheets/Littelfuse_297_MINI.pdf",
+              "Description": "4 A, 32 VDC MINI blade fuse; backup protection for a fault the MOSFETs cannot interrupt"
             }
           }
         },
@@ -1444,27 +1240,26 @@
             }
           }
         },
-        "R4": {
+        "C3": {
           "old": {
-            "value": "22k",
+            "value": "100n",
             "footprint": null,
             "fields": {
               "Footprint": null,
               "Datasheet": null,
-              "Description": "Resistor"
+              "Description": "Unpolarized capacitor"
             }
           },
           "current": {
-            "value": "22k",
-            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "value": "100n",
+            "footprint": "Capacitor_SMD:C_0603_1608Metric",
             "fields": {
-              "Tolerance": "1%",
-              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-0722KL",
-              "Manufacturer": "YAGEO",
-              "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0722KL",
-              "Description": "1% 0.125W (at 70C), 0805 thick film"
+              "MPN": "C0603C104K4RACTU",
+              "Manufacturer": "KEMET",
+              "Selection_Status": "Nominal specification verified; DC-bias and circuit validation pending",
+              "Footprint": "Capacitor_SMD:C_0603_1608Metric",
+              "Datasheet": "${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf",
+              "Description": "16V X7R"
             }
           }
         },
@@ -1491,6 +1286,98 @@
             }
           }
         },
+        "R9": {
+          "old": {
+            "value": "10",
+            "footprint": null,
+            "fields": {
+              "Footprint": null,
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "10",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-0710RL",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
+            }
+          }
+        },
+        "R3": {
+          "old": {
+            "value": "56k2",
+            "footprint": null,
+            "fields": {
+              "Footprint": null,
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "56k2",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-0756K2L",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0756K2L",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
+            }
+          }
+        },
+        "R4": {
+          "old": {
+            "value": "22k",
+            "footprint": null,
+            "fields": {
+              "Footprint": null,
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "22k",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Tolerance": "1%",
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-0722KL",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0722KL",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
+            }
+          }
+        },
+        "R5": {
+          "old": {
+            "value": "FC4L64R005FER",
+            "footprint": "PDB_Footprints:OH_FC4L64_OHM",
+            "fields": {
+              "Footprint": "PDB_Footprints:OH_FC4L64_OHM",
+              "Datasheet": "FC4L64R005FER",
+              "Description": null
+            }
+          },
+          "current": {
+            "value": "FC4L64R005FER",
+            "footprint": "PDB_Footprints:OH_FC4L64_OHM",
+            "fields": {
+              "Manufacturer": "Ohmite",
+              "MPN": "FC4L64R005FER",
+              "Footprint": "PDB_Footprints:OH_FC4L64_OHM",
+              "Datasheet": "https://www.ohmite.com/res-fc4l/",
+              "Description": null
+            }
+          }
+        },
         "C2": {
           "old": {
             "value": "1U0",
@@ -1511,6 +1398,76 @@
               "Footprint": "Capacitor_SMD:C_0805_2012Metric",
               "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1H105K125AB",
               "Description": "50V X7R"
+            }
+          }
+        },
+        "Q2": {
+          "old": {
+            "value": "ISC015N06NM5LF2",
+            "footprint": null,
+            "fields": {
+              "Footprint": null,
+              "Datasheet": null,
+              "Description": "Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins"
+            }
+          },
+          "current": {
+            "value": "ISC015N06NM5LF2",
+            "footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
+            "fields": {
+              "Manufacturer": "Infineon",
+              "MPN": "ISC015N06NM5LF2ATMA1",
+              "Selection_Status": "Full Infineon tape-and-reel order code; same ISC015N06NM5LF2 device and footprint. SOA qualification pending.",
+              "Footprint": "PDB_Footprints:ISC015N06NM5LF2_TDSON8FL",
+              "Datasheet": "${KIPRJMOD}/Datasheets/Datasheet ISC015N06NM5LF2.pdf",
+              "Description": "Insulated-Gate Field-Effect Transistor (IGFET), N-Channel, Enhancement, Body Diode, Pin 1 Source, 2 Source, 3 Source, 4 Gate, 5 Drain, 6 Drain, 7 Drain, 8 Drain, 8 Pins"
+            }
+          }
+        },
+        "U1": {
+          "old": {
+            "value": "LTC4368IMS-1-PBF",
+            "footprint": "PDB_Footprints:MS_10-MSOP_ADI",
+            "fields": {
+              "Footprint": "PDB_Footprints:MS_10-MSOP_ADI",
+              "Datasheet": "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4368.pdf",
+              "Description": null
+            }
+          },
+          "current": {
+            "value": "LTC4368IMS-1-PBF",
+            "footprint": "PDB_Footprints:MS_10-MSOP_ADI",
+            "fields": {
+              "Manufacturer": "Analog Devices",
+              "MPN": "LTC4368IMS-1#TRPBF",
+              "Selection_Status": "Tape-and-reel order code selected for assembly; same industrial LTC4368-1 MSOP device as #PBF.",
+              "Footprint": "PDB_Footprints:MS_10-MSOP_ADI",
+              "Datasheet": "${KIPRJMOD}/Datasheets/LTC4368 (Rev C).pdf",
+              "Description": null
+            }
+          }
+        },
+        "R1": {
+          "old": {
+            "value": "2M0",
+            "footprint": null,
+            "fields": {
+              "Footprint": null,
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "2M0",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Tolerance": "1%",
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-072ML",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-072ML",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
             }
           }
         },
@@ -1561,58 +1518,9 @@
             }
           }
         },
-        "J1": {
+        "R7": {
           "old": {
-            "value": "XT60",
-            "footprint": null,
-            "fields": {
-              "Footprint": null,
-              "Datasheet": null,
-              "Description": "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-            }
-          },
-          "current": {
-            "value": "XT60PW-M",
-            "footprint": "Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal",
-            "fields": {
-              "Selection_Status": "Assigned; verify cable mating, polarity and board-edge clearance",
-              "Manufacturer": "AMASS",
-              "MPN": "XT60PW-M",
-              "Footprint": "Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal",
-              "Datasheet": "${KIPRJMOD}/Datasheets/AMASS_XT60PW-M.pdf",
-              "Description": "Battery input; PCB right-angle XT60; pin 1 GND, pin 2 VBAT_RAW"
-            }
-          }
-        },
-        "F1": {
-          "old": {
-            "value": "Fuse",
-            "footprint": null,
-            "fields": {
-              "Footprint": null,
-              "Datasheet": null,
-              "Description": "Fuse"
-            }
-          },
-          "current": {
-            "value": "4A MINI",
-            "footprint": "Fuse:Fuseholder_Blade_Mini_Keystone_3568",
-            "fields": {
-              "Selection_Status": "PROVISIONAL 4 A candidate. 2.22 A is an assumed operating scenario, not a verified maximum. Validate current, startup, ambient derating and fault coordination.",
-              "Manufacturer": "Littelfuse",
-              "MPN": "0297004.WXNV",
-              "Holder_Manufacturer": "Keystone Electronics",
-              "Holder_MPN": "3568",
-              "Holder_Datasheet": "${KIPRJMOD}/Datasheets/Keystone_3568.pdf",
-              "Footprint": "Fuse:Fuseholder_Blade_Mini_Keystone_3568",
-              "Datasheet": "${KIPRJMOD}/Datasheets/Littelfuse_297_MINI.pdf",
-              "Description": "4 A, 32 VDC MINI blade fuse; backup protection for a fault the MOSFETs cannot interrupt"
-            }
-          }
-        },
-        "R9": {
-          "old": {
-            "value": "10",
+            "value": "200k",
             "footprint": null,
             "fields": {
               "Footprint": null,
@@ -1621,14 +1529,14 @@
             }
           },
           "current": {
-            "value": "10",
+            "value": "200k",
             "footprint": "Resistor_SMD:R_0805_2012Metric",
             "fields": {
               "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
-              "MPN": "RC0805FR-0710RL",
+              "MPN": "RC0805FR-07200KL",
               "Manufacturer": "YAGEO",
               "Footprint": "Resistor_SMD:R_0805_2012Metric",
-              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07200KL",
               "Description": "1% 0.125W (at 70C), 0805 thick film"
             }
           }
@@ -1655,6 +1563,29 @@
             }
           }
         },
+        "R8": {
+          "old": {
+            "value": "10",
+            "footprint": null,
+            "fields": {
+              "Footprint": null,
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "10",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-0710RL",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0710RL",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
+            }
+          }
+        },
         "C6": {
           "old": {
             "value": "10u",
@@ -1675,6 +1606,75 @@
               "Footprint": "Capacitor_SMD:C_0805_2012Metric",
               "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1A106K125AC",
               "Description": "10V X7R"
+            }
+          }
+        },
+        "J1": {
+          "old": {
+            "value": "XT60",
+            "footprint": null,
+            "fields": {
+              "Footprint": null,
+              "Datasheet": null,
+              "Description": "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+            }
+          },
+          "current": {
+            "value": "XT60PW-M",
+            "footprint": "Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal",
+            "fields": {
+              "Selection_Status": "Assigned; verify cable mating, polarity and board-edge clearance",
+              "Manufacturer": "AMASS",
+              "MPN": "XT60PW-M",
+              "Footprint": "Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal",
+              "Datasheet": "${KIPRJMOD}/Datasheets/AMASS_XT60PW-M.pdf",
+              "Description": "Battery input; PCB right-angle XT60; pin 1 GND, pin 2 VBAT_RAW"
+            }
+          }
+        },
+        "R6": {
+          "old": {
+            "value": "680k",
+            "footprint": null,
+            "fields": {
+              "Footprint": null,
+              "Datasheet": null,
+              "Description": "Resistor"
+            }
+          },
+          "current": {
+            "value": "680k",
+            "footprint": "Resistor_SMD:R_0805_2012Metric",
+            "fields": {
+              "Selection_Status": "Procurement baseline: nominal value and 0805 footprint retained; 1% RC series selected. Final thermal/pulse qualification remains open.",
+              "MPN": "RC0805FR-07680KL",
+              "Manufacturer": "YAGEO",
+              "Footprint": "Resistor_SMD:R_0805_2012Metric",
+              "Datasheet": "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07680KL",
+              "Description": "1% 0.125W (at 70C), 0805 thick film"
+            }
+          }
+        },
+        "C1": {
+          "old": {
+            "value": "5n6",
+            "footprint": null,
+            "fields": {
+              "Footprint": null,
+              "Datasheet": null,
+              "Description": "Unpolarized capacitor 100V, C0G.NP0"
+            }
+          },
+          "current": {
+            "value": "5n6",
+            "footprint": "Capacitor_SMD:C_0805_2012Metric",
+            "fields": {
+              "MPN": "C2012C0G2A562J125AA",
+              "Manufacturer": "TDK",
+              "Selection_Status": "CGATE at the U1 GATE pin per requirements D2; sets the 6.25 kV/s turn-on ramp",
+              "Footprint": "Capacitor_SMD:C_0805_2012Metric",
+              "Datasheet": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012C0G2A562J125AA",
+              "Description": "100V C0G/NP0"
             }
           }
         }
@@ -1838,64 +1838,286 @@
             ]
           ]
         },
-        "/PDB_PROTECTED": {
+        "/GATE_PIN": {
+          "old": null,
+          "current": [
+            [
+              "C1",
+              "1"
+            ],
+            [
+              "D2",
+              "1"
+            ],
+            [
+              "R4",
+              "2"
+            ],
+            [
+              "U1",
+              "10"
+            ]
+          ]
+        },
+        "/GATE_DRV": {
           "old": [
             [
+              "Q1",
+              "4"
+            ],
+            [
               "Q2",
+              "4"
+            ],
+            [
+              "R4",
+              "1"
+            ],
+            [
+              "U1",
+              "10"
+            ]
+          ],
+          "current": null
+        },
+        "Net-(C1-Pad1)": {
+          "old": [
+            [
+              "C1",
+              "1"
+            ],
+            [
+              "R4",
+              "2"
+            ]
+          ],
+          "current": null
+        },
+        "/INA_IN_N": {
+          "old": [
+            [
+              "R8",
+              "2"
+            ],
+            [
+              "U2",
+              "9"
+            ]
+          ],
+          "current": [
+            [
+              "C7",
+              "2"
+            ],
+            [
+              "R8",
+              "2"
+            ],
+            [
+              "U2",
+              "9"
+            ]
+          ]
+        },
+        "unconnected-(U4-NC-Pad1)": {
+          "old": null,
+          "current": [
+            [
+              "U4",
+              "1"
+            ]
+          ]
+        },
+        "/PDB_FAULT_N": {
+          "old": null,
+          "current": [
+            [
+              "TP7",
+              "1"
+            ],
+            [
+              "U1",
+              "7"
+            ]
+          ]
+        },
+        "/INA_ALERT_N": {
+          "old": [
+            [
+              "U2",
+              "3"
+            ]
+          ],
+          "current": [
+            [
+              "TP6",
+              "1"
+            ],
+            [
+              "U4",
+              "4"
+            ]
+          ]
+        },
+        "/GATE_FET": {
+          "old": null,
+          "current": [
+            [
+              "D2",
+              "2"
+            ],
+            [
+              "Q1",
+              "4"
+            ],
+            [
+              "Q2",
+              "4"
+            ],
+            [
+              "R4",
+              "1"
+            ]
+          ]
+        },
+        "/INA_IN_P": {
+          "old": [
+            [
+              "R9",
+              "2"
+            ],
+            [
+              "U2",
+              "10"
+            ]
+          ],
+          "current": [
+            [
+              "C7",
+              "1"
+            ],
+            [
+              "R9",
+              "2"
+            ],
+            [
+              "U2",
+              "10"
+            ]
+          ]
+        },
+        "/VBAT_FUSED": {
+          "old": [
+            [
+              "F1",
+              "2"
+            ],
+            [
+              "Q1",
               "5"
             ],
             [
-              "Q2",
+              "Q1",
               "6"
             ],
             [
-              "Q2",
+              "Q1",
               "7"
             ],
             [
-              "Q2",
+              "Q1",
               "8"
             ],
             [
-              "R5",
+              "R1",
+              "1"
+            ],
+            [
+              "R6",
+              "2"
+            ],
+            [
+              "U1",
               "1"
             ]
           ],
           "current": [
             [
-              "Q2",
-              "5"
-            ],
-            [
-              "Q2",
-              "6"
-            ],
-            [
-              "Q2",
-              "7"
-            ],
-            [
-              "Q2",
-              "8"
-            ],
-            [
-              "R5",
+              "D1",
               "1"
             ],
             [
-              "TP2",
+              "F1",
+              "2"
+            ],
+            [
+              "Q1",
+              "5"
+            ],
+            [
+              "Q1",
+              "6"
+            ],
+            [
+              "Q1",
+              "7"
+            ],
+            [
+              "Q1",
+              "8"
+            ],
+            [
+              "R1",
+              "1"
+            ],
+            [
+              "R6",
+              "2"
+            ],
+            [
+              "TP1",
+              "1"
+            ],
+            [
+              "U1",
               "1"
             ]
           ]
         },
-        "unconnected-(U1-FAULT-Pad7)": {
+        "/PDB_I2C_SCL": {
           "old": [
             [
-              "U1",
-              "7"
+              "U2",
+              "5"
             ]
           ],
-          "current": null
+          "current": [
+            [
+              "J2",
+              "2"
+            ],
+            [
+              "U2",
+              "5"
+            ]
+          ]
+        },
+        "/INA_ALERT_LOCAL_N": {
+          "old": null,
+          "current": [
+            [
+              "R10",
+              "2"
+            ],
+            [
+              "U2",
+              "3"
+            ],
+            [
+              "U4",
+              "2"
+            ]
+          ]
         },
         "/PDB_3V3": {
           "old": [
@@ -1951,102 +2173,20 @@
             ]
           ]
         },
-        "Net-(C1-Pad1)": {
+        "unconnected-(U1-FAULT-Pad7)": {
           "old": [
             [
-              "C1",
-              "1"
-            ],
-            [
-              "R4",
-              "2"
+              "U1",
+              "7"
             ]
           ],
           "current": null
         },
-        "unconnected-(U4-NC-Pad1)": {
+        "unconnected-(J2-Pin_1-Pad1)": {
           "old": null,
           "current": [
             [
-              "U4",
-              "1"
-            ]
-          ]
-        },
-        "/VBAT_FUSED": {
-          "old": [
-            [
-              "F1",
-              "2"
-            ],
-            [
-              "Q1",
-              "5"
-            ],
-            [
-              "Q1",
-              "6"
-            ],
-            [
-              "Q1",
-              "7"
-            ],
-            [
-              "Q1",
-              "8"
-            ],
-            [
-              "R1",
-              "1"
-            ],
-            [
-              "R6",
-              "2"
-            ],
-            [
-              "U1",
-              "1"
-            ]
-          ],
-          "current": [
-            [
-              "D1",
-              "1"
-            ],
-            [
-              "F1",
-              "2"
-            ],
-            [
-              "Q1",
-              "5"
-            ],
-            [
-              "Q1",
-              "6"
-            ],
-            [
-              "Q1",
-              "7"
-            ],
-            [
-              "Q1",
-              "8"
-            ],
-            [
-              "R1",
-              "1"
-            ],
-            [
-              "R6",
-              "2"
-            ],
-            [
-              "TP1",
-              "1"
-            ],
-            [
-              "U1",
+              "J2",
               "1"
             ]
           ]
@@ -2113,46 +2253,53 @@
             ]
           ]
         },
-        "/INA_ALERT_LOCAL_N": {
-          "old": null,
-          "current": [
-            [
-              "R10",
-              "2"
-            ],
-            [
-              "U2",
-              "3"
-            ],
-            [
-              "U4",
-              "2"
-            ]
-          ]
-        },
-        "/INA_IN_P": {
+        "/PDB_PROTECTED": {
           "old": [
             [
-              "R9",
-              "2"
+              "Q2",
+              "5"
             ],
             [
-              "U2",
-              "10"
+              "Q2",
+              "6"
+            ],
+            [
+              "Q2",
+              "7"
+            ],
+            [
+              "Q2",
+              "8"
+            ],
+            [
+              "R5",
+              "1"
             ]
           ],
           "current": [
             [
-              "C7",
+              "Q2",
+              "5"
+            ],
+            [
+              "Q2",
+              "6"
+            ],
+            [
+              "Q2",
+              "7"
+            ],
+            [
+              "Q2",
+              "8"
+            ],
+            [
+              "R5",
               "1"
             ],
             [
-              "R9",
-              "2"
-            ],
-            [
-              "U2",
-              "10"
+              "TP2",
+              "1"
             ]
           ]
         },
@@ -2171,153 +2318,6 @@
             [
               "U2",
               "4"
-            ]
-          ]
-        },
-        "/INA_ALERT_N": {
-          "old": [
-            [
-              "U2",
-              "3"
-            ]
-          ],
-          "current": [
-            [
-              "TP6",
-              "1"
-            ],
-            [
-              "U4",
-              "4"
-            ]
-          ]
-        },
-        "/GATE_FET": {
-          "old": null,
-          "current": [
-            [
-              "D2",
-              "2"
-            ],
-            [
-              "Q1",
-              "4"
-            ],
-            [
-              "Q2",
-              "4"
-            ],
-            [
-              "R4",
-              "1"
-            ]
-          ]
-        },
-        "/GATE_DRV": {
-          "old": [
-            [
-              "Q1",
-              "4"
-            ],
-            [
-              "Q2",
-              "4"
-            ],
-            [
-              "R4",
-              "1"
-            ],
-            [
-              "U1",
-              "10"
-            ]
-          ],
-          "current": null
-        },
-        "/GATE_PIN": {
-          "old": null,
-          "current": [
-            [
-              "C1",
-              "1"
-            ],
-            [
-              "D2",
-              "1"
-            ],
-            [
-              "R4",
-              "2"
-            ],
-            [
-              "U1",
-              "10"
-            ]
-          ]
-        },
-        "/PDB_FAULT_N": {
-          "old": null,
-          "current": [
-            [
-              "TP7",
-              "1"
-            ],
-            [
-              "U1",
-              "7"
-            ]
-          ]
-        },
-        "/INA_IN_N": {
-          "old": [
-            [
-              "R8",
-              "2"
-            ],
-            [
-              "U2",
-              "9"
-            ]
-          ],
-          "current": [
-            [
-              "C7",
-              "2"
-            ],
-            [
-              "R8",
-              "2"
-            ],
-            [
-              "U2",
-              "9"
-            ]
-          ]
-        },
-        "/PDB_I2C_SCL": {
-          "old": [
-            [
-              "U2",
-              "5"
-            ]
-          ],
-          "current": [
-            [
-              "J2",
-              "2"
-            ],
-            [
-              "U2",
-              "5"
-            ]
-          ]
-        },
-        "unconnected-(J2-Pin_1-Pad1)": {
-          "old": null,
-          "current": [
-            [
-              "J2",
-              "1"
             ]
           ]
         }

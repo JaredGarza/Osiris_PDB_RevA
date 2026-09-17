@@ -1,0 +1,111 @@
+* ============================================================================
+* pdb_devices.lib -- discrete device models for the Osiris PDB A-P2-DRAFT
+* Engine: LTspice 26.x  (NOT PSpice -- see BUILD_NOTES.md)
+* Generated 2026-09-15.  Every parameter below is traced to a datasheet
+* excerpt under docs/interface-review-20260915/.
+* ============================================================================
+
+* ---------------------------------------------------------------------------
+* Q1, Q2 : Infineon ISC015N06NM5LF2  (OptiMOS-5 60V power MOSFET)
+* Source: docs/interface-review-20260915/Datasheet ISC015N06NM5LF2.txt
+*   V(BR)DSS 60 V         VGS(th) 2.25 / 3.0 / 3.45 V
+*   RDS(on)  1.3 m typ, 1.55 m max @ VGS=10V, ID=50A
+*   gfs      28 / 56 S    @ ID=50A
+*   Ciss 6900p  Coss 1300p  Crss 55p   @ VDS=30V
+*   Qg 90n  Qgs 41n  Qgd 16n           @ VDD=30V, ID=50A
+*
+* ** FIDELITY WARNING -- SURROGATE, NOT A VENDOR MODEL **
+* No Infineon SPICE model for this part was available locally. This is a
+* datasheet-fitted VDMOS. The square-law VDMOS channel cannot match both
+* RDS(on)=1.3m AND gfs=56S simultaneously for a modern trench device:
+* holding RDS(on) forces Kp high, which overstates gm by roughly 2x.
+* Consequence: the Miller plateau sits ~0.3 V low at few-amp currents, so
+* modelled inrush is mildly OPTIMISTIC (slightly faster turn-on than real).
+* Do NOT use this model for SOA, avalanche, or thermal qualification.
+* Cgdmax/a are fitted to reproduce Qgd=16nC over a 30V swing, not measured.
+* ---------------------------------------------------------------------------
+.model ISC015N06NM5LF2 VDMOS(nchan
++ Vto=3.0 Kp=150 lambda=0
++ Rd=0.35m Rs=0.05m Rg=1.5
++ Cgs=6.85n Cgdmax=2n Cgdmin=55p a=1.0 Cjo=1.25n
++ Is=8e-12 N=1.0 Rb=5m
++ BV=60 IBV=250u
++ mtriode=1.0 ksubthres=0.1
++ Tnom=27)
+
+* ---------------------------------------------------------------------------
+* D1 : Littelfuse SMAJ24CA  bidirectional TVS, 24 V standoff
+*   VRWM 24 V, VBR 26.7-29.5 V @ 1 mA, VC 38.9 V @ 7.7 A (IPP)
+*   Rdyn = (38.9 - 28.1) / 7.7 = 1.40 ohm
+* Modelled as two anti-series avalanche diodes in the subcircuit below, so
+* it clamps symmetrically in both polarities (reverse-battery case).
+* Cjo is a datasheet-typical bidirectional value, NOT measured.
+* ---------------------------------------------------------------------------
+.model DTVS_SMAJ24CA D(Is=1e-12 N=1.0 Rs=0.70 Cjo=600p BV=28.1 IBV=1m Tnom=27)
+
+.subckt SMAJ24CA A1 A2
+DA MID A1 DTVS_SMAJ24CA
+DB MID A2 DTVS_SMAJ24CA
+.ends SMAJ24CA
+
+* ---------------------------------------------------------------------------
+* D2, D3 : onsemi MBR0540  Schottky, 40 V / 0.5 A, SOD-123
+* Source: docs/interface-review-20260915/onsemi_MBR0540.txt
+*   VF 0.53 V max @ 0.5 A, VR 40 V, Ct ~ 40 pF
+* D2 = gate-discharge bypass around R4;  D3 = negative clamp on PDB_VOUT.
+* ---------------------------------------------------------------------------
+.model MBR0540 D(Is=1u N=1.1 Rs=0.15 Cjo=40p BV=40 IBV=10u Tnom=27)
+
+* ---------------------------------------------------------------------------
+* F1 : Littelfuse 0297004.WXNV  4 A MINI blade fuse
+* Source: docs/interface-review-20260915/Littelfuse_297_MINI.txt line 70
+*   Cold resistance 23.48 m,  typ. voltage drop 121 mV,  I2t 17 A^2s
+*
+* ** THE FUSE DOES NOT OPEN IN THIS MODEL. **
+* F1 is a fixed 23.48 m resistor. It is the COLD resistance; real fuse
+* resistance rises steeply as the element heats, so modelled I*R drop and
+* modelled let-through current are both optimistic during a fault.
+* The published 17 A^2s is PRE-ARCING (melting) I2t. It is NOT total
+* clearing I2t, which is larger and load/voltage dependent. The deck
+* integrates I^2 dt and compares it against 17 A^2s only to flag "melting
+* energy reached" -- that is a screening indicator, NOT a demonstration
+* that the fuse cleared, nor of arc energy or interrupt behaviour.
+* Interrupt rating of this series is 1000 A, not 3000 A.
+* ---------------------------------------------------------------------------
+.param RFUSE_COLD = 23.48m
+.param FUSE_I2T_MELT = 17
+
+* ---------------------------------------------------------------------------
+* U2 : TI INA228 -- ANALOG BEHAVIOUR ONLY
+* Source: docs/interface-review-20260915/INA228.txt
+* This models ONLY what the analog power path sees: supply draw on VS,
+* input bias/leakage on IN+/IN-/VBUS. It does NOT implement the ADC,
+* the digital I2C interface, register map, averaging, or ALERT logic.
+* Any claim about measurement accuracy or alert timing is OUT OF SCOPE.
+* IQ 600 uA typical (datasheet), VBUS input impedance ~ 1 Mohm.
+* ---------------------------------------------------------------------------
+.subckt INA228_ANALOG INP INN VBUS VS GND ALERT
+IQ   VS  GND  600u
+RINP INP GND  10Meg
+RINN INN GND  10Meg
+RBUS VBUS GND 1Meg
+RALK ALERT GND 100Meg
+CVS  VS  GND  10p
+.ends INA228_ANALOG
+
+* ---------------------------------------------------------------------------
+* U4 : Nexperia 74AUP1G07GW  open-drain non-inverting buffer
+* Source: docs/interface-review-20260915/Nexperia_74AUP1G07.txt
+* Open-drain: output sinks when input is LOW, high-Z when input is HIGH.
+* Switch threshold taken as 0.5*VCC. Logic-level behaviour only; no
+* propagation delay, no output slew shaping.
+* ---------------------------------------------------------------------------
+.subckt BUF_74AUP1G07 A Y VCC GND
+BTH  TH  GND  V=0.5*V(VCC,GND)
+SOUT Y GND TH A SW_OD
+RLK  Y GND 100Meg
+IQ   VCC GND 1u
+.model SW_OD SW(Ron=25 Roff=1G Vt=0 Vh=0.05)
+.ends BUF_74AUP1G07
+
+.end

@@ -1,0 +1,1235 @@
+                  74AUP1G07
+                  Low-power buffer with open-drain output
+                  Rev. 12.1 — 28 August 2024                                                 Product data sheet
+
+
+
+
+1. General description
+              The 74AUP1G07 is a single buffer with open-drain output.
+              Schmitt-trigger action at all inputs makes the circuit tolerant of slower input rise and fall times.
+              This device ensures a very low static and dynamic power consumption across the entire VCC range
+              from 0.8 V to 3.6 V.
+              This device is fully specified for partial power-down applications using IOFF. The IOFF circuitry
+              disables the output, preventing the damaging backflow current through the device when it is
+              powered down.
+
+
+2. Features and benefits
+              •   Wide supply voltage range from 0.8 V to 3.6 V
+              •   High noise immunity
+              •   CMOS low power dissipation
+              •   Complies with JEDEC standards:
+                  • JESD8-12 (0.8 V to 1.3 V)
+                  • JESD8-11 (0.9 V to 1.65 V)
+                  • JESD8-7 (1.65 V to 1.95 V)
+                  • JESD8-5 (2.3 V to 2.7 V)
+                  • JESD8C (2.7 V to 3.6 V)
+              •   Low static power consumption; ICC = 0.9 μA (maximum)
+              •   Latch-up performance exceeds 100 mA per JESD 78 Class II
+              •   Overvoltage tolerant inputs to 3.6 V
+              •   Low noise overshoot and undershoot < 10 % of VCC
+              •   IOFF circuitry provides partial Power-down mode operation
+              •   Multiple package options
+              •   ESD protection:
+                  • HBM: ANSI/ESDA/JEDEC JS-001 class 3A exceeds 5000 V
+                  • CDM: ANSI/ESDA/JEDEC JS-002 class C3 exceeds 1000 V
+              •   Specified from -40 °C to +85 °C and -40 °C to +125 °C
+Nexperia                                                                                                                                       74AUP1G07
+                                                                                                              Low-power buffer with open-drain output
+
+
+3. Ordering information
+Table 1. Ordering information
+Type number         Package
+                        Temperature range         Name                    Description                                                                          Version
+74AUP1G07GW             -40 °C to +125 °C         TSSOP5                  plastic thin shrink small outline package; 5 leads;                                  SOT353-1
+                                                                          body width 1.25 mm
+74AUP1G07GM             -40 °C to +125 °C         XSON6                   plastic extremely thin small outline package;                                        SOT886
+                                                                          no leads; 6 terminals; body 1 × 1.45 × 0.5 mm
+74AUP1G07GN             -40 °C to +125 °C         XSON6                   extremely thin small outline package; no leads;                                      SOT1115
+                                                                          6 terminals; body 0.9 × 1.0 × 0.35 mm
+74AUP1G07GS             -40 °C to +125 °C         XSON6                   extremely thin small outline package; no leads;                                      SOT1202
+                                                                          6 terminals; body 1.0 × 1.0 × 0.35 mm
+74AUP1G07GX             -40 °C to +125 °C         X2SON5                  plastic thermal enhanced extremely thin                                              SOT1226-3
+                                                                          small outline package; no leads; 5 terminals;
+                                                                          body 0.8 × 0.8 × 0.32 mm
+74AUP1G07GX4            -40 °C to +125 °C         X2SON4                  plastic thermal enhanced extremely thin                                              SOT1269-2
+                                                                          small outline package; no leads; 4 terminals;
+                                                                          body 0.6 × 0.6 × 0.32 mm
+74AUP1G07GZ             -40 °C to +125 °C         XSON5                   plastic thermal enhanced extremely thin small outline SOT8065-1
+                                                                          package with side-wettable flanks (SWF); no leads;
+                                                                          5 terminals; body 1.1 × 0.85 × 0.5 mm
+
+
+4. Marking
+Table 2. Marking
+Type number                                                                            Marking code[1]
+74AUP1G07GW                                                                            pS
+74AUP1G07GM                                                                            pS
+74AUP1G07GN                                                                            pS
+74AUP1G07GS                                                                            pS
+74AUP1G07GX                                                                            pS
+74AUP1G07GX4                                                                           pS
+74AUP1G07GZ                                                                            pS
+
+[1]   The pin 1 indicator is located on the lower left corner of the device, below the marking code.
+
+
+
+5. Functional diagram
+                                                                                                                                                                Y
+
+
+                A              Y                                                                                                        A
+                                                                A                                        Y
+                                                                                                                                                             GND
+                           mna623                                                      mna624                                                             mna625
+
+Fig. 1.     Logic symbol                         Fig. 2.         IEC logic symbol                                             Fig. 3.   Logic diagram
+
+
+
+
+74AUP1G07                                        All information provided in this document is subject to legal disclaimers.                    © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                           Rev. 12.1 — 28 August 2024                                                                                       2 / 19
+Nexperia                                                                                                                                                                   74AUP1G07
+                                                                                                                                 Low-power buffer with open-drain output
+
+
+6. Pinning information
+
+                                       6.1. Pinning
+
+                                                                        GM package
+                                                                      SOT886 (XSON6)
+                      GW package                                                                                                                                      GS package
+                   SOT353-1 (TSSOP5)                                                                                                                                SOT1202 (XSON6)
+                                                               n.c.      1               6       VCC                GN package
+                                                                                                                  SOT1115 (XSON6)
+                                                                                                                                                                 n.c.     1            6       VCC
+            n.c.    1                       5   VCC
+                                                                 A       2               5       n.c.         n.c.           1           6          VCC
+                                                                                                                                                                   A      2            5       n.c.
+              A     2                                                                                            A           2           5          n.c.
+                                                             GND         3               4       Y                                                             GND        3            4       Y
+                                                                                                            GND              3           4          Y                                 aaa-035752
+        GND         3                       4   Y                               aaa-035750
+                                                                                                                                        aaa-035751                  Transparent top view
+                               aaa-035748                             Transparent top view
+                                                                                                                   Transparent top view
+
+
+
+                             GX package                                                                                                            GZ package
+                          SOT1226-3 (X2SON5)                                       GX4 package                                                  SOT8065-1 (XSON5)
+                                                                                SOT1269-2 (X2SON4)
+                        n.c.       1                5    VCC                                                                                 n.c.       1               5 VCC
+                                                                                A        1                   4       VCC
+                                        3
+                                                                                                                                                              3
+                                       GND                                                                                                                   GND
+
+                          A        2                4    Y
+                                                                             GND         2                   3       Y                         A        2               4 Y
+                                            aaa-035753
+                                                                                                                                                                          aaa-037921
+                               Transparent top view                                                  aaa-035754
+                                                                                    Transparent top view                                            Transparent top view
+
+
+
+
+                                       6.2. Pin description
+Table 3. Pin description
+Symbol           Pin                                                                                                                                        Description
+                               TSSOP5, XSON5 and X2SON5                                XSON6                             X2SON4
+n.c.                           1                                                       1, 5                              -                                  not connected
+A                              2                                                       2                                 1                                  data input
+GND                            3                                                       3                                 2                                  ground (0 V)
+Y                              4                                                       4                                 3                                  data output
+VCC                            5                                                       6                                 4                                  supply voltage
+
+
+7. Functional description
+Table 4. Function table
+H = HIGH voltage level; L = LOW voltage level; Z = high-impedance OFF state.
+Input                                                                                                   Output
+A                                                                                                       Y
+L                                                                                                       L
+H                                                                                                       Z
+
+
+
+74AUP1G07                                                         All information provided in this document is subject to legal disclaimers.                               © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                                            Rev. 12.1 — 28 August 2024                                                                                                  3 / 19
+Nexperia                                                                                                                                   74AUP1G07
+                                                                                                                Low-power buffer with open-drain output
+
+
+8. Limiting values
+Table 5. Limiting values
+In accordance with the Absolute Maximum Rating System (IEC 60134). Voltages are referenced to GND (ground = 0 V).
+Symbol Parameter                                        Conditions                                                                    Min                 Max             Unit
+VCC          supply voltage                                                                                                           -0.5                +4.6            V
+IIK          input clamping current                     VI < 0 V                                                                      -50                    -            mA
+VI           input voltage                                                                                                      [1]   -0.5                +4.6            V
+IOK          output clamping current                    VO < 0 V                                                                      -50                    -            mA
+VO           output voltage                             Active mode and Power-down mode                                         [1]   -0.5                +4.6            V
+IO           output current                             VO = 0 V to VCC                                                                -                    20            mA
+ICC          supply current                                                                                                            -                    50            mA
+IGND         ground current                                                                                                           -50                    -            mA
+Tstg         storage temperature                                                                                                      -65                +150             °C
+Ptot         total power dissipation                    Tamb = -40 °C to +125 °C
+                                                               TSSOP5, XSON6 and X2SON5 package [2]                                    -                   250            mW
+                                                               X2SON4 package                                                   [3]    -                   150            mW
+
+[1]    The input and output voltage ratings may be exceeded if the input and output current ratings are observed.
+[2]    For SOT353-1 (TSSOP5) package: Ptot derates linearly with 3.3 mW/K above 74 °C.
+       For SOT886 (XSON6) package: Ptot derates linearly with 3.3 mW/K above 74 °C.
+       For SOT1115 (XSON6) package: Ptot derates linearly with 3.2 mW/K above 71 °C.
+       For SOT1202 (XSON6) package: Ptot derates linearly with 3.3 mW/K above 74 °C.
+       For SOT1226-3 (X2SON5) package: Ptot derates linearly with 3.0 mW/K above 67 °C.
+       For SOT8065-1 (XSON5) package: Ptot derates linearly with 3.2 mW/K above 72 °C.
+[3]    For SOT1269-2 (X2SON4) package: Ptot derates linearly with 1.7 mW/K above 57 °C.
+
+
+
+9. Recommended operating conditions
+Table 6. Recommended operating conditions
+Symbol Parameter                        Conditions                                                                                    Min                 Max             Unit
+VCC          supply voltage                                                                                                           0.8                  3.6            V
+VI           input voltage                                                                                                             0                   3.6            V
+VO           output voltage                               Active mode and Power-down mode                                              0                   3.6            V
+Tamb         ambient temperature                                                                                                      -40                +125             °C
+Δt/ΔV        input transition rise and fall rate          VCC = 0.8 V to 3.6 V                                                         0                  200             ns/V
+
+
+
+
+74AUP1G07                                          All information provided in this document is subject to legal disclaimers.              © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                             Rev. 12.1 — 28 August 2024                                                                                 4 / 19
+Nexperia                                                                                                                            74AUP1G07
+                                                                                                         Low-power buffer with open-drain output
+
+
+10. Static characteristics
+Table 7. Static characteristics
+At recommended operating conditions; voltages are referenced to GND (ground = 0 V).
+Symbol Parameter                        Conditions                                                                         Min      Typ            Max              Unit
+Tamb = 25 °C
+VIH         HIGH-level input voltage    VCC = 0.8 V                                                                      0.70×VCC    -                -             V
+                                        VCC = 0.9 V to 1.95 V                                                            0.65×VCC    -                -             V
+                                        VCC = 2.3 V to 2.7 V                                                               1.6       -                -             V
+                                        VCC = 3.0 V to 3.6 V                                                               2.0       -                -             V
+VIL         LOW-level input voltage     VCC = 0.8 V                                                                         -        -        0.30×VCC V
+                                        VCC = 0.9 V to 1.95 V                                                               -        -        0.35×VCC V
+                                        VCC = 2.3 V to 2.7 V                                                                -        -              0.7             V
+                                        VCC = 3.0 V to 3.6 V                                                                -        -              0.9             V
+VOL         LOW-level output voltage    VI = VIH or VIL
+                                           IO = 20 μA; VCC = 0.8 V to 3.6 V                                                 -        -              0.1             V
+                                           IO = 1.1 mA; VCC = 1.1 V                                                         -        -         0.3×VCC              V
+                                           IO = 1.7 mA; VCC = 1.4 V                                                         -        -             0.31             V
+                                           IO = 1.9 mA; VCC = 1.65 V                                                        -        -             0.31             V
+                                           IO = 2.3 mA; VCC = 2.3 V                                                         -        -             0.31             V
+                                           IO = 3.1 mA; VCC = 2.3 V                                                         -        -             0.44             V
+                                           IO = 2.7 mA; VCC = 3.0 V                                                         -        -             0.31             V
+                                           IO = 4.0 mA; VCC = 3.0 V                                                         -        -             0.44             V
+II          input leakage current       VI = GND to 3.6 V; VCC = 0 V to 3.6 V                                               -        -             ±0.1             μA
+IOZ         OFF-state output current    VI = VIH; VO = 0 V to 3.6 V;                                                        -        -             ±0.1             μA
+                                        VCC = 0 V to 3.6 V
+IOFF        power-off leakage current   VI or VO = 0 V to 3.6 V; VCC = 0 V                                                  -        -             ±0.2             μA
+ΔIOFF       additional power-off        VI or VO = 0 V to 3.6 V; VCC = 0 V to 0.2 V                                         -        -             ±0.2             μA
+            leakage current
+ICC         supply current              VI = GND or VCC; IO = 0 A;                                                          -        -              0.5             μA
+                                        VCC = 0.8 V to 3.6 V
+ΔICC        additional supply current   VI = VCC - 0.6 V; IO = 0 A; VCC = 3.3 V                                             -        -               40             μA
+CI          input capacitance           VCC = 0 V to 3.6 V; VI = GND or VCC                                                 -       0.8               -             pF
+CO          output capacitance          output enabled; VO = GND; VCC = 0 V                                                 -       1.7               -             pF
+                                        output disabled; VO = GND; VCC = 0 V                                                -       1.1               -             pF
+Tamb = -40 °C to +85 °C
+VIH         HIGH-level input voltage    VCC = 0.8 V                                                                      0.70×VCC    -                -             V
+                                        VCC = 0.9 V to 1.95 V                                                            0.65×VCC    -                -             V
+                                        VCC = 2.3 V to 2.7 V                                                               1.6       -                -             V
+                                        VCC = 3.0 V to 3.6 V                                                               2.0       -                -             V
+VIL         LOW-level input voltage     VCC = 0.8 V                                                                         -        -        0.30×VCC V
+                                        VCC = 0.9 V to 1.95 V                                                               -        -        0.35×VCC V
+                                        VCC = 2.3 V to 2.7 V                                                                -        -              0.7             V
+                                        VCC = 3.0 V to 3.6 V                                                                -        -              0.9             V
+
+
+
+
+74AUP1G07                                   All information provided in this document is subject to legal disclaimers.               © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                      Rev. 12.1 — 28 August 2024                                                                                  5 / 19
+Nexperia                                                                                                                            74AUP1G07
+                                                                                                         Low-power buffer with open-drain output
+
+Symbol Parameter                        Conditions                                                                         Min      Typ            Max              Unit
+VOL         LOW-level output voltage    VI = VIH or VIL
+                                           IO = 20 μA; VCC = 0.8 V to 3.6 V                                                 -        -              0.1             V
+                                           IO = 1.1 mA; VCC = 1.1 V                                                         -        -         0.3×VCC              V
+                                           IO = 1.7 mA; VCC = 1.4 V                                                         -        -             0.37             V
+                                           IO = 1.9 mA; VCC = 1.65 V                                                        -        -             0.35             V
+                                           IO = 2.3 mA; VCC = 2.3 V                                                         -        -             0.33             V
+                                           IO = 3.1 mA; VCC = 2.3 V                                                         -        -             0.45             V
+                                           IO = 2.7 mA; VCC = 3.0 V                                                         -        -             0.33             V
+                                           IO = 4.0 mA; VCC = 3.0 V                                                         -        -             0.45             V
+II          input leakage current       VI = GND to 3.6 V; VCC = 0 V to 3.6 V                                               -        -             ±0.5             μA
+IOZ         OFF-state output current    VI = VIH; VO = 0 V to 3.6 V;                                                        -        -             ±0.5             μA
+                                        VCC = 0 V to 3.6 V
+IOFF        power-off leakage current   VI or VO = 0 V to 3.6 V; VCC = 0 V                                                  -        -             ±0.5             μA
+ΔIOFF       additional power-off        VI or VO = 0 V to 3.6 V; VCC = 0 V to 0.2 V                                         -        -             ±0.6             μA
+            leakage current
+ICC         supply current              VI = GND or VCC; IO = 0 A;                                                          -        -              0.9             μA
+                                        VCC = 0.8 V to 3.6 V
+ΔICC        additional supply current   VI = VCC - 0.6 V; IO = 0 A; VCC = 3.3 V                                             -        -               50             μA
+Tamb = -40 °C to +125 °C
+VIH         HIGH-level input voltage    VCC = 0.8 V                                                                      0.75×VCC    -                -             V
+                                        VCC = 0.9 V to 1.95 V                                                            0.70×VCC    -                -             V
+                                        VCC = 2.3 V to 2.7 V                                                               1.6       -                -             V
+                                        VCC = 3.0 V to 3.6 V                                                               2.0       -                -             V
+VIL         LOW-level input voltage     VCC = 0.8 V                                                                         -        -        0.25×VCC V
+                                        VCC = 0.9 V to 1.95 V                                                               -        -        0.30×VCC V
+                                        VCC = 2.3 V to 2.7 V                                                                -        -              0.7             V
+                                        VCC = 3.0 V to 3.6 V                                                                -        -              0.9             V
+VOL         LOW-level output voltage    VI = VIH or VIL
+                                           IO = 20 μA; VCC = 0.8 V to 3.6 V                                                 -        -             0.11             V
+                                           IO = 1.1 mA; VCC = 1.1 V                                                         -        -        0.33×VCC V
+                                           IO = 1.7 mA; VCC = 1.4 V                                                         -        -             0.41             V
+                                           IO = 1.9 mA; VCC = 1.65 V                                                        -        -             0.39             V
+                                           IO = 2.3 mA; VCC = 2.3 V                                                         -        -             0.36             V
+                                           IO = 3.1 mA; VCC = 2.3 V                                                         -        -             0.50             V
+                                           IO = 2.7 mA; VCC = 3.0 V                                                         -        -             0.36             V
+                                           IO = 4.0 mA; VCC = 3.0 V                                                         -        -             0.50             V
+II          input leakage current       VI = GND to 3.6 V; VCC = 0 V to 3.6 V                                               -        -            ±0.75             μA
+IOZ         OFF-state output current    VI = VIH; VO = 0 V to 3.6 V;                                                        -        -            ±0.75             μA
+                                        VCC = 0 V to 3.6 V
+IOFF        power-off leakage current   VI or VO = 0 V to 3.6 V; VCC = 0 V                                                  -        -            ±0.75             μA
+ΔIOFF       additional power-off        VI or VO = 0 V to 3.6 V; VCC = 0 V to 0.2 V                                         -        -            ±0.75             μA
+            leakage current
+ICC         supply current              VI = GND or VCC; IO = 0 A;                                                          -        -              1.4             μA
+                                        VCC = 0.8 V to 3.6 V
+ΔICC        additional supply current   VI = VCC - 0.6 V; IO = 0 A; VCC = 3.3 V                                             -        -               75             μA
+
+
+
+
+74AUP1G07                                   All information provided in this document is subject to legal disclaimers.               © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                      Rev. 12.1 — 28 August 2024                                                                                  6 / 19
+Nexperia                                                                                                                              74AUP1G07
+                                                                                                        Low-power buffer with open-drain output
+
+
+11. Dynamic characteristics
+Table 8. Dynamic characteristics
+Voltages are referenced to GND (ground = 0 V); for test circuit see Fig. 5.
+Symbol Parameter          Conditions                                                       25 °C                         -40 °C to          -40 °C to                Unit
+                                                                                                                          +85 °C             +125 °C
+                                                                            Min           Typ[1]            Max         Min    Max       Min            Max
+CL = 5 pF
+tpd         propagation   A to Y; see Fig. 4                      [2]
+            delay            VCC = 0.8 V                                       -            11.6                -        -       -          -              -         ns
+                             VCC = 1.1 V to 1.3 V                            2.1             4.1              7.5       1.7     9.1      1.7            10.0         ns
+                             VCC = 1.4 V to 1.6 V                            1.6             3.0              5.1       1.3     6.1      1.3             6.7         ns
+                             VCC = 1.65 V to 1.95 V                          1.6             2.7              4.0       1.2     5.0      1.2             5.5         ns
+                             VCC = 2.3 V to 2.7 V                            1.1             2.1              3.2       0.9     4.0      0.9             4.4         ns
+                             VCC = 3.0 V to 3.6 V                            1.4             2.2              2.8       1.1     3.3      1.1             3.6         ns
+CL = 10 pF
+tpd         propagation   A to Y; see Fig. 4                      [2]
+            delay            VCC = 0.8 V                                       -            14.7                -        -       -          -              -         ns
+                             VCC = 1.1 V to 1.3 V                            3.0             5.1              9.0       2.4    11.2      2.4            12.3         ns
+                             VCC = 1.4 V to 1.6 V                            2.3             3.8              6.1       2.0     7.4      2.0             8.1         ns
+                             VCC = 1.65 V to 1.95 V                          2.4             3.6              4.8       1.8     6.1      1.8             6.7         ns
+                             VCC = 2.3 V to 2.7 V                            1.7             2.8              3.8       1.3     4.8      1.3             5.3         ns
+                             VCC = 3.0 V to 3.6 V                            2.2             3.1              4.2       1.6     4.5      1.6             5.0         ns
+CL = 15 pF
+tpd         propagation   A to Y; see Fig. 4                      [2]
+            delay            VCC = 0.8 V                                       -            17.7                -        -       -          -              -         ns
+                             VCC = 1.1 V to 1.3 V                            3.5             6.1            10.4        3.2    13.1      3.2            14.5         ns
+                             VCC = 1.4 V to 1.6 V                            3.0             4.5              6.8       2.6     8.6      2.6             9.4         ns
+                             VCC = 1.65 V to 1.95 V                          2.8             4.4              6.7       2.2     7.8      2.2             8.6         ns
+                             VCC = 2.3 V to 2.7 V                            2.4             3.4              4.5       1.9     5.3      1.9             5.8         ns
+                             VCC = 3.0 V to 3.6 V                            2.2             4.0              5.7       1.9     6.1      1.9             6.7         ns
+CL = 30 pF
+tpd         propagation   A to Y; see Fig. 4                      [2]
+            delay            VCC = 0.8 V                                       -            24.6                -        -       -          -              -         ns
+                             VCC = 1.1 V to 1.3 V                            4.8             9.0            15.6        4.3    18.8      4.3            20.7         ns
+                             VCC = 1.4 V to 1.6 V                            4.1             6.7              9.4       3.7    11.8      3.7            13.0         ns
+                             VCC = 1.65 V to 1.95 V                          3.8             6.8              9.7       3.2    11.0      3.2            12.1         ns
+                             VCC = 2.3 V to 2.7 V                            3.7             5.2              6.7       3.0     7.1      3.0             7.8         ns
+                             VCC = 3.0 V to 3.6 V                            3.6             6.4              9.7       2.8    10.4      2.8            11.4         ns
+
+
+
+
+74AUP1G07                                  All information provided in this document is subject to legal disclaimers.                 © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                     Rev. 12.1 — 28 August 2024                                                                                    7 / 19
+Nexperia                                                                                                                                           74AUP1G07
+                                                                                                            Low-power buffer with open-drain output
+
+Symbol Parameter             Conditions                                                        25 °C                              -40 °C to              -40 °C to                Unit
+                                                                                                                                   +85 °C                 +125 °C
+                                                                                Min           Typ[1]            Max              Min       Max        Min            Max
+CL = 5 pF, 10 pF, 15 pF and 30 pF
+CPD         power            fi = 1 MHz; VI = GND to VCC [3]
+            dissipation         VCC = 0.8 V                                        -             0.5                -             -            -         -              -         pF
+            capacitance
+                                VCC = 1.1 V to 1.3 V                               -             0.6                -             -            -         -              -         pF
+                                VCC = 1.4 V to 1.6 V                               -             0.6                -             -            -         -              -         pF
+                                VCC = 1.65 V to 1.95 V                             -             0.7                -             -            -         -              -         pF
+                                VCC = 2.3 V to 2.7 V                               -             0.9                -             -            -         -              -         pF
+                                VCC = 3.0 V to 3.6 V                               -             1.2                -             -            -         -              -         pF
+
+[1]   All typical values are measured at nominal VCC.
+[2]   tpd is the same as tPZL and tPLZ.
+[3]   CPD is used to determine the dynamic power dissipation (PD in μW).
+                        2
+      PD = CPD × VCC × fi × N where:
+      fi = input frequency in MHz;
+      VCC = supply voltage in V;
+      N = number of inputs switching.
+
+
+
+                             11.1. Waveforms and test circuit
+                                              VI
+
+                                 A input                     VM
+
+                                            GND
+                                                                 t PLZ                                           t PZL
+                                            VCC
+
+                                Y output                                                                                    VM
+
+                                            VOL                                VX
+                                                                                                                                      mna626
+
+            Measurement points are given in Table 9.
+            Logic level: VOL is the typical output voltage level that occurs with the output load.
+Fig. 4.     The data input (A) to output (Y) propagation delays
+
+Table 9. Measurement points
+Supply voltage    Input                                                                                                     Output
+VCC                     VM                     VI                                    tr = tf                                VM                         VX
+0.8 V to 1.6 V          0.5 × VCC              VCC                                   ≤ 3.0 ns                               0.5 × VCC                  VOL + 0.1 V
+1.65 V to 2.7 V         0.5 × VCC              VCC                                   ≤ 3.0 ns                               0.5 × VCC                  VOL + 0.15 V
+3.0 V to 3.6 V          0.5 × VCC              VCC                                   ≤ 3.0 ns                               0.5 × VCC                  VOL + 0.3 V
+
+
+
+
+74AUP1G07                                      All information provided in this document is subject to legal disclaimers.                          © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                         Rev. 12.1 — 28 August 2024                                                                                             8 / 19
+Nexperia                                                                                                                                 74AUP1G07
+                                                                                                            Low-power buffer with open-drain output
+
+                                                                               VCC                            VEXT
+
+
+                                                                                                                    5 kΩ
+                                                           VI                                VO
+                                                G                             DUT
+
+                                                                       RT                                CL         RL
+
+
+
+                                                                                                           001aac521
+
+            Test data is given in Table 10.
+            Definitions for test circuit:
+            RL = Load resistance;
+            CL = Load capacitance including jig and probe capacitance;
+            RT = Termination resistance should be equal to the output impedance Zo of the pulse generator;
+            VEXT = External voltage for measuring switching times.
+Fig. 5.     Test circuit for measuring switching times
+
+Table 10. Test data
+Supply voltage           Load                                                                       VEXT
+VCC                      CL                                       RL [1]                            tPLH, tPHL              tPZH, tPHZ            tPZL, tPLZ
+0.8 V to 3.6 V           5 pF, 10 pF, 15 pF and 30 pF 5 kΩ or 1 MΩ                                  open                    GND                   2 × VCC
+
+[1]   For measuring enable and disable times, RL = 5 kΩ.
+      For measuring propagation delays, setup and hold times and pulse width, RL = 1 MΩ.
+
+
+
+
+74AUP1G07                                      All information provided in this document is subject to legal disclaimers.                © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                         Rev. 12.1 — 28 August 2024                                                                                   9 / 19
+Nexperia                                                                                                                                                                        74AUP1G07
+                                                                                                                                   Low-power buffer with open-drain output
+
+
+12. Package outline
+  TSSOP5: plastic thin shrink small outline package; 5 leads; body width 1.25 mm                                                                                                                    SOT353-1
+
+
+
+
+                                                          D                                  B                                                         E                    A           X
+
+
+
+
+                                                                                                               c
+                                                                                                              (5x)
+
+
+
+
+                                             y                                                                                                     HE                                   v M A
+
+
+
+
+                                                         e1
+
+
+
+                                       5                                        4
+
+
+
+
+                   pin 1 index
+                                                                                                                        A    A2
+
+
+                                                                                                                                    A1
+                                       1                      2                   3                                                                                              A3
+                                                                                                                                                                                              θ
+
+                                                                                          w M B                                                                        Lp
+                                                                          bp
+                                                                         (5x)
+                                                                                                                                                    detail X
+                                                    e             e
+
+
+
+
+                                                                  0                                                                                3 mm
+                                                                                                       scale
+
+
+
+     Dimensions (mm are the original dimensions)
+
+            Unit        A        A1        A2     A3     bp       c        D(1)       E(1)       e       e1       HE         Lp        v           w       y      θ
+
+               max     1.1       0.1       1.0           0.30 0.25          2.2       1.35                        2.4       0.46                                  8°
+      mm                                          0.15                                     0.65         1.3                          0.3       0.1         0.1
+               min     0.8        0        0.8           0.15 0.08          1.8       1.15                        1.8       0.26                                  0°
+     Note
+     1. Plastic or metal protrusions of 0.2 mm maximum per side are not included.                                                                                                                 sot353-1_po
+
+            Outline                                                             References                                                                       European
+                                                                                                                                                                                            Issue date
+            version                         IEC                   JEDEC                              JEITA                                                       projection
+                                                                                                                                                                                            21-12-15
+        SOT353-1                                                  MO-203                         SC-88A
+                                                                                                                                                                                            21-12-16
+
+Fig. 6.        Package outline SOT353-1 (TSSOP5)
+
+
+
+
+74AUP1G07                                                             All information provided in this document is subject to legal disclaimers.                                © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                                                Rev. 12.1 — 28 August 2024                                                                                                 10 / 19
+Nexperia                                                                                                                                                           74AUP1G07
+                                                                                                                                Low-power buffer with open-drain output
+
+  XSON6: plastic extremely thin small outline package; no leads; 6 terminals; body 1 x 1.45 x 0.5 mm                                                                                      SOT886
+
+
+
+                                                                                                  b
+                                                      1                     2                         3
+
+                                                                                                                                                4x
+                                                                                                                  L                             (2)
+                                      L1
+
+
+                             e
+
+
+
+
+                                                      6                      5                        4
+                                                              e1                     e1
+
+
+
+
+                                      6x                                                                                  A
+                                      (2)
+
+
+
+
+                                                                                                                A1
+
+                                                                          D
+
+
+
+
+                                                                                                                      E
+
+
+
+
+                             terminal 1
+                             index area
+
+
+                                                          0                                               1                                       2 mm
+                                                                                                      scale
+
+     Dimensions (mm are the original dimensions)
+
+            Unit      A(1)       A1         b     D       E    e         e1         L        L1
+
+               max    0.5     0.04 0.25 1.50 1.05                                 0.35 0.40
+      mm       nom                 0.20 1.45 1.00             0.6        0.5      0.30 0.35
+               min                 0.17 1.40 0.95                                 0.27 0.32
+     Notes
+     1. Including plating thickness.
+     2. Can be visible in some manufacturing processes.                                                                                                                                 sot886_po
+
+            Outline                                                         References                                                                European
+                                                                                                                                                                              Issue date
+            version                         IEC                JEDEC                           JEITA                                                  projection
+                                                                                                                                                                               04-07-22
+            SOT886                                            MO-252                                                                                                           12-01-05
+
+Fig. 7.        Package outline SOT886 (XSON6)
+
+
+
+
+74AUP1G07                                                          All information provided in this document is subject to legal disclaimers.                      © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                                               Rev. 12.1 — 28 August 2024                                                                                     11 / 19
+Nexperia                                                                                                                                         74AUP1G07
+                                                                                                                    Low-power buffer with open-drain output
+
+  XSON6: extremely thin small outline package; no leads;
+  6 terminals; body 0.9 x 1.0 x 0.35 mm                                                                                                                               SOT1115
+
+
+
+                                                                                  b
+                                                          1          2            3                                      (4×)(2)
+
+
+                                                L1                                              L
+
+
+                                          e
+
+
+
+
+                                                          6          5            4
+
+                                                               e1            e1
+
+
+
+
+                                            (6×)(2)
+                                                                                              A1      A
+
+
+
+
+                                                                     D
+
+
+
+
+                                                                                                E
+
+
+
+                                        terminal 1
+                                        index area
+
+
+
+
+                                                                         0                0.5                   1 mm
+
+     Dimensions                                                                          scale
+
+            Unit      A(1)   A1   b     D       E     e       e1         L        L1
+
+               max 0.35 0.04 0.20 0.95 1.05                          0.35 0.40
+      mm       nom           0.15 0.90 1.00 0.55              0.3    0.30 0.35
+               min           0.12 0.85 0.95                          0.27 0.32
+     Note
+     1. Including plating thickness.
+     2. Visible depending upon used manufacturing technology.                                                                                                       sot1115_po
+
+            Outline                                             References                                                          European
+                                                                                                                                                            Issue date
+            version               IEC                 JEDEC                           JEITA                                         projection
+                                                                                                                                                             10-04-02
+            SOT1115
+                                                                                                                                                             10-04-07
+
+Fig. 8.       Package outline SOT1115 (XSON6)
+
+
+
+
+74AUP1G07                                              All information provided in this document is subject to legal disclaimers.                © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                                  Rev. 12.1 — 28 August 2024                                                                                12 / 19
+Nexperia                                                                                                                                        74AUP1G07
+                                                                                                                 Low-power buffer with open-drain output
+
+  XSON6: extremely thin small outline package; no leads;
+  6 terminals; body 1.0 x 1.0 x 0.35 mm                                                                                                                              SOT1202
+
+
+
+
+                                                                                b
+                                                    1             2             3                                        (4×)(2)
+
+
+                                             L1                                               L
+
+
+                                        e
+
+
+
+
+                                                    6             5             4
+                                                          e1              e1
+
+
+
+
+                                         (6×)(2)
+                                                                                             A1      A
+
+
+
+
+                                                                 D
+
+
+
+
+                                                                                              E
+
+                                      terminal 1
+                                      index area
+
+
+
+
+                                                                      0                0.5                   1 mm
+
+     Dimensions                                                                       scale
+
+            Unit      A(1)   A1   b     D      E   e      e1          L        L1
+
+               max 0.35 0.04 0.20 1.05 1.05           0.35 0.40
+      mm       nom           0.15 1.00 1.00 0.55 0.35 0.30 0.35
+               min           0.12 0.95 0.95           0.27 0.32
+     Note
+     1. Including plating thickness.
+     2. Visible depending upon used manufacturing technology.                                                                                                      sot1202_po
+
+            Outline                                          References                                                            European
+                                                                                                                                                           Issue date
+            version               IEC              JEDEC                        JEITA                                              projection
+                                                                                                                                                            10-04-02
+            SOT1202
+                                                                                                                                                            10-04-06
+
+Fig. 9.       Package outline SOT1202 (XSON6)
+
+
+
+
+74AUP1G07                                           All information provided in this document is subject to legal disclaimers.                  © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                              Rev. 12.1 — 28 August 2024                                                                                   13 / 19
+Nexperia                                                                                                                                                 74AUP1G07
+                                                                                                                    Low-power buffer with open-drain output
+
+  X2SON5: plastic thermal enhanced extremely thin small outline package; no leads;
+  5 terminals; body 0.8 x 0.8 x 0.32 mm                                                                                                                                    SOT1226-3
+
+
+
+
+                                                                                        C
+                                                                                            Seating Plane
+                                                                        y C
+                          X                                       5x
+
+                                                  D                             A       B
+
+
+
+
+                                                                                        E                      A
+
+
+
+                                                                                                                      A3
+                   pin 1
+                   index area                                                                                                A1
+
+
+                   pin 1                          e
+                   index area
+                                                               b
+                                                                                    v       C A B                          y1 C
+                                                              (4x)
+                                         1                2                         w       C
+
+                           L
+                          (4x)
+
+
+
+                                                          3
+
+
+                                                                                                                                                              (6x)
+                                             h
+                                        D
+
+
+
+
+                                                                                k
+                                                                                (4
+                                                                                  x)
+
+
+
+
+                                         5                    4
+                                                                        0                                                            1 mm
+                                                                                                  scale
+     Dimensions (mm are the original dimensions)
+
+            Unit      A       A1   A3        D   Dh   E           b         e       K       L       v        w         y        y1
+
+               max 0.35 0.04        0.85 0.30 0.85 0.25           0.27
+                              0.10
+      mm       nom 0.32 0.02        0.80 0.25 0.80 0.20 0.50      0.22                             0.1     0.05 0.05 0.05
+                             (Typ.)
+               min 0.30 0.00        0.75 0.20 0.75 0.15      0.20 0.17
+                                                                                                                                                                          sot1226-3_po
+
+            Outline                                                   References                                                            European
+                                                                                                                                                                     Issue date
+            version                IEC                JEDEC                             EIAJ                                                projection
+                                                                                                                                                                     19-11-06
+        SOT1226-3                                         ---                                                                                                        19-11-07
+
+Fig. 10. Package outline SOT1226-3 (X2SON5)
+
+
+
+
+74AUP1G07                                              All information provided in this document is subject to legal disclaimers.                        © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                                     Rev. 12.1 — 28 August 2024                                                                                     14 / 19
+Nexperia                                                                                                                                                   74AUP1G07
+                                                                                                                       Low-power buffer with open-drain output
+
+  X2SON4: plastic thermal enhanced extremely thin small outline package; no leads;
+  4 terminals; body 0.6 x 0.6 x 0.32 mm                                                                                                                                      SOT1269-2
+
+
+
+
+                                                                                X
+
+
+                                                  D                             A       B
+
+
+
+
+                       pin 1
+                       ID area
+                                                                                                                                                                    A
+                                                                                        E
+
+
+
+
+                                                                                                                                          detail X         A1
+
+
+
+                                                                                                                                                           C
+
+                                                  e                                                                         y1 C                               y
+                                      2                              3
+
+                        L
+                      (4x)
+
+
+
+                             e
+
+
+
+
+                                      1                         4
+                                                                                        v         C A B
+                                                   b
+                                                  (4x)                                  w         C
+
+
+                                                      0                                                                                1 mm
+                                                                                            scale
+     Dimensions (mm are the original dimensions)
+
+            Unit      A      A1   D       E   b       e          L         v        w         y        y1
+
+               max 0.35 0.04 0.65 0.65 0.20                    0.23
+      mm       nom 0.32 0.02 0.60 0.60 0.15 0.40               0.18 0.10 0.05 0.05 0.05
+               min 0.30 0.00 0.55 0.55 0.10                    0.13
+                                                                                                                                                                            sot1269-2_po
+
+            Outline                                                 References                                                                European
+                                                                                                                                                                        Issue date
+            version               IEC                 JEDEC                           JEITA                                                   projection
+                                                                                                                                                                        17-04-07
+        SOT1269-2                                         ---                                                                                                           17-06-30
+
+Fig. 11. Package outline SOT1269-2 (X2SON4)
+
+
+
+
+74AUP1G07                                                 All information provided in this document is subject to legal disclaimers.                       © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                                    Rev. 12.1 — 28 August 2024                                                                                        15 / 19
+Nexperia                                                                                                                                                                    74AUP1G07
+                                                                                                                                   Low-power buffer with open-drain output
+
+  XSON5: Plastic thermal enhanced extremely thin small outline package with
+  side-wettable flanks (SWF); no leads; 5 terminals; body 1.1 × 0.85 × 0.5 mm                                                                                                                 SOT8065-1
+                                                              e
+                       terminal 1
+                                                                                  b                          v      C A B
+                       index area
+                                                                                (4×)                         w      C
+                                                 1                       2
+
+                                                                                                 L
+                                                                                               (4×)
+
+
+                                                                         3
+                                 e1
+
+
+                                                     □Dh
+                                                                                               k1 (4×)
+
+
+                                             5                                  4
+                                                              k2
+                                                             (2×)
+                                                                                                        y1 C
+
+
+
+                   A
+                                                                                                                 y C
+                                                                                                                   5×
+                       A3 (4×)
+
+
+                                 A1                                                                                       seating plane
+                                                                                                         C
+                                                                                    u C
+                                                                              2×
+                                 A                            D                                   B
+                                             (2 )                                (2)
+
+
+
+
+                                                                                                    E
+
+
+                       terminal 1
+                       index area
+                                                                                                                  u C
+                                             (2)                                 (2)                       2×
+
+
+                                                                                         0                                              1 mm
+                                                                                                                  scale
+     Dimensions (mm are the original dimensions)
+
+            Unit        A(1)          A1    A3         b          D (1) Dh             E (1)    e         e1        k1        k2         L         u     v      w       y         y1
+
+               max 0.50           0.040               0.28               0.35                                                          0.30
+      mm       nom 0.47           0.020    0.135      0.23    1.10       0.30       0.85       0.75      0.6                           0.25       0.05   0.1   0.05    0.05 0.05
+               min 0.44           0.005    (typ)      0.20               0.27                                       0.2     0.45       0.22
+     Note:
+     1. Plastic or metal protrusions per side are not included.
+     2. Side wettable flanks (SWF), protrusion max. 0.02 mm.                                                                                                                                 sot8065-1_po
+
+            Outline                                                           References                                                                  European
+                                                                                                                                                                                       Issue date
+            version                        IEC                      JEDEC                        JEITA                                                    projection
+                                                                                                                                                                                        24-07-09
+       SOT8065-1                                                  MO-340
+                                                                                                                                                                                        24-08-27
+
+Fig. 12. Package outline SOT8065-1 (XSON5)
+
+
+
+
+74AUP1G07                                                            All information provided in this document is subject to legal disclaimers.                             © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                                               Rev. 12.1 — 28 August 2024                                                                                              16 / 19
+Nexperia                                                                                                                                74AUP1G07
+                                                                                                        Low-power buffer with open-drain output
+
+
+13. Abbreviations
+Table 11. Abbreviations
+Acronym                          Description
+ANSI                             American National Standards Institute
+CDM                              Charged Device Model
+DUT                              Device Under Test
+ESD                              ElectroStatic Discharge
+ESDA                             ElectroStatic Discharge Association
+HBM                              Human Body Model
+JEDEC                            Joint Electron Device Engineering Council
+
+
+14. Revision history
+Table 12. Revision history
+Document ID             Release date      Data sheet status                               Change notice Supersedes
+74AUP1G07 v.12.1          20240828        Product data sheet                              -                             74AUP1G07 v.12
+Modifications:            •   Fig. 12: Added JEDEC reference MO-340 to SOT8065-1 package outline drawing.
+74AUP1G07 v.12            20240828        Product data sheet                              -                             74AUP1G07 v.11.1
+Modifications:            •   Type number 74AUP1G07GZ (SOT8065-1/XSON5) added.
+74AUP1G07 v.11.1          20230711        Product data sheet                              -                             74AUP1G07 v.10
+Modifications:            •   Section 2: ESD specification updated according to the latest JEDEC standard.
+74AUP1G07 v.10            20220113        Product data sheet                              -                             74AUP1G07 v.9
+Modifications:            •   Section 1 and Section 2 updated.
+                          •   Fig. 6: Package outline drawing of SOT353-1 (TSSOP5) has changed.
+74AUP1G07 v.9             20210420        Product data sheet                              -                             74AUP1G07 v.8
+Modifications:            •   SOT1226 (X2SON5) package changed to SOT1226-3 (X2SON5) package.
+                          •   Type number 74AUP1G07GF (SOT891) removed.
+                          •   Table 5: Derating values for Ptot total power dissipation have been updated.
+74AUP1G07 v.8             20180608        Product data sheet                              -                             74AUP1G07 v.7
+Modifications:            •   The format of this data sheet has been redesigned to comply with the identity guidelines of
+                              Nexperia.
+                          •   Legal texts have been adapted to the new company name where appropriate.
+                          •   Added type number 74AUP1G07GX4 (SOT1269-2)
+74AUP1G07 v.7             20120716        Product data sheet                              -                             74AUP1G07 v.6
+Modifications:            •   Package outline drawing of SOT1226 modified.
+74AUP1G07 v.6             20120412        Product data sheet                              -                             74AUP1G07 v.5
+Modifications:            •   Added type number 74AUP1G07GX (SOT1226)
+                          •   Package outline drawing of SOT886 (Fig. 7) modified.
+74AUP1G07 v.5             20111115        Product data sheet                              -                             74AUP1G07 v.4
+Modifications:            •   Legal pages updated.
+74AUP1G07 v.4             20100902        Product data sheet                              -                             74AUP1G07 v.3
+74AUP1G07 v.3             20090617        Product data sheet                              -                             74AUP1G07 v.2
+
+
+
+
+74AUP1G07                                  All information provided in this document is subject to legal disclaimers.                   © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                     Rev. 12.1 — 28 August 2024                                                                                    17 / 19
+Nexperia                                                                                                                                               74AUP1G07
+                                                                                                                         Low-power buffer with open-drain output
+                                                                                                    injury, death or severe property or environmental damage. Nexperia and its
+
+15. Legal information                                                                               suppliers accept no liability for inclusion and/or use of Nexperia products in
+                                                                                                    such equipment or applications and therefore such inclusion and/or use is at
+                                                                                                    the customer’s own risk.
+                                                                                                    Quick reference data — The Quick reference data is an extract of the
+Data sheet status                                                                                   product data given in the Limiting values and Characteristics sections of this
+                                                                                                    document, and as such is not complete, exhaustive or legally binding.
+ Document status         Product            Definition                                              Applications — Applications that are described herein for any of these
+ [1][2]                  status [3]                                                                 products are for illustrative purposes only. Nexperia makes no representation
+ Objective [short]       Development        This document contains data from                        or warranty that such applications will be suitable for the specified use
+ data sheet                                 the objective specification for                         without further testing or modification.
+                                            product development.                                    Customers are responsible for the design and operation of their applications
+                                                                                                    and products using Nexperia products, and Nexperia accepts no liability for
+ Preliminary [short]     Qualification      This document contains data from
+                                                                                                    any assistance with applications or customer product design. It is customer’s
+ data sheet                                 the preliminary specification.
+                                                                                                    sole responsibility to determine whether the Nexperia product is suitable
+ Product [short]         Production         This document contains the product                      and fit for the customer’s applications and products planned, as well as
+ data sheet                                 specification.                                          for the planned application and use of customer’s third party customer(s).
+                                                                                                    Customers should provide appropriate design and operating safeguards to
+                                                                                                    minimize the risks associated with their applications and products.
+[1]   Please consult the most recently issued document before initiating or
+      completing a design.                                                                          Nexperia does not accept any liability related to any default, damage, costs
+[2]   The term 'short data sheet' is explained in section "Definitions".                            or problem which is based on any weakness or default in the customer’s
+[3]   The product status of device(s) described in this document may have                           applications or products, or the application or use by customer’s third party
+      changed since this document was published and may differ in case of                           customer(s). Customer is responsible for doing all necessary testing for the
+      multiple devices. The latest product status information is available on                       customer’s applications and products using Nexperia products in order to
+      the internet at https://www.nexperia.com.                                                     avoid a default of the applications and the products or of the application or
+                                                                                                    use by customer’s third party customer(s). Nexperia does not accept any
+                                                                                                    liability in this respect.
+Definitions                                                                                         Limiting values — Stress above one or more limiting values (as defined in
+Draft — The document is a draft version only. The content is still under                            the Absolute Maximum Ratings System of IEC 60134) will cause permanent
+internal review and subject to formal approval, which may result in                                 damage to the device. Limiting values are stress ratings only and (proper)
+modifications or additions. Nexperia does not give any representations or                           operation of the device at these or any other conditions above those
+warranties as to the accuracy or completeness of information included herein                        given in the Recommended operating conditions section (if present) or the
+and shall have no liability for the consequences of use of such information.                        Characteristics sections of this document is not warranted. Constant or
+                                                                                                    repeated exposure to limiting values will permanently and irreversibly affect
+Short data sheet — A short data sheet is an extract from a full data sheet
+                                                                                                    the quality and reliability of the device.
+with the same product type number(s) and title. A short data sheet is
+intended for quick reference only and should not be relied upon to contain                          Terms and conditions of commercial sale — Nexperia products are
+detailed and full information. For detailed and full information see the relevant                   sold subject to the general terms and conditions of commercial sale, as
+full data sheet, which is available on request via the local Nexperia sales                         published at http://www.nexperia.com/profile/terms, unless otherwise agreed
+office. In case of any inconsistency or conflict with the short data sheet, the                     in a valid written individual agreement. In case an individual agreement is
+full data sheet shall prevail.                                                                      concluded only the terms and conditions of the respective agreement shall
+                                                                                                    apply. Nexperia hereby expressly objects to applying the customer’s general
+Product specification — The information and data provided in a Product
+                                                                                                    terms and conditions with regard to the purchase of Nexperia products by
+data sheet shall define the specification of the product as agreed between
+                                                                                                    customer.
+Nexperia and its customer, unless Nexperia and customer have explicitly
+agreed otherwise in writing. In no event however, shall an agreement be                             No offer to sell or license — Nothing in this document may be interpreted
+valid in which the Nexperia product is deemed to offer functions and qualities                      or construed as an offer to sell products that is open for acceptance or the
+beyond those described in the Product data sheet.                                                   grant, conveyance or implication of any license under any copyrights, patents
+                                                                                                    or other industrial or intellectual property rights.
+                                                                                                    Export control — This document as well as the item(s) described herein
+Disclaimers                                                                                         may be subject to export control regulations. Export might require a prior
+Limited warranty and liability — Information in this document is believed                           authorization from competent authorities.
+to be accurate and reliable. However, Nexperia does not give any
+                                                                                                    Non-automotive qualified products — Unless this data sheet expressly
+representations or warranties, expressed or implied, as to the accuracy
+                                                                                                    states that this specific Nexperia product is automotive qualified, the
+or completeness of such information and shall have no liability for the
+                                                                                                    product is not suitable for automotive use. It is neither qualified nor tested in
+consequences of use of such information. Nexperia takes no responsibility
+                                                                                                    accordance with automotive testing or application requirements. Nexperia
+for the content in this document if provided by an information source outside
+                                                                                                    accepts no liability for inclusion and/or use of non-automotive qualified
+of Nexperia.
+                                                                                                    products in automotive equipment or applications.
+In no event shall Nexperia be liable for any indirect, incidental, punitive,
+                                                                                                    In the event that customer uses the product for design-in and use in
+special or consequential damages (including - without limitation - lost
+                                                                                                    automotive applications to automotive specifications and standards,
+profits, lost savings, business interruption, costs related to the removal
+                                                                                                    customer (a) shall use the product without Nexperia’s warranty of the
+or replacement of any products or rework charges) whether or not such
+                                                                                                    product for such automotive applications, use and specifications, and (b)
+damages are based on tort (including negligence), warranty, breach of
+                                                                                                    whenever customer uses the product for automotive applications beyond
+contract or any other legal theory.
+                                                                                                    Nexperia’s specifications such use shall be solely at customer’s own risk,
+Notwithstanding any damages that customer might incur for any reason                                and (c) customer fully indemnifies Nexperia for any liability, damages or failed
+whatsoever, Nexperia’s aggregate and cumulative liability towards customer                          product claims resulting from customer design and use of the product for
+for the products described herein shall be limited in accordance with the                           automotive applications beyond Nexperia’s standard warranty and Nexperia’s
+Terms and conditions of commercial sale of Nexperia.                                                product specifications.
+Right to make changes — Nexperia reserves the right to make changes                                 Translations — A non-English (translated) version of a document is for
+to information published in this document, including without limitation                             reference only. The English version shall prevail in case of any discrepancy
+specifications and product descriptions, at any time and without notice. This                       between the translated and English versions.
+document supersedes and replaces all information supplied prior to the
+publication hereof.
+                                                                                                    Trademarks
+Suitability for use — Nexperia products are not designed, authorized or
+warranted to be suitable for use in life support, life-critical or safety-critical                  Notice: All referenced brands, product names, service names and
+systems or equipment, nor in applications where failure or malfunction                              trademarks are the property of their respective owners.
+of an Nexperia product can reasonably be expected to result in personal
+
+
+
+
+74AUP1G07                                                   All information provided in this document is subject to legal disclaimers.                 © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                                      Rev. 12.1 — 28 August 2024                                                                                  18 / 19
+Nexperia                                                                                                                                     74AUP1G07
+                                                                                                                         Low-power buffer with open-drain output
+
+
+Contents
+1. General description...................................................... 1
+2. Features and benefits.................................................. 1
+3. Ordering information....................................................2
+4. Marking.......................................................................... 2
+5. Functional diagram.......................................................2
+6. Pinning information......................................................3
+6.1. Pinning.........................................................................3
+6.2. Pin description............................................................. 3
+7. Functional description................................................. 3
+8. Limiting values............................................................. 4
+9. Recommended operating conditions..........................4
+10. Static characteristics..................................................5
+11. Dynamic characteristics.............................................7
+11.1. Waveforms and test circuit........................................ 8
+12. Package outline........................................................ 10
+13. Abbreviations............................................................ 17
+14. Revision history........................................................17
+15. Legal information......................................................18
+
+© Nexperia B.V. 2024. All rights reserved
+
+For more information, please visit: http://www.nexperia.com
+For sales office addresses, please send an email to: salesaddresses@nexperia.com
+Date of release: 28 August 2024
+
+
+
+
+74AUP1G07                                                   All information provided in this document is subject to legal disclaimers.       © Nexperia B.V. 2024. All rights reserved
+
+
+Product data sheet                                                      Rev. 12.1 — 28 August 2024                                                                        19 / 19
+

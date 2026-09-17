@@ -1,0 +1,46 @@
+* ============================================================================
+* COMBINED PDB + OSIRIS Rev A -- reverse battery connection
+* The XT60 is keyed, but a damaged/adapted connector or a miswired harness
+* can still present reversed polarity. Q1's channel blocks the reverse path;
+* D1 SMAJ24CA clamps. This checks that nothing downstream sees negative volts.
+*   0 - 300ms   battery connected BACKWARDS at -14.8 V
+* 300 - 900ms   corrected to +14.8 V -- does the board start normally after?
+* ============================================================================
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_ap2.lib
+.inc osiris\osiris_reva.lib
+
+.step param VREV list -14.8 -16.8 -25.0
+
+VBAT VSRC 0 PWL(0 0 1m {VREV} 300m {VREV} 310m 14.8 900m 14.8)
+RBATT VSRC VBIN 20m
+
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_AP2
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+.tran 0 900m 0 20u
+.options method=gear reltol=0.003
+
+* --- During reverse connection -------------------------------------------
+.meas TRAN REV_VBIN     MIN V(VBIN)   FROM 50m TO 295m
+.meas TRAN REV_VOSIN    MIN V(OSIN)   FROM 50m TO 295m
+.meas TRAN REV_PDBOUT   MIN V(PDBOUT) FROM 50m TO 295m
+.meas TRAN REV_V5       MIN V(V5)     FROM 50m TO 295m
+.meas TRAN REV_V3       MIN V(V3)     FROM 50m TO 295m
+.meas TRAN REV_PDB3V3   MIN V(PDB3V3) FROM 50m TO 295m
+.meas TRAN REV_IIN      MAX ABS(I(RBATT)) FROM 20m TO 295m
+.meas TRAN REV_TVS_I2T  INTEG I(RBATT)*I(RBATT) FROM 1m TO 300m
+.meas TRAN REV_GATE     MAX V(GF)-V(COMMON) FROM 50m TO 295m
+
+* --- Recovery after polarity corrected -----------------------------------
+.meas TRAN REC_VOSIN    AVG V(OSIN)   FROM 850m TO 895m
+.meas TRAN REC_V5       AVG V(V5)     FROM 850m TO 895m
+.meas TRAN REC_V3       AVG V(V3)     FROM 850m TO 895m
+.meas TRAN REC_V5PROT   AVG V(V5PROT) FROM 850m TO 895m
+.end

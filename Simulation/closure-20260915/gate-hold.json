@@ -1,0 +1,82 @@
+{
+  "deck": "gate_hold_transients.cir",
+  "status": "FAIL",
+  "seconds": 180.12,
+  "errors": [
+    "timeout after 180s",
+    "missing completed fresh log",
+    "INP_MIN: expected 2 finite values, got 0",
+    "INN_MIN: expected 2 finite values, got 0",
+    "VBUS_MIN: expected 2 finite values, got 0",
+    "U1_VIN_MIN: expected 2 finite values, got 0",
+    "U1_VIN_MAX: expected 2 finite values, got 0",
+    "U1_VOUT_MIN: expected 2 finite values, got 0",
+    "U1_VOUT_MAX: expected 2 finite values, got 0",
+    "U1_SENSE_MIN: expected 2 finite values, got 0",
+    "U1_SENSE_MAX: expected 2 finite values, got 0",
+    "U1_VOUT_SENSE_ABS: expected 2 finite values, got 0",
+    "U1_VIN_VOUT_MIN: expected 2 finite values, got 0",
+    "U1_VIN_VOUT_MAX: expected 2 finite values, got 0",
+    "U1_GATE_MIN: expected 2 finite values, got 0",
+    "U1_GATE_VIN_MAX: expected 2 finite values, got 0",
+    "U1_RETRY_MIN: expected 2 finite values, got 0",
+    "U1_RETRY_MAX: expected 2 finite values, got 0",
+    "U1_UV_MIN: expected 2 finite values, got 0",
+    "U1_OV_MIN: expected 2 finite values, got 0",
+    "U1_OV_MAX: expected 2 finite values, got 0",
+    "U1_SHDN_MIN: expected 2 finite values, got 0",
+    "BUS_MIN: expected 2 finite values, got 0",
+    "Q1_VDS: expected 2 finite values, got 0",
+    "Q2_VDS: expected 2 finite values, got 0",
+    "VGS_MAX: expected 2 finite values, got 0",
+    "V3V3_MAX: expected 2 finite values, got 0",
+    "VOUT_FINAL: expected 2 finite values, got 0",
+    "Q3_VDS: expected 2 finite values, got 0",
+    "Q3_VGS: expected 2 finite values, got 0",
+    "U5_IN_MIN: expected 2 finite values, got 0",
+    "U5_IN_MAX: expected 2 finite values, got 0",
+    "U5_OUT_MIN: expected 2 finite values, got 0",
+    "U5_OUT_MAX: expected 2 finite values, got 0",
+    "INP_MAX: expected 2 finite values, got 0",
+    "INN_MAX: expected 2 finite values, got 0",
+    "VBUS_MAX: expected 2 finite values, got 0",
+    "U5_GS_MIN: expected 2 finite values, got 0",
+    "U5_GS_MAX: expected 2 finite values, got 0",
+    "C11_STRESS: expected 2 finite values, got 0",
+    "C16_STRESS: expected 2 finite values, got 0",
+    "INA_DIFF: expected 2 finite values, got 0",
+    "u5_gs_min: [] outside [-0.3, 15]",
+    "u5_gs_max: [] outside [-0.3, 15]",
+    "u5_in_min: [] outside [-40, 100]",
+    "q3_vds: [] outside [0, 100]",
+    "vout_final: [] outside [16, 16.8]",
+    "inp_min: [] outside [-0.3, 85]"
+  ],
+  "measurements": {},
+  "limits": {
+    "u5_gs_min": [
+      -0.3,
+      15
+    ],
+    "u5_gs_max": [
+      -0.3,
+      15
+    ],
+    "u5_in_min": [
+      -40,
+      100
+    ],
+    "q3_vds": [
+      0,
+      100
+    ],
+    "vout_final": [
+      16,
+      16.8
+    ],
+    "inp_min": [
+      -0.3,
+      85
+    ]
+  }
+}

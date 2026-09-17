@@ -1,0 +1,11 @@
+[
+  "release_corners.cir",
+  "release_lowtrip.cir",
+  "release_temperature.cir",
+  "release_faults.cir",
+  "release_faults_fine.cir",
+  "release_reverse.cir",
+  "release_reverse25.cir",
+  "release_transients.cir",
+  "model_sanity.cir"
+]

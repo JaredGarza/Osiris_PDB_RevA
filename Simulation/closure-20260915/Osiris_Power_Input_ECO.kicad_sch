@@ -1,0 +1,195 @@
+(kicad_sch (version 20250114) (generator "eeschema") (uuid "6108134e-9817-4eee-9480-3a5ab4c4b665") (paper "A4")
+(title_block (title "Osiris - eFuse slew control change sheet") (date "2026-09-15") (rev "ECO-1-DRAFT"))
+(lib_symbols (symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		))
+(symbol (lib_id "Device:C") (at 50.8 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "22337f4b-9dc7-466b-8bf0-39a68bd0600a")
+(property "Reference" "C901" (at 55.879999999999995 73.66 0)  (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "3n3" (at 55.879999999999995 76.2 0)  (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 55.879999999999995 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608C0G1H332J080AA" (at 55.879999999999995 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(property "MPN" "C1608C0G1H332J080AA" (at 55.879999999999995 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Manufacturer" "TDK" (at 55.879999999999995 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(pin "1" (uuid "fbff74f6-2763-46a8-9e57-47c4647074cf")) (pin "2" (uuid "d9aca107-0072-4470-bbfe-9dbb5700c867")) (instances (project "Osiris_Power_Input_ECO" (path "/6108134e-9817-4eee-9480-3a5ab4c4b665" (reference "C901") (unit 1)))))
+(label "U21_DVDT_PIN7" (at 50.8 72.39 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6c504811-91d2-4e7d-8ae6-7c5a4e359434"))
+(label "GND" (at 50.8 80.01 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "8ce7e63a-70c5-4ef9-9a39-c025d4e6f3da"))
+(text "U21 LM73100RPWR" (at 50.8 55.88 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "70b16a40-9692-4df9-a8e4-7686f524b25a"))
+(text "50 V C0G, 5%" (at 50.8 91.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ac032c3e-516b-4477-a13b-98a381e94593"))
+(symbol (lib_id "Device:C") (at 127.0 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "0ba85fe7-6f5e-4e16-9765-800ce97883e0")
+(property "Reference" "C902" (at 132.08 73.66 0)  (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "3n3" (at 132.08 76.2 0)  (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 132.08 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608C0G1H332J080AA" (at 132.08 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(property "MPN" "C1608C0G1H332J080AA" (at 132.08 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Manufacturer" "TDK" (at 132.08 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(pin "1" (uuid "4c028df1-41f6-4741-957e-6dcad74d98a2")) (pin "2" (uuid "fd28a24c-d468-4f12-921c-bec7f107ce8f")) (instances (project "Osiris_Power_Input_ECO" (path "/6108134e-9817-4eee-9480-3a5ab4c4b665" (reference "C902") (unit 1)))))
+(label "U22_DVDT_PIN7" (at 127.0 72.39 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "5d414a86-2787-4027-9b7d-71e56c95d46e"))
+(label "GND" (at 127.0 80.01 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "6c78c7ae-133b-480c-b096-1980934848c5"))
+(text "U22 LM73100RPWR" (at 127.0 55.88 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e9b0abaf-c957-4f63-91ea-bab1ec05bf02"))
+(text "50 V C0G, 5%" (at 127.0 91.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "7ebfccf0-4609-4f09-a846-b06370ec2605"))
+(symbol (lib_id "Device:C") (at 203.2 76.2 0) (unit 1) (in_bom yes) (on_board yes) (dnp no) (uuid "c4a5a4ff-a210-42ba-8cc1-52c9597493ef")
+(property "Reference" "C903" (at 208.28 73.66 0)  (effects (font (size 1.27 1.27)) (justify left)))
+(property "Value" "3n3" (at 208.28 76.2 0)  (effects (font (size 1.27 1.27)) (justify left)))
+(property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 208.28 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608C0G1H332J080AA" (at 208.28 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(property "MPN" "C1608C0G1H332J080AA" (at 208.28 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(property "Manufacturer" "TDK" (at 208.28 76.2 0) (hide yes) (effects (font (size 1.27 1.27)) (justify left)))
+(pin "1" (uuid "804f47d7-df3c-4ccd-a30d-b95e95ae5dec")) (pin "2" (uuid "e04cfed1-6408-4077-b6c6-5400ed8d8e8d")) (instances (project "Osiris_Power_Input_ECO" (path "/6108134e-9817-4eee-9480-3a5ab4c4b665" (reference "C903") (unit 1)))))
+(label "U4_DVDT_PIN7" (at 203.2 72.39 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "24772cd4-a48a-4d97-bd65-9ed684529719"))
+(label "GND" (at 203.2 80.01 0) (effects (font (size 1.27 1.27)) (justify left bottom)) (uuid "e7126fca-97b7-438a-a8ba-dc8b707bcc22"))
+(text "U4 LM73100RPWR" (at 203.2 55.88 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "eadfe797-70ce-4ccc-8b97-92e444d10c99"))
+(text "50 V C0G, 5%" (at 203.2 91.44 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "609f61c5-ceb1-4daf-85e4-97bbd438278c"))
+(text "CHANGE SHEET ONLY - integrate into the original Osiris Altium design.\nConnect each upper terminal directly to the named IC DVDT pin 7.\nConnect each lower terminal to that IC ground pin 8 with a short, quiet return.\nRemove the corresponding no-connect marker. Verify reference numbers on integration.\n\nThese three capacitors are required by the combined ECO simulation.\nThey have not been installed in the original Altium schematic or PCB.\nSee OSIRIS-ECO.md for the source pin mapping and verification limits." (at 25.4 114.3 0) (effects (font (size 1.5 1.5)) (justify left top)) (uuid "ee1ff5b6-e4b1-45d7-9552-9642a7c4c7aa"))
+)

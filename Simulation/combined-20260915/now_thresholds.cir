@@ -1,0 +1,23 @@
+* Thresholds of the CURRENT CAD population (4A / 5m / 237k / 11k8 / 22M / 22n, no D2).
+* Nothing on disk had ever simulated this population.
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc pdb\pdb_now.lib
+
+VBAT VIN 0 PWL(0 0 11 22 22 0)
+XPDB VIN VOUT V3V3 GP GF COMMON FAULT ALERT SCL SDA 0 PDB_NOW
+RLOAD VOUT 0 100
+
+.tran 0 22 0 2m
+.options method=gear reltol=0.003
+.meas TRAN t_on   WHEN V(VOUT)=5 RISE=1
+.meas TRAN UV_ON  FIND V(VIN) AT=t_on
+.meas TRAN t_ovt  WHEN V(VOUT)=5 FALL=1
+.meas TRAN OV_TRIP FIND V(VIN) AT=t_ovt
+.meas TRAN t_ovr  WHEN V(VOUT)=5 RISE=2
+.meas TRAN OV_REC FIND V(VIN) AT=t_ovr
+.meas TRAN t_off  WHEN V(VOUT)=5 FALL=2
+.meas TRAN UV_OFF FIND V(VIN) AT=t_off
+.meas TRAN extra  WHEN V(VOUT)=5 FALL=3
+.end

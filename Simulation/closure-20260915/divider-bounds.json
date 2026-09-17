@@ -1,0 +1,31 @@
+{
+  "uv_on_cold_v": [
+    10.444717935978504,
+    11.792791832894883
+  ],
+  "uv_off_conditional_v": [
+    9.78068088359636,
+    10.896352458974738
+  ],
+  "ov_trip_v": [
+    17.780091222333155,
+    19.693793988477477
+  ],
+  "nominal_uv_on_v": 11.075147207241912,
+  "nominal_uv_off_v_assuming_11v_gate_boost": 10.318105112642465,
+  "cold_start_margin_at_12v": 0.2072081671051169,
+  "normal_current_trip_a": [
+    7.920792079207922,
+    12.12121212121212
+  ],
+  "zero_output_min_trip_a": 5.9405940594059405,
+  "nominal_shunt_loss_2p5a_w": 0.03125,
+  "shunt_cal_50ua_lsb": 3277,
+  "assumptions": [
+    "Cold gate -1..0 V is an explicit boundary assumption, not a guaranteed encrypted-model parameter.",
+    "UV off assumes gate boost 7..13.1 V; load-dependent gate drive is not guaranteed by this calculation.",
+    "Temperature allowance is a conservative independent resistor sensitivity, not a supplier batch correlation.",
+    "Leakage +/-10 nA, UV/OV reference .4925..5075 V, UV hysteresis20..32 mV from LTC4368 datasheet.",
+    "UV thresholds are system cutoffs, not cell-level battery protection."
+  ]
+}

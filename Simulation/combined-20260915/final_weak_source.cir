@@ -1,0 +1,35 @@
+* Source-impedance sensitivity; includes operation outside the proposed normal envelope.
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_final.lib
+.inc osiris\osiris_reva.lib
+
+* The four pack voltages that broke as-built, at its 500 mOhm, then harder
+* impedances to find where Rev-B's own limit actually is.
+.step param IDX list 1 2 3 4 5 6 7 8
+.param RB  = table(IDX, 1,500m, 2,500m, 3,500m, 4,500m, 5,700m, 6,700m, 7,900m, 8,900m)
+.param VPK = table(IDX, 1,11.2, 2,11.4, 3,11.6, 4,11.8, 5,11.9, 6,12.3, 7,12.0, 8,12.4)
+
+VBAT VSRC 0 PWL(0 0 50m 14.8 1.0 14.8 1.5 {VPK} 8.0 {VPK})
+RBATT VSRC VBIN {RB}
+
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_CURRENT
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+.tran 0 8 0 100u
+.options method=gear reltol=0.003
+
+* Late, settled window -- disjoint from the ramp
+.meas TRAN VBIN_PP  PP  V(VBIN)       FROM 6 TO 8
+.meas TRAN OSIN_PP  PP  V(OSIN)       FROM 6 TO 8
+.meas TRAN V5_MIN   MIN V(V5)         FROM 6 TO 8
+.meas TRAN V5_MAX   MAX V(V5)         FROM 6 TO 8
+.meas TRAN V3_AVG   AVG V(V3)         FROM 6 TO 8
+.meas TRAN IIN_AVG  AVG ABS(I(RBATT)) FROM 6 TO 8
+.meas TRAN IIN_MAX  MAX ABS(I(RBATT)) FROM 6 TO 8
+.end

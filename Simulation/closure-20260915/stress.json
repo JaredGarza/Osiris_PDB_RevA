@@ -1,0 +1,129 @@
+[
+  {
+    "deck": "eco_reverse25.cir",
+    "status": "FAIL",
+    "seconds": 0.55,
+    "errors": [
+      "engine exit 1",
+      "missing completed fresh log",
+      "REV_VBIN: expected 1 finite values, got 0",
+      "REV_VOSIN: expected 1 finite values, got 0",
+      "REV_PDBOUT: expected 1 finite values, got 0",
+      "REV_V5: expected 1 finite values, got 0",
+      "REV_V3: expected 1 finite values, got 0",
+      "REV_PDB3V3: expected 1 finite values, got 0",
+      "REV_IIN: expected 1 finite values, got 0",
+      "REV_TVS_I2T: expected 1 finite values, got 0",
+      "REV_GATE: expected 1 finite values, got 0",
+      "REC_VOSIN: expected 1 finite values, got 0",
+      "REC_V5: expected 1 finite values, got 0",
+      "REC_V3: expected 1 finite values, got 0",
+      "REC_V5PROT: expected 1 finite values, got 0"
+    ],
+    "measurements": {},
+    "limits": {}
+  },
+  {
+    "deck": "eco_transients.cir",
+    "status": "FAIL",
+    "seconds": 180.15,
+    "errors": [
+      "timeout after 180s",
+      "missing completed fresh log",
+      "INP_MIN: expected 1 finite values, got 0",
+      "INN_MIN: expected 1 finite values, got 0",
+      "VBUS_MIN: expected 1 finite values, got 0",
+      "U1_VIN_MIN: expected 1 finite values, got 0",
+      "U1_VIN_MAX: expected 1 finite values, got 0",
+      "Q1_VDS: expected 1 finite values, got 0",
+      "Q2_VDS: expected 1 finite values, got 0",
+      "VGS_MAX: expected 1 finite values, got 0",
+      "V3V3_MAX: expected 1 finite values, got 0",
+      "VOUT_FINAL: expected 1 finite values, got 0"
+    ],
+    "measurements": {},
+    "limits": {}
+  },
+  {
+    "deck": "eco_weak_source.cir",
+    "status": "RUN_OK",
+    "seconds": 43.99,
+    "errors": [],
+    "measurements": {
+      "options": [
+        0.003
+      ],
+      "vbin_pp": [
+        0.0,
+        1.25920391083,
+        0.0,
+        0.0,
+        1.7616147995,
+        0.0,
+        1.88199615479,
+        2.26402759552
+      ],
+      "osin_pp": [
+        0.126877316729,
+        10.4855907559,
+        0.0,
+        0.0,
+        10.9865754247,
+        0.0,
+        11.0890212655,
+        11.4861685038
+      ],
+      "v5_min": [
+        4.98486599554e-07,
+        1.10038530827,
+        5.16040897369,
+        5.16040897369,
+        1.10115873814,
+        5.16040897369,
+        1.10205042362,
+        1.10170018673
+      ],
+      "v5_max": [
+        5.78942411807e-07,
+        5.17873573303,
+        5.16040897369,
+        5.16040897369,
+        5.1788315773,
+        5.16040897369,
+        5.17886972427,
+        5.17864704132
+      ],
+      "v3_avg": [
+        0.000215179655157,
+        1.76094689223,
+        3.30469942093,
+        3.30469942093,
+        1.75802188622,
+        3.30469942093,
+        1.40734222508,
+        1.75661382205
+      ],
+      "iin_avg": [
+        0.000237434472976,
+        0.898577670859,
+        2.70898699759,
+        2.64710378647,
+        0.882821093185,
+        2.65657258032,
+        0.579602078623,
+        0.869696107698
+      ],
+      "iin_max": [
+        0.000237434505834,
+        2.51863360405,
+        2.7089869976,
+        2.64710378647,
+        2.51682162285,
+        2.65657258034,
+        2.09133625031,
+        2.51581716537
+      ]
+    },
+    "limits": {}
+  }
+]

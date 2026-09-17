@@ -1,0 +1,252 @@
+FC4L Series
+FC4L Four Terminal Current Sense
+Metal Foil Construction
+F e at u r e s
+• Foil Construction ensures a very stable TCR
+  (Temperature Coefficient of Resistance)
+• Designed for automatic insertion                                Ohmite offers the low TCR FC4L series in 0.25 watts up to
+• Industry standard sizes                                         5 watts and values down to 1 milli-ohm. Great stability is
+• High heat resistant use                                         achieved by employing a Ni-Cu-Mn resistive element. The
+                                                                  FC4L series affords the user an added advantage of a built in
+• Low heat electromotive use                                      4-terminal design with 2 larger electrodes for current man-
+• Color: white (top) and green (bottom)                           agement and 2 smaller electrodes for current measurement.
+
+                                               S ER I E S S P E C I F I C AT I O N S
+
+           Power     Resistance		         TCR Weight                                 Power Resistance		         TCR Weight
+    Series Rating      Range      Tol. (ppm/°C) (g)                           Series Rating   Range     Tol. (ppm/°C) (g)
+    FC4L16 0.25W 5m, 10m, 20m, ±1%        ±50 0.004                           FC4L76 3W      1m-4mΩ    ±1%     ±100 0.062
+    		            50mΩ ~ 100mΩ                                                		            5m-25mΩ ±0.5%, 1% ±50
+    FC4L32 1W          1mΩ        ±5% ±100 0.015                              FC4L90 4W      1m-4mΩ    ±1%     ±100 0.082
+    		                 2mΩ        ±2% ±100                                    		            5m-25mΩ ±0.5%, 1% ±50
+    		                 3mΩ        ±1% ±100                                    FC4L110 5W      1mΩ      ±5%     ±100 0.110
+    		             4mΩ ~ 500mΩ ±1%        ±50                                 		              2mΩ      ±2%      ±50
+    FC4L64 2W        1mΩ        ±5%     ±100 0.038                            		 3mΩ ~ 100mΩ ±1%                ±50
+    		               2mΩ        ±2%     ±100                                  		 10m ~ 50mΩ ±0.5%               ±50
+    		               3mΩ        ±1%     ±100
+    		 4m ~ 100mΩ ±1%                    ±50
+    		 10m ~ 50mΩ ±0.5%                  ±50
+
+
+                                                       c h a r a c t e r is t ics
+                                   Test Condition                                                         Maximum ∆R
+    Max. temperature for rated power 70°C
+        Operating temperature range -55°C ~ +155°C (FC4L16: -40°C ~ +125°C)
+                        Rated voltage √(Rated power x Resistance value) V
+               Overload (FC4L16 only) Rated power x 1.5 for 5s                                            ±(0.5%+0.0005Ω)
+                       In-rush current Rated current 10 msec ON, 60 sec OFF, 10 cycles.                   ±(1.0% +0.0005Ω)
+                                       (see table next page)
+        Rapid change of temperature -55°C (30min.)/+155°C (30min.), 100 cycles                            ±(1.0% +0.0005Ω)
+                                    (FC4L16: 1000 cycles)                                                 (FC4L16: ±(2.0%+0.0005Ω))
+                          Solderability 245°C ±5°C for 3 ±0.5 sec.                                        Min. 90% coverage
+                                                                                                          (FC4L76 & 90: 95%)
+                            Endurance 70°C ±3°C, Rated voltage 1.5h ON, 0.5h OFF, 1000h                   ±(1.0% +0.0005Ω)
+                                      (FC4L76 & 90: 100°C)                                                (FC4L76 & 90: ±(3.0%+0.5mΩ))
+        Resistance to soldering heat 260°C ±5°C for 10 ±1 sec.                                            ±(1.0% +0.0005Ω)
+                                     (FC4L76 & 90: 20 ±1)                                                 (FC4L16: ±0.5%)
+                                                                                                          (FC4L76 & 90: No evidence of
+                                                                                                          mechanical damage)
+                  Moisture resistance 60°C ±2°C, 90~95% RH, Rated voltage 1.5h ON, 0.5h OFF, 1,000h ±(2.0% +0.0005Ω)
+                                      (76 & 90: 85 ±2°C, 85±5%RH, 10% Rated power, 1,000h)          (FC4L16: ±1.0%)
+                                                                                                    (FC4L76 & 90: ±(3% +0.0005Ω))
+
+
+
+
+8         1-866-9-OHMITE • Int’l 1-847-258-0300 • Fax 1-847-574-7522 • www.ohmite.com • info@ohmite.com
+FC4L Series
+FC4L Four Terminal Current Sense
+Metal Foil Construction
+
+                                                                                c h a r a c t e r is t ics
+             In-rush current                                                                   Derating                                                       Recommended Reflow
+                           Power           Resistance               In-rush Max.
+                                                                                                           100                                                Temperature Profile
+
+
+
+
+                                                                                            Percent Rated Power
+             Series        Rating            Range                   Power Current                                80                                          For lead free soldering (Sn-Ag-Cu
+             FC4L16 0.25 watt 5m, 10mΩ                               2.5W      5A                                                                             solder)
+                                                                                                                  60                        Others
+             FC4L32 1 watt   1mΩ~9mΩ   25W                                     45A                                                                            Preheating: 130° ~ 180° 60s ~ 90s
+             		            10mΩ~500mΩ 12.5W                                    24A                                40                                          Heating:     Over 220°     30s ~ 90s
+             FC4L64 2 watt   1mΩ~9mΩ  100W                                     85A
+             		            10mΩ~100mΩ 50W                                      35A                                20
+                                                                                                                                                              Peak:        240° ~ 260° Max. 10s
+             FC4L76 3 watt  1mΩ~9mΩ                                  110W      90A
+                                                                                                                                     FC4L16                   Max. number of reflow: 2
+                                                                                                                  0
+             		            10mΩ~***mΩ                                 55W      40A                                -55     0       50 70 100 125 155                           300
+                                                                                                                                                                                                       Peak 240 ~ 260℃ Max. 10s
+             FC4L90 4 watt  1mΩ~9mΩ   120W                                     95A                                      Ambient Temperature, °C
+             		            10mΩ~***mΩ 60W                                      45A                                                                                            250
+
+
+
+
+                                                                                                                                                             Temperature °C
+             FC4L110 5 watt             1mΩ~50mΩ                     100W     100A                                                                                            200
+             In-rush current = √(in-rush power/resistance                                                                                                                                                      Heating
+                                                                                                                                                                              150
+             value), or max. current, whichever is smaller                                                                                                                                                     Over 220℃
+                                                                                                                                                                                           Preheating           30s ~ 90s
+                                                                                                                                                                              100           130 ~ 180℃
+                                                                                                                                                                                            60 ~ 90 sec.
+
+                                                                                                                                                                               50
+                                                                                                                                                                                                    Time (sec.)
+
+
+
+                                                                                         DIMENSIONS
+
+                            W                                         a                                                                                   Land Pattern
+                                                    2
+                                                                                1. Alumina substrate
+                                        “I” term.
+
+
+
+
+                                                                                2. Resistive element
+                                                                                   (Ni-Cu-Mn alloy)*                                                                                                               c
+                       R010
+
+
+
+
+               1                                                                                                                                                                                                   d
+                                                          3                   d 3. Electrode (Ni, Sn)*
+                                                                                4. Protective coating
+                   L                                                               (Epoxy resin)                                                                                                               e
+                                                           4
+                                                                                5. Marking (Epoxy
+                                        “V” term.
+
+
+
+
+                                                                               c resin): wider mark
+                                                                               b indicates “V” term.                                                                                                 a
+                       5                            t                     *Dependent on size and value                                                                                               b
+
+		                             L            W                                   a              b                           c          d               t
+  Rating                     (in.±.008/mm ±0.20)                            (in./mm)        mm ±0.15                     mm ±0.1   mm ±0.15          mm                             (mm)             a         b            c      d      e
+FC4L16    0.25 watt    0.063 / 1.60                     0.031 / 0.8       0.010 / 0.26      0.30 ±.2                     0.3 ±.2    1.0 ±.2     0.5 +.2/-.05                        FC4L16         0.25       1.2      0.40       0.30   1.2
+FC4L32      1 watt     0.126 / 3.20                     0.063 / 1.6       0.014 / 0.35                 0.35                0.2        2.6       0.5 +.2/-.05                        FC4L32          0.4       2.7      0.35       0.3    2.7
+FC4L64      2 watt     0.251 / 6.40                     0.126 / 3.2       0.020 / 0.5                      0.7             0.5        5.2       0.5 +.2/-.05                        FC4L64          2.0       4.4       0.7       0.5    5.4
+FC4L76 3 watt          0.30 / 7.60                      0.15 / 3.8        0.02 / 0.55         0.75                         0.60       6.15       0.60 ±.20                          FC4L76          2.4      4.80      0.95       0.45   6.60
+		                      ±0.3mm                           ±0.3mm            ±0.2mm           ±0.2mm                       ±0.2mm     ±0.3mm
+FC4L90 4 watt          0.35 / 9.00                      0.18 / 4.5        0.03 / 0.65         0.90                         0.75       7.25       0.60 ±.20                          FC4L90          2.8      5.60      1.10       0.55   7.80
+		                      ±0.3mm                           ±0.3mm            ±0.2mm           ±0.2mm                       ±0.2mm     ±0.3mm
+FC4L110     5 watt     0.433 / 11.0                     0.197 / 5.0       0.028 / 0.7                      1.4             1.1        8.5       0.5 +.2/-.05                        FC4L110         3.2       5.6       1.6       1.1    8.7
+
+
+
+                                                               P a c k a g in g S p e cific a t ions
+
+Reel
+                                                                                         FC4L16                             FC4L32 & 64          FC4L76 & 90                                 FC4L110
+                                                                                A        7.087 (180 +0/-3) 7.087 (180 +0/-3) 7.087 (180 +1.0/-3.0) 7.087 (180 ±2.0)
+                                                                                H        0.512 (13 ±0.2)                    0.512 (13 ±0.2)      0.512 (13 ±0.2)                             0.512 (13 ±0.2)
+                                                               H N A            E        0.079 (2.0 ±0.5)                   0.079 (2.0 ±0.5)     0.079 (2.0 ±0.5)                            0.079 (2.0 ±0.5)
+                                                                                N        2.362 (60 +1/-0)                   2.362 (60 +1/-0)     2.362 (60 +1/-0)                            0.827 (21 ±0.8)
+                                                                                W1 0.354 (9.0 ±0.3)                         0.512 (13.0 ±0.3)    0.827 (21 ±0.8)                             1.000 (25.4 ±1.0)
+                                    E                          W2               W2 0.512 (13.0 ±0.3)                        0.669 (17.0 ±1.4)    0.669 (17.0 ±.3)                            1.157 (29.4 ±1.0)
+                                                               W1
+
+
+                                                                                                                                                                                                                            (continued)
+
+
+1-866-9-OHMITE • Int’l 1-847-258-0300 • Fax 1-847-574-7522 • www.ohmite.com • info@ohmite.com                                                                        9
+FC4L Series                                                  T            D0
+                                                                                        P0
+                                                                                                        P2
+                                                                                                                 Direction
+                                                                                                                  of feed
+FC4L Four Terminal Current Sense E
+Metal Foil Construction          F                                                                                           W
+                                                                                                                      B
+
+                                          P a c k a g in g S p e cific a t ions
+                                                        T2                       D1                          A
+(continued)                                                                                   P1
+
+Tape
+inches (mm)                                                                                    P0
+                                                                                                                 Direction
+                                                             T      E      D0                         P2          of feed
+
+
+                                                                    F
+                                                                                                                             W
+                                                                                                                      B
+
+
+                                                        T2                       D1                          A
+                                                                                        P1
+
+                     FC4L16               FC4L32                  FC4L64                     FC4L76                          FC4L90                FC4L110
+             A       0.037 (0.95±0.05)    0.075 (1.90 ±0.1)       0.135 (3.43 ±0.2)          0.163 (4.15 ±0.20)              0.191 (4.85 ±0.20)    0.213 (5.40 ±0.10)
+             B       0.073 (1.85±0.05)    0.138 (3.50 ±0.1)       0.261 (6.63 ±0.2)          0.313 (7.95 ±0.20)              0.368 (9.35 ±0.20)    0.453 (11.50 ±0.10)
+             W       0.315 (8.00±0.10)    0.315 (8.00 ±0.2)       0.472 (12.0 ±0.3)          0.630 (16.00 ±0.30) 0.630 (16.00 ±0.30) 0.945 (24.00 ±0.30)
+             F       0.138 (3.50±0.05)    0.138 (3.50 ±0.05)      0.069 (1.75 ±0.1)          0.295 (7.50 ±0.10)              0.295 (7.50 ±0.10)    0.069 (1.75 ±0.10)
+             E       0.069 (1.75±0.10)    0.069 (1.75 ±0.1)       0.217 (5.5 ±0.05)          0.069 (1.75 ±0.10)              0.069 (1.75 ±0.10)    0.453 (11.50 ±0.10)
+             P0      0.157 (4.00±0.10)    0.157 (4.0 ±0.1)        0.157 (4.0 ±0.1)           0.157 (4.00 ±0.10)              0.157 (4.00 ±0.10)    0.157 (4.00 ±0.10)
+             P1      0.157 (4.00±0.10)    0.157 (4.0 ±0.1)        0.157 (4.0 ±0.1)           0.315 (8.00 ±0.10)              0.315 (8.00 ±0.10)    0.315 (8.00 ±0.10)
+             P2      0.079 (2.00±0.05)    0.079 (2.0 ±0.05)       0.079 (2.0 ±0.05)          0.079 (2.00 ±0.10)              0.079 (2.00 ±0.10)    0.079 (2.00 ±0.10)
+             D0      0.059 (1.50+0.10/-0) 0.059 (1.50 +0.1/-0) 0.059 (1.5 +0.1/-0)           0.059 (1.50 ±0.10)              0.059 (1.50 ±0.10)    0.059 (1.50 ±0.10)
+             D1      0.024 (0.60±0.05)    0.039 (1.00 +0.2/-0) 0.059 (1.5 +0.2/-0)			                                                              0.059 (1.50 ±0.10)
+             T       0.008 (0.20±0.05)    0.008 (0.20 ±0.05)      0.008 (0.20 ±0.05)         0.012 (0.30 ±0.10)              0.012 (0.30 ±0.10)    0.012 (0.30 ±0.05)
+             T2      0.022 (0.55±0.05)    0.039 (1.00 ±0.2)       0.059 (1.5) max.           0.063 (1.60) max.               0.063 (1.60) max.     0.047 (1.2 ±0.15)
+
+
+
+                                               O R D ER I N G I N F O R M AT I O N
+
+                                                                               Ohms
+                                                                               R005=0.005Ω
+                                                                               R050=0.050Ω     RoHS Compliant
+
+
+                                            FC4L110R005FER
+                                              Series    TCR* (ppm)      Package Size         Tolerance Taping Code
+                                                        W = 25          110=11050=5W         J = 5%    1,000 pc/reel
+                                                        V = 50          64=6432=2W           G = 2%    FC4L16: 5,000 pc/reel
+                                                        L = per chart   32=3216=1W           F = 1%
+                                                           above        16=1608=0.25W        D = 0.5%
+                                                        *FC4L32 and FC4L64 values over 0.100Ω only
+
+
+                     Standard Part Numbers for FC4L series
+                          0.25 watt            1 watt                   2 watt                 3 watt                        4 watt               5 watt
+                     				                                      FC4L76R001GER FC4L90R001GER
+                     		            FC4L32R001JER FC4L64R001JER			                          FC4L110R001JER
+                     				                                      FC4L76R002FER FC4L90R002FER
+                     		            FC4L32R002GER FC4L64R002GER			                          FC4L110R002GER
+                     		            FC4L32R003FER FC4L64R003FER FC4L76R003FER FC4L90R003FER FC4L110R003FER
+                     FC4L16R005FER FC4L32R005FER FC4L64R005FER FC4L76R005FER FC4L90R005FER FC4L110R005FER
+                     			                         FC4L64R010DER			                          FC4L110R010DER
+                     FC4L16R010FER FC4L32R010FER FC4L64R010FER FC4L76R010FER FC4L90R010FER FC4L110R010FER
+                     			                         FC4L64R015DER			                          FC4L110R015DER
+                     FC4L16R015FER FC4L32R015FER FC4L64R015FER FC4L76R015FER FC4L90R015FER FC4L110R015FER
+                     			                         FC4L64R020DER			                          FC4L110R020DER
+                     FC4L16R020FER FC4L32R020FER FC4L64R020FER FC4L76R020FER FC4L90R020FER FC4L110R020FER
+                     			                         FC4L64R025DER			                          FC4L110R025DER
+                     FC4L16R025FER FC4L32R025FER FC4L64R025FER FC4L76R025FER FC4L90R025FER FC4L110R025FER
+                     			                         FC4L64R030DER			                          FC4L110R030DER
+                     FC4L16R030FER FC4L32R030FER FC4L64R030FER			                          FC4L110R030FER
+                     			                         FC4L64R050DER			                          FC4L110R050DER
+                     FC4L16R050FER FC4L32R050FER FC4L64R050FER			                          FC4L110R050FER
+                     FC4L16R100FER FC4L32R100FER FC4L64R100FER			                          FC4L110R100FER
+
+
+
+
+rev 8/19-1
+
+10       1-866-9-OHMITE • Int’l 1-847-258-0300 • Fax 1-847-574-7522 • www.ohmite.com • info@ohmite.com
+

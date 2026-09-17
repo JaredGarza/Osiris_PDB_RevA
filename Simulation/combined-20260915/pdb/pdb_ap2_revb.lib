@@ -1,0 +1,166 @@
+* ============================================================================
+* pdb_ap2_revb.lib -- PROPOSED PDB changes (candidate, NOT the as-built board)
+*
+* The as-built model is pdb/pdb_ap2.lib and is left untouched for comparison.
+* Three changes, each traced to a finding in FINDINGS.md:
+*
+*  FIX 1  UV hysteresis feedback (finding 1: non-recoverable restart loop)
+*         Add RH from PDB_VOUT back into the UV node. When the output is up,
+*         RH injects current into UV, so the input must fall further to trip;
+*         when the output is down, RH pulls UV toward ground, so the input
+*         must rise further to start. Hysteresis 0.60 V -> 1.58 V.
+*
+*  FIX 2  SPLIT THE OV DIVIDER (required by FIX 1, not optional)
+*         As built, UV and OV are two taps on ONE string (R1/R2/R3). Feeding
+*         hysteresis into the UV node would drag the OV tap with it and trade
+*         a UV oscillation for an OV oscillation: OV would trip, the output
+*         would drop, RH would pull the tap down, OV would release, and it
+*         would chatter at ~18.5-19.5 V. So OV gets its own divider off VIN,
+*         untouched by the feedback.
+*
+*  FIX 3  Shunt / fuse re-coordination (finding 2: 4-10 A coverage gap)
+*         R5 5 m -> 8 m lowers the breaker from 10 A typ to 6.25 A typ.
+*         F1 4 A -> 5 A raises the fuse. The uncovered band narrows from
+*         4-10 A to roughly 5-6.25 A.
+*
+* Component delta vs as-built:
+*   R1   2M0  -> 1M0     (UV divider top)
+*   R2   43k2 -> 2M0     REWIRED: was UV->OV, now VIN->OV
+*   R3   56k2 -> 54k9    (OV divider bottom)
+*   R5   5m   -> 8m      (sense shunt)
+*   F1   4A   -> 5A      (0297005.WXNV)
+*   +RUVB 47k            NEW, UV->GND
+*   +RH   10M            NEW, PDB_VOUT->UV
+*
+* Design arithmetic (LTC4368: VUV 500 mV falling / 525 mV rising, VOV 500 mV):
+*   OFF state, UV node sees RUVB||RH = 46.78k below, R1 = 1M above
+*       V_on  = 0.525 * (1000 + 46.78) / 46.78   = 11.75 V
+*   ON state, UV node sees R1||RH = 909.09k above, RUVB = 47k below
+*       V_off = 0.500 * (909.09 + 47) / 47       = 10.17 V
+*       hysteresis = 1.58 V  (covers R_pack up to 1.58/2.3 = 687 m)
+*   OV divider  2M0 / 54k9
+*       V_ov  = 0.500 * (2000 + 54.9) / 54.9     = 18.71 V
+* ============================================================================
+
+.subckt PDB_AP2_REVB VIN VOUT V3V3 GP GF COMMON FAULT ALERT SCL SDA GND
++ PARAMS: CDERATE=0.65 CDERATE3=0.50 RXT60=0.3m RFUSE=17.75m
++          RSHUNT=8m R1V=1Meg RUVBV=47k ROVTV=2Meg ROVBV=54.9k
++          RHV_VOUT=1G RHV_V3V3=1G RHV_GP=20Meg
+
+* --- J1 XT60PW-M battery inlet -------------------------------------------
+RJ1P VIN   VBAT_RAW {RXT60}
+
+* --- F1 5 A MINI blade fuse (0297005.WXNV) -------------------------------
+* Datasheet: cold resistance 17.75 m, melting I2t 25 A^2s, typ drop 129 mV
+* (vs 23.48 m / 17 A^2s for the 4 A part). Lower resistance is a side
+* benefit: less conduction loss than the 4 A fuse it replaces.
+* STILL DOES NOT OPEN in this model -- see pdb_devices.lib.
+RF1  VBAT_RAW VBAT_FUSED {RFUSE}
+
+* --- D1 SMAJ24CA bidirectional TVS ---------------------------------------
+XD1  VBAT_FUSED GND SMAJ24CA
+
+* --- U1 LTC4368-1 --------------------------------------------------------
+XU1  VBAT_FUSED N_UV N_OV N_RETRY GND SHDN_LTC FAULT SHUNT_LO SHUNT_HI GP
++    LTC4368-1
+
+* --- FIX 1 + FIX 2: independent UV and OV dividers ------------------------
+* FEEDBACK NODE: V3V3, *not* VOUT.
+* First attempt tied RH to PDB_VOUT and still oscillated at 11.4 V / 500 mOhm
+* where the window arithmetic said it should be safe. Reason: VOUT does NOT
+* cleanly collapse when the switch opens -- the downstream bulk caps hold it
+* at an intermediate voltage, so the injected feedback current depends on
+* decay state and the threshold goes metastable.
+* V3V3 is genuinely bistable: the LT3010 either regulates at 3.28 V or drops
+* out entirely. Smaller swing, but a clean two-state node.
+*   OFF (V3V3=0):    V_on  = 0.525 * S/G1                      = 11.86 V
+*   ON  (V3V3=3.28): V_off = (0.5*S - 3.2825*GH)/G1            = 10.26 V
+*   hysteresis 1.60 V   (covers R_pack up to 1.60/2.7 = 590 mOhm)
+* SELECTED FEEDBACK NODE: GP (the LTC4368 GATE pin), RH = 20 M.
+* Chosen by measurement, not argument -- see revb_fbsweep.cir / revb_thresholds.cir.
+*   VOUT (10M)  : V_on 11.82  V_off 10.17  hyst 1.64 -- but STILL OSCILLATED at
+*                 11.4 V / 500 mOhm. VOUT does not collapse cleanly when the
+*                 switch opens (bulk caps hold it up), so the injected current
+*                 depends on decay state and the threshold goes metastable.
+*   V3V3 (3.16M): V_on 12.25  V_off 10.23  hyst 2.03 -- rejected. That
+*                 hysteresis is INFLATED by an LT3010 model artifact: the
+*                 vendor model drives its output to -1.02 V when unpowered
+*                 (outside its >=3 V spec), which over-drives the feedback.
+*                 Real hardware would sit near 0 V, giving ~1.6 V. Calibrating
+*                 a design against a model bug is not acceptable.
+*   GP (20M)    : V_on 11.78  V_off 10.10  hyst 1.68  -- SELECTED. Largest
+*                 genuine hysteresis, actively driven by the LTC4368 itself,
+*                 no dependence on out-of-range vendor-model behaviour.
+*                 Verified VBIN_PP = 0 at 11.6/11.9/12.2/12.5/12.8 V, 500 mOhm.
+*
+* Loading GP costs charge-pump current: at GP ~26 V into the ~0.5 V UV node,
+* 20 M draws ~1.3 uA against the LTC4368's 35 uA pull-up, i.e. ~4%. That
+* slightly slows gate turn-on; confirmed acceptable in revb_regression.cir.
+*
+* COVERAGE: closes the window for R_pack up to ~1.68/2.7 = 620 mOhm
+* (as-built: 260 mOhm). It does NOT cover 700-900 mOhm -- a window reopens
+* there. No protection circuit can fix a pack that cannot supply the load;
+* this buys margin for cold/aged packs, it does not make the failure go away.
+R1    VBAT_FUSED N_UV  {R1V}
+RUVB  N_UV       GND   {RUVBV}
+RHO   VOUT       N_UV  {RHV_VOUT}
+RH3   V3V3       N_UV  {RHV_V3V3}
+RHG   GP         N_UV  {RHV_GP}
+R2    VBAT_FUSED N_OV  {ROVTV}
+R3    N_OV       GND   {ROVBV}
+
+* SHDN divider unchanged
+R6   VBAT_FUSED SHDN_LTC 680k
+R7   SHDN_LTC   GND      200k
+C3   N_RETRY GND 100n
+
+* --- Gate network unchanged ----------------------------------------------
+R4   GP GF  22k
+C1   GP GND 5.6n Rser=50m
+D2   GF GP  MBR0540
+
+* --- Q1/Q2 unchanged -----------------------------------------------------
+MQ1  VBAT_FUSED     GF COMMON COMMON ISC015N06NM5LF2
+MQ2  PDB_PROTECTED  GF COMMON COMMON ISC015N06NM5LF2
+
+* --- FIX 3: R5 sense shunt 5 m -> 8 m ------------------------------------
+* Breaker: 50 mV / 8 m = 6.25 A typ (spec 40-60 mV => 5.0 - 7.5 A)
+RSH_F1 PDB_PROTECTED SHUNT_HI 0.5m
+RSH    SHUNT_HI      SHUNT_LO {RSHUNT}
+RSH_F4 SHUNT_LO      VOUT     0.5m
+C2   SHUNT_LO GND 1u Rser=20m
+
+* --- INA228 front end unchanged ------------------------------------------
+R9   SHUNT_HI INA_IN_P 10
+R8   SHUNT_LO INA_IN_N 10
+C7   INA_IN_P INA_IN_N 100n Rser=30m
+XU2  INA_IN_P INA_IN_N VOUT V3V3 GND INA_ALERT_LOCAL_N INA228_ANALOG
+R10  V3V3 INA_ALERT_LOCAL_N 4.7k
+XU4  INA_ALERT_LOCAL_N ALERT V3V3 GND BUF_74AUP1G07
+
+* --- U3 LT3010 housekeeping LDO unchanged --------------------------------
+XU3  V3V3 PDB_LDO_ADJ NC3 GND VOUT NC6 NC7 VOUT LT3010
+R11  V3V3        PDB_LDO_ADJ 1.58k
+R12  PDB_LDO_ADJ GND         1k
+C10  V3V3        PDB_LDO_ADJ 100n Rser=30m
+
+* --- Bulk / bypass unchanged ---------------------------------------------
+C4   VOUT GND {10u*CDERATE}  Rser=5m
+C9   VOUT GND {10u*CDERATE}  Rser=5m
+C6   V3V3 GND {10u*CDERATE3} Rser=10m
+C5   V3V3 GND 100n Rser=30m
+C8   V3V3 GND 100n Rser=30m
+D3   GND VOUT MBR0540
+
+* --- Pull-ups added for the open-drain outputs (finding 5) ---------------
+* As built, FAULT and the buffered ALERT float to testpoints with no
+* pull-up, so neither is readable. 10k to the 3V3 housekeeping rail.
+RPUF FAULT V3V3 10k
+RPUA ALERT V3V3 10k
+
+* --- J2 I2C: pull-ups added ----------------------------------------------
+* As built there were none on the PDB at all.
+RPUC SCL V3V3 4.7k
+RPUD SDA V3V3 4.7k
+
+.ends PDB_AP2_REVB

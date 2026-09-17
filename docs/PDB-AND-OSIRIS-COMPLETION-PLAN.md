@@ -1,5 +1,11 @@
 # PDB Rev A and Osiris Rev B completion plan
 
+> September 15 update: A-P2-DRAFT implements the U3 regulator correction and has
+> 42 components. M1 is proposed; M2 remains open. Current details are in the
+> [electrical review](PDB-ELECTRICAL-REVIEW-20260915.md) and
+> [interface proposal](PDB-INTERFACE-PROPOSAL-20260915.md). Dates and counts below
+> describe the September 13 plan, not current completion commitments.
+
 Planning date: 13 September 2026. Targets below are proposed working dates, not
 verified delivery commitments. Current procurement baseline: A-P1, Git tag
 `pdb-procurement-2026-09-13`, commit `e780c08`.

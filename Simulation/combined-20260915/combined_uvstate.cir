@@ -1,0 +1,53 @@
+* ============================================================================
+* Single-case probe of the 500 mOhm / 11.6 V open-circuit condition.
+* Summary statistics over one wide window kept giving contradictory answers
+* (8.3 V peak-to-peak but zero threshold crossings), so this slices the
+* timeline into disjoint late windows and asks the same questions of each.
+*   - If activity persists in every window -> sustained retry loop.
+*   - If it dies away -> the swing was a one-off startup transient and the
+*     board settles into a stable latched-off state.
+* ============================================================================
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_ap2.lib
+.inc osiris\osiris_reva.lib
+
+VBAT VSRC 0 PWL(0 0 50m 14.8 1.0 14.8 1.5 11.6 12.0 11.6)
+RBATT VSRC VBIN 500m
+
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_AP2
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+.tran 0 12 0 100u
+.options method=gear reltol=0.003
+
+* Disjoint late windows, same questions asked of each
+.meas TRAN W3_OSIN_MAX MAX V(OSIN)        FROM 3 TO 4
+.meas TRAN W3_OSIN_MIN MIN V(OSIN)        FROM 3 TO 4
+.meas TRAN W3_IIN_AVG  AVG ABS(I(RBATT))  FROM 3 TO 4
+.meas TRAN W3_IIN_MAX  MAX ABS(I(RBATT))  FROM 3 TO 4
+
+.meas TRAN W6_OSIN_MAX MAX V(OSIN)        FROM 6 TO 7
+.meas TRAN W6_OSIN_MIN MIN V(OSIN)        FROM 6 TO 7
+.meas TRAN W6_IIN_AVG  AVG ABS(I(RBATT))  FROM 6 TO 7
+.meas TRAN W6_IIN_MAX  MAX ABS(I(RBATT))  FROM 6 TO 7
+
+.meas TRAN W9_OSIN_MAX MAX V(OSIN)        FROM 9 TO 10
+.meas TRAN W9_OSIN_MIN MIN V(OSIN)        FROM 9 TO 10
+.meas TRAN W9_IIN_AVG  AVG ABS(I(RBATT))  FROM 9 TO 10
+.meas TRAN W9_IIN_MAX  MAX ABS(I(RBATT))  FROM 9 TO 10
+
+.meas TRAN W11_OSIN_MAX MAX V(OSIN)       FROM 11 TO 12
+.meas TRAN W11_OSIN_MIN MIN V(OSIN)       FROM 11 TO 12
+.meas TRAN W11_IIN_AVG  AVG ABS(I(RBATT)) FROM 11 TO 12
+.meas TRAN W11_V5_MAX   MAX V(V5)         FROM 11 TO 12
+.meas TRAN W11_VBIN_PP  PP  V(VBIN)       FROM 11 TO 12
+
+* Total restart attempts across the whole post-ramp timeline
+.meas TRAN LAST_TRY WHEN V(OSIN)=4 RISE=LAST
+.end

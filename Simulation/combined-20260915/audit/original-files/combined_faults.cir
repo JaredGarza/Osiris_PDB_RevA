@@ -1,0 +1,72 @@
+* ============================================================================
+* COMBINED PDB + OSIRIS Rev A -- fault response on one timeline
+*   0 -  250ms  normal startup at 14.8 V
+* 300 -  450ms  OVERVOLTAGE excursion to 19.5 V (PDB OV trip is 18.69 V)
+* 600 -  750ms  UNDERVOLTAGE sag to 9.0 V (PDB UV dropout is 10.56 V)
+* 900 - 1100ms  HARD SHORT at the Osiris end of the harness
+*1100 - 1500ms  short removed -- does the system come back by itself?
+* ============================================================================
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_ap2.lib
+.inc osiris\osiris_reva.lib
+
+VBAT VSRC 0 PWL(0 0 1m 14.8
++ 300m 14.8 310m 19.5 440m 19.5 450m 14.8
++ 600m 14.8 610m 9.0  740m 9.0  750m 14.8
++ 1.5 14.8)
+RBATT VSRC VBIN 20m
+
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_AP2
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+* Hard short across the Osiris input, 900ms -> 1100ms
+SSHORT OSIN NSH FCTL 0 SWSH
+RSH   NSH 0 20m
+VFCTL FCTL 0 PWL(0 0 899.9m 0 900m 1 1.0999 1 1.1 0)
+.model SWSH SW(Ron=1m Roff=1G Vt=0.5 Vh=0.1)
+
+* Window runs well past the short so recovery is OBSERVED, not assumed.
+* The LTC4368 retry period with C3=100n is ~545 ms, and the Osiris
+* bootstrap adds ~90 ms on top, so 1.5 s was too short to conclude anything.
+.tran 0 3.0 0 20u
+.options method=gear reltol=0.003
+
+* --- Overvoltage: did the PDB disconnect, and did Osiris rails survive? ---
+.meas TRAN OV_VOSIN_PK  MAX V(OSIN)   FROM 315m TO 435m
+.meas TRAN OV_V5_MIN    MIN V(V5)     FROM 315m TO 435m
+.meas TRAN OV_V3_MIN    MIN V(V3)     FROM 315m TO 435m
+.meas TRAN OV_GATE      AVG V(GF)-V(COMMON) FROM 350m TO 430m
+.meas TRAN OV_RECOV_V5  AVG V(V5)     FROM 550m TO 590m
+
+* --- Undervoltage: PDB dropout at 10.56 V, Osiris UVLO at 7.91 V ----------
+.meas TRAN UV_VOSIN_MIN MIN V(OSIN)   FROM 620m TO 735m
+.meas TRAN UV_V5_MIN    MIN V(V5)     FROM 620m TO 735m
+.meas TRAN UV_V3_MIN    MIN V(V3)     FROM 620m TO 735m
+.meas TRAN UV_RECOV_V5  AVG V(V5)     FROM 850m TO 890m
+.meas TRAN UV_RECOV_V3  AVG V(V3)     FROM 850m TO 890m
+
+* --- Hard short ----------------------------------------------------------
+.meas TRAN SH_IPK       MAX ABS(I(RBATT)) FROM 899m TO 1000m
+.meas TRAN SH_I2T       INTEG I(RBATT)*I(RBATT) FROM 900m TO 1.1
+.meas TRAN SH_GATE      AVG V(GF)-V(COMMON) FROM 1000m TO 1090m
+.meas TRAN SH_VOSIN     AVG V(OSIN)   FROM 1000m TO 1090m
+
+* --- Self-recovery after the short is removed at 1.1 s -------------------
+* Timing first: how long does each stage actually take to come back?
+.meas TRAN T_REC_PDB   WHEN V(OSIN)=10  RISE=LAST
+.meas TRAN T_REC_V5    WHEN V(V5)=4.9   RISE=LAST
+.meas TRAN T_REC_V3    WHEN V(V3)=3.1   RISE=LAST
+.meas TRAN T_REC_V5P   WHEN V(V5PROT)=4.9 RISE=LAST
+* Then the settled values, measured at the very end of a 3 s window
+.meas TRAN REC_VOSIN    AVG V(OSIN)   FROM 2900m TO 2995m
+.meas TRAN REC_V5       AVG V(V5)     FROM 2900m TO 2995m
+.meas TRAN REC_V3       AVG V(V3)     FROM 2900m TO 2995m
+.meas TRAN REC_V5PROT   AVG V(V5PROT) FROM 2900m TO 2995m
+.meas TRAN REC_IIN      AVG ABS(I(RBATT)) FROM 2900m TO 2995m
+.end

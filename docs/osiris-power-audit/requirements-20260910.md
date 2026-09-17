@@ -13,6 +13,13 @@ cited to a datasheet page. Assumption-derived numbers are labelled as such.
 
 This document records requirements only. It does not change the schematic.
 
+> HISTORICAL / SUPERSEDED: several conclusions below are incorrect or conditional.
+> See [September 15 review](../PDB-ELECTRICAL-REVIEW-20260915.md): WXNV is package
+> quantity, interrupt rating is 1000 A, current fuse data lists 31 A2s for 4 A,
+> moderate overloads can be cleared by the fuse, and neither 2.22 A nor the
+> nominal inrush estimate is a measured maximum. Gate drive and hot-swap
+> assumptions below must not be reused as current approval.
+
 ---
 
 ## 1. Load requirement

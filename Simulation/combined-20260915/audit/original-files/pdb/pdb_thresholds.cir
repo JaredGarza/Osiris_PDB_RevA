@@ -1,0 +1,31 @@
+* PDB protection-threshold characterisation.
+* Slow ramp up then down across the whole 0..22 V range so the UV and OV
+* trip points and their hysteresis fall out of the measured waveform.
+* Slow enough (2 V/s) that the 32 ms gate turn-on delay is not the limiter.
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc ..\models\pdb_devices.lib
+.inc pdb_ap2.lib
+
+VBAT VIN 0 PWL(0 0 11 22 22 0)
+XPDB VIN VOUT V3V3 GP GF COMMON FAULT ALERT SCL SDA 0 PDB_AP2
+RLOAD VOUT 0 100
+
+.tran 0 22 0 2m
+.options method=gear reltol=0.003
+
+* Rising edge: output comes alive at the UV threshold
+.meas TRAN uv_rise_t   WHEN V(VOUT)=5 RISE=1
+.meas TRAN UV_RISE_V   FIND V(VIN) AT=uv_rise_t
+* Rising edge: output drops out again at the OV threshold
+.meas TRAN ov_rise_t   WHEN V(VOUT)=5 FALL=1
+.meas TRAN OV_RISE_V   FIND V(VIN) AT=ov_rise_t
+* Falling edge: recovery below OV, then dropout below UV
+.meas TRAN ov_fall_t   WHEN V(VOUT)=5 RISE=2
+.meas TRAN OV_FALL_V   FIND V(VIN) AT=ov_fall_t
+.meas TRAN uv_fall_t   WHEN V(VOUT)=5 FALL=2
+.meas TRAN UV_FALL_V   FIND V(VIN) AT=uv_fall_t
+* Housekeeping rail regulation across the operating window
+.meas TRAN V3V3_AT_12V FIND V(V3V3) WHEN V(VIN)=12 RISE=1
+.meas TRAN V3V3_AT_168 FIND V(V3V3) WHEN V(VIN)=16.8 RISE=1
+.end

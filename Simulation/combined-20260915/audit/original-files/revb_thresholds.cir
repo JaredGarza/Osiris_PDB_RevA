@@ -1,0 +1,36 @@
+* Rev-B candidate: verify the UV/OV thresholds actually land where designed,
+* and that splitting the OV divider did NOT introduce OV chatter.
+* Slow ramp up then down across 0..22 V.
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc pdb\pdb_ap2_revb.lib
+
+* 2 = V3V3 feedback, 3 = GP (gate) feedback, 4 = no feedback
+.step param FB list 2 3 4
+.param RH3 = table(FB, 2,3.16Meg, 3,1G,    4,1G)
+.param RHG = table(FB, 2,1G,      3,20Meg, 4,1G)
+
+VBAT VIN 0 PWL(0 0 11 22 22 0)
+XPDB VIN VOUT V3V3 GP GF COMMON FAULT ALERT SCL SDA 0 PDB_AP2_REVB
++ PARAMS: RHV_V3V3={RH3} RHV_GP={RHG}
+RLOAD VOUT 0 100
+
+.tran 0 22 0 2m
+.options method=gear reltol=0.003
+
+* Design targets: UV on 11.75 V, UV off 10.17 V, OV 18.71 V
+.meas TRAN uv_rise_t WHEN V(VOUT)=5 RISE=1
+.meas TRAN UV_ON_V   FIND V(VIN) AT=uv_rise_t
+.meas TRAN ov_rise_t WHEN V(VOUT)=5 FALL=1
+.meas TRAN OV_TRIP_V FIND V(VIN) AT=ov_rise_t
+.meas TRAN ov_fall_t WHEN V(VOUT)=5 RISE=2
+.meas TRAN OV_REC_V  FIND V(VIN) AT=ov_fall_t
+.meas TRAN uv_fall_t WHEN V(VOUT)=5 FALL=2
+.meas TRAN UV_OFF_V  FIND V(VIN) AT=uv_fall_t
+
+* If the OV divider split failed, there would be EXTRA crossings up near the
+* OV threshold. Exactly 4 total crossings means clean single transitions.
+.meas TRAN extra_t   WHEN V(VOUT)=5 FALL=3
+.meas TRAN V3V3_12V  FIND V(V3V3) WHEN V(VIN)=12 RISE=1
+.end

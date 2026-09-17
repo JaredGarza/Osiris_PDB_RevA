@@ -1,0 +1,48 @@
+* ============================================================================
+* Which UV-hysteresis feedback node actually works?
+*
+* Tested empirically because reasoning about it has already been wrong twice:
+*   VOUT  -- does not collapse cleanly (bulk caps hold it up) -> metastable
+*   V3V3  -- LT3010 model goes to -1.02 V when unpowered, contaminating it
+*   GP    -- LTC4368 GATE; datasheet says it tracks VOUT while falling, so
+*            it may have the same flaw as VOUT. Unknown until measured.
+*
+* Run the SAME failing condition (500 mOhm pack, Voc 11.4 V) that defeated
+* both the as-built board and the VOUT-feedback attempt.
+* PASS = VBIN_PP ~ 0 and V5 either at 5.16 V or cleanly at 0 (latched off).
+* FAIL = VBIN_PP large with V5 stuck around 1-2 V.
+* ============================================================================
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_ap2_revb.lib
+.inc osiris\osiris_reva.lib
+
+* 1 = VOUT feedback, 2 = V3V3 feedback, 3 = GP feedback, 4 = no feedback
+.step param FB list 1 2 3 4
+.param RHO = table(FB, 1,10Meg, 2,1G,     3,1G,     4,1G)
+.param RH3 = table(FB, 1,1G,    2,3.16Meg,3,1G,     4,1G)
+.param RHG = table(FB, 1,1G,    2,1G,     3,20Meg,  4,1G)
+
+VBAT VSRC 0 PWL(0 0 50m 14.8 1.0 14.8 1.5 11.4 8.0 11.4)
+RBATT VSRC VBIN 500m
+
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_AP2_REVB
++ PARAMS: RHV_VOUT={RHO} RHV_V3V3={RH3} RHV_GP={RHG}
+
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+.tran 0 8 0 100u
+.options method=gear reltol=0.003
+
+.meas TRAN VBIN_PP  PP  V(VBIN)       FROM 6 TO 8
+.meas TRAN OSIN_PP  PP  V(OSIN)       FROM 6 TO 8
+.meas TRAN V5_MIN   MIN V(V5)         FROM 6 TO 8
+.meas TRAN V5_MAX   MAX V(V5)         FROM 6 TO 8
+.meas TRAN IIN_AVG  AVG ABS(I(RBATT)) FROM 6 TO 8
+.meas TRAN IIN_MAX  MAX ABS(I(RBATT)) FROM 6 TO 8
+.end

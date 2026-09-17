@@ -1,9 +1,17 @@
 # Osiris PDB Rev A
 
-Active 39-component 4S avionics power protection and I2C telemetry schematic.
+Current simulation/design audit: [review](Simulation/combined-20260915/REVIEW.md). This supersedes earlier population and simulation claims.
+
+Active 48-component A-P2-DRAFT 4S avionics power protection and I2C telemetry schematic.
 Open `Osiris_PDB_RevA.kicad_pro` in KiCad 10. Project libraries use `${KIPRJMOD}`.
 
-**Parts-planning baseline: 13 September 2026.** See the
+**September 15 engineering draft:** U3 is now LT3010 with R11/R12/C10.
+See the [electrical review](docs/PDB-ELECTRICAL-REVIEW-20260915.md) and
+[proposed interface](docs/PDB-INTERFACE-PROPOSAL-20260915.md). Actual loads and
+mechanical constraints remain undecided; negative-input protection and fault
+qualification remain open. The previous parts baseline is historical.
+
+**Historical parts-planning baseline: 13 September 2026.** See the
 [freeze note](procurement/2026-09-13/FREEZE-NOTE.md) and
 [parts workbook](outputs/procurement-20260913/PDB-RevA-Parts-Planning.xlsx).
 New Osiris Rev B power and top-facing ports are planned, not yet drawn; shared-part
@@ -29,7 +37,16 @@ simulation sources and review evidence are versioned together. Full Osiris board
 imports, editor state and LTspice binary outputs are kept out of Git. Git history
 retains the obsolete PCB; it is not a layout for the current circuit.
 
-Install KiCad 10 and run from the repository root:
+Install KiCad 10 and run from this project's root. Current draft checks:
+
+```sh
+kicad-cli sch erc -o docs/interface-review-20260915/erc-final.rpt Osiris_PDB_RevA.kicad_sch
+kicad-cli sch export netlist --format kicadxml -o docs/interface-review-20260915/final.net.xml Osiris_PDB_RevA.kicad_sch
+python docs/interface-review-20260915/check_review.py
+```
+
+The September 12 audit procedure below is historical; do not overwrite its saved
+evidence when checking A-P2-DRAFT:
 
 ```sh
 kicad-cli sch erc -o erc-current.rpt Osiris_PDB_RevA.kicad_sch

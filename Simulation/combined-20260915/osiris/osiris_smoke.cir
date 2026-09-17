@@ -1,0 +1,20 @@
+* Osiris-only smoke test: ideal source at the XT60 inlet.
+* Checks that the bootstrap sequence works: VIN -> U1 -> +5V0 -> U12 ->
+* +3V3_AON -> U11 -> 3V3_EN/5V0_EN -> +3V3 and +5V0_PROT.
+.inc ..\..\models\U21_SCREEN.lib
+.inc osiris_reva.lib
+
+VBAT BATIN 0 PWL(0 0 1m 14.8)
+XOS BATIN 0 V5 V3 V5PROT VJET 0 OSIRIS_REVA
+
+.tran 0 800m 0 50u
+.options method=gear reltol=0.003
+
+.meas TRAN V5_FINAL   AVG V(V5)     FROM 400m TO 500m
+.meas TRAN V3_FINAL   AVG V(V3)     FROM 400m TO 500m
+.meas TRAN V5P_FINAL  AVG V(V5PROT) FROM 400m TO 500m
+.meas TRAN VJET_FINAL AVG V(VJET)   FROM 400m TO 500m
+.meas TRAN IIN_FINAL  AVG I(VBAT)   FROM 400m TO 500m
+.meas TRAN IIN_PEAK   MAX ABS(I(VBAT)) FROM 0 TO 400m
+.meas TRAN IIN_STEP   AVG I(VBAT)   FROM 700m TO 790m
+.end

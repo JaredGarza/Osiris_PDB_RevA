@@ -1,0 +1,19 @@
+* PDB-only smoke test: does the subckt parse, bias up, and turn on?
+* Resistive load only. Not a validation run.
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc ..\models\pdb_devices.lib
+.inc pdb_ap2.lib
+
+VBAT VB 0 PWL(0 0 1m 14.8)
+RSRC VB VIN 20m
+XPDB VIN VOUT V3V3 GP GF COMMON FAULT ALERT SCL SDA 0 PDB_AP2
+RLOAD VOUT 0 9.5
+
+.tran 0 400m 0 20u
+.options method=gear reltol=0.003
+.meas TRAN Vout_final  AVG V(VOUT)  FROM 350m TO 395m
+.meas TRAN V3v3_final  AVG V(V3V3)  FROM 350m TO 395m
+.meas TRAN Igate_final AVG V(GF)    FROM 350m TO 395m
+.meas TRAN Ipk         MAX I(RLOAD) FROM 0 TO 400m
+.end

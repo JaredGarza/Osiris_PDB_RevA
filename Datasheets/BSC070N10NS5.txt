@@ -1,0 +1,645 @@
+===== PAGE 1
+1
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+1
+2
+3
+4
+56
+7
+8
+4
+3 2
+1
+5 6
+7 8
+SuperSO8
+8 D
+7 D
+6 D
+5 D
+S 1
+S 2
+S 3
+G 4
+MOSFET
+OptiMOSTM5Power-Transistor,100V
+Features
+•OptimizedforhighperformanceSMPS,e.g.sync.rec.
+•100%avalanchetested
+•Superiorthermalresistance
+•N-channel
+•QualifiedaccordingtoJEDEC1)fortargetapplications
+•Pb-freeleadplating;RoHScompliant
+•Halogen-freeaccordingtoIEC61249-2-21
+Table1KeyPerformanceParameters
+Parameter Value Unit
+VDS 100 V
+RDS(on),max 7.0 mΩ
+ID 80 A
+Qoss 41 nC
+QG(0V..10V) 30 nC
+Type/OrderingCode Package Marking RelatedLinks
+BSC070N10NS5 PG-TDSON-8 070N10N5 -
+1) J-STD20 and JESD22
+===== PAGE 2
+2
+OptiMOSTM5Power-Transistor,100V
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+TableofContents
+Description   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+Maximum ratings   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+Thermal characteristics  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+Electrical characteristics  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+Electrical characteristics diagrams  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+Package Outlines  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 10
+Revision History  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Trademarks   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+Disclaimer   . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13
+===== PAGE 3
+3
+OptiMOSTM5Power-Transistor,100V
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+1Maximumratings
+atTA=25°C,unlessotherwisespecified
+Table2Maximumratings
+Values
+Min. Typ. Max.
+Parameter Symbol Unit Note/TestCondition
+Continuous drain current ID
+-
+-
+-
+-
+-
+-
+80
+51
+14
+A
+VGS=10V,TC=25°C
+VGS=10V,TC=100°C
+VGS=10V,TA=25°C,RthJA=50K/W1)
+Pulsed drain current2) ID,pulse - - 320 A TC=25°C
+Avalanche energy, single pulse3) EAS - - 73 mJ ID=50A,RGS=25Ω
+Gate source voltage VGS -20 - 20 V -
+Power dissipation Ptot
+-
+-
+-
+-
+83
+2.5 W TC=25°C
+TA=25°C,RthJA=50K/W2)
+Operating and storage temperature Tj,Tstg -55 - 150 °C IEC climatic category;
+DIN IEC 68-1: 55/150/56
+2Thermalcharacteristics
+Table3Thermalcharacteristics
+Values
+Min. Typ. Max.
+Parameter Symbol Unit Note/TestCondition
+Thermal resistance, junction - case,
+bottom RthJC - 0.9 1.5 K/W -
+Thermal resistance, junction - case,
+top RthJC - - 20 K/W -
+Device on PCB,
+6 cm2 cooling area1) RthJA - - 50 K/W -
+1) Device on 40 mm x 40 mm x 1.5 mm epoxy PCB FR4 with 6 cm2 (one layer, 70 µm thick) copper area for drain
+connection. PCB is vertical in still air.
+2) See Diagram 3 for more detailed information
+3) See Diagram 13 for more detailed information
+===== PAGE 4
+4
+OptiMOSTM5Power-Transistor,100V
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+3Electricalcharacteristics
+Table4Staticcharacteristics
+Values
+Min. Typ. Max.
+Parameter Symbol Unit Note/TestCondition
+Drain-source breakdown voltage V(BR)DSS 100 - - V VGS=0V,ID=1mA
+Gate threshold voltage VGS(th) 2.2 3.0 3.8 V VDS=VGS,ID=50µA
+Zero gate voltage drain current IDSS
+-
+-
+0.1
+10
+1
+100 µA VDS=100V,VGS=0V,Tj=25°C
+VDS=100V,VGS=0V,Tj=125°C
+Gate-source leakage current IGSS - 10 100 nA VGS=20V,VDS=0V
+Drain-source on-state resistance RDS(on)
+-
+-
+6.0
+7.6
+7.0
+10.2 mΩ VGS=10V,ID=40A
+VGS=6V,ID=20A
+Gate resistance1) RG - 1.0 1.5 Ω -
+Transconductance gfs 38 77 - S |VDS|>2|ID|RDS(on)max,ID=40A
+Table5Dynamiccharacteristics
+Values
+Min. Typ. Max.
+Parameter Symbol Unit Note/TestCondition
+Input capacitance1) Ciss - 2100 2700 pF VGS=0V,VDS=50V,f=1MHz
+Output capacitance1) Coss - 340 440 pF VGS=0V,VDS=50V,f=1MHz
+Reverse transfer capacitance1) Crss - 16 28 pF VGS=0V,VDS=50V,f=1MHz
+Turn-on delay time td(on) - 13 - ns VDD=50V,VGS=10V,ID=40A,
+RG,ext=3Ω
+Rise time tr - 5 - ns VDD=50V,VGS=10V,ID=40A,
+RG,ext=3Ω
+Turn-off delay time td(off) - 24 - ns VDD=50V,VGS=10V,ID=40A,
+RG,ext=3Ω
+Fall time tf - 6 - ns VDD=50V,VGS=10V,ID=40A,
+RG,ext=3Ω
+Table6Gatechargecharacteristics2)
+Values
+Min. Typ. Max.
+Parameter Symbol Unit Note/TestCondition
+Gate to source charge Qgs - 10 - nC VDD=50V,ID=40A,VGS=0to10V
+Gate charge at threshold Qg(th) - 6 - nC VDD=50V,ID=40A,VGS=0to10V
+Gate to drain charge1) Qgd - 6 10 nC VDD=50V,ID=40A,VGS=0to10V
+Switching charge Qsw - 11 - nC VDD=50V,ID=40A,VGS=0to10V
+Gate charge total1) Qg - 30 38 nC VDD=50V,ID=40A,VGS=0to10V
+Gate plateau voltage Vplateau - 4.8 - V VDD=50V,ID=40A,VGS=0to10V
+Gate charge total, sync. FET Qg(sync) - 26 - nC VDS=0.1V,VGS=0to10V
+Output charge1) Qoss - 41 55 nC VDD=50V,VGS=0V
+1) Defined by design. Not Subject to production test.
+2) See ″Gate charge waveforms″ for parameter definition
+===== PAGE 5
+5
+OptiMOSTM5Power-Transistor,100V
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+Table7Reversediode
+Values
+Min. Typ. Max.
+Parameter Symbol Unit Note/TestCondition
+Diode continuous forward current IS - - 76 A TC=25°C
+Diode pulse current IS,pulse - - 320 A TC=25°C
+Diode forward voltage VSD - 0.9 1.1 V VGS=0V,IF=40A,Tj=25°C
+Reverse recovery time1) trr - 53 106 ns VR=50V,IF=40A,diF/dt=100A/µs
+Reverse recovery charge1) Qrr - 89 179 nC VR=50V,IF=40A,diF/dt=100A/µs
+1) Defined by design. Not Subject to production test.
+===== PAGE 6
+6
+OptiMOSTM5Power-Transistor,100V
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+4Electricalcharacteristicsdiagrams
+Diagram1:Powerdissipation
+TC[°C]
+Ptot[W]
+0
+ 25
+ 50
+ 75
+ 100
+ 125
+ 150
+ 175
+0
+20
+40
+60
+80
+100
+Ptot=f(TC)
+Diagram2:Draincurrent
+TC[°C]
+ID[A]
+0
+ 25
+ 50
+ 75
+ 100
+ 125
+ 150
+ 175
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+ID=f(TC);VGS≥10V
+Diagram3:Safeoperatingarea
+VDS[V]
+ID[A]
+10-1
+ 100
+ 101
+ 102
+ 103
+10-1
+100
+101
+102
+103
+1 µs
+10 µs
+100 µs
+1 ms
+10 ms
+DC
+ID=f(VDS);TC=25°C;D=0;parameter:tp
+Diagram4:Max.transientthermalimpedance
+tp[s]
+ZthJC[K/W]
+10-6
+ 10-5
+ 10-4
+ 10-3
+ 10-2
+ 10-1
+10-3
+10-2
+10-1
+100
+101
+0.5
+0.2
+0.1
+0.05
+0.02
+0.01
+single pulse
+ZthJC=f(tp);parameter:D=tp/T
+===== PAGE 7
+7
+OptiMOSTM5Power-Transistor,100V
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+Diagram5:Typ.outputcharacteristics
+VDS[V]
+ID[A]
+0.0
+ 0.5
+ 1.0
+ 1.5
+ 2.0
+ 2.5
+ 3.0
+0
+40
+80
+120
+160
+200
+240
+280
+320
+10 V
+7 V
+6 V
+5.5 V
+5 V
+ID=f(VDS);Tj=25°C;parameter:VGS
+Diagram6:Typ.drain-sourceonresistance
+ID[A]
+RDS(on)[mΩ ]
+0
+ 40
+ 80
+ 120
+ 160
+ 200
+ 240
+ 280
+ 320
+0
+2
+4
+6
+8
+10
+12
+14
+5 V
+5.5 V
+6 V
+7 V
+10 V
+RDS(on)=f(ID);Tj=25°C;parameter:VGS
+Diagram7:Typ.transfercharacteristics
+VGS[V]
+ID[A]
+0
+ 2
+ 4
+ 6
+ 8
+0
+40
+80
+120
+160
+200
+240
+280
+320
+150 °C
+ 25 °C
+ID=f(VGS);|VDS|>2|ID|RDS(on)max;parameter:Tj
+Diagram8:Typ.forwardtransconductance
+ID[A]
+gfs[S]
+0
+ 20
+ 40
+ 60
+ 80
+ 100
+0
+40
+80
+120
+gfs=f(ID);Tj=25°C
+===== PAGE 8
+8
+OptiMOSTM5Power-Transistor,100V
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+Diagram9:Drain-sourceon-stateresistance
+Tj[°C]
+RDS(on)[mΩ ]
+-60
+ -20
+ 20
+ 60
+ 100
+ 140
+ 180
+0
+2
+4
+6
+8
+10
+12
+14
+max
+typ
+RDS(on)=f(Tj);ID=40A;VGS=10V
+Diagram10:Typ.gatethresholdvoltage
+Tj[°C]
+VGS(th)[V]
+-60
+ -20
+ 20
+ 60
+ 100
+ 140
+ 180
+0
+1
+2
+3
+4
+5
+500 µA
+50 µA
+VGS(th)=f(Tj);VGS=VDS
+Diagram11:Typ.capacitances
+VDS[V]
+C[pF]
+0
+ 20
+ 40
+ 60
+ 80
+ 100
+101
+102
+103
+104
+Ciss
+Coss
+Crss
+C=f(VDS);VGS=0V;f=1MHz
+Diagram12:Forwardcharacteristicsofreversediode
+VSD[V]
+IF[A]
+0.0
+ 0.5
+ 1.0
+ 1.5
+100
+101
+102
+103
+25 °C
+150 °C
+25 °C, max
+150 °C, max
+IF=f(VSD);parameter:Tj
+===== PAGE 9
+9
+OptiMOSTM5Power-Transistor,100V
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+Diagram13:Avalanchecharacteristics
+tAV[µs]
+IAV[A]
+100
+ 101
+ 102
+ 103
+10-1
+100
+101
+102
+25 °C
+100 °C
+125 °C
+IAS=f(tAV);RGS=25Ω;parameter:Tj(start)
+Diagram14:Typ.gatecharge
+Qgate[nC]
+VGS[V]
+0
+ 10
+ 20
+ 30
+ 40
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+80 V
+50 V
+20 V
+VGS=f(Qgate);ID=40Apulsed;parameter:VDD
+Diagram15:Drain-sourcebreakdownvoltage
+Tj[°C]
+VBR(DSS)[V]
+-60
+ -20
+ 20
+ 60
+ 100
+ 140
+ 180
+94
+96
+98
+100
+102
+104
+106
+108
+VBR(DSS)=f(Tj);ID=1mA
+Diagram Gate charge waveforms
+
+===== PAGE 10
+10
+OptiMOSTM5Power-Transistor,100V
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+5PackageOutlines
+1
+10:1
+Z8B00003332
+REVISION
+ISSUE DATE
+EUROPEAN PROJECTION
+07
+06.06.2019
+0 3mm
+DOCUMENT NO.
+1.27
+MILLIMETERSDIMENSION
+0.90 1.20
+D1
+A
+b
+D
+D2
+E
+E1
+E2
+e
+L
+0.34 0.54
+0.03 0.23
+3.88 4.31
+0.45 0.71
+MIN. MAX. SCALE
+2
+M 0.45 0.69
+0.15 0.35A1
+3.90 4.40
+4.80 5.35
+5.70 6.10
+5.90 6.42
+Figure1OutlinePG-TDSON-8,dimensionsinmm
+===== PAGE 11
+11
+OptiMOSTM5Power-Transistor,100V
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+  
+Dimension in mm 
+Figure2OutlineTape(TDSON-8)
+===== PAGE 12
+12
+OptiMOSTM5Power-Transistor,100V
+BSC070N10NS5
+ Rev.2.3,2019-11-13Final Data Sheet
+copper solder mask stencil apertures all dimensions in mm
+1.5
+1.5
+0.5
+0.825
+0.4
+0.75
+2.863
+0.875
+2.9
+0.2
+0.2
+1.905
+1.905
+1.27
+3x
+1.27
+3x
+1.6
+0.6
+0.925
+0.51.27
+3x
+2.863
+0.8
+4.455
+3.325
+1.905
+1.27
+3x
+1.905
+PG-TDSON-8: RecommenGHd BoDrdpads & Apertures 
+Figure 3     Outline Boardpads (TDSON-8), dimensions in mm
+===== PAGE 13
+13
+OptiMOS TM5 Power-Transistor , 100 V
+BSC070N10NS5
+ Rev. 2.3,  2019-11-13Final Data Sheet
+Revision History
+BSC070N10NS5
+Revision: 2019-11-13, Rev. 2.3
+Previous Revision
+Revision Date Subjects (major changes since last revision)
+2.0 2014-11-26 Release of final version
+2.1 2015-07-13 Update Marking
+2.2 2016-09-07 Update Avalanche Energy
+2.3 2019-11-13 Update package drawings
+Trademarks
+All referenced product or service names and trademarks are the property of their respective owners.
+We Listen to Your Comments
+Any information within this document that you feel is wrong, unclear or missing at all? Your feedback will help us to continuously
+improve the quality of this document. Please send your proposal (including a reference to this document) to:
+erratum@infineon.com
+Published by
+Infineon Technologies AG
+81726 München, Germany
+© 2019 Infineon Technologies AG
+All Rights Reserved.
+Legal Disclaimer
+The information given in this document shall in no event be regarded as a guarantee of conditions or characteristics 
+(“Beschaffenheitsgarantie”) .
+With respect to any examples, hints or any typical values stated herein and/or any information regarding the application of the
+product, Infineon Technologies hereby disclaims any and all warranties and liabilities of any kind, including without limitation
+warranties of non-infringement of intellectual property rights of any third party.
+In addition, any information given in this document is subject to customer’s compliance with its obligations stated in this
+document and any applicable legal requirements, norms and standards concerning customer’s products and any use of the
+product of Infineon Technologies in customer’s applications.
+The data contained in this document is exclusively intended for technically trained staff. It is the responsibility of customer’s
+technical departments to evaluate the suitability of the product for the intended application and the completeness of the product
+information given in this document with respect to such application.
+Information
+For further information on technology, delivery terms and conditions and prices please contact your nearest Infineon
+Technologies Office (www.infineon.com ).
+Warnings
+Due to technical requirements, components may contain dangerous substances. For information on the types in question,
+please contact the nearest Infineon Technologies Office.
+The Infineon Technologies component described in this Data Sheet may be used in life-support devices or systems and/or
+automotive, aviation and aerospace applications or systems only with the express written approval of Infineon Technologies, if a
+failure of such components can reasonably be expected to cause the failure of that life-support, automotive, aviation and
+aerospace device or system or to affect the safety or effectiveness of that device or system. Life support devices or systems are
+intended to be implanted in the human body or to support and/or maintain and sustain and/or protect human life. If they fail, it is
+reasonable to assume that the health of the user or other persons may be endangered.

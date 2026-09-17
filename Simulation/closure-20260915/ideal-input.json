@@ -1,0 +1,25 @@
+{
+  "deck": "ideal_transients.cir",
+  "status": "FAIL",
+  "seconds": 180.13,
+  "errors": [
+    "timeout after 180s",
+    "missing completed fresh log",
+    "INP_MIN: expected 3 finite values, got 0",
+    "INN_MIN: expected 3 finite values, got 0",
+    "VBUS_MIN: expected 3 finite values, got 0",
+    "U1_VIN_MIN: expected 3 finite values, got 0",
+    "U1_VIN_MAX: expected 3 finite values, got 0",
+    "Q1_VDS: expected 3 finite values, got 0",
+    "Q2_VDS: expected 3 finite values, got 0",
+    "VGS_MAX: expected 3 finite values, got 0",
+    "V3V3_MAX: expected 3 finite values, got 0",
+    "VOUT_FINAL: expected 3 finite values, got 0",
+    "U5_IN_MIN: expected 3 finite values, got 0",
+    "U5_OUT_MIN: expected 3 finite values, got 0",
+    "Q3_VDS: expected 3 finite values, got 0",
+    "Q3_VGS: expected 3 finite values, got 0"
+  ],
+  "measurements": {},
+  "limits": {}
+}

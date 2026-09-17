@@ -1,0 +1,70 @@
+* ============================================================================
+* A-P3-DRAFT combined fault screen; surrogate loads and power devices.
+*   0 -  250ms  startup at 14.8 V
+* 300 -  450ms  OV excursion to 19.5 V
+* 600 -  750ms  UV sag to 9.0 V
+* 900 - 1100ms  hard short at the Osiris end
+*1100 - 3000ms  recovery
+* ============================================================================
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_large_tvs.lib
+.inc osiris\osiris_reva.lib
+
+VBAT VSRC 0 PWL(0 0 1m 14.8
++ 300m 14.8 310m 19.5 440m 19.5 450m 14.8
++ 600m 14.8 610m 9.0  690m 9.0  700m 14.8
++ 3.0 14.8)
+RBATT VSRC VBIN 20m
+
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_CURRENT
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+SSHORT OSIN NSH FCTL 0 SWSH
+RSH   NSH 0 20m
+VFCTL FCTL 0 PWL(0 0 899.9m 0 900m 1 1.0999 1 1.1 0)
+.model SWSH SW(Ron=1m Roff=1G Vt=0.5 Vh=0.1)
+
+.tran 0 3.0 0 20u
+.options method=gear reltol=0.003
+
+* Startup measurements
+.meas TRAN T_PDBON   WHEN V(OSIN)=5   RISE=1
+.meas TRAN T_5V0     WHEN V(V5)=4.9   RISE=1
+.meas TRAN T_3V3     WHEN V(V3)=3.1   RISE=1
+.meas TRAN IIN_PEAK  MAX ABS(I(RBATT)) FROM 0 TO 290m
+.meas TRAN IIN_SS    AVG ABS(I(RBATT)) FROM 200m TO 290m
+.meas TRAN V5_SS     AVG V(V5)     FROM 200m TO 290m
+.meas TRAN V3_SS     AVG V(V3)     FROM 200m TO 290m
+.meas TRAN V3V3_PDB  AVG V(PDB3V3) FROM 200m TO 290m
+.meas TRAN VDROP_PDB AVG V(VBIN)-V(PDBOUT) FROM 200m TO 290m
+
+* OV excursion -- must still disconnect and recover
+.meas TRAN OV_VOSIN  MAX V(OSIN) FROM 315m TO 435m
+.meas TRAN OV_REC_V5 AVG V(V5)   FROM 550m TO 590m
+
+* UV sag -- must still disconnect and recover
+.meas TRAN UV_VOSIN  MIN V(OSIN) FROM 620m TO 685m
+.meas TRAN UV_REC_V5 AVG V(V5)   FROM 850m TO 890m
+.meas TRAN UV_REC_V3 AVG V(V3)   FROM 850m TO 890m
+
+* Hard short -- must still trip and self-recover
+.meas TRAN SH_IPK    MAX ABS(I(RBATT)) FROM 899m TO 1000m
+.meas TRAN SH_VOSIN  AVG V(OSIN)  FROM 1000m TO 1090m
+.meas TRAN T_REC_V3  WHEN V(V3)=3.1 RISE=LAST
+.meas TRAN REC_VOSIN AVG V(OSIN)   FROM 2900m TO 2995m
+.meas TRAN REC_V5    AVG V(V5)     FROM 2900m TO 2995m
+.meas TRAN REC_V3    AVG V(V3)     FROM 2900m TO 2995m
+.meas TRAN REC_V5P   AVG V(V5PROT) FROM 2900m TO 2995m
+.meas TRAN SH_I2T INTEG I(RBATT)*I(RBATT) FROM 899.9m TO 1.1
+.meas TRAN INP_MIN MIN V(XPDB:INA_IN_P) FROM 899.9m TO 1.1
+.meas TRAN INN_MIN MIN V(XPDB:INA_IN_N) FROM 899.9m TO 1.1
+.meas TRAN VBUS_MIN MIN V(PDBOUT) FROM 899.9m TO 1.1
+.meas TRAN D3_IPK MAX ABS(I(D:XPDB:D3)) FROM 899.9m TO 1.1
+.save V(OSIN) V(V5) V(V3) V(PDB3V3) V(VBIN) V(PDBOUT) V(V5PROT) I(RBATT) V(XPDB:INA_IN_P) V(XPDB:INA_IN_N) I(D:XPDB:D3)
+.end

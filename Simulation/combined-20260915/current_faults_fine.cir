@@ -1,0 +1,50 @@
+* ============================================================================
+* Rev-B regression: everything that worked on the as-built board must still
+* work. Same timeline as combined_faults.cir so results are directly
+* comparable against the as-built numbers in FINDINGS.md.
+*   0 -  250ms  startup at 14.8 V
+* 300 -  450ms  OV excursion to 19.5 V
+* 600 -  750ms  UV sag to 9.0 V
+* 900 - 1100ms  hard short at the Osiris end
+*1100 - 3000ms  recovery
+* ============================================================================
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_current.lib
+.inc osiris\osiris_reva.lib
+
+VBAT VSRC 0 PWL(0 0 1m 14.8
++ 300m 14.8 310m 19.5 440m 19.5 450m 14.8
++ 600m 14.8 610m 9.0  740m 9.0  750m 14.8
++ 3.0 14.8)
+RBATT VSRC VBIN 20m
+
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_CURRENT
++ PARAMS: RHV_GP=20Meg
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+SSHORT OSIN NSH FCTL 0 SWSH
+RSH   NSH 0 20m
+VFCTL FCTL 0 PWL(0 0 899.9m 0 900m 1 1.0999 1 1.1 0)
+.model SWSH SW(Ron=1m Roff=1G Vt=0.5 Vh=0.1)
+
+.tran 0 1.11 0 2u
+.save V(OSIN) I(RBATT)
+.options method=gear reltol=0.001 plotwinsize=0
+
+* Startup -- compare against as-built 35.0 / 37.9 / 89.4 ms and 2.90 A
+
+* OV excursion -- must still disconnect and recover
+
+* UV sag -- must still disconnect and recover
+
+* Hard short -- must still trip and self-recover
+.meas TRAN SH_IPK    MAX ABS(I(RBATT)) FROM 899m TO 1000m
+.meas TRAN SH_VOSIN  AVG V(OSIN)  FROM 1000m TO 1090m
+.meas TRAN SH_I2T INTEG I(RBATT)*I(RBATT) FROM 899.9m TO 1.1
+.end

@@ -1,0 +1,92 @@
+* A-P3-DRAFT ECO: direct gate drive, series RC branch, standard 5 mOhm shunt.
+* Kelvin force stubs, fuse, FETs and IC models retain documented approximations.
+.subckt PDB_CURRENT VIN VOUT V3V3 GP GF COMMON FAULT ALERT SCL SDA GND
++ PARAMS: CDERATE=0.65 CDERATE3=0.50 RXT60=0.3m RFUSE=23.48m
++          RSHUNT=5m R1V=237k RUVBV=11.8k ROVTV=2Meg ROVBV=54.9k
++          RHV_VOUT=1G RHV_V3V3=1G RHV_GP=22Meg
+
+RJ1P VIN   VBAT_RAW {RXT60}
+
+RF1  VBAT_RAW VBAT_FUSED {RFUSE}
+R20  VBAT_FUSED INPUT_DAMP 1
+C11  INPUT_DAMP GND 1u Rser=50m
+
+XD1  VBAT_FUSED TVS_K SM8S24CA_SCREEN
+XD6  VBAT_FUSED TVS_K SM8S24CA_SCREEN
+RTVS TVS_K GND 1m
+
+XU1  VBAT_FUSED N_UV N_OV N_RETRY GND SHDN_LTC FAULT SHUNT_LO SHUNT_HI GP
++    LTC4368-1
+
+R1    VBAT_FUSED N_UV  {R1V}
+R2    N_UV       GND   {RUVBV}
+R14   GP         N_UV  {RHV_GP}
+R3    VBAT_FUSED N_OV  {ROVTV}
+R13   N_OV       GND   {ROVBV}
+
+R6   VBAT_FUSED SHDN_LTC 680k
+R7   SHDN_LTC   GND      200k
+C3   N_RETRY GND 100n
+
+RGF GP GF 1m ; gate copper parasitic, not a fitted component
+R4 GP GATE_RC 22k
+C1   GATE_RC GND 22n Rser=50m
+* D2 omitted; gate directly driven as in ADI Figure 7.
+
+MQ1  VBAT_FUSED     GF COMMON COMMON BSC070N10NS5
+MQ2  PDB_PROTECTED  GF COMMON COMMON BSC070N10NS5
+
+RSH_F1 PDB_PROTECTED SHUNT_HI 0.5m
+RSH    SHUNT_HI      SHUNT_LO {RSHUNT}
+RSH_F4 SHUNT_LO      VOUT     0.5m
+C2   SHUNT_LO GND 1u Rser=20m
+
+R9   SHUNT_HI INA_IN_P 10
+R8   SHUNT_LO INA_IN_N 10
+C7 INA_IN_P INA_IN_N 100n Rser=30m
+* Candidate common-mode filters; values below are minimum effective capacitance.
+C12 INA_IN_P GND 1u Rser=30m
+C13 INA_IN_N GND 1u Rser=30m
+R19 VOUT INA_VBUS 100
+C14 INA_VBUS GND 100n Rser=30m
+XU2  INA_IN_P INA_IN_N INA_VBUS V3V3 GND INA_ALERT_LOCAL_N INA228_ANALOG
+R10  V3V3 INA_ALERT_LOCAL_N 4.7k
+XU4  INA_ALERT_LOCAL_N ALERT V3V3 GND BUF_74AUP1G07
+
+XU3  V3V3 PDB_LDO_ADJ NC3 GND VOUT NC6 NC7 VOUT LT3010
+R11  V3V3        PDB_LDO_ADJ 1.58k
+R12  PDB_LDO_ADJ GND         1k
+C10  V3V3        PDB_LDO_ADJ 100n Rser=30m
+
+C4   VOUT GND {10u*CDERATE}  Rser=5m
+C9   VOUT GND {10u*CDERATE}  Rser=5m
+C6   V3V3 GND {10u*CDERATE3} Rser=10m
+C5   V3V3 GND 100n Rser=30m
+C8   V3V3 GND 100n Rser=30m
+D3   GND VOUT MBR0540
+
+R15  FAULT V3V3 10k
+R16  ALERT V3V3 10k
+
+* R17 DNP; host owns pull-up.
+* R18 DNP; host owns pull-up.
+
+.ends PDB_CURRENT
+
+* ** FIDELITY WARNING -- SURROGATE, NOT AN INFINEON MODEL **
+* Datasheet-fitted VDMOS for screening overvoltage/gate stress only.
+* Not valid for SOA, avalanche, reverse-recovery or thermal qualification.
+.model BSC070N10NS5 VDMOS(nchan
++ Vto=3.0 Kp=34 lambda=0
++ Rd=1.5m Rs=0.3m Rg=1.5
++ Cgs=2.08n Cgdmax=1n Cgdmin=16p a=0.3 Cjo=1.2n
++ Is=7e-11 N=1.0 Rb=5m
++ BV=100 IBV=250u
++ mtriode=1.0 ksubthres=0.1
++ Tnom=25)
+
+.subckt SM8S24CA_SCREEN A1 A2
+DA A1 MID DSM8S_SCREEN
+DB A2 MID DSM8S_SCREEN
+.ends SM8S24CA_SCREEN
+.model DSM8S_SCREEN D(Is=1e-12 N=1 Rs=.02765 Cjo=10n BV=30.5 IBV=1m Tnom=27)

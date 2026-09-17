@@ -1,0 +1,697 @@
+ISC015N06NM5LF2
+
+
+    MOSFET
+    OptiMOSTM5LinearFET2,60V                                      TDSON-8FL(enlargedsourceinterconnection)
+                                                                                                            8
+                                                                                                                   7
+    Features                                                                                                             6
+                                                                                                                              5
+    •Idealforhot-swap,batteryprotectionande-fuseapplications
+    •Verylowon-resistanceRDS(on)                                          1                                               5
+                                                                                  2                                                     6
+    •WidesafeoperatingareaSOA                                                    3                                                     7
+    •N-channel,normallevel                                                                 4                                                      8
+
+    •100%avalanchetested
+                                                                                          4
+    •Pb-freeleadplating;RoHScompliant                                                        3
+    •Halogen-freeaccordingtoIEC61249-2-21                                                         2
+                                                                                                          1
+
+
+    Productvalidation
+    FullyqualifiedaccordingtoJEDECforIndustrialApplications                                                                       Drain
+                                                                                                                                        Pin 5-8
+
+
+    Table1KeyPerformanceParameters                                                                       Gate                           *1
+
+
+    Parameter              Value                   Unit                                                          Pin 4
+
+
+    VDS                    60                      V                                                                                    Source
+                                                                                                          *1: Internal body diode       Pin 1-3
+    RDS(on),max            1.55                    mΩ
+    ID                     275                     A
+    I(VDS=30V,tp=10ms) 8.3                       A
+
+
+
+
+    Type/OrderingCode                           Package             Marking                                  RelatedLinks
+    ISC015N06NM5LF2                                PG-TDSON-8 FL       15N06LF2                                                     -
+
+
+
+
+ Final Data Sheet                                             1                                                 Rev.2.1,2023-11-08
+   OptiMOSTM5LinearFET2,60V
+   ISC015N06NM5LF2
+
+
+   TableofContents
+      Description . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1
+      Maximum ratings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+      Thermal characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+      Electrical characteristics . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+      Electrical characteristics diagrams . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+      Package Outlines . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+      Revision History . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+      Trademarks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+      Disclaimer . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+
+
+
+
+Final Data Sheet                                                                      2                                                          Rev.2.1,2023-11-08
+   OptiMOSTM5LinearFET2,60V
+   ISC015N06NM5LF2
+
+
+
+   1Maximumratings
+   atTA=25°C,unlessotherwisespecified
+
+
+   Table2Maximumratings
+                                                                       Values
+   Parameter                                   Symbol                                    Unit   Note/TestCondition
+                                                              Min.     Typ.     Max.
+                                                              -        -        275             VGS=10V,TC=25°C
+   Continuous drain current1)                  ID             -        -        195      A      VGS=10V,TC=100°C
+                                                              -        -        32              VGS=10V,TA=25°C,RthJA=50°C/W2)
+   Pulsed drain current3)                      ID,pulse       -        -        1100     A      TC=25°C
+   Avalanche energy, single pulse4)            EAS            -        -        580      mJ     ID=50A,RGS=25Ω
+   Gate source voltage                         VGS            -20      -        20       V      -
+                                                              -        -        217             TC=25°C
+   Power dissipation                           Ptot                                      W
+                                                              -        -        3.0             TA=25°C,RthJA=50°C/W2)
+   Operating and storage temperature           Tj,Tstg       -55      -        175      °C     -
+
+
+
+
+   2Thermalcharacteristics
+
+   Table3Thermalcharacteristics
+                                                                       Values
+   Parameter                                   Symbol                                    Unit   Note/TestCondition
+                                                              Min.     Typ.     Max.
+   Thermal resistance, junction - case,
+                                               RthJC          -        -        0.7      °C/W -
+   bottom
+   Thermal resistance, junction - case,
+                                               RthJC          -        -        20       °C/W -
+   top
+   Thermal resistance, junction - ambient,
+                                           RthJA              -        -        50       °C/W -
+   6 cm² cooling area2)
+
+
+
+
+   1)
+      Rating refers to the product only with datasheet specified absolute maximum values, maintaining case temperature
+   as specified. For other case temperatures please refer to Diagram 2. De-rating will be required based on the actual
+   environmental conditions.
+   2)
+      Device on 40 mm x 40 mm x 1.5 mm epoxy PCB FR4 with 6 cm2 (one layer, 70 µm thick) copper area for drain
+   connection. PCB is vertical in still air.
+   3)
+      See Diagrams 3 and 4 for more detailed information
+   4)
+      See Diagram 14 for more detailed information
+Final Data Sheet                                                  3                                         Rev.2.1,2023-11-08
+   OptiMOSTM5LinearFET2,60V
+   ISC015N06NM5LF2
+
+
+   3Electricalcharacteristics
+   atTj=25°C,unlessotherwisespecified
+
+
+   Table4Staticcharacteristics
+                                                                       Values
+   Parameter                                     Symbol                                Unit   Note/TestCondition
+                                                               Min.    Typ.     Max.
+   Drain-source breakdown voltage                V(BR)DSS      60      -        -      V      VGS=0V,ID=1mA
+   Gate threshold voltage                        VGS(th)       2.25    3.0      3.45   V      VDS=VGS,ID=120µA
+                                                               -       0.1      1             VDS=60V,VGS=0V,Tj=25°C
+   Zero gate voltage drain current               IDSS                                  µA
+                                                               -       10       100           VDS=60V,VGS=0V,Tj=125°C
+   Gate-source leakage current                   IGSS          -       10       100    nA     VGS=20V,VDS=0V
+   Drain-source on-state resistance              RDS(on)       -       1.3      1.55   mΩ     VGS=10V,ID=50A
+   Gate resistance                               RG            -       2.0      2.6    Ω      -
+   Transconductance        1)
+                                                 gfs           28      56       -      S      |VDS|≥2|ID|RDS(on)max,ID=50A
+
+
+   Table5Dynamiccharacteristics
+                                                                       Values
+   Parameter                                     Symbol                                Unit   Note/TestCondition
+                                                               Min.    Typ.     Max.
+   Input capacitance1)                           Ciss          -       6900     9000   pF     VGS=0V,VDS=30V,f=1MHz
+   Output capacitance          1)
+                                                 Coss          -       1300     1700   pF     VGS=0V,VDS=30V,f=1MHz
+   Reverse transfer capacitance      1)
+                                                 Crss          -       55       96     pF     VGS=0V,VDS=30V,f=1MHz
+                                                                                              VDD=30V,VGS=10V,ID=50A,
+   Turn-on delay time                            td(on)        -       17       -      ns
+                                                                                              RG,ext=1.6Ω
+                                                                                              VDD=30V,VGS=10V,ID=50A,
+   Rise time                                     tr            -       16       -      ns
+                                                                                              RG,ext=1.6Ω
+                                                                                              VDD=30V,VGS=10V,ID=50A,
+   Turn-off delay time                           td(off)       -       31       -      ns
+                                                                                              RG,ext=1.6Ω
+                                                                                              VDD=30V,VGS=10V,ID=50A,
+   Fall time                                     tf            -       15       -      ns
+                                                                                              RG,ext=1.6Ω
+
+
+   Table6Gatechargecharacteristics2)
+                                                                       Values
+   Parameter                                     Symbol                                Unit   Note/TestCondition
+                                                               Min.    Typ.     Max.
+   Gate to source charge                         Qgs           -       41       -      nC     VDD=30V,ID=50A,VGS=0to10V
+   Gate charge at threshold                      Qg(th)        -       21       -      nC     VDD=30V,ID=50A,VGS=0to10V
+   Gate to drain charge         1)
+                                                 Qgd           -       16       24     nC     VDD=30V,ID=50A,VGS=0to10V
+   Switching charge                              Qsw           -       36       -      nC     VDD=30V,ID=50A,VGS=0to10V
+   Gate charge total      1)
+                                                 Qg            -       90       113    nC     VDD=30V,ID=50A,VGS=0to10V
+   Gate plateau voltage                          Vplateau      -       5.9      -      V      VDD=30V,ID=50A,VGS=0to10V
+   Output charge     1)
+                                                 Qoss          -       91       121    nC     VDS=30V,VGS=0V
+
+
+
+
+   1)
+        Defined by design. Not subject to production test.
+   2)
+        See ″Gate charge waveforms″ for parameter definition
+Final Data Sheet                                                   4                                     Rev.2.1,2023-11-08
+   OptiMOSTM5LinearFET2,60V
+   ISC015N06NM5LF2
+
+   Table7Reversediode
+                                                                      Values
+   Parameter                                       Symbol                             Unit   Note/TestCondition
+                                                              Min.    Typ.     Max.
+   Diode continuous forward current                IS         -       -        163    A      TC=25°C
+   Diode pulse current                             IS,pulse   -       -        1100   A      TC=25°C
+   Diode forward voltage                           VSD        -       0.82     1.2    V      VGS=0V,IF=50A,Tj=25°C
+   Reverse recovery time       1)
+                                                   trr        -       39       78     ns     VR=30V,IF=50A,diF/dt=100A/µs
+   Reverse recovery charge          1)
+                                                   Qrr        -       42       84     nC     VR=30V,IF=50A,diF/dt=100A/µs
+
+
+
+
+   1)
+        Defined by design. Not subject to production test.
+Final Data Sheet                                                  5                                     Rev.2.1,2023-11-08
+   OptiMOSTM5LinearFET2,60V
+   ISC015N06NM5LF2
+
+
+   4Electricalcharacteristicsdiagrams
+
+
+   Diagram1:Powerdissipation                                                        Diagram2:Draincurrent
+              250                                                                               300
+
+
+
+
+                                                                                                250
+              200
+
+
+
+                                                                                                200
+
+              150
+   Ptot[W]
+
+
+
+
+                                                                                       ID[A]
+                                                                                                150
+
+
+              100
+
+                                                                                                100
+
+
+
+                50
+                                                                                                  50
+
+
+
+
+                 0                                                                                   0
+                      0     25   50     75    100      125          150          175                     0    25   50     75     100        125        150   175
+                                         TC[°C]                                                                           TC[°C]
+   Ptot=f(TC)                                                                          ID=f(TC);VGS≥10V
+
+
+
+
+   Diagram3:Safeoperatingarea                                                      Diagram4:Safeoperatingarea
+                 4
+              10                                                                                104
+
+
+
+                                                                          1 µs
+              103                                                                               103                                                   1 µs
+                                                                10 µs
+                                                                                                                                              10 µs
+                                                           100 µs
+                                                                                                                                        100 µs
+              102                                    1 ms                                       102
+                                                   10 ms                                                                             1 ms
+   ID[A]
+
+
+
+
+                                                                                       ID[A]
+
+
+
+
+                                                                                                                                10 ms
+                                             DC
+                 1                                                                                   1
+              10                                                                                10
+                                                                                                                           DC
+
+
+
+
+              100                                                                               100
+
+
+
+
+              10-1                                                                              10-1
+                     10-1         100                101                         102                   10-1         100                 101                  102
+                                         VDS[V]                                                                           VDS[V]
+   ID=f(VDS);TC=25°C;D=0;parameter:tp                                             ID=f(VDS);TC=125°C;D=0;parameter:tp
+
+
+Final Data Sheet                                                                  6                                               Rev.2.1,2023-11-08
+   OptiMOSTM5LinearFET2,60V
+   ISC015N06NM5LF2
+
+
+
+   Diagram5:Max.transientthermalimpedance                                        Diagram6:Typ.outputcharacteristics
+                     1
+                  10                                                                           1200
+                                single pulse                                                              15 V
+                                0.01                                                                                  12 V
+                                0.02
+                                0.05                                                                                                                 10 V
+                                                                                               1000
+                                0.1
+                                0.2
+                  100           0.5
+
+                                                                                                800
+                                                                                                                                                      9V
+   ZthJC[K/W]
+
+
+
+
+                                                                                      ID[A]
+                  10-1                                                                          600
+
+
+                                                                                                                                                           8V
+                                                                                                400
+
+                  10-2
+
+                                                                                                200
+
+
+
+
+                  10-3                                                                            0
+                         10-6   10-5      10-4   10-3     10-2    10-1          100                   0       1        2             3           4                 5
+                                                 tp[s]                                                                    VDS[V]
+   ZthJC=f(tp);parameter:D=tp/T                                                     ID=f(VDS),Tj=25°C;parameter:VGS
+
+
+
+
+   Diagram7:Typ.drain-sourceonresistance                                         Diagram8:Typ.transfercharacteristics
+                   3.5                                                                         1200
+
+
+
+                   3.0
+                                                                                               1000
+                                                                                                                                         25 °C
+                                           8V
+                   2.5
+                                                                 9V                             800                                                       175 °C
+
+                   2.0
+   RDS(on)[mΩ]
+
+
+
+
+                                                                                      ID[A]
+
+
+
+
+                                                                      10 V                      600
+
+                   1.5
+                                                                          12 V
+                                                                                                400
+                   1.0
+                                                                         15 V
+
+                                                                                                200
+                   0.5
+
+
+
+                   0.0                                                                            0
+                          0     100        200   300      400     500           600                   0   2       4          6            8          10            12
+                                                 ID[A]                                                                    VGS[V]
+   RDS(on)=f(ID),Tj=25°C;parameter:VGS                                            ID=f(VGS),|VDS|>2|ID|RDS(on)max;parameter:Tj
+
+
+
+
+Final Data Sheet                                                                 7                                               Rev.2.1,2023-11-08
+   OptiMOSTM5LinearFET2,60V
+   ISC015N06NM5LF2
+
+
+
+   Diagram9:Typ.drain-sourceonresistance                                                    Diagram10:Normalizeddrain-sourceonresistance
+                  3.5                                                                                                            2.0
+
+
+                                                                                                                                 1.8
+                  3.0
+                                                                                                                                 1.6
+
+                  2.5
+
+
+
+
+                                                                                                 RDS(on)(normalizedto25°C)
+                                                                      175 °C                                                     1.4
+
+
+                                                                                                                                 1.2
+                  2.0
+   RDS(on)[mΩ]
+
+
+
+
+                                                                                                                                 1.0
+
+                  1.5
+                                                                                                                                 0.8
+
+
+                  1.0                                                                                                            0.6
+                                                                          25 °C
+                                                                                                                                 0.4
+                  0.5
+                                                                                                                                 0.2
+
+
+                  0.0                                                                                                            0.0
+                        6    7     8        9    10        11        12     13    14   15   16                                      -75    -50   -25   0    25   50        75   100 125 150 175 200
+                                                      VGS[V]                                                                                                    Tj[°C]
+   RDS(on)=f(VGS),ID=50A;parameter:Tj                                                        RDS(on)=f(Tj),ID=50A,VGS=10V
+
+
+
+
+   Diagram11:Typ.gatethresholdvoltage                                                       Diagram12:Typ.capacitances
+                  4.0                                                                                                            104
+
+
+                  3.5                                                                                                                                                                     Ciss
+
+                                                                 1200 µA
+                  3.0
+
+                                                                                                                                 103
+                  2.5                           120 µA
+                                                                                                                                                                                              Coss
+   VGS(th)[V]
+
+
+
+
+                                                                                                 C[pF]
+
+
+
+
+                  2.0
+
+
+                  1.5
+                                                                                                                                 102
+
+                  1.0
+
+                                                                                                                                                                                              Crss
+                  0.5
+
+
+                  0.0                                                                                                            101
+                     -75    -50   -25   0       25    50        75    100 125 150 175 200                                              0         10        20         30         40      50          60
+                                                      Tj[°C]                                                                                                    VDS[V]
+   VGS(th=f(Tj),VGS=VDS;parameter:ID                                                          C=f(VDS);VGS=0V;f=1MHz
+
+
+
+
+Final Data Sheet                                                                            8                                                                               Rev.2.1,2023-11-08
+   OptiMOSTM5LinearFET2,60V
+   ISC015N06NM5LF2
+
+
+
+   Diagram13:Forwardcharacteristicsofreversediode                              Diagram14:Avalanchecharacteristics
+               4
+             10                                                                                     102
+                          25 °C
+                          25 °C, max
+                          175 °C
+                          175 °C, max
+
+             103
+                                                                                                                                                               25 °C
+
+                                                                                                                                                      100 °C
+                                                                                                                                      150 °C
+
+
+
+
+                                                                                     IAV[A]
+   IF[A]
+
+
+
+
+             102                                                                                    101
+
+
+
+
+             101
+
+
+
+
+             100                                                                                    100
+                   0.0        0.4        0.8             1.2        1.6        2.0                        100                   101                  102               103
+                                               VSD[V]                                                                                   tAV[µs]
+   IF=f(VSD);parameter:Tj                                                          IAS=f(tAV);RGS=25Ω;parameter:Tj,start
+
+
+
+
+   Diagram15:Typ.gatecharge                                                      Diagram16:Drain-sourcebreakdownvoltage
+              10                                                                                     65
+                          12 V
+               9          30 V
+                          48 V                                                                       64
+
+               8
+                                                                                                     63
+               7
+
+                                                                                                     62
+               6
+                                                                                     VBR(DSS)[V]
+   VGS[V]
+
+
+
+
+               5                                                                                     61
+
+
+               4
+                                                                                                     60
+
+               3
+                                                                                                     59
+               2
+
+                                                                                                     58
+               1
+
+
+               0                                                                                     57
+                   0     10   20    30   40      50      60    70   80    90   100                     -75      -50   -25   0     25    50     75   100 125 150 175 200
+                                          Qgate[nC]                                                                                     Tj[°C]
+   VGS=f(Qgate),ID=50Apulsed,Tj=25°C;parameter:VDD                            VBR(DSS)=f(Tj);ID=1mA
+
+
+
+
+Final Data Sheet                                                                9                                                               Rev.2.1,2023-11-08
+   OptiMOSTM5LinearFET2,60V
+   ISC015N06NM5LF2
+
+
+
+    Diagram Gate charge waveforms
+
+
+
+
+Final Data Sheet                    10   Rev.2.1,2023-11-08
+   OptiMOSTM5LinearFET2,60V
+   ISC015N06NM5LF2
+
+
+   5PackageOutlines
+
+
+
+
+                                                                DOCUMENT NO.
+                                                                 Z8B000193699
+                                                                  REVISION
+                                                                     04
+                                    MILLIMETERS
+                   DIMENSION
+                               MIN.            MAX.             SCALE 10:1
+                      A        0.90             1.20
+                               0.15             0.35        0     1     2       3mm
+                      A1
+                      b        0.26             0.54
+                      D        4.80             5.35
+                      D1       3.70             4.40
+                                                            EUROPEAN PROJECTION
+                      D2       0.00             0.23
+                      E        5.70             6.10
+                      E1       5.90             6.42
+                      E2       3.88             4.42
+                       e                1.27
+                      L        0.69             0.90             ISSUE DATE
+                      M        0.45             0.69              05.11.2019
+
+
+
+
+   Figure1OutlinePG-TDSON-8FL,dimensionsinmm
+
+
+
+Final Data Sheet                                       11                   Rev.2.1,2023-11-08
+   OptiMOSTM5LinearFET2,60V
+   ISC015N06NM5LF2
+
+
+   RevisionHistory
+   ISC015N06NM5LF2
+
+   Revision:2023-11-08,Rev.2.1
+   Previous Revision
+   Revision        Date                 Subjects (major changes since last revision)
+   2.1             2023-11-08           Update sales name and marking
+
+
+   Trademarks
+   Allreferencedproductorservicenamesandtrademarksarethepropertyoftheirrespectiveowners.
+
+
+
+
+   WeListentoYourComments
+   Anyinformationwithinthisdocumentthatyoufeeliswrong,unclearormissingatall?Yourfeedbackwillhelpustocontinuously
+   improvethequalityofthisdocument.Pleasesendyourproposal(includingareferencetothisdocument)to:
+   erratum@infineon.com
+
+
+   Publishedby
+   InfineonTechnologiesAG
+   81726München,Germany
+   ©2023InfineonTechnologiesAG
+   AllRightsReserved.
+
+   LegalDisclaimer
+   Theinformationgiveninthisdocumentshallinnoeventberegardedasaguaranteeofconditionsorcharacteristics
+   (“Beschaffenheitsgarantie”).
+
+   Withrespecttoanyexamples,hintsoranytypicalvaluesstatedhereinand/oranyinformationregardingtheapplicationofthe
+   product,InfineonTechnologiesherebydisclaimsanyandallwarrantiesandliabilitiesofanykind,includingwithoutlimitation
+   warrantiesofnon-infringementofintellectualpropertyrightsofanythirdparty.
+   Inaddition,anyinformationgiveninthisdocumentissubjecttocustomer’scompliancewithitsobligationsstatedinthis
+   documentandanyapplicablelegalrequirements,normsandstandardsconcerningcustomer’sproductsandanyuseofthe
+   productofInfineonTechnologiesincustomer’sapplications.
+   Thedatacontainedinthisdocumentisexclusivelyintendedfortechnicallytrainedstaff.Itistheresponsibilityofcustomer’s
+   technicaldepartmentstoevaluatethesuitabilityoftheproductfortheintendedapplicationandthecompletenessoftheproduct
+   informationgiveninthisdocumentwithrespecttosuchapplication.
+
+   Information
+   Forfurtherinformationontechnology,deliverytermsandconditionsandpricespleasecontactyournearestInfineon
+   TechnologiesOffice(www.infineon.com).
+
+   Warnings
+   Duetotechnicalrequirements,componentsmaycontaindangeroussubstances.Forinformationonthetypesinquestion,
+   pleasecontactthenearestInfineonTechnologiesOffice.
+   TheInfineonTechnologiescomponentdescribedinthisDataSheetmaybeusedinlife-supportdevicesorsystemsand/or
+   automotive,aviationandaerospaceapplicationsorsystemsonlywiththeexpresswrittenapprovalofInfineonTechnologies,ifa
+   failureofsuchcomponentscanreasonablybeexpectedtocausethefailureofthatlife-support,automotive,aviationand
+   aerospacedeviceorsystemortoaffectthesafetyoreffectivenessofthatdeviceorsystem.Lifesupportdevicesorsystemsare
+   intendedtobeimplantedinthehumanbodyortosupportand/ormaintainandsustainand/orprotecthumanlife.Iftheyfail,itis
+   reasonabletoassumethatthehealthoftheuserorotherpersonsmaybeendangered.
+
+
+
+
+Final Data Sheet                                                                  12                            Rev.2.1,2023-11-08
+

@@ -1,0 +1,100 @@
+{
+  "status": "DESK REVIEW ONLY; M1 proposed; M2 open; not a fabrication release",
+  "parts": 42,
+  "nets": 28,
+  "connectivity": "PASS",
+  "ECO_scope": "Only U3 replacement plus R11/R12/C10; all other original pin-to-net connections preserved",
+  "BOM_values_footprint_files": "PASS",
+  "MPN_documented_exceptions": [],
+  "UV_falling_V": [
+    10.17473510568361,
+    10.95667676564437
+  ],
+  "UV_recovery_V": [
+    10.589180988903719,
+    11.645547281669817
+  ],
+  "OV_rising_V": [
+    18.003179483243013,
+    19.37168079679643
+  ],
+  "OV_recovery_V": [
+    16.83082896705261,
+    18.609874117907903
+  ],
+  "forward_trip_A_normal_conditions": [
+    7.920792079207922,
+    12.12121212121212
+  ],
+  "forward_trip_A_Vout_zero_test_condition": [
+    5.9405940594059405,
+    14.141414141414142
+  ],
+  "reverse_trip_magnitude_A": [
+    8.316831683168317,
+    11.717171717171716
+  ],
+  "gate_ramp_estimate_V_per_s": [
+    3401.3605442176877,
+    11278.195488721805
+  ],
+  "ramp_estimate_to_16p8_ms": [
+    1.4896,
+    4.9392
+  ],
+  "220uF_capacitive_inrush_estimate_A": [
+    0.7482993197278913,
+    2.4812030075187974
+  ],
+  "inrush_plus_2p5A_load_estimate_A": 4.981203007518797,
+  "capacitor_energy_220uF_16p8V_J": 0.031046400000000002,
+  "load_cases_25W_plus_housekeeping": [
+    {
+      "battery_V": 16.8,
+      "input_A": 1.5041478908220067,
+      "J3_V_approx": 16.68718890818835,
+      "path_loss_W": 0.16968456580982186
+    },
+    {
+      "battery_V": 14.8,
+      "input_A": 1.7107774982182988,
+      "J3_V_approx": 14.67169168763363,
+      "path_loss_W": 0.21950697363075458
+    },
+    {
+      "battery_V": 12,
+      "input_A": 2.119750043202006,
+      "J3_V_approx": 11.841018746759849,
+      "path_loss_W": 0.337000518424118
+    },
+    {
+      "battery_V": 10.17473510568361,
+      "input_A": 2.5134621830739574,
+      "J3_V_approx": 9.986225441953062,
+      "path_loss_W": 0.47381191093071773
+    }
+  ],
+  "shunt_W_at_2p5A": 0.0315625,
+  "shunt_W_at_14p142A": 1.0098969492908887,
+  "I2C_rise_us_2p2k_1pct_200pF": 0.37654012000000003,
+  "I2C_sink_mA_3p6V_0p4V_2p2k_1pct": 1.4692378328741966,
+  "INA228_proposed_CURRENT_LSB_A": 5e-05,
+  "INA228_SHUNT_CAL_ADCRANGE0": 3277,
+  "INA228_SHUNT_CAL_exact": 3276.8,
+  "short_current_16p8V_min_loop_R_for_1000A_ohm": 0.016800000000000002,
+  "LT3010_nominal_output_V": 3.289579,
+  "LT3010_initial_reference_and_1pct_divider_output_V": [
+    3.1527578217821786,
+    3.429609478989899
+  ],
+  "LT3010_C10_Xc_10kHz_90nF_ohm": 176.8388256576615,
+  "LT3010_feedback_load_min_A": 0.0012247524752475249,
+  "LT3010_5mA_dissipation_16p8V_plus_0p7mA_ground_W": 0.08026,
+  "source_sha256": {
+    "Osiris_PDB_RevA.kicad_sch": "fa8c80a2735f008303bcf85d4022f05ffea53840bae26dc0ae00c8671ddda015",
+    "Osiris_PDB_RevA.kicad_pro": "74ef145297263f7c79d17bd12ea38c6ade12b889d252049298df8bad83a56f6d",
+    "BOM.csv": "681ec012cb1213365f372802b743529f5b528276b86b2b458dd2811a88d5b7f9",
+    "BOM_purchasing.csv": "c66d6b60e117c714a51cd115169cd26a1efceedc4893a9589ea3372cb8d3a6d3",
+    "Libraries/PDB_Symbols.kicad_sym": "484cf0b79242ffe653dea7bb8eb5d0caedb70caeb764a311d2c870deb9cb6984"
+  }
+}

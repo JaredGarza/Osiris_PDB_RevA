@@ -1,0 +1,34 @@
+﻿Ref(s),Qty/Board,Qty for 10,Value,Package,Manufacturer,MPN,Digi-Key P/N,Digi-Key Link,Unit Price USD,Price Tier,Extended USD,Stock,Confidence,Notes
+C1,1,10,5n6,0805,TDK,C2012C0G2A562J125AA,445-15277-1-ND,https://www.digikey.com/en/products/result?keywords=C2012C0G2A562J125AA,0.14100,qty 10,1.41,"3,201",OK,
+C2,1,10,1u0,0805,TDK,C2012X7R1H105K125AB,445-7547-1-ND,https://www.digikey.com/en/products/result?keywords=C2012X7R1H105K125AB,0.14100,qty 10,1.41,"14,000",OK,
+"C3, C5, C8",3,30,100n,0603,KEMET,C0603C104K4RACTU,399-C0603C104K4RACTUCT-ND,https://www.digikey.com/en/products/result?keywords=C0603C104K4RACTU,0.05040,qty 25,1.51,"4,450,173",OK,
+"C4, C9",2,20,10u,1206,TDK,C3216X7R1H106K160AC,445-181601-1-ND,https://www.digikey.com/en/products/result?keywords=C3216X7R1H106K160AC,0.62000,qty 10,12.4,0,OK,"OUT OF STOCK - 2,000 due 2026-11-11"
+C6,1,10,10u,0805,TDK,C2012X7R1A106K125AC,445-6857-1-ND,https://www.digikey.com/en/products/result?keywords=C2012X7R1A106K125AC,0.19400,qty 10,1.94,"105,968",OK,
+C7,1,10,100n,0603,TDK,C1608X7R1H104K080AA,445-1314-1-ND,https://www.digikey.com/en/products/result?keywords=C1608X7R1H104K080AA,0.06000,qty 10,0.6,"276,210",OK,
+D1,1,10,SMAJ24CA,DO-214AC,Bourns,SMAJ24CA,2254533,https://www.digikey.com/en/products/result?keywords=SMAJ24CA,0.62000,unit,6.2,in stock,CONFIRM,Price tier not broken out; verify at qty 10
+"D2, D3",2,20,MBR0540,SOD-123,onsemi,MBR0540T1G,,https://www.digikey.com/en/products/result?keywords=MBR0540T1G,0.31000,qty 10,6.2,in stock,CONFIRM,DK P/N not returned; page also listed a cheaper non-onsemi part - confirm mfr
+F1,1,10,4A MINI,blade,Littelfuse,0297004.WXNV,F988-ND,https://www.digikey.com/en/products/result?keywords=0297004.WXNV,0.30100,qty 10,3.01,"18,404",OK,Needs Keystone 3568 holder - separate line
+J1,1,10,XT60PW-M,THT,AMASS,XT60PW-M,,https://www.digikey.com/en/products/result?keywords=XT60PW-M,,,,n/a,NOT CARRIED,Digi-Key returns no results - source elsewhere
+J2,1,10,OSIRIS_I2C,JST GH 4P,JST,BM04B-GHS-TBT(LF)(SN),455-BM04B-GHS-TBTCT-ND,https://www.digikey.com/en/products/result?keywords=BM04B-GHS-TBT%28LF%29%28SN%29,0.32000,qty 10,3.2,0,OK,"OUT OF STOCK - 2,500 due 2026-11-06"
+J3,1,10,XT60PW-F,THT,AMASS,XT60PW-F,,https://www.digikey.com/en/products/result?keywords=XT60PW-F,,,,n/a,NOT CARRIED,Digi-Key returns no results - source elsewhere
+"Q1, Q2",2,20,ISC015N06NM5LF2,TDSON-8 FL,Infineon,ISC015N06NM5LF2ATMA1,448-ISC015N06NM5LF2ATMA1CT-ND,https://www.digikey.com/en/products/result?keywords=ISC015N06NM5LF2ATMA1,2.06000,qty 20,41.2,"6,183",OK,
+R1,1,10,2M0,0805,YAGEO,RC0805FR-072ML,,https://www.digikey.com/en/products/result?keywords=RC0805FR-072ML,0.11000,qty 1,1.1,"31,485",CONFIRM,"qty-10 tier not returned; $0.11 is the qty-1 price, so this is a ceiling"
+R2,1,10,43k2,0805,YAGEO,RC0805FR-0743K2L,311-43.2KCRCT-ND,https://www.digikey.com/en/products/result?keywords=RC0805FR-0743K2L,0.03600,qty 10,0.36,"196,774",OK,
+R3,1,10,56k2,0805,YAGEO,RC0805FR-0756K2L,311-56.2KCRCT-ND,https://www.digikey.com/en/products/result?keywords=RC0805FR-0756K2L,0.03400,qty 10,0.34,86,OK,"LOW STOCK - only 86 units, need 10"
+R4,1,10,22k,0805,YAGEO,RC0805FR-0722KL,,https://www.digikey.com/en/products/result?keywords=RC0805FR-0722KL,0.03400,qty 10,0.34,"306,715",OK,
+R5,1,10,5m,2512 wide,Ohmite,FC4L64R005FER,273-FC4L64R005FERTR-ND,https://www.digikey.com/en/products/result?keywords=FC4L64R005FER,0.82701,qty 10,8.27,"11,450",CONFIRM,"qty-25 came back HIGHER ($0.9126) - packaging tiers differ, verify before order"
+R6,1,10,680k,0805,YAGEO,RC0805FR-07680KL,,https://www.digikey.com/en/products/result?keywords=RC0805FR-07680KL,0.10000,qty 1,1.0,in stock,CONFIRM,"qty-10 tier not returned; $0.10 is the qty-1 price, so this is a ceiling"
+R7,1,10,200k,0805,YAGEO,RC0805FR-07200KL,311-200KCRCT-ND,https://www.digikey.com/en/products/result?keywords=RC0805FR-07200KL,0.02560,qty 25,0.26,"191,161",OK,
+"R8, R9",2,20,10,0805,YAGEO,RC0805FR-0710RL,311-10.0CRCT-ND,https://www.digikey.com/en/products/result?keywords=RC0805FR-0710RL,0.05400,qty 10,1.08,"632,845",OK,
+R10,1,10,4k7,0805,YAGEO,RC0805FR-074K7L,311-4.70KCRCT-ND,https://www.digikey.com/en/products/result?keywords=RC0805FR-074K7L,0.03400,qty 10,0.34,"915,211",OK,
+U1,1,10,LTC4368IMS-1,MSOP-10,Analog Devices,LTC4368IMS-1#TRPBF,505-LTC4368IMS-1#TRPBFCT-ND,https://www.digikey.com/en/products/result?keywords=LTC4368IMS-1%23TRPBF,6.23000,qty 10,62.3,0,OK,"OUT OF STOCK - 2,500 due 2026-10-28"
+U2,1,10,INA228AIDGSR,VSSOP-10,Texas Instruments,INA228AIDGSR,296-INA228AIDGSRCT-ND,https://www.digikey.com/en/products/result?keywords=INA228AIDGSR,3.55000,qty 10,35.5,0,OK,"OUT OF STOCK - 2,500 due 2026-11-11"
+U3,1,10,TPS7A1633DGNR,HVSSOP-8,Texas Instruments,TPS7A1633DGNR,296-30223-1-ND,https://www.digikey.com/en/products/result?keywords=TPS7A1633DGNR,3.12000,qty 10,31.2,"3,622",OK,
+U4,1,10,74AUP1G07GW,SOT-353,Nexperia,"74AUP1G07GW,125",,https://www.digikey.com/en/products/result?keywords=74AUP1G07GW%2C125,0.19000,unit,1.9,in stock,CONFIRM,DK P/N and tier not returned; verify
+TP1-TP7,7,70,TestPoint,bare pad,,,,,0,,0,n/a,OK,Bare copper test pads - no part to purchase
+F1-holder,1,10,MINI fuse holder,THT,Keystone Electronics,3568,,,,,,,CONFIRM,Separate purchased holder for F1 - not priced in this pass
+
+SUBTOTAL - verified prices,,,,,,,,,,,198.4,,,"Digi-Key, retrieved 2026-09-14"
+SUBTOTAL - prices needing confirmation,,,,,,,,,,,24.67,,,Treat as upper bound
+NOT PRICED,,,,,,,,,,,,,,J1 (XT60PW-M); J3 (XT60PW-F); Keystone 3568 holder
+"INDICATIVE TOTAL, 10 boards",,,,,,,,,,,223.07,,,"Excludes 2 unsourced connectors, fuse holder, shipping and tax"

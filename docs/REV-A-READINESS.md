@@ -1,5 +1,11 @@
 # Osiris PDB Rev A review — 12 September 2026
 
+**Later September 15 update:** the active schematic now has 48 components, F1=5 A and R5=8 mOhm. See [simulation/design review](../Simulation/combined-20260915/REVIEW.md). Earlier numerical population/threshold tables below describe the previous draft.
+
+> Historical audit. The active September 15 A-P2-DRAFT has 42 components and an
+> LT3010 local regulator. Use [the current review](PDB-ELECTRICAL-REVIEW-20260915.md)
+> and [interface proposal](PDB-INTERFACE-PROPOSAL-20260915.md) for new work.
+
 > September 13 update: the new Osiris Rev B power section and top-facing ports are
 > planned and no revised schematic exists yet. The Osiris connections below describe
 > the reference implementation, not a verified new Rev B design. See the current

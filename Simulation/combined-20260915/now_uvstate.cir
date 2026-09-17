@@ -1,0 +1,29 @@
+* Current CAD population: is the restart-loop window reopened?
+* Measured hysteresis 0.83 V. Window = [11.15, 10.32 + I*Rpack].
+* At 500 mOhm / ~2.7 A that predicts a ~0.5 V wide window near 11.2-11.7 V.
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_now.lib
+.inc osiris\osiris_reva.lib
+
+.param RB = 500m
+.step param VPK list 11.0 11.3 11.5 11.7 12.0 12.4
+
+VBAT VSRC 0 PWL(0 0 50m 14.8 1.0 14.8 1.5 {VPK} 8.0 {VPK})
+RBATT VSRC VBIN {RB}
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_NOW
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+.tran 0 8 0 100u
+.options method=gear reltol=0.003
+* Settled, disjoint from the ramp. PP=0 means stable (running or off).
+.meas TRAN VBIN_PP PP  V(VBIN) FROM 6 TO 8
+.meas TRAN V5_MAX  MAX V(V5)   FROM 6 TO 8
+.meas TRAN V5_MIN  MIN V(V5)   FROM 6 TO 8
+.meas TRAN IIN_AVG AVG ABS(I(RBATT)) FROM 6 TO 8
+.end

@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "changed_prior_pins": [
+    [
+      "F1",
+      "2",
+      "/VBAT_FUSED",
+      "/IDEAL_IN"
+    ],
+    [
+      "TP1",
+      "1",
+      "/VBAT_FUSED",
+      "/IDEAL_IN"
+    ],
+    [
+      "U2",
+      "8",
+      "/PDB_VOUT",
+      "/INA_VBUS"
+    ]
+  ],
+  "new_pin_maps": {
+    "U5": {
+      "1": "IDEAL_GATE",
+      "2": "IDEAL_IN",
+      "4": "IDEAL_IN",
+      "5": "IDEAL_IN",
+      "6": "IDEAL_VSS",
+      "8": "VBAT_FUSED"
+    },
+    "Q3": {
+      "1": "IDEAL_IN",
+      "2": "IDEAL_IN",
+      "3": "IDEAL_IN",
+      "4": "IDEAL_GATE",
+      "5": "VBAT_FUSED",
+      "6": "VBAT_FUSED",
+      "7": "VBAT_FUSED",
+      "8": "VBAT_FUSED"
+    },
+    "R19": {
+      "1": "IDEAL_VSS",
+      "2": "GND"
+    },
+    "R20": {
+      "1": "IDEAL_IN",
+      "2": "INPUT_DAMP"
+    },
+    "R21": {
+      "1": "PDB_VOUT",
+      "2": "INA_VBUS"
+    },
+    "C11": {
+      "1": "VBAT_FUSED",
+      "2": "IDEAL_VSS"
+    },
+    "C15": {
+      "1": "VBAT_FUSED",
+      "2": "IDEAL_VSS"
+    },
+    "C12": {
+      "1": "INA_IN_P",
+      "2": "GND"
+    },
+    "C13": {
+      "1": "INA_IN_N",
+      "2": "GND"
+    },
+    "C14": {
+      "1": "INA_VBUS",
+      "2": "GND"
+    },
+    "C16": {
+      "1": "INPUT_DAMP",
+      "2": "GND"
+    },
+    "F1": {
+      "2": "IDEAL_IN"
+    },
+    "U2": {
+      "8": "INA_VBUS"
+    },
+    "D3": {
+      "1": "PDB_VOUT",
+      "2": "GND"
+    }
+  }
+}

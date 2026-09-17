@@ -1,0 +1,62 @@
+ref,value_or_mpn,sheet,spice_element,fidelity,notes
+J16,XT60PW-M,OS_PowerInput,RJ16,estimated,Battery inlet from PDB; contact R estimated
+R55,CSS2725FTL250 250uohm 4W,OS_PowerInput,R55,exact,Stackpole Kelvin shunt; Altium Comment string LR2725-24R00025F1 disagrees with MPN field
+IC11,INA228AIDGSR,OS_PowerInput,RI11P/RI11N/BI11Q,analog stub,VS on +3V3; sense across R55; NO ADC/I2C/register modelling
+J15,XT60PW-F,OS_PowerInput,omitted,not modelled,Pass-through tap on VBATT_OUT; nothing plugged in
+U21,LM73100RPWR,OS_PowerInput,XU21 U21_SCREEN,SURROGATE,Primary eFuse VBATT_OUT->VIN; DVDT pin UNCONNECTED; SR/TD/RON are surrogate defaults not datasheet
+R58,470k,OS_PowerInput,R58,exact,U21 UV/OV string top
+R61,24k,OS_PowerInput,R61,exact,U21 divider
+R65,24k,OS_PowerInput,R65,exact,U21 divider
+R68,12k,OS_PowerInput,R68,exact,U21 divider
+R70,24k,OS_PowerInput,R70,exact,U21 divider bottom; 554k total -> 7.91V UV / 27.7V OV
+R60,47k,OS_PowerInput,R60,exact,U21 PGTH top -> 8.25V
+R64,8k,OS_PowerInput,R64,exact,U21 PGTH bottom; PG pin itself unconnected on board
+J17,DCJ0202,OS_PowerInput,AUXIN pin,exact,DC barrel jack = the REAL alternate source (not USB)
+U22,LM73100RPWR,OS_PowerInput,XU22 U21_SCREEN,SURROGATE,Alternate eFuse VCONN_OUT->VIN; OR'd at VIN with no priority logic or mux
+R59,470k,OS_PowerInput,R59,exact,U22 divider top
+R63,24k,OS_PowerInput,R63,exact,U22 divider
+R67,24k,OS_PowerInput,R67,exact,U22 divider
+R69,12k,OS_PowerInput,R69,exact,U22 divider
+R71,24k,OS_PowerInput,R71,exact,U22 divider bottom; identical window to U21
+R62,47k,OS_PowerInput,R62,exact,U22 PGTH top
+R66,8k,OS_PowerInput,R66,exact,U22 PGTH bottom
+C7-C12 C21-C26,10uF x12,OS_PowerSupply,CVIN 120u*CDERATE,derated,VIN bulk bank
+U1,AP64501SP-13,OS_PowerSupply,XU1 BUCK_AVG,SURROGATE,EN TIED TO VIN = always on; averaged model, no ripple/loop
+R2,12k 1%,OS_PowerSupply,in VSET,exact,U1 FB top
+R3,2k2,OS_PowerSupply,in VSET,exact,U1 FB bottom -> 0.8*(1+12k/2k2)=5.164V
+L1,FNR6028S3R3NT,OS_PowerSupply,not modelled,AMBIGUOUS,MPN implies 3.3uH but Altium field says 47uH; averaged model ignores L
+C13,100n,OS_PowerSupply,TSS param,approximated,U1 soft-start; TSS=2ms assumed not derived
+R4/C14,20k/1n2,OS_PowerSupply,omitted,not modelled,U1 COMP network - loop dynamics not represented
+C1/R1,100n/10R,OS_PowerSupply,omitted,not modelled,U1 bootstrap
+U2,AP64501SP-13,OS_PowerSupply,XU2 BUCK_AVG,SURROGATE,EN = 3V3_EN from U11 sequencer
+R6,47k 1%,OS_PowerSupply,in VSET,exact,U2 FB top
+R7,15k 1%,OS_PowerSupply,in VSET,exact,U2 FB bottom -> 0.8*(1+47k/15k)=3.307V
+L2,FNR6028S3R3NT,OS_PowerSupply,not modelled,AMBIGUOUS,Same 3.3uH vs 47uH conflict as L1
+C27,100n,OS_PowerSupply,TSS param,approximated,U2 soft-start
+R9/C28,12k/1n2,OS_PowerSupply,omitted,not modelled,U2 COMP network
+C2-C6 + C139 C140-C149,460uF total,OS_PowerSupply/OS_JetsonPower,CV5,derated,+5V0 bulk
+C16-C20 + distributed,221.4uF total,multiple,CV3,derated,+3V3 bulk across 65 caps
+U4,LM73100RPWR,OS_PowerSupply,XU4 U21_SCREEN,SURROGATE,+5V0 -> +5V0_PROT; EN firmware-sequenced, NO UVLO divider
+R10,330k,OS_PowerSupply,R10,exact,U4 OVLO top
+R13,30k,OS_PowerSupply,R13,exact,U4 OVLO mid
+R15,100k,OS_PowerSupply,R15,exact,U4 OVLO bottom -> 5.52V trip
+C30 + 100n x3,22.3uF,OS_PowerSupply,CVP,derated,+5V0_PROT bulk
+U12,AMS1117-3.3,OS_JetsonPower,XU12 LDO_AMS1117,SURROGATE,+5V0 -> +3V3_AON; closes the bootstrap loop
+U11,STM32F030F4P6TR,OS_PowerSupply,BSEQ/BSQD/BEN3/BEN5,behavioural,Power sequencer; FIRMWARE NOT SIMULATED, TSEQ=50ms ASSUMED
+R14,10k,OS_PowerSupply,R14,exact,5V0_EN pulldown
+P1,DDR4 SODIMM 260P,OS_JetsonPower,RP1 + XJET,lumped load,Jetson on +5V0 pins 251-260; 1.356A from 7W planning figure
+U10,STM32H743IIK6,OS_FMU,in XL3,lumped load,FMU MCU on +3V3
+U13,AMS1117-1.8,OS_JetsonPower,in XL5,folded,+1V8 rail not a node
+U3,AMS1117-3.3,OS_PowerSupply,in XL5P,folded,+3V3A sensor rail not a node
+U16,AMS1117-3.3,OS_RadioSX1280,in XL5P,folded,+3V3_RADIO_24 not a node
+U20,AMS1117-1.8,OS_RadioDW1000,in XL5P,folded,+1V8_RADIO_5G0 not a node
+IC2,AMS1117-1.2,OS_JetsonUSBHub,in XL5P,folded,+1V2 not a node
+U5,USB5744-I/2G,OS_JetsonUSBHub,in XL3,lumped load,USB3 hub
+U6,LAN7800/Y9X,OS_Ethernet,in XL3,lumped load,Internal 2V5 LDO and 1V2 switcher with L3 are on-die - not modelled
+U17,DW1000-I-TR13,OS_RadioDW1000,in XL3,lumped load,UWB radio
+IC10,SX1280IMLTRT,OS_RadioSX1280,in XL5P,folded,2.4GHz radio
+J3,1054500101 USB-C,OS_JetsonUSB,NOT A POWER SOURCE,excluded,+VBUS_IN reaches only IC1 as 1V8 VBUS-detect; no load switch/diode/OR element
+IC1,74LVC1T45DW-7,OS_JetsonUSB,omitted,not modelled,VBUS level-shift to JETSON_OTG_VBUS_DET_1V8
+J24/J25,BM20B-SRDS-G-TF,OS_ModuleHub,NOT MODELLED,UNBOUNDED,Pins 14/16/18/20 tap RAW VIN - external modules can draw unbudgeted current
+J27-J37 J36,JST-GH / fan,multiple,in XL5P,folded,Peripheral connectors on +5V0_PROT
+D1 D2 D3 D10,LEDs,multiple,in XL5/XL3,folded,Only D-prefix parts on board are LEDs - no protection diodes

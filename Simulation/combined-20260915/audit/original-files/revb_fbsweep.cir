@@ -1,0 +1,45 @@
+* ============================================================================
+* Feedback-node comparison, probed across each variant's OWN window.
+*
+* The single-voltage test at 11.4 V was non-discriminating: the Rev-B divider
+* moved the thresholds up, so 11.4 V is below turn-on for every variant and
+* they all idle off regardless of feedback. Sweep the whole 11.4-12.8 V band
+* at 500 mOhm so each variant is exercised where ITS window actually is.
+*
+* Predicted windows [V_on, V_off + I*R] with I*R = 2.7 A * 0.5 = 1.35 V:
+*   FB=2 V3V3 : V_on 12.25, V_off 10.26 -> [12.25, 11.61]  EMPTY, immune
+*   FB=3 GP   : thresholds unmeasured   -> unknown
+*   FB=4 none : V_on 11.70, V_off 11.14 -> [11.70, 12.49]  0.79 V wide, FAILS
+* ============================================================================
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_ap2_revb.lib
+.inc osiris\osiris_reva.lib
+
+.step param FB list 2 3 4
+.step param VPK list 11.6 11.9 12.2 12.5 12.8
+.param RHO = table(FB, 2,1G,      3,1G,    4,1G)
+.param RH3 = table(FB, 2,3.16Meg, 3,1G,    4,1G)
+.param RHG = table(FB, 2,1G,      3,20Meg, 4,1G)
+
+VBAT VSRC 0 PWL(0 0 50m 14.8 1.0 14.8 1.5 {VPK} 6.0 {VPK})
+RBATT VSRC VBIN 500m
+
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_AP2_REVB
++ PARAMS: RHV_VOUT={RHO} RHV_V3V3={RH3} RHV_GP={RHG}
+
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+.tran 0 6 0 100u
+.options method=gear reltol=0.003
+
+* VBIN_PP is the discriminator: 0 = stable (running or latched off),
+* large = oscillating. V5_MAX distinguishes running (5.16) from off (0).
+.meas TRAN VBIN_PP PP  V(VBIN) FROM 4.5 TO 6
+.meas TRAN V5_MAX  MAX V(V5)   FROM 4.5 TO 6
+.end

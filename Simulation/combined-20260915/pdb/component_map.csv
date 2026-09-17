@@ -1,0 +1,43 @@
+ref,value,mpn,spice_element,fidelity,notes
+C1,5n6,C2012C0G2A562J125AA,C1 (GP-GND),exact,Gate slew cap; sets 6.25 V/ms GP ramp at 35 uA
+C2,1U0,C2012X7R1H105K125AB,C2 (SHUNT_LO-GND),exact,LTC4368 VOUT pin bypass
+C3,100n,C0603C104K4RACTU,C3 (N_RETRY-GND),exact,Retry timer; ~545 ms scaled from 120 ms @ 22 nF
+C4,10u,C3216X7R1H106K160AC,C4 (VOUT-GND),derated,DC-bias derated by CDERATE (default 0.65)
+C5,100n,C0603C104K4RACTU,C5 (V3V3-GND),exact,
+C6,10u,C2012X7R1A106K125AC,C6 (V3V3-GND),derated,10 V part on 3.28 V rail; CDERATE3 default 0.50
+C7,100n,C1608X7R1H104K080AA,C7 (INA_IN_P-INA_IN_N),exact,Differential filter with R8/R9; fc 79.6 kHz
+C8,100n,C0603C104K4RACTU,C8 (V3V3-GND),exact,
+C9,10u,C3216X7R1H106K160AC,C9 (VOUT-GND),derated,DC-bias derated by CDERATE
+C10,100n,C0603C104K4RACTU,C10 (V3V3-PDB_LDO_ADJ),exact,LT3010 feedforward compensation across R11
+D1,SMAJ24CA,SMAJ24CA,XD1 SMAJ24CA,surrogate,Two anti-series avalanche diodes; BV 28.1 V Rdyn 1.4 ohm; Cjo estimated
+D2,MBR0540,MBR0540T1G,D2 (GF-GP),datasheet-fitted,Fast gate discharge bypass around R4
+D3,MBR0540,MBR0540T1G,D3 (GND-VOUT),datasheet-fitted,Negative clamp on output
+F1,4A MINI,0297004.WXNV,RF1 23.48 mohm,COLD RESISTANCE ONLY,DOES NOT OPEN. 17 A2s is melting not clearing I2t
+J1,XT60PW-M,XT60PW-M,RJ1P/RJ1N 0.3 mohm,estimated,Per-contact resistance estimated not specified
+J2,OSIRIS_I2C,BM04B-GHS-TBT(LF)(SN),RSCL/RSDA 100 Meg,high-Z stub,Pin 1 UNCONNECTED in schematic; no bus pull-ups on PDB
+J3,XT60PW-F,XT60PW-F,top-level harness,estimated,Contact R carried in harness model
+Q1,ISC015N06NM5LF2,ISC015N06NM5LF2ATMA1,MQ1 VDMOS,SURROGATE,Datasheet-fitted VDMOS; gm ~2x high; no SOA/thermal validity
+Q2,ISC015N06NM5LF2,ISC015N06NM5LF2ATMA1,MQ2 VDMOS,SURROGATE,Same model as Q1
+R1,2M0,RC0805FR-072ML,R1,exact,UV/OV divider top; UV trip 10.56 V
+R2,43k2,RC0805FR-0743K2L,R2,exact,UV/OV divider mid
+R3,56k2,RC0805FR-0756K2L,R3,exact,UV/OV divider bottom; OV trip 18.68 V
+R4,22k,RC0805FR-0722KL,R4,exact,Gate isolation to ~13.8 nF of FET Ciss
+R5,5m,FC4L64R005FER,RSH + RSH_F1/F4,exact+estimated,5 mohm between sense taps exact; 0.5 mohm force stubs estimated
+R6,680k,RC0805FR-07680KL,R6,exact,SHDN divider top
+R7,200k,RC0805FR-07200KL,R7,exact,SHDN divider bottom; enable above ~3.3 V
+R8,10,RC0805FR-0710RL,R8,exact,INA228 IN- filter
+R9,10,RC0805FR-0710RL,R9,exact,INA228 IN+ filter
+R10,4k7,RC0805FR-074K7L,R10,exact,ALERT pull-up to 3V3
+R11,1k58,RC0805FR-071K58L,R11,exact,LDO feedback top
+R12,1k0,RC0805FR-071KL,R12,exact,LDO feedback bottom
+TP1,TestPoint,,alias /VBAT_FUSED,pad only,No electrical effect
+TP2,TestPoint,,alias /PDB_PROTECTED,pad only,No electrical effect
+TP3,TestPoint,,alias GND,pad only,No electrical effect
+TP4,TestPoint,,alias /PDB_VOUT,pad only,No electrical effect
+TP5,TestPoint,,alias /PDB_3V3,pad only,No electrical effect
+TP6,TestPoint,,alias /INA_ALERT_N,pad only,No electrical effect
+TP7,TestPoint,,alias /PDB_FAULT_N,pad only,No electrical effect
+U1,LTC4368IMS-1-PBF,LTC4368IMS-1#TRPBF,XU1 LTC4368-1,VENDOR (encrypted),Official ADI encrypted model; LTspice-only
+U2,INA228AIDGSR,INA228AIDGSR,XU2 INA228_ANALOG,analog stub,Supply draw and input Z only; NO ADC/I2C/register/alert logic
+U3,LT3010EMS8E,LT3010EMS8E#TRPBF,XU3 LT3010,VENDOR (plaintext),Official ADI model from LTspice lib
+U4,74AUP1G07GW,74AUP1G07GW125,XU4 BUF_74AUP1G07,behavioural,Open-drain switch; no propagation delay or slew shaping

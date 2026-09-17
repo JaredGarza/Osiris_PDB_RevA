@@ -1,0 +1,57 @@
+* ============================================================================
+* COMBINED PDB + OSIRIS Rev A -- slow battery discharge to collapse
+*
+* This is the case the combined model exists for. The Osiris bucks are
+* CONSTANT-POWER loads: as the pack sags, input current RISES, which
+* increases the drop across RBATT + fuse + FETs + harness, which sags the
+* rail further. The question is whether that loop is stable all the way
+* down to the PDB's 10.56 V undervoltage dropout, or whether it runs away
+* first -- and whether the board recovers cleanly when the pack recovers.
+*
+* Pack ramps 16.8 V -> 6.0 V over 4 s, holds, then recovers to 16.8 V.
+* Swept over battery internal resistance, which is what changes as a pack
+* ages or gets cold.
+* ============================================================================
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_ap2.lib
+.inc osiris\osiris_reva.lib
+
+* 20m = healthy pack, 200m = aged/cold pack, 500m = badly degraded
+.step param RB list 20m 200m 500m
+
+VBAT VSRC 0 PWL(0 0 50m 16.8 4.05 6.0 5.0 6.0 9.0 16.8)
+RBATT VSRC VBIN {RB}
+
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_AP2
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+.tran 0 9 0 200u
+.options method=gear reltol=0.003
+
+* --- Where does each stage give up on the way down? ----------------------
+.meas TRAN t_pdb_drop WHEN V(PDBOUT)=5   FALL=1
+.meas TRAN VPACK_DROP FIND V(VSRC)  AT=t_pdb_drop
+.meas TRAN VBIN_DROP  FIND V(VBIN)   AT=t_pdb_drop
+.meas TRAN IIN_DROP   FIND ABS(I(RBATT)) AT=t_pdb_drop
+.meas TRAN t_v5_drop  WHEN V(V5)=4.9 FALL=1
+.meas TRAN VPACK_V5   FIND V(VSRC)  AT=t_v5_drop
+.meas TRAN t_v3_drop  WHEN V(V3)=3.1 FALL=1
+.meas TRAN VPACK_V3   FIND V(VSRC)  AT=t_v3_drop
+
+* --- Worst-case current just before collapse -----------------------------
+.meas TRAN IIN_MAX    MAX ABS(I(RBATT)) FROM 100m TO 4.0
+.meas TRAN VOSIN_MIN  MIN V(OSIN) FROM 100m TO 4.0
+
+* --- Recovery on the way back up -----------------------------------------
+.meas TRAN t_pdb_rec  WHEN V(PDBOUT)=5   RISE=2
+.meas TRAN VPACK_REC  FIND V(VSRC)  AT=t_pdb_rec
+.meas TRAN REC_V5     AVG V(V5)     FROM 8.5 TO 8.95
+.meas TRAN REC_V3     AVG V(V3)     FROM 8.5 TO 8.95
+.meas TRAN REC_V5P    AVG V(V5PROT) FROM 8.5 TO 8.95
+.end

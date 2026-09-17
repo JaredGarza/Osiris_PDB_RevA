@@ -1,0 +1,409 @@
+MBR0540T1G,
+NRVB0540T1G,
+MBR0540T3G,
+NRVB0540T3G
+
+Schottky Power Rectifier,
+                                                                                                   http://onsemi.com
+Surface Mount,
+                                                                                           SCHOTTKY BARRIER
+0.5 A, 40 V, SOD-123 Package                                                                   RECTIFIER
+                                                                                         0.5 AMPERES, 40 VOLTS
+   The Schottky Power Rectifier employs the Schottky Barrier
+principle with a barrier metal that produces optimal forward voltage
+drop−reverse current tradeoff. Ideally suited for low voltage, high
+frequency rectification, or as a free wheeling and polarity protection
+diodes in surface mount applications where compact size and weight
+are critical to the system. This package provides an alternative to the
+leadless 34 MELF style package.                                                                          SOD−123
+                                                                                                         CASE 425
+Features                                                                                                 STYLE 1
+
+ Guardring for Stress Protection
+                                                                                                  MARKING DIAGRAM
+ Very Low Forward Voltage
+ Epoxy Meets UL 94 V−0 @ 0.125 in
+ Package Designed for Optimal Automated Board Assembly                                                       B4MG
+                                                                                                   1
+ AEC−Q101 Qualified and PPAP Capable                                                                           G
+
+ NRVB Prefix for Automotive and Other Applications Requiring
+  Unique Site and Control Change Requirements
+                                                                                                  B4   = Device Code
+ All Packages are Pb−Free*                                                                       M    = Date Code
+                                                                                                  G    = Pb−Free Package
+Mechanical Characteristics
+                                                                                         (Note: Microdot may be in either location)
+ Device Marking: B4
+ Polarity Designator: Cathode Band                                                          ORDERING INFORMATION
+ Weight: 11.7 mg (approximately)                                                        Device        Package         Shipping†
+ Case: Epoxy Molded                                                                MBR0540T1G         SOD−123      3,000/Tape & Reel
+ Finish: All External Surfaces Corrosion Resistant and Terminal                                       (Pb−Free)   (8 mm Tape, 7” Real)
+  Leads are Readily Solderable                                                      NRVB0540T1G SOD−123             3,000/Tape & Reel
+ Lead and Mounting Surface Temperature for Soldering Purposes:                                 (Pb−Free)          (8 mm Tape, 7” Real)
+  260C max. for 10 Seconds                                                         MBR0540T3G         SOD−123 10,000/Tape & Reel
+ ESD Rating:                                                                                          (Pb−Free) (8 mm Tape, 13” Real)
+   Human Body Model = 3B                                                           NRVB0540T3G SOD−123 10,000/Tape & Reel
+   Machine Model = C                                                                           (Pb−Free) (8 mm Tape, 13” Real)
+
+                                                                                    †For information on tape and reel specifications,
+                                                                                     including part orientation and tape sizes, please
+                                                                                     refer to our Tape and Reel Packaging Specifications
+                                                                                     Brochure, BRD8011/D.
+
+
+
+*For additional information on our Pb−Free strategy and soldering details, please
+ download the ON Semiconductor Soldering and Mounting Techniques
+ Reference Manual, SOLDERRM/D.
+
+
+ Semiconductor Components Industries, LLC, 2012                       1                                      Publication Order Number:
+January, 2012 − Rev. 7                                                                                                    MBR0540T1/D
+                                                                   MBR0540T1G, NRVB0540T1G, MBR0540T3G, NRVB0540T3G
+
+MAXIMUM RATINGS
+                                                                                     Rating                                                                                                    Symbol              Value            Unit
+               Peak Repetitive Reverse Voltage                                                                                                                                                 VRRM                 40               V
+               Working Peak Reverse Voltage                                                                                                                                                    VRWM
+               DC Blocking Voltage                                                                                                                                                              VR
+               Average Rectified Forward Current                                                                                                                                                 IO                                  A
+                 (At Rated VR, TC = 115C)                                                                                                                                                                          0.5
+
+               Peak Repetitive Forward Current                                                                                                                                                  IFRM                                 A
+                 (At Rated VR, Square Wave, 20 kHz, TC = 115C)                                                                                                                                                     1.0
+
+               Non−Repetitive Peak Surge Current                                                                                                                                                IFSM                                 A
+                 (Surge Applied at Rated Load Conditions Halfwave, Single Phase, 60 Hz)                                                                                                                             5.5
+
+               Storage/Operating Case Temperature Range                                                                                                                                        Tstg, TC         −55 to +150          C
+               Operating Junction Temperature                                                                                                                                                    TJ             −55 to +150          C
+               Voltage Rate of Change                                                                                                                                                           dv/dt                               V/ms
+                 (Rated VR, TJ = 25C)                                                                                                                                                                             1000
+Stresses exceeding Maximum Ratings may damage the device. Maximum Ratings are stress ratings only. Functional operation above the
+Recommended Operating Conditions is not implied. Extended exposure to stresses above the Recommended Operating Conditions may affect
+device reliability.
+
+
+THERMAL CHARACTERISTICS
+                                                                                  Characteristic                                                                                               Symbol              Value            Unit
+               Thermal Resistance − Junction−to−Lead (Note 1)                                                                                                                                    Rtjl               118             C/W
+               Thermal Resistance − Junction−to−Ambient (Note 2)                                                                                                                                 Rtja               206
+1. Mounted with minimum recommended pad size, PC Board FR4.
+2. 1 inch square pad size (1 X 0.5 inch for each lead) on FR4 board.
+
+
+ELECTRICAL CHARACTERISTICS
+                                                                      Characteristic                                                                                  Symbol                               Value                    Unit
+               Maximum Instantaneous Forward Voltage (Note 3)                                                                                                               vF             TJ = 25C            TJ = 100C           V
+                                            (iF = 0.5 A)                                                                                                                                        0.51                0.46
+                                            (iF = 1 A)                                                                                                                                          0.62                0.61
+
+               Maximum Instantaneous Reverse Current (Note 3)                                                                                                               IR             TJ = 25C            TJ = 100C          mA
+                                            (VR = 40 V)                                                                                                                                          20                13,000
+                                            (VR = 20 V)                                                                                                                                          10                5,000
+3. Pulse Test: Pulse Width  250 ms, Duty Cycle  2.0%.
+
+
+
+                                                                                                                       100
+i F, INSTANTANEOUS FORWARD CURRENT (AMPS)
+
+
+
+
+                                                                                                                           IF, INSTANTANEOUS FORWARD CURRENT (AMPS)
+
+
+
+
+                                             10                                                                                                                       10
+
+
+
+                                                                                                          25C
+
+
+
+                                            1.0                                                                                                                       1.0
+
+                                                    TJ = 125C          TJ = -40C
+                                                                                                                                                                              TJ = 125C
+                                                                       TJ = 25C                                                                                                                   TJ = 100C
+
+                                                                     TJ = 100C                                                                                                                TJ = 25C
+                                            0.1                                                                                                                       0.1
+                                                  0.2        0.4        0.6           0.8          1.0           1.2                                                        0.2          0.4              0.6        0.8      1.0          1.2
+                                                         vF, INSTANTANEOUS FORWARD VOLTAGE (VOLTS)                                                                                VF, MAXIMUM INSTANTANEOUS FORWARD VOLTAGE (VOLTS)
+
+                                                            Figure 1. Typical Forward Voltage                                                                                         Figure 2. Maximum Forward Voltage
+
+
+                                                                                                         http://onsemi.com
+                                                                                                                       2
+                                                                         MBR0540T1G, NRVB0540T1G, MBR0540T3G, NRVB0540T3G
+
+                                  100E-3                                                                                                                                100E-3
+
+
+
+
+                                                                                                                                   I R, MAXIMUM REVERSE CURRENT (AMPS)
+                                       10E-3                                                                                                                                            10E-3
+I R, REVERSE CURRENT (AMPS)
+
+
+
+                                                                                                                                                                                                                           TJ = 100C
+                                       1.0E-3                                  TJ = 125C                                                                                      1.0E-3
+
+
+                                  100E-6                                                                                                                                100E-6
+                                                                               TJ = 100C
+                                       10E-6                                                                                                                                            10E-6
+                                                                                                                                                                                                                            TJ = 25C
+                                       1.0E-6                                   TJ = 25C                                                                                      1.0E-6
+
+
+                                  100E-9                                                                                                                                100E-9
+                                                    0                     10            20           30                       40                                                                0                 10            20           30                               40
+                                                                           VR, REVERSE VOLTAGE (VOLTS)                                                                                                             VR, REVERSE VOLTAGE (VOLTS)
+                                                                   Figure 3. Typical Reverse Current                                                                                                   Figure 4. Maximum Reverse Current
+
+                                        0.8                                                                                                                                             0.45
+
+
+
+
+                                                                                                                                              PFO , AVERAGE POWER DISSIPATION (WATTS)
+I O , AVERAGE FORWARD CURRENT (AMPS)
+
+
+
+
+                                                                          dc
+                                        0.7                                                                                                                                             0.40
+                                                                                                            FREQ = 20 kHz                                                                                                                     SQUARE WAVE                dc
+                                                                   SQUARE WAVE                                                                                                          0.35
+                                        0.6                                                                                                                                                                                         Ipk/Io = p
+                                                                                                                                                                                        0.30
+                                        0.5
+                                                                     Ipk/Io = p                                                                                                                                            Ipk/Io = 5
+                                                                                                                                                                                        0.25
+                                        0.4                                                                                                                                                                  Ipk/Io = 10
+                                                                     Ipk/Io = 5                                                                                                         0.20
+                                        0.3                                                                                                                                                         Ipk/Io = 20
+                                                                     Ipk/Io = 10                                                                                                        0.15
+                                        0.2                                                                                                                                             0.10
+                                                                     Ipk/Io = 20
+                                        0.1                                                                                                                                             0.05
+                                            0                                                                                                                                              0
+                                                0             20         40         60        80      100       120         140                                                                 0    0.1          0.2      0.3          0.4      0.5       0.6     0.7        0.8
+                                                                          TL, LEAD TEMPERATURE (C)                                                                                                        IO, AVERAGE FORWARD CURRENT (AMPS)
+                                                                     Figure 5. Current Derating                                                                                                       Figure 6. Forward Power Dissipation
+
+                          100                                                                                                                                                           126
+                                                                                                                                       TJ , DERATED OPERATING TEMPERATURE ( C)
+
+
+
+
+                                                                                                    TJ = 25C                                                                           124
+                                                                                                                                                                                                                                                       Rtja = 118C/W
+                                                                                                                                                                                        122
+C, CAPACITANCE (pF)
+
+
+
+
+                                                                                                                                                                                        120
+
+                                                                                                                                                                                         118
+                                                                                                                                                                                                                                              149C/W
+                                                                                                                                                                                         116
+                                                                                                                                                                                                                                                      180C/W
+                                                                                                                                                                                         114
+                                                                                                                                                                                                                                                         206C/W
+                                                                                                                                                                                         112
+                                                                                                                                                                                                                                                                 228C/W
+                                       10                                                                                                                                                110
+                                            0           5.0         10         15        20    25      30       35      40                                                                      0   5.0       10        15              20       25       30       35      40
+                                                                     VR, REVERSE VOLTAGE (VOLTS)                                                                                                              VR, DC REVERSE VOLTAGE (VOLTS)
+                                                                         Figure 7. Capacitance                                                                                             Figure 8. Typical Operating Temperature Derating*
+                                                * Reverse power dissipation and the possibility of thermal runaway must be considered when operating this device under any
+                                                reverse voltage conditions. Calculations of TJ therefore must include forward and reverse power effects. The allowable operating
+                                                TJ may be calculated from the equation:         TJ = TJmax − r(t)(Pf + Pr) where
+                                                                                                r(t) = thermal impedance under given conditions,
+                                                                                                Pf = forward power dissipation, and
+                                                                                                Pr = reverse power dissipation
+                                                This graph displays the derated allowable TJ due to reverse bias under DC conditions only and is calculated as
+                                                TJ = TJmax − r(t)Pr, where r(t) = Rthja. For other power applications further calculations must be performed.
+
+
+                                                                                                                     http://onsemi.com
+                                                                                                                                  3
+                                                                      MBR0540T1G, NRVB0540T1G, MBR0540T3G, NRVB0540T3G
+
+R (T) , TRANSIENT THERMAL RESISTANCE (NORMALIZED)
+                                                       1E+00
+                                                               50%
+                                                               20%
+
+                                                               10%
+                                                       1E-01
+                                                               5.0%
+                                                               2.0%
+                                                               1.0%
+
+                                                       1E-02
+
+                                                                               Rtjl(t) = Rtjl*r(t)
+
+                                                       1E-03
+                                                           0.00001    0.0001                 0.001            0.01                  0.1    1.0   10   100   1,000
+                                                                                                                           T, TIME (s)
+                                                                                               Figure 9. Thermal Response Junction to Lead
+   R (T) , TRANSIENT THERMAL RESISTANCE (NORMALIZED)
+
+
+
+
+                                                       1E+00
+
+                                                               50%
+
+                                                               20%
+                                                       1E-01
+                                                               10%
+
+                                                               5.0%
+                                                               2.0%
+                                                       1E-02
+                                                               1.0%
+                                                                                                     Rtjl(t) = Rtjl*r(t)
+
+                                                       1E-03
+                                                           0.00001    0.0001                 0.001             0.01                  0.1   1.0   10   100   1,000
+                                                                                                                           T, TIME (s)
+                                                                                           Figure 10. Thermal Response Junction to Ambient
+
+
+
+
+                                                                                                                  http://onsemi.com
+                                                                                                                               4
+MECHANICAL CASE OUTLINE
+PACKAGE DIMENSIONS
+
+
+                                                                                     SOD−123
+                                                                                    CASE 425−04
+                                                                                      ISSUE G
+                                                                                                                                                                DATE 07 OCT 2009
+  SCALE 5:1
+                            D
+                                                                           A                                         NOTES:
+                                                                                                                       1. DIMENSIONING AND TOLERANCING PER ANSI
+                                                                                          A1                              Y14.5M, 1982.
+
+
+
+
+                ÂÂÂÂ
+                                                                                                                       2. CONTROLLING DIMENSION: INCH.
+                               1
+                                                                                                                                        MILLIMETERS                   INCHES
+
+
+
+                ÂÂÂÂ
+                                                                                                                            DIM    MIN      NOM    MAX        MIN       NOM     MAX
+                                                                                                                             A     0.94      1.17   1.35    0.037      0.046   0.053
+                                                                                                                            A1     0.00      0.05   0.10    0.000      0.002   0.004
+                                                                                                                             b     0.51      0.61   0.71    0.020      0.024   0.028
+          HE                                      E                                                                          c      ---      ---    0.15       ---       ---   0.006
+                                                                                                                             D     1.40      1.60   1.80    0.055      0.063   0.071
+                                                                                                                             E     2.54      2.69   2.84    0.100      0.106   0.112
+                                                                                                                            HE     3.56      3.68   3.86    0.140      0.145   0.152
+                                                                                                                             L     0.25      ---    ---     0.010        ---    ---
+                                                                                                                             q       0°      ---     10 °      0°        ---     10 °
+                               2
+                                                                             q                                                RECOMMENDED
+                               b                                                              L                            SOLDERING FOOTPRINT*
+                                                                         C
+                                                                                                                                  0.91
+
+
+                                                                                                            ÉÉÉ                                  ÉÉÉ
+                                                                                                                                  0.036
+                             GENERIC
+                         MARKING DIAGRAM*
+
+                                         XXXMG
+                                                                                                            ÉÉÉ
+                                                                                                            ÉÉÉ                                  ÉÉÉ
+                                                                                                                                                 ÉÉÉ
+                                                                                                                                                                          1.22
+                                                                                                                                                                          0.048
+                           1
+                                           G                                                                                      2.36
+                                                                                                                                  0.093
+                      XXX = Specific Device Code                                                                                   4.19
+                      M    = Date Code                                                                                            0.165
+                      G    = Pb−Free Package
+               (Note: Microdot may be in either location)                                                                                         SCALE 10:1
+                                                                                                                                                                        mm Ǔ
+                                                                                                                                                                     ǒinches
+             *This information is generic. Please refer to
+              device data sheet for actual part marking.                                            *For additional information on our Pb−Free strategy and soldering
+              Pb−Free indicator, “G” or microdot “G”, may                                            details, please download the onsemi Soldering and Mounting
+              or may not be present. Some products may                                               Techniques Reference Manual, SOLDERRM/D.
+              not follow the Generic Marking.
+
+
+              STYLE 1:
+                PIN 1. CATHODE
+                    2. ANODE
+
+
+
+
+                                                                                         Electronic versions are uncontrolled except when accessed directly from the Document Repository.
+ DOCUMENT NUMBER:                          98ASB42927B                                   Printed versions are uncontrolled except when stamped “CONTROLLED COPY” in red.
+
+             DESCRIPTION:                  SOD−123                                                                                                                      PAGE 1 OF 1
+
+ onsemi and               are trademarks of Semiconductor Components Industries, LLC dba onsemi or its subsidiaries in the United States and/or other countries. onsemi reserves
+ the right to make changes without further notice to any products herein. onsemi makes no warranty, representation or guarantee regarding the suitability of its products for any particular
+ purpose, nor does onsemi assume any liability arising out of the application or use of any product or circuit, and specifically disclaims any and all liability, including without limitation
+ special, consequential or incidental damages. onsemi does not convey any license under its patent rights nor the rights of others.
+
+
+
+© Semiconductor Components Industries, LLC, 2019                                                                                                                        www.onsemi.com
+ onsemi,                , and other names, marks, and brands are registered and/or common law trademarks of Semiconductor Components Industries, LLC dba “onsemi” or its affiliates
+ and/or subsidiaries in the United States and/or other countries. onsemi owns the rights to a number of patents, trademarks, copyrights, trade secrets, and other intellectual property.
+ A listing of onsemi’s product/patent coverage may be accessed at www.onsemi.com/site/pdf/Patent−Marking.pdf. onsemi reserves the right to make changes at any time to any
+ products or information herein, without notice. The information herein is provided “as−is” and onsemi makes no warranty, representation or guarantee regarding the accuracy of the
+ information, product features, availability, functionality, or suitability of its products for any particular purpose, nor does onsemi assume any liability arising out of the application or use
+ of any product or circuit, and specifically disclaims any and all liability, including without limitation special, consequential or incidental damages. Buyer is responsible for its products
+ and applications using onsemi products, including compliance with all laws, regulations and safety requirements or standards, regardless of any support or applications information
+ provided by onsemi. “Typical” parameters which may be provided in onsemi data sheets and/or specifications can and do vary in different applications and actual performance may
+ vary over time. All operating parameters, including “Typicals” must be validated for each customer application by customer’s technical experts. onsemi does not convey any license
+ under any of its intellectual property rights nor the rights of others. onsemi products are not designed, intended, or authorized for use as a critical component in life support systems
+ or any FDA Class 3 medical devices or medical devices with a same or similar classification in a foreign jurisdiction or any devices intended for implantation in the human body. Should
+ Buyer purchase or use onsemi products for any such unintended or unauthorized application, Buyer shall indemnify and hold onsemi and its officers, employees, subsidiaries, affiliates,
+ and distributors harmless against all claims, costs, damages, and expenses, and reasonable attorney fees arising out of, directly or indirectly, any claim of personal injury or death
+ associated with such unintended or unauthorized use, even if such claim alleges that onsemi was negligent regarding the design or manufacture of the part. onsemi is an Equal
+ Opportunity/Affirmative Action Employer. This literature is subject to all applicable copyright laws and is not for resale in any manner.
+
+
+ADDITIONAL INFORMATION
+    TECHNICAL PUBLICATIONS:                                                                               ONLINE SUPPORT: www.onsemi.com/support
+    Technical Library: www.onsemi.com/design/resources/technical−documentation                            For additional information, please contact your local Sales Representative at
+    onsemi Website: www.onsemi.com                                                                        www.onsemi.com/support/sales
+
+
+
+
+

@@ -1,0 +1,16 @@
+* INA228 analog surrogate: active-mode bias, differential and bus impedance.
+.inc models\pdb_screen17_devices.lib
+.step param CASE list 1 2 3
+.param VCM=table(CASE,1,12,2,85,3,12) VD=table(CASE,1,0,2,0,3,.1)
+VP P 0 {VCM+VD/2}
+VN N 0 {VCM-VD/2}
+VB BUS 0 {VCM}
+VS SUPPLY 0 3.3
+XINA P N BUS SUPPLY 0 ALERT INA228_ANALOG
+.tran 0 1u 0 100n
+.meas TRAN BIAS AVG (-(I(VP)+I(VN))/2)
+.meas TRAN DIFF_ERROR MAX ABS((I(VN)-I(VP))/2-VD/92k)
+.meas TRAN BUS_ERROR MAX ABS(I(VB)+VCM/1Meg)
+.meas TRAN IQ AVG (-I(VS))
+.save I(VP) I(VN) I(VB) I(VS)
+.end

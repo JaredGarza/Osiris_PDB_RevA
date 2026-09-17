@@ -1,0 +1,101 @@
+[
+  {
+    "deck": "tvs_transients.cir",
+    "status": "RUN_OK",
+    "seconds": 12.5,
+    "errors": [],
+    "measurements": {
+      "inp_min": [
+        -8.40534485178e-05,
+        -8.08926488389e-05,
+        -9.41916441661e-05
+      ],
+      "inn_min": [
+        -7.85686206655e-05,
+        -7.62795098126e-05,
+        -8.79032158991e-05
+      ],
+      "vbus_min": [
+        -7.73282154114e-05,
+        -7.6338663348e-05,
+        -8.80293082446e-05
+      ],
+      "u1_vin_min": [
+        -60.7063560486,
+        -52.503742218,
+        -38.4313278198
+      ],
+      "u1_vin_max": [
+        17.2646865845,
+        20.0717048645,
+        31.1620616913
+      ],
+      "q1_vds": [
+        35.9424343109,
+        36.0390491486,
+        40.844461441
+      ],
+      "q2_vds": [
+        61.3488814831,
+        60.5807313919,
+        55.8214931488
+      ],
+      "vgs_max": [
+        10.9657859802,
+        10.9657974243,
+        10.9657974243
+      ],
+      "v3v3_max": [
+        3.28772878647,
+        3.28772902489,
+        3.28772902489
+      ],
+      "vout_final": [
+        16.6677977718,
+        16.6677978222,
+        16.66779782
+      ]
+    },
+    "limits": {}
+  },
+  {
+    "deck": "tvs_faults.cir",
+    "status": "FAIL",
+    "seconds": 6.97,
+    "errors": [
+      "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\tvs_faults.cir(65): Voltage not found.",
+      "T_PDBON: expected 1 finite values, got 0",
+      "T_5V0: expected 1 finite values, got 0",
+      "T_3V3: expected 1 finite values, got 0",
+      "IIN_PEAK: expected 1 finite values, got 0",
+      "IIN_SS: expected 1 finite values, got 0",
+      "V5_SS: expected 1 finite values, got 0",
+      "V3_SS: expected 1 finite values, got 0",
+      "V3V3_PDB: expected 1 finite values, got 0",
+      "VDROP_PDB: expected 1 finite values, got 0",
+      "OV_VOSIN: expected 1 finite values, got 0",
+      "OV_REC_V5: expected 1 finite values, got 0",
+      "UV_VOSIN: expected 1 finite values, got 0",
+      "UV_REC_V5: expected 1 finite values, got 0",
+      "UV_REC_V3: expected 1 finite values, got 0",
+      "SH_IPK: expected 1 finite values, got 0",
+      "SH_VOSIN: expected 1 finite values, got 0",
+      "T_REC_V3: expected 1 finite values, got 0",
+      "REC_VOSIN: expected 1 finite values, got 0",
+      "REC_V5: expected 1 finite values, got 0",
+      "REC_V3: expected 1 finite values, got 0",
+      "REC_V5P: expected 1 finite values, got 0",
+      "SH_I2T: expected 1 finite values, got 0",
+      "INP_MIN: expected 1 finite values, got 0",
+      "INN_MIN: expected 1 finite values, got 0",
+      "VBUS_MIN: expected 1 finite values, got 0",
+      "D3_IPK: expected 1 finite values, got 0"
+    ],
+    "measurements": {
+      "options": [
+        0.003
+      ]
+    },
+    "limits": {}
+  }
+]

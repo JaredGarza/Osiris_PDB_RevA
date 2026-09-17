@@ -1,0 +1,49 @@
+* ============================================================================
+* FIX 3 verification: does the 8 mOhm shunt + 5 A fuse close the coverage gap
+* WITHOUT nuisance-tripping on normal inrush?
+*
+* As-built: 5 mOhm shunt -> breaker at 10 A typ (8-12 A), fuse 4 A.
+*           2 Ohm fault (8.7 A) fell in the gap and never tripped.
+* Rev-B:    8 mOhm shunt -> breaker at 6.25 A typ (5.0-7.5 A), fuse 5 A.
+*
+* The 2 Ohm case is the one that must now trip. The no-fault case must still
+* start cleanly -- inrush is ~3.1 A against a 5.0 A worst-case-low trip, only
+* 1.6x margin, so nuisance tripping is the real risk of this change.
+* ============================================================================
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_ap2_revb.lib
+.inc osiris\osiris_reva.lib
+
+* 999 = no fault (nuisance-trip check on a real Osiris load)
+.step param RFAULT list 999 5.0 3.0 2.0 1.0 0.5
+
+VBAT VSRC 0 PWL(0 0 1m 14.8)
+RBATT VSRC VBIN 20m
+
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_AP2_REVB
++ PARAMS: RHV_GP=20Meg
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+SFLT OSIN NFLT FCTL 0 SWF
+RFLT NFLT 0 {RFAULT}
+VFCTL FCTL 0 PWL(0 0 799.9m 0 800m 1)
+.model SWF SW(Ron=1m Roff=1G Vt=0.5 Vh=0.1)
+
+.tran 0 1.6 0 20u
+.options method=gear reltol=0.003
+
+* Did it start normally before the fault? (nuisance-trip check)
+.meas TRAN V5_PREFAULT AVG V(V5)        FROM 700m TO 790m
+.meas TRAN IIN_INRUSH  MAX ABS(I(RBATT)) FROM 0 TO 300m
+* Did the breaker trip after the fault?
+.meas TRAN IPK_FAULT   MAX ABS(I(RBATT)) FROM 799m TO 900m
+.meas TRAN GATE_POST   AVG V(GF)-V(COMMON) FROM 1.2 TO 1.55
+.meas TRAN VOSIN_POST  AVG V(OSIN)      FROM 1.2 TO 1.55
+.meas TRAN FUSE_I2T    INTEG I(RBATT)*I(RBATT) FROM 800m TO 1.6
+.end

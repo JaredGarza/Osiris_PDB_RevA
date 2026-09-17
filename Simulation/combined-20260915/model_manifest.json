@@ -1,0 +1,138 @@
+{
+  "generated": "2026-09-15",
+  "scope": "Current 59-symbol/57-populated A-P4 PDB release model feeding the Osiris Rev A behavioral surrogate; older populations remain historical.",
+  "engine": {
+    "used": "LTspice 26.0.2 (C:/Program Files/ADI/LTspice/LTspice.exe, -b -Run)",
+    "requested_by_user": "LTspice",
+    "why_not_pspice": "The user selected the installed free LTspice for this verification run.",
+    "dialect_warning": "Decks use LTspice-only constructs (B-sources, tanh/limit/if, Rser= on caps, .step param, table()). They will NOT run in PSpice without translation."
+  },
+  "models": [
+    {
+      "device": "D3 STPST10H100SB-TR (PDB)",
+      "file": "pdb/pdb_release.lib: STPST10H100SB subcircuit",
+      "provenance": "ST_POWER_SCHOTTKY_V10.LIB inside user-supplied resources.zip / st_power_schottky_diodes_pspice_models_v6.zip; original retained in Simulation/vendor-models/received-20260917/st-schottky",
+      "original_library_sha256": "633fb9263215d27c308e42fa32be0577889347a388021460cf87ddfe9e4e7bad",
+      "fidelity": "VENDOR ELECTRICAL",
+      "pin_order": "1 anode, 2 cathode, 3 anode; both anodes to GND, cathode to VOUT",
+      "limits": "No thermal network, SOA or reverse breakdown BV parameter. Does not establish pulse survival. Replaces the fitted STPST10H100_SCREEN model in the release population only."
+    },
+    {
+      "device": "U1 LTC4368-1 (PDB)",
+      "file": "C:/Users/jared/AppData/Local/LTspice/lib/sub/LTC4368-1.sub",
+      "provenance": "Analog Devices official, ENCRYPTED",
+      "fidelity": "VENDOR",
+      "pin_order": "VIN UV OV RETRY GND SHDN FAULT VOUT SENSE GATE",
+      "limits": "Encrypted; internals not inspectable. LTspice-only."
+    },
+    {
+      "device": "U3 LT3010 (PDB)",
+      "file": "C:/Users/jared/AppData/Local/LTspice/lib/sub/LT3010.lib",
+      "provenance": "Analog Devices official, plaintext",
+      "fidelity": "VENDOR",
+      "pin_order": "1 OUT, 2 ADJ, 3 NC, 4 GND, 5 SHDN, 6 NC, 7 NC, 8 IN",
+      "limits": "Vendor model, nominal reference 1.275 V. Out-of-range behavior remains unqualified. Phantom external current sinks were removed; do not infer hardware reverse or transient protection from this model alone."
+    },
+    {
+      "device": "Q1/Q2 Infineon ISC015N06NM5LF2 (PDB)",
+      "file": "models/pdb_devices.lib",
+      "provenance": "DATASHEET-FITTED VDMOS, built here. No Infineon SPICE model was available.",
+      "fidelity": "SURROGATE",
+      "limits": "Square-law VDMOS cannot match RDS(on)=1.3 mohm and gfs=56 S simultaneously; RDS(on) was held, so gm is roughly 2x high and the Miller plateau sits ~0.3 V low. Inrush is therefore mildly optimistic. NO SOA, avalanche, or thermal validity. The 178.7 A short-circuit peak is NOT an SOA demonstration."
+    },
+    {
+      "device": "D1 SMAJ24CA (PDB)",
+      "file": "models/pdb_devices.lib",
+      "provenance": "Datasheet-fitted, two anti-series avalanche diodes",
+      "fidelity": "SURROGATE",
+      "limits": "BV 28.1 V and Rdyn 1.4 ohm from VBR/VC datasheet points; Cjo estimated, not measured."
+    },
+    {
+      "device": "Current F1 0297004.WXNV 4 A",
+      "file": "models/pdb_devices.lib",
+      "provenance": "Datasheet cold resistance 23.48 mohm",
+      "fidelity": "RESISTOR ONLY",
+      "limits": "Cold resistor only (23.48/17.75 mOhm assumptions carried from older source). No heating/opening/arcing/clearing. Old 17/25 A^2s figures are not acceptance limits. Use current manufacturer time-current data and temperature derating for coordination."
+    },
+    {
+      "device": "U2 INA228 (PDB), IC11 INA228 (Osiris)",
+      "file": "models/pdb_devices.lib",
+      "provenance": "Analog stub written here",
+      "fidelity": "ANALOG STUB",
+      "limits": "Supply draw and input impedance only. NO ADC, NO I2C, NO register map, NO alert logic. Says nothing about measurement accuracy or alert timing."
+    },
+    {
+      "device": "U4 74AUP1G07 (PDB)",
+      "file": "models/pdb_devices.lib",
+      "provenance": "Behavioural open-drain switch",
+      "fidelity": "BEHAVIOURAL",
+      "limits": "No propagation delay, no output slew shaping."
+    },
+    {
+      "device": "U21/U22/U4 LM73100RPWR (Osiris)",
+      "file": "Simulation/models/U21_SCREEN.lib",
+      "provenance": "Pre-existing engineering surrogate in this repo, self-labelled 'not a TI model'",
+      "fidelity": "SURROGATE",
+      "limits": "Engineering surrogate, no thermal/fast-trip model. TI SNOSDC0A table 6.7 supports typical open-pin SR=28.1 V/ms and TD=0.1 ms at 12 V; slew varies with input (12.14 V/ms at 2.7 V, 44.78 V/ms at 23 V). A fixed 12 V typical is not a guaranteed bound.",
+      "source": "https://www.ti.com/lit/ds/symlink/lm7310.pdf"
+    },
+    {
+      "device": "U1/U2 AP64501SP-13 buck (Osiris)",
+      "file": "osiris/osiris_reva.lib (BUCK_AVG)",
+      "provenance": "Behavioral average; AP64501 DS41980 Rev 5-2 reviewed.",
+      "fidelity": "SURROGATE",
+      "limits": "0.8 V reference and 570 kHz verified in manufacturer datasheet. 100 nF soft-start maps to 18.868 ms using Eq.7, replacing 2 ms. IQ/EFF/ILIM/smoothed UVLO and bandwidth remain assumptions. No switching, compensation, peak-current or thermal qualification. Output delivery now requires enable and input headroom.",
+      "source": "https://www.diodes.com/datasheet/download/AP64501.pdf"
+    },
+    {
+      "device": "AMS1117 family LDOs (Osiris U12/U13/U3/U16/U20/IC2)",
+      "file": "osiris/osiris_reva.lib (LDO_AMS1117)",
+      "provenance": "Behavioural",
+      "fidelity": "SURROGATE",
+      "limits": "Regulation, dropout and pass-through current only. Only U12 (+3V3_AON) is instantiated as a node; the rest are folded into aggregate rail loads."
+    },
+    {
+      "device": "All Osiris digital consumers (Jetson, STM32H743, radios, USB hub, Ethernet bridge)",
+      "file": "osiris/osiris_reva.lib (DIGILOAD)",
+      "provenance": "Aggregated parameterised current sinks",
+      "fidelity": "LUMPED LOAD",
+      "limits": "Planning loads, not independent measured budgets. Boot ramp now starts after rail rise and resets on collapse. The 50% Jetson step at 600 ms is an arbitrary stress stimulus. Sequencer firmware and actual module demands remain unknown."
+    }
+  ],
+  "known_model_bugs_found_and_fixed": [
+    {
+      "bug": "DIGILOAD rail-collapse guard was applied to the pre-ramp value, so the 25 ms ramp kept sinking ~0.46 A from a dead rail and drove +5V0_PROT to -349 V, which then made the U4 pass element attempt ~12 kA.",
+      "fix": "Guard now multiplies the final drawn current.",
+      "found_by": "Recovery measurement returning a physically impossible negative voltage."
+    },
+    {
+      "bug": "Hard if()/> comparators in BGO, BSEQ, BEN3/BEN5 chattered when rails decayed through threshold, collapsing the timestep to ~1e-15 and hanging the OV case (5817 tolerance warnings).",
+      "fix": "Smoothed with tanh. Transition widths are NUMERICAL softening, not modelled hysteresis.",
+      "found_by": "Simulation hang at t=0.309 s."
+    }
+  ],
+  "measurement_artifacts_encountered": [
+    "`.meas INTEG ABS(ddt(...))` edge-counting returned 0 while the circuit was demonstrably oscillating. Superseded by direct min/max/avg over disjoint time windows. Do not trust ddt-based edge counts in these decks.",
+    "A 1.5 s fault window was too short to distinguish 'does not recover' from 'has not recovered yet'; the LTC4368 retry alone is ~545 ms. Extended to 3 s."
+  ],
+  "not_modelled": [
+    "Fuse opening, arcing, clearing time, interrupt capability",
+    "MOSFET SOA, avalanche, die temperature",
+    "Buck switching ripple and control-loop stability",
+    "All digital/firmware behaviour on both boards",
+    "PCB parasitics, trace resistance/inductance, thermal coupling",
+    "Component tolerance corners (single nominal values used throughout except where swept)",
+    "Osiris J24/J25 Module Hub pins 14/16/18/20, which tap raw VIN and allow unbudgeted external draw"
+  ],
+  "review": "2026-09-15 independent model and schematic audit; see REVIEW.md and audit/verification.json.",
+  "current_schematic_model": "pdb/pdb_release.lib; A-P4 LTC4359/Q3 front end, sensor filters, 5 mOhm shunt, 4 A fuse and DNP local I2C pull-ups.",
+  "review_fixes": [
+    "No supply-independent INA228/buffer/AMS1117 quiescent sinks at zero power.",
+    "Correct AP64501 capacitor-derived soft start.",
+    "Buck cannot source through disabled/absent input in the averaged model.",
+    "Digital-load ramp follows rail validity.",
+    "Short I^2t includes switch edge at 899.96 ms.",
+    "Removed unreliable ddt-based edge counter; stable cases no longer require nonexistent retry crossings.",
+    "Native Windows runner checks completion, return codes, fresh logs, finite measurements and explicit electrical bounds."
+  ]
+}

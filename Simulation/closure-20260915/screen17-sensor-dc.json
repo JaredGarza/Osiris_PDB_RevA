@@ -1,0 +1,51 @@
+{
+  "deck": "screen17_sensor_dc.cir",
+  "status": "PASS",
+  "seconds": 0.61,
+  "errors": [],
+  "measurements": {
+    "bias": [
+      2.51199994139e-09,
+      2.58499999184e-09,
+      2.5120243663e-09
+    ],
+    "diff_error": [
+      0.0,
+      0.0,
+      3.67989463822e-14
+    ],
+    "bus_error": [
+      4.24450263077e-13,
+      3.28291213658e-13,
+      4.24450263077e-13
+    ],
+    "iq": [
+      0.000600000028498,
+      0.000600000028498,
+      0.000600000028498
+    ]
+  },
+  "limits": {
+    "bias": [
+      2.49e-09,
+      2.6e-09
+    ],
+    "diff_error": [
+      0,
+      1e-10
+    ],
+    "bus_error": [
+      0,
+      1e-10
+    ],
+    "iq": [
+      0.000599,
+      0.000601
+    ]
+  },
+  "sha256": {
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\models\\pdb_screen17_devices.lib": "942970c0c302d76781579730aaa98231d8b427ce0144b6ea90e79d29486b0ba3",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\screen17_sensor_dc.cir": "e240918373f4ba38db85a34f9048d40fc5174a0ffc397752a6d05dea39ac1445"
+  },
+  "scope": "Active-mode analog surrogate only; 1 Tohm numerical shunts add up to 85 pA at 85 V."
+}

@@ -1,0 +1,146 @@
+* ============================================================================
+* pdb_ap2.lib -- Osiris PDB, revision A-P2-DRAFT
+* Transcribed 1:1 from docs/interface-review-20260915/final.net.xml
+* All 42 schematic components accounted for (see component_map.csv).
+* Engine: LTspice 26.x
+*
+* Requires, included by the TOP-LEVEL deck (not here, to avoid double-include):
+*   .lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+*   .lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+*   .inc ../models/pdb_devices.lib
+* ============================================================================
+
+* ---------------------------------------------------------------------------
+* Pin order:
+*   VIN    J1.2  battery input, UPSTREAM of fuse F1   (/VBAT_RAW)
+*   VOUT   J3.2  protected output to Osiris           (/PDB_VOUT)
+*   V3V3   LT3010 housekeeping rail                   (/PDB_3V3)
+*   GP     LTC4368 GATE pin                           (/GATE_PIN)
+*   GF     MOSFET gates                               (/GATE_FET)
+*   COMMON Q1/Q2 common source                        (/SW_COMMON)
+*   FAULT  LTC4368 FAULT, open-drain                  (/PDB_FAULT_N)
+*   ALERT  74AUP1G07 output, open-drain               (/INA_ALERT_N)
+*   SCL    J2.2                                       (/PDB_I2C_SCL)
+*   SDA    J2.3                                       (/PDB_I2C_SDA)
+*   GND
+*
+* PARAMS:
+*   CDERATE   MLCC DC-bias derating on the VOUT bulk caps (1 = none)
+*   CDERATE3  MLCC DC-bias derating on the 3V3 bulk cap
+*   RXT60     per-contact XT60 resistance (J1 and J3)
+*   RFUSE     F1 series resistance -- COLD value, does not open
+* ---------------------------------------------------------------------------
+.subckt PDB_AP2 VIN VOUT V3V3 GP GF COMMON FAULT ALERT SCL SDA GND
++ PARAMS: CDERATE=0.65 CDERATE3=0.50 RXT60=0.3m RFUSE=23.48m
+
+* --- J1 XT60PW-M battery inlet -------------------------------------------
+RJ1P VIN   VBAT_RAW {RXT60}
+* J1.1 returns to GND; modelled as the shared GND reference plus contact R
+* Return/contact resistance is included in the top-level loop resistance.
+
+* --- F1 4A MINI blade fuse (COLD RESISTANCE ONLY -- DOES NOT OPEN) -------
+RF1  VBAT_RAW VBAT_FUSED {RFUSE}
+
+* --- D1 SMAJ24CA bidirectional TVS ---------------------------------------
+XD1  VBAT_FUSED GND SMAJ24CA
+
+* --- U1 LTC4368-1 undervoltage/overvoltage/reverse controller ------------
+*     pins: 1 VIN  2 UV  3 OV  4 RETRY  5 GND  6 SHDN  7 FAULT
+*           8 VOUT 9 SENSE 10 GATE
+XU1  VBAT_FUSED N_UV N_OV N_RETRY GND SHDN_LTC FAULT SHUNT_LO SHUNT_HI GP
++    LTC4368-1
+
+* UV/OV programming divider: R1 2M0 -> R2 43k2 -> R3 56k2 -> GND
+*   UV trip (VUV=500mV falling) : VIN = 0.500 * 2099.4k/99.4k  = 10.56 V
+*   OV trip (VOV=500mV rising)  : VIN = 0.500 * 2099.4k/56.2k  = 18.68 V
+R1   VBAT_FUSED N_UV 2Meg
+R2   N_UV       N_OV 43.2k
+R3   N_OV       GND  56.2k
+
+* SHDN divider R6/R7: enables above ~3.3 V (VSHDN 0.75V typ, 0.4-1.2V range)
+R6   VBAT_FUSED SHDN_LTC 680k
+R7   SHDN_LTC   GND      200k
+
+* C3 RETRY timing cap. Datasheet tRETRY = 120 ms at CRETRY = 22 nF,
+* so 100 nF scales to roughly 545 ms cool-down between retries.
+C3   N_RETRY GND 100n
+
+* --- Gate network: R4 / C1 / D2 ------------------------------------------
+* LTC4368 GATE sources ~35 uA from an internal charge pump. C1 sets the
+* GP ramp rate (35u/5.6n = 6.25 V/ms); R4 isolates the ~13.8 nF of FET
+* Ciss; D2 gives a fast discharge path for GF when GP is pulled down.
+R4   GP GF  22k
+C1   GP GND 5.6n  Rser=50m
+D2   GF GP  MBR0540
+
+* --- Q1/Q2 back-to-back N-channel pass FETs ------------------------------
+* Q1 drain = VBAT_FUSED, Q2 drain = PDB_PROTECTED, sources common.
+* Forward path: Q1 channel blocks/passes, Q2 body diode is forward-biased.
+* Reverse path: Q2 channel blocks -> reverse-current and reverse-battery
+* protection. Both gates driven together from GF.
+MQ1  VBAT_FUSED     GF COMMON COMMON ISC015N06NM5LF2
+MQ2  PDB_PROTECTED  GF COMMON COMMON ISC015N06NM5LF2
+
+* --- R5 Ohmite FC4L64R005FER 5 mohm 4-terminal Kelvin shunt --------------
+* Force pins 1 (PROTECTED) and 4 (VOUT); sense pins 2 (HI) and 3 (LO).
+* The specified 5 mohm is between the SENSE taps; the short force-to-sense
+* stubs are modelled at 0.5 mohm each (estimated, not specified).
+* LTC4368 forward overcurrent = 50 mV / 5 mohm = 10.0 A (spec 40-60 mV
+* => 8.0 - 12.0 A). Reverse (LTC4368-1) = -50 mV => -10.0 A.
+RSH_F1 PDB_PROTECTED SHUNT_HI 0.5m
+RSH    SHUNT_HI      SHUNT_LO 5m
+RSH_F4 SHUNT_LO      VOUT     0.5m
+
+* C2 bypass on the LTC4368 VOUT pin
+C2   SHUNT_LO GND 1u Rser=20m
+
+* --- U2 INA228 current/power monitor (ANALOG BEHAVIOUR ONLY) -------------
+* R8/R9 10 ohm + C7 100n differential input filter.
+* fc = 1/(2*pi*2*10*100n) = 79.6 kHz differential.
+R9   SHUNT_HI INA_IN_P 10
+R8   SHUNT_LO INA_IN_N 10
+C7   INA_IN_P INA_IN_N 100n Rser=30m
+XU2  INA_IN_P INA_IN_N VOUT V3V3 GND INA_ALERT_LOCAL_N INA228_ANALOG
+R10  V3V3 INA_ALERT_LOCAL_N 4.7k
+
+* --- U4 74AUP1G07 open-drain buffer on the ALERT path --------------------
+XU4  INA_ALERT_LOCAL_N ALERT V3V3 GND BUF_74AUP1G07
+
+* --- U3 LT3010 housekeeping LDO ------------------------------------------
+*   pins: 1 OUT  2 ADJ  3 NC  4 GND  5 SHDN  6 NC  7 NC  8 IN
+*   SHDN is tied to the input rail, so the LDO is permanently enabled.
+*   VOUT = VADJ * (1 + R11/R12); LT3010 VADJ = 1.275 V nominal
+*        = 1.275 * (1 + 1580/1000) = 3.2895 V nominal (before ADJ bias)
+XU3  V3V3 PDB_LDO_ADJ NC3 GND VOUT NC6 NC7 VOUT LT3010
+R11  V3V3        PDB_LDO_ADJ 1.58k
+R12  PDB_LDO_ADJ GND         1k
+C10  V3V3        PDB_LDO_ADJ 100n Rser=30m
+
+* --- Bulk / bypass capacitance -------------------------------------------
+* CDERATE accounts for MLCC DC-bias loss, which is severe here:
+*   C4/C9 = C3216X7R1H106K160AC, 10 uF 1206 50 V X7R, biased at 12-16.8 V
+*   C6    = C2012X7R1A106K125AC, 10 uF 0805 10 V X7R, biased at 3.2 V
+C4   VOUT GND {10u*CDERATE}  Rser=5m
+C9   VOUT GND {10u*CDERATE}  Rser=5m
+C6   V3V3 GND {10u*CDERATE3} Rser=10m
+C5   V3V3 GND 100n Rser=30m
+C8   V3V3 GND 100n Rser=30m
+
+* --- D3 MBR0540 negative clamp on the output -----------------------------
+D3   GND VOUT MBR0540
+
+* --- J3 XT60PW-F output to Osiris ----------------------------------------
+* Contact resistance is carried on the top-level harness model so the
+* VOUT node here stays the schematic node. See BUILD_NOTES.md.
+
+* --- J2 JST-GH I2C connector ---------------------------------------------
+* J2.2 = SCL, J2.3 = SDA, J2.4 = GND, J2.1 UNCONNECTED in the schematic.
+* No bus pull-ups exist on the PDB; SCL/SDA are left high-Z here.
+RSCL SCL GND 100Meg
+RSDA SDA GND 100Meg
+
+* --- Testpoints TP1..TP7 : pad-only, no electrical effect ----------------
+* TP1 /VBAT_FUSED  TP2 /PDB_PROTECTED  TP3 GND  TP4 /PDB_VOUT
+* TP5 /PDB_3V3     TP6 /INA_ALERT_N    TP7 /PDB_FAULT_N
+
+.ends PDB_AP2

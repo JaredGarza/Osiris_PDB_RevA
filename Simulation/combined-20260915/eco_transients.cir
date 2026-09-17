@@ -1,0 +1,26 @@
+* Reversed hot-plug, charged-output reversal, loss of input, and restart.
+* 0.2/2/20 uH source/harness inductance sensitivity; 20 mOhm source.
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc pdb\pdb_eco.lib
+.step param LH list 200n 2u 20u
+VBAT SRC 0 PWL(0 0 10u -25 50m -25 50.01m 16.8 150m 16.8 150.01m -25 250m -25 250.01m 16.8 350m 16.8 350.01m 0 400m 0 400.01m 16.8 600m 16.8)
+RSRC SRC L_IN 20m
+LSRC L_IN VIN {LH} Rser=1m
+XPDB VIN VOUT V3V3 GP GF COMMON FAULT ALERT SCL SDA 0 PDB_CURRENT
+RLOAD VOUT 0 6.72
+CLOAD VOUT 0 220u Rser=20m
+.tran 0 600m 0 5u
+.options method=gear reltol=0.003 cshunt=10p
+.meas TRAN INP_MIN MIN V(XPDB:INA_IN_P)
+.meas TRAN INN_MIN MIN V(XPDB:INA_IN_N)
+.meas TRAN VBUS_MIN MIN V(VOUT)
+.meas TRAN U1_VIN_MIN MIN V(XPDB:VBAT_FUSED)
+.meas TRAN U1_VIN_MAX MAX V(XPDB:VBAT_FUSED)
+.meas TRAN Q1_VDS MAX ABS(V(XPDB:VBAT_FUSED,COMMON))
+.meas TRAN Q2_VDS MAX ABS(V(XPDB:PDB_PROTECTED,COMMON))
+.meas TRAN VGS_MAX MAX ABS(V(GF,COMMON))
+.meas TRAN V3V3_MAX MAX V(V3V3)
+.meas TRAN VOUT_FINAL AVG V(VOUT) FROM 550m TO 595m
+.end

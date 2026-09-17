@@ -1,0 +1,23 @@
+* Can R14 alone restore hysteresis while keeping the current CAD's 5 mOhm
+* shunt and 22 n gate cap (i.e. keeping the startup-margin improvement)?
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc pdb\pdb_now.lib
+
+.step param R14V list 22Meg 10Meg 6.8Meg 4.7Meg 3.3Meg
+VBAT VIN 0 PWL(0 0 11 22 22 0)
+XPDB VIN VOUT V3V3 GP GF COMMON FAULT ALERT SCL SDA 0 PDB_NOW
++ PARAMS: RHV_GP={R14V}
+RLOAD VOUT 0 100
+
+.tran 0 22 0 2m
+.options method=gear reltol=0.003
+.meas TRAN t_on   WHEN V(VOUT)=5 RISE=1
+.meas TRAN UV_ON  FIND V(VIN) AT=t_on
+.meas TRAN t_off  WHEN V(VOUT)=5 FALL=2
+.meas TRAN UV_OFF FIND V(VIN) AT=t_off
+.meas TRAN t_ovt  WHEN V(VOUT)=5 FALL=1
+.meas TRAN OV_TRIP FIND V(VIN) AT=t_ovt
+.meas TRAN extra  WHEN V(VOUT)=5 FALL=3
+.end

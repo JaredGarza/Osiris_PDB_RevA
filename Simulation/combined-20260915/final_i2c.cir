@@ -1,0 +1,16 @@
+* Passive I2C rise-time screen using actual Osiris R74/R75=12k.
+* PDB R17/R18 are DNP. This is not an INA228/STM32 protocol model.
+.step param RP list 11304 12696
+VDD VHOST 0 3.6
+RPULL VHOST SDA {RP}
+CBUS SDA 0 90p
+SDRAIN SDA 0 DRIVE 0 OD
+VDRIVE DRIVE 0 PULSE(1 0 5u 1n 1n 5u 10u)
+.model OD SW(Ron=10 Roff=1G Vt=.5 Vh=.1)
+.tran 0 20u 0 5n
+.meas TRAN RISE_TIME TRIG V(SDA) VAL=1.08 RISE=1 TARG V(SDA) VAL=2.52 RISE=1
+.meas TRAN LOW_LEVEL MAX V(SDA) FROM 1u TO 4u
+.meas TRAN HIGH_LEVEL MIN V(SDA) FROM 8u TO 9u
+.meas TRAN SINK_CURRENT MAX ABS(I(RPULL))
+.save V(SDA) I(RPULL)
+.end

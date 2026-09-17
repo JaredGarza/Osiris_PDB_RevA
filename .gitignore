@@ -46,3 +46,6 @@ Simulation/models/STARTUP.cir
 __pycache__/
 *.pyc
 *.xlsx.inspect.ndjson
+
+# Local simulation review tooling dependency junction
+Simulation/combined-20260915/audit/node_modules/

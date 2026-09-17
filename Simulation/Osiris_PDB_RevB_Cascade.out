@@ -1,0 +1,148 @@
+
+**** 09/15/26 17:19:05 ***** PSpice 25.1.0 (18 July 2026) ***** ID# 0 ********
+
+ * Osiris cascade screening. Not hardware qualification.
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+* 7W Jetson target; total load is a planning allowance, not measured.
+* F1 cold resistance only; I2t measured, fuse opening NOT modeled.
+* TVS piecewise model and SiR870ADP MOSFET stand-ins: no SOA certification.
+.step param CASE list 1 2 3 4 5 6 7 8
+* 1 nominal; 2/3 slower U21; 4 low battery; 5 full pack; 6 high impedance; 7/8 cap corners
+.param VBAT=table(CASE,1,14.8,2,14.8,3,14.8,4,12,5,16.8,6,12,7,16.8,8,16.8)
+------------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'table' to double value. Token can be a constant or expression
+.param RBATT=table(CASE,1,.02,5,.02,6,.2,7,.02,8,.02)
+-------------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'table' to double value. Token can be a constant or expression
+.param RCBL=table(CASE,1,.006,5,.006,6,.05,7,.006,8,.006)
+------------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'table' to double value. Token can be a constant or expression
+.param CSCALE=table(CASE,1,1,6,1,7,.5,8,1.2)
+--------------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'table' to double value. Token can be a constant or expression
+.param LCBL=200n CPDB=21u*CSCALE CVIN=110u*CSCALE PLOAD=22.97
+.param CDVDT=table(CASE,1,0,2,1.8n,3,3.3n,4,0,8,0)
+-------------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'table' to double value. Token can be a constant or expression
+.param SR=table(CDVDT,0,28100,1.8n,1090,3.3n,610)
+----------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'table' to double value. Token can be a constant or expression
+.param TD=table(CDVDT,0,100u,1.8n,1.32m,3.3n,2.35m)
+----------$
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'table' to double value. Token can be a constant or expression
+V1 VSRC 0 PWL(0 -16.8 20m -16.8 21m 0 50m 0 51m {VBAT}
++ 400m {VBAT} 410m 19.5 500m 19.5 510m {VBAT}
++ 800m {VBAT} 810m 9 900m 9 910m {VBAT} 2.3 {VBAT})
+RBATT VSRC RAW {RBATT}
+RF1 RAW IN 23.48m
+BTVS IN 0 I=sgn(V(IN))*max(0,(abs(V(IN))-28.1)/1.05)
+----------------$
+ERROR(ORPSIM-16147): Invalid parameter
+CTVS IN 0 100p
+R1 IN UV 2Meg
+R2 UV OV 43.2k
+R3 OV 0 56.2k
+R6 IN SHDN 680k
+R7 SHDN 0 200k
+M1 IN GF COMMON COMMON SiR870ADP
+M2 PROT GF COMMON COMMON SiR870ADP
+R4 GP GF 22k
+C1 GP 0 5.6n
+D2 GF GP DBYP
+.model DBYP D(Is=1u N=1.1 Rs=.15 Cjo=40p Bv=40)
+R5 PROT PDBOUT 5m
+C3 RETRY 0 100n
+RFLT IN FAULT 100k
+X1 IN UV OV RETRY 0 SHDN FAULT PDBOUT PROT GP LTC4368-1
+* C9 10u + restored C4 10u + C2 1u; U3 fed from protected output.
+D3 0 PDBOUT DBYP
+CPDB PDBOUT 0 {CPDB} Rser=20m
+---------------------$
+ERROR(ORPSIM-16015): Unknown parameter.
+BAUX PDBOUT 0 I=650u*limit(V(PDBOUT)/3,0,1)
+---------------------------$
+ERROR(ORPSIM-16147): Invalid parameter
+LCBL PDBOUT NCABLE {LCBL} Rser=1m
+--------------------------$
+ERROR(ORPSIM-16015): Unknown parameter.
+RCBL NCABLE VBATIN {RCBL}
+R55 VBATIN VBATOUT .25m
+R58 VBATOUT NUV 470k
+R61 NUV NX1 24k
+R65 NX1 NX2 24k
+R68 NX2 NOV 12k
+R70 NOV 0 24k
+X21 VBATOUT OSVIN NUV NOV NEN NRAMP U21_SCREEN PARAMS: SR={SR} TD={TD}
+CVIN OSVIN 0 {CVIN} Rser=20m
+--------------------$
+ERROR(ORPSIM-16015): Unknown parameter.
+* Approximate buck UVLO, followed by 20ms load ramp.
+VLOG ONE 0 1
+SBUCK ONE LOADON OSVIN 0 SWBUCK
+RLOADON LOADON 0 1k
+.model SWBUCK SW(Ron=1m Roff=1G Vt=3.3 Vh=.2)
+RLOADRAMP LOADON LOADRAMP 20k
+CLOADRAMP LOADRAMP 0 1u
+BLOAD OSVIN 0 I={PLOAD}*V(LOADRAMP)*limit(V(OSVIN)/3.1,0,1)/max(V(OSVIN),3.1)
+----------------$
+ERROR(ORPSIM-16407): Missing model
+SFAULT PDBOUT 0 FCTRL 0 SFAULTMOD
+VFAULT FCTRL 0 PULSE(0 1 1.2 1u 1u 100m 10)
+.model SFAULTMOD SW(Ron=50m Roff=1G Vt=.5 Vh=.1)
+.tran 0 2.3 0 20u
+.options method=gear reltol=.003
+.save V(IN) V(PDBOUT) V(OSVIN) V(GP) V(GF) V(COMMON) V(FAULT) V(RETRY) V(NEN) I(R5) I(RF1) I(R55)
+------------$
+ERROR(ORPSIM-16283): Invalid analysis type
+.meas TRAN Vreverse MIN V(PDBOUT) FROM 0 TO .019
+.meas TRAN Voff_ov MAX V(OSVIN) FROM .48 TO .50
+.meas TRAN Voff_uv MAX V(OSVIN) FROM .88 TO .90
+.meas TRAN Ipk_start MAX I(R5) FROM .05 TO .25
+.meas TRAN Vsteady AVG V(OSVIN) FROM .3 TO .39
+.meas TRAN Nen_settled MIN V(NEN) FROM .3 TO .39
+.meas TRAN Vpost_ov AVG V(OSVIN) FROM .65 TO .75
+.meas TRAN Vpost_uv AVG V(OSVIN) FROM 1.1 TO 1.18
+.meas TRAN Ipk_short MAX I(R5) FROM 1.2 TO 1.3
+.meas TRAN Fuse_I2t INTEG I(RF1)*I(RF1) FROM 1.2 TO 1.3
+
+ERROR(ORPSIM-16152): Invalid number: Error while converting token 'RF1' to double value. Token can be a constant or expression
+
+ERROR(ORPSIM-16634): Measurement results cannot be calculated because the .MEASURE command 'Fuse_I2t' is incomplete. Refer to the command documentation for the correct syntax.
+.meas TRAN Vrecovered AVG V(OSVIN) FROM 2.1 TO 2.25
+.lib LTC4368-1.sub
+
+ERROR(ORPSIM-16276): Simulation cannot be completed because library LTC4368-1.sub 
+is not available.
+.lib C:\Users\jared\AppData\Local\LTspice\lib\cmp\standard.mos
+.include models/U21_SCREEN.lib
+
+**** INCLUDING U21_SCREEN.lib ****
+* Engineering surrogate, not a TI model. Typical SR/TD, no thermal or fast-trip.
+.subckt U21_SCREEN IN OUT UV OV EN RAMP params: SR=28100 TD=100u RON=.0284
+VONE ONE 0 1
+SUV ONE UVOK UV 0 SHYST
+RUV UVOK 0 1k
+SOV ONE OVBAD OV 0 SHYST
+ROV OVBAD 0 1k
+.model SHYST SW(Ron=1m Roff=1G Vt=1.145 Vh=.055)
+BEN NOW 0 V=V(UVOK)*(1-V(OVBAD))
+RDELAY NOW EN {TD/0.693147/1u}
+CDELAY EN 0 1u
+BRAMP 0 RAMP I=limit((V(EN)-.45)/.1,0,1)*{SR}*1u*tanh((max(V(IN),0)+.1-V(RAMP))/.05)-(1-limit((V(EN)-.45)/.1,0,1))*V(RAMP)/100
+CRAMP RAMP 0 1u
+RDC RAMP 0 1G
+BPASS IN OUT I=limit((V(EN)-.45)/.1,0,1)*max(0,min((V(IN)-V(OUT))/{RON},100*(V(RAMP)-V(OUT))))
+RLEAK IN OUT 1G
+.ends U21_SCREEN
+
+**** RESUMING Osiris_PDB_RevB_Cascade.cir ****
+.end
+

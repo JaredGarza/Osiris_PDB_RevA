@@ -1,0 +1,78 @@
+* ============================================================================
+* COMBINED PDB + OSIRIS Rev A -- undervoltage threshold stability
+*
+* HYPOTHESIS UNDER TEST
+* The PDB's UV comparator has ~506 mV of hysteresis referred to the input
+* (25 mV pin hysteresis x the 21.1 divider ratio). When the PDB disconnects,
+* the Osiris load drops to almost nothing, so the battery's internal
+* resistance stops dropping volts and VBIN BOUNCES UP by roughly I*RBATT.
+* If that bounce exceeds the hysteresis, the part turns back on, the load
+* returns, the rail sags, and it turns off again -- a relaxation oscillation
+* that power-cycles the flight computer instead of shutting it down cleanly.
+*
+* Predicted bounce at the ~2.6 A trip current:
+*    20 mOhm ->  52 mV  (well inside 506 mV -> stable)
+*   200 mOhm -> 520 mV  (marginal, right at the hysteresis)
+*   500 mOhm -> 1.30 V  (far exceeds -> should oscillate)
+*
+* Pack is held FLAT at 10.9 V, just below the healthy-pack trip point, so
+* any oscillation is self-sustained and not an artifact of a moving ramp.
+* ============================================================================
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LTC4368-1.sub
+.lib C:\Users\jared\AppData\Local\LTspice\lib\sub\LT3010.lib
+.inc models\pdb_devices.lib
+.inc ..\models\U21_SCREEN.lib
+.inc pdb\pdb_ap2.lib
+.inc osiris\osiris_reva.lib
+
+* REVISED after the first run refuted the naive hypothesis.
+* The bounce is CAPPED at the pack's open-circuit voltage, so a flat pack
+* below the 11.16 V restart threshold simply latches off -- correct
+* behaviour, no oscillation. A chatter window can only exist where BOTH:
+*     Voc > 11.16 V            (high enough to turn back on)
+*     Voc - I*RBATT < 10.56 V  (sags below dropout once loaded)
+* At ~2.5 A that predicts NO window for 20 mOhm or 200 mOhm, and a window
+* of roughly 11.16 - 11.81 V for a 500 mOhm pack. Sweeping through it.
+.param RB = 500m
+.step param VPK list 10.9 11.2 11.4 11.6 11.8 12.2
+
+VBAT VSRC 0 PWL(0 0 50m 14.8 1.0 14.8 1.5 {VPK} 6.0 {VPK})
+RBATT VSRC VBIN {RB}
+
+XPDB VBIN PDBOUT PDB3V3 GP GF COMMON FAULTN ALERTN SCL SDA 0 PDB_AP2
+LCBL PDBOUT NCBL 200n Rser=1m
+RCBL NCBL   OSIN 6m
+XOS  OSIN NAUX V5 V3 V5PROT VJET 0 OSIRIS_REVA
+RAUX NAUX 0 1Meg
+
+.tran 0 6 0 100u
+.options method=gear reltol=0.003
+
+* Oscillation detector.
+* FIRST ATTEMPT keyed this to PDBOUT crossing 5 V and wrongly reported zero:
+* in the oscillating regime the rail never climbs that high, so the detector
+* sat flat while the system was in fact relaxation-oscillating. Key it to
+* the MOSFET gate instead -- V(GF)-V(COMMON) is the unambiguous statement
+* of whether the pass element is being driven, whatever the rail does.
+* SECOND correction: the gate detector also read zero, because each restart
+* attempt aborts before the gate reaches 2 V. Average input current is only
+* ~5 mA against 1.6-2.6 A peaks, so these are brief, widely spaced events --
+* the LTC4368 AUTO-RETRY timer, not comparator chatter. Detect on the output
+* rail itself, which demonstrably swings 8.3 V peak-to-peak.
+* Time between the first two restart attempts = the retry period
+* Peak-to-peak swing is the model-independent evidence of oscillation
+.meas TRAN VBIN_PP  PP V(VBIN)   FROM 2.5 TO 6.0
+.meas TRAN VOSIN_PP PP V(OSIN)   FROM 2.5 TO 6.0
+.meas TRAN IIN_OSC  MAX ABS(I(RBATT)) FROM 2.5 TO 6.0
+.meas TRAN IIN_AVG  AVG ABS(I(RBATT)) FROM 2.5 TO 6.0
+
+* Bounce magnitude: how far VBIN springs back once the load is released
+.meas TRAN VBIN_HI  MAX V(VBIN)   FROM 2.5 TO 6.0
+.meas TRAN VBIN_LO  MIN V(VBIN)   FROM 2.5 TO 6.0
+.meas TRAN VOSIN_HI MAX V(OSIN)   FROM 2.5 TO 6.0
+.meas TRAN VOSIN_LO MIN V(OSIN)   FROM 2.5 TO 6.0
+.meas TRAN V5_HI    MAX V(V5)     FROM 2.5 TO 6.0
+.meas TRAN V5_LO    MIN V(V5)     FROM 2.5 TO 6.0
+.meas TRAN V3_HI    MAX V(V3)     FROM 2.5 TO 6.0
+.meas TRAN V3_LO    MIN V(V3)     FROM 2.5 TO 6.0
+.end
