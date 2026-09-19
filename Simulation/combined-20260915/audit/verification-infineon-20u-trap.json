@@ -1,0 +1,279 @@
+{
+  "timestamp": "2026-09-18T15:50:37-0500",
+  "scope": "Model screening, not hardware qualification",
+  "sha256": {
+    "C:\\Users\\jared\\AppData\\Local\\LTspice\\lib\\sub\\LT3010.lib": "ba6628a27c8983e46719503d214493e6616c6f76d047bcf673338684e5647f09",
+    "C:\\Users\\jared\\AppData\\Local\\LTspice\\lib\\sub\\LTC4359.sub": "d3863307dafbba31512b7923258b7cab20d3ccd6ac455827852fdc66770b1787",
+    "C:\\Users\\jared\\AppData\\Local\\LTspice\\lib\\sub\\LTC4368-1.sub": "e0306198293d852be3f49d83ae2d245f432a31b651a0c1373330acca82f853b8",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\audit\\pdb_release-before-infineon.lib": "1985b23abe050a88e80728fd95fb7ad3369463f094f62e3494d5595dac0a35fa",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\models\\pdb_devices.lib": "65649a15f884438df463e1368060901f1eb11b166b43ccd4125ad8150b36109d",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\models\\pdb_screen17_devices.lib": "942970c0c302d76781579730aaa98231d8b427ce0144b6ea90e79d29486b0ba3",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\osiris\\osiris_eco.lib": "a733521144dc99a5c348062ee222678cae242b750ae401efbc1fc92a7b292e6c",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\osiris\\osiris_reva.lib": "772c3600c894da54f5987849d1f77e9de8b530c9ed891e3415d29a6c6c6608c5",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\osiris\\osiris_screen17_nominal.lib": "73967446e53a109441c906bed5ec0cc012ef49e0c9607dd95a1e93fe5ef843c9",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_12m.lib": "c86431dcf30ac0d32f2c5727bf140a9c20d6dd38e7168caede5451810228a5fe",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_ap2.lib": "f13ce5b2ff7de6087f4186fec7d7e533d5c1837ffb393afae209fd899d34f8a7",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_ap2_revb.lib": "acca19aba72db16d851e4654006fab7f3f1c9adc655ee8174d5d179160290305",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_closure.lib": "38a7136268c2b354c4fd4252406386d39364f43e39ac863c784e0d3fc1a4a95d",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_coordinated.lib": "70066ea3dedfbff2cfa92a629761f0773c914c899c1862423ede15b1a30391bb",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_current.lib": "cc088843a4999e847b2775a7edf93d4a770024674795a0e60db7d7d925e0f7ba",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_damped.lib": "9d50326a3d2635225373981f8c59e8c084a47796f3c05fdbea15bbb38d187fac",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_eco.lib": "c01593138003d3f13aafc9eb268d24d01f3d4b8763ff74fbd45718a66b98253f",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_filter.lib": "7661e36c3c16a2acea164a67bad5c885b00ad8ff3bba229829200ba23cd11478",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_final.lib": "41c5bf704c8b61c1708dd0b5ee0bc71596e1fd8127875f282578d1ff337a98e2",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_gate470.lib": "68953b8a9e8cb13ed9534c70477b4db1e9cf6bd385d4c0ca9dc257d1658c4cc9",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_gate_hold.lib": "4f2bb693dd4be6cbf88643bd36e50edd1d1e1e1e2bbaf2da9600b3f84032bb3f",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_gatefix.lib": "09b54fae4b91560975a5dddd24ee1940ba2624d26082498f4d38880a31a511d5",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hva.lib": "7dedb270db2226936b06d630067a2232fecf6a004a6803c0a10d3284c33b10a9",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hvb.lib": "c78fdbb5670308a6a3b46fabd7dff6901de714afb58bd91aaba7da6b2854d8b7",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hvc.lib": "4366b06cc51396f6a33256c2bbe614a24c1671b715a2ba4b940c27d3b09ecd3a",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hvd.lib": "58af6666cc222d3a7c3ae1b6312bb16e705d1942ba226aa9f698cdbd03937f4b",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hve.lib": "9ff767b16e0debe314c0df36c9dc758df163da2ec8eec5a6bd5d9b40e1a9508a",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hvf.lib": "35442602709381335cd101e115b6276a7128c17855b4a73de69d318c66d66266",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_ideal.lib": "984c0d5c711b6526ccc6500d3b5c92dcbbeec2408a04a0ce51b614ec6b8d799f",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_large_tvs.lib": "77d104fc6c891a1a365692ee04cc504c2e7c03e9102fc912edab549df4a0fb7a",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_now.lib": "eee07c946460d0f8b38c124b146ac2237a24e86fb60ffead12f3b9a49462cfca",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_only_1u.lib": "c6383a9406d4179363f6514f212eb587a2120e6ea6d39679b3def1749c8bfdf8",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_only_220n.lib": "365ba7f44761e72c6cd1a039248a0d4be1390e8f2cdc4d2b0a7fd93cc677ec14",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_only_470n.lib": "d0815e97c7c424162674ee47aab86a68b0aaf013edf9e1c920b0f1752b0e611b",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_only_5m.lib": "9ee2c4f37c2c4007be3b4798a4a7b216d6b0df666e068655d72e2c2643f6c634",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_passive.lib": "5b966524f78c9d6983ebca313eacdf2ae260ca7d9ae235c429187d050297cb21",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_release.lib": "6e1ff27756268092f25ef2ca098f916519e6aac442675ae9b3f816b77668a45e",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_screen17.lib": "570f87284f5f4778667c69f9fca681474b25e6e6b9c4b8146090cb07aa9fdb05",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_selected.lib": "2827560bc93078eea67196e58b43687c877fb7b0d91500f952762bdeed60b13f",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_slowgate.lib": "72bb1119c575f79dc6536eb58ebfaa9f20f02387996ce5737cf32fe468b54911",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_tvs.lib": "013e7e1742095fe691518bbc6489b747b873179853ff5dd674bdd92686fa7cda",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\release_transients_20u_trap.cir": "98428ca0351e9eec088ba53d5a25bd6d214e63787cbaf3fef7657c47e6ea9601",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\models\\U21_SCREEN.lib": "84c155a3457211050aa5335768d3043a193ac075e53d968be6880183b05c79af",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\vendor-models\\infineon-60v\\03_OptiMOS_OptiMOS5\\OptiMOS_OptiMOS5_60V_LTSpice.lib": "6309f9b70959f636ee3cea927251da7f6cc7f5d73b444a1a3c4b2489e470917e"
+  },
+  "results": [
+    {
+      "deck": "release_transients_20u_trap.cir",
+      "status": "FAIL",
+      "seconds": 180.25,
+      "errors": [
+        "timeout after 180s",
+        "missing completed fresh log",
+        "INP_MIN: expected 1 finite values, got 0",
+        "INN_MIN: expected 1 finite values, got 0",
+        "VBUS_MIN: expected 1 finite values, got 0",
+        "U1_VIN_MIN: expected 1 finite values, got 0",
+        "U1_VIN_MAX: expected 1 finite values, got 0",
+        "U1_VOUT_MIN: expected 1 finite values, got 0",
+        "U1_VOUT_MAX: expected 1 finite values, got 0",
+        "U1_SENSE_MIN: expected 1 finite values, got 0",
+        "U1_SENSE_MAX: expected 1 finite values, got 0",
+        "U1_VOUT_SENSE_ABS: expected 1 finite values, got 0",
+        "U1_VIN_VOUT_MIN: expected 1 finite values, got 0",
+        "U1_VIN_VOUT_MAX: expected 1 finite values, got 0",
+        "U1_GATE_MIN: expected 1 finite values, got 0",
+        "U1_GATE_VIN_MAX: expected 1 finite values, got 0",
+        "U1_RETRY_MIN: expected 1 finite values, got 0",
+        "U1_RETRY_MAX: expected 1 finite values, got 0",
+        "U1_UV_MIN: expected 1 finite values, got 0",
+        "U1_OV_MIN: expected 1 finite values, got 0",
+        "U1_OV_MAX: expected 1 finite values, got 0",
+        "U1_SHDN_MIN: expected 1 finite values, got 0",
+        "BUS_MIN: expected 1 finite values, got 0",
+        "Q1_VDS: expected 1 finite values, got 0",
+        "Q2_VDS: expected 1 finite values, got 0",
+        "VGS_MAX: expected 1 finite values, got 0",
+        "V3V3_MAX: expected 1 finite values, got 0",
+        "VOUT_FINAL: expected 1 finite values, got 0",
+        "Q3_VDS: expected 1 finite values, got 0",
+        "Q3_VGS: expected 1 finite values, got 0",
+        "U5_IN_MIN: expected 1 finite values, got 0",
+        "U5_IN_MAX: expected 1 finite values, got 0",
+        "U5_OUT_MIN: expected 1 finite values, got 0",
+        "U5_OUT_MAX: expected 1 finite values, got 0",
+        "INP_MAX: expected 1 finite values, got 0",
+        "INN_MAX: expected 1 finite values, got 0",
+        "VBUS_MAX: expected 1 finite values, got 0",
+        "U5_GS_MIN: expected 1 finite values, got 0",
+        "U5_GS_MAX: expected 1 finite values, got 0",
+        "C11_STRESS: expected 1 finite values, got 0",
+        "C16_STRESS: expected 1 finite values, got 0",
+        "INA_DIFF: expected 1 finite values, got 0",
+        "u1_vin_min: [] outside [-40, 100]",
+        "u1_vin_max: [] outside [-40, 100]",
+        "u1_vout_min: [] outside [-10, 80]",
+        "u1_vout_max: [] outside [-10, 80]",
+        "u1_sense_min: [] outside [-10, 80]",
+        "u1_sense_max: [] outside [-10, 80]",
+        "u1_vout_sense_abs: [] outside [0, 10]",
+        "u1_vin_vout_min: [] outside [-60, 100]",
+        "u1_vin_vout_max: [] outside [-60, 100]",
+        "u1_gate_min: [] outside [-40, 100]",
+        "u1_gate_vin_max: [] outside [-40, 14]",
+        "u1_retry_min: [] outside [-0.3, 5]",
+        "u1_retry_max: [] outside [-0.3, 5]",
+        "q1_vds: [] outside [0, 60]",
+        "q2_vds: [] outside [0, 60]",
+        "vgs_max: [] outside [0, 20]",
+        "inp_min: [] outside [-0.3, 85]",
+        "inn_min: [] outside [-0.3, 85]",
+        "vbus_min: [] outside [-0.3, 85]",
+        "v3v3_max: [] outside [0, 3.6]",
+        "vout_final: [] outside [12, 16.8]",
+        "inp_max: [] outside [-0.3, 85]",
+        "inn_max: [] outside [-0.3, 85]",
+        "vbus_max: [] outside [-0.3, 85]",
+        "q3_vds: [] outside [0, 100]",
+        "q3_vgs: [] outside [0, 20]",
+        "u5_in_min: [] outside [-40, 100]",
+        "u5_in_max: [] outside [-40, 100]",
+        "u5_out_min: [] outside [-0.3, 100]",
+        "u5_out_max: [] outside [-0.3, 100]",
+        "u5_gs_min: [] outside [-1, 20]",
+        "u5_gs_max: [] outside [-1, 20]",
+        "c11_stress: [] outside [0, 63]",
+        "c16_stress: [] outside [0, 63]",
+        "ina_diff: [] outside [0, 40]"
+      ],
+      "measurements": {},
+      "limits": {
+        "u1_vin_min": [
+          -40,
+          100
+        ],
+        "u1_vin_max": [
+          -40,
+          100
+        ],
+        "u1_vout_min": [
+          -10,
+          80
+        ],
+        "u1_vout_max": [
+          -10,
+          80
+        ],
+        "u1_sense_min": [
+          -10,
+          80
+        ],
+        "u1_sense_max": [
+          -10,
+          80
+        ],
+        "u1_vout_sense_abs": [
+          0,
+          10
+        ],
+        "u1_vin_vout_min": [
+          -60,
+          100
+        ],
+        "u1_vin_vout_max": [
+          -60,
+          100
+        ],
+        "u1_gate_min": [
+          -40,
+          100
+        ],
+        "u1_gate_vin_max": [
+          -40,
+          14
+        ],
+        "u1_retry_min": [
+          -0.3,
+          5
+        ],
+        "u1_retry_max": [
+          -0.3,
+          5
+        ],
+        "q1_vds": [
+          0,
+          60
+        ],
+        "q2_vds": [
+          0,
+          60
+        ],
+        "vgs_max": [
+          0,
+          20
+        ],
+        "inp_min": [
+          -0.3,
+          85
+        ],
+        "inn_min": [
+          -0.3,
+          85
+        ],
+        "vbus_min": [
+          -0.3,
+          85
+        ],
+        "v3v3_max": [
+          0,
+          3.6
+        ],
+        "vout_final": [
+          12,
+          16.8
+        ],
+        "inp_max": [
+          -0.3,
+          85
+        ],
+        "inn_max": [
+          -0.3,
+          85
+        ],
+        "vbus_max": [
+          -0.3,
+          85
+        ],
+        "q3_vds": [
+          0,
+          100
+        ],
+        "q3_vgs": [
+          0,
+          20
+        ],
+        "u5_in_min": [
+          -40,
+          100
+        ],
+        "u5_in_max": [
+          -40,
+          100
+        ],
+        "u5_out_min": [
+          -0.3,
+          100
+        ],
+        "u5_out_max": [
+          -0.3,
+          100
+        ],
+        "u5_gs_min": [
+          -1,
+          20
+        ],
+        "u5_gs_max": [
+          -1,
+          20
+        ],
+        "c11_stress": [
+          0,
+          63
+        ],
+        "c16_stress": [
+          0,
+          63
+        ],
+        "ina_diff": [
+          0,
+          40
+        ]
+      }
+    }
+  ]
+}

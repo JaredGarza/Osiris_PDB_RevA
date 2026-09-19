@@ -1,0 +1,584 @@
+Application Note AN 2014-02
+V2.0 Feb. 2014
+
+
+
+
+       Introduction to Infineon’s Simulation Models
+       Power MOSFETs
+
+          IFAT PMM
+          F. Stueckler
+          G. Noebauer
+          K. Bueyuektas
+                                                                                     Application Note AN 2014-02
+Simulation models for Infineon Power MOSFET
+                                                                                     V2.0 Feb. 2014
+
+
+
+
+ Edition 2013-09-16
+ Published by
+ Infineon Technologies Austria AG
+ 9500 Villach, Austria
+ © Infineon Technologies Austria AG 2011.
+ All Rights Reserved.
+
+ Attention please!
+
+ THE INFORMATION GIVEN IN THIS APPLICATION NOTE IS GIVEN AS A HINT FOR THE IMPLEMEN-
+ TATION OF THE INFINEON TECHNOLOGIES COMPONENT ONLY AND SHALL NOT BE REGARDED
+ AS ANY DESCRIPTION OR WARRANTY OF A CERTAIN FUNCTIONALITY, CONDITION OR QUALITY
+ OF THE INFINEON TECHNOLOGIES COMPONENT. THE RECIPIENT OF THIS APPLICATION NOTE
+ MUST VERIFY ANY FUNCTION DESCRIBED HEREIN IN THE REAL APPLICATION. INFINEON
+ TECHNOLOGIES HEREBY DISCLAIMS ANY AND ALL WARRANTIES AND LIABILITIES OF ANY KIND
+ (INCLUDING WITHOUT LIMITATION WARRANTIES OF NON-INFRINGEMENT OF INTELLECTUAL
+ PROPERTY RIGHTS OF ANY THIRD PARTY) WITH RESPECT TO ANY AND ALL INFORMATION
+ GIVEN IN THIS APPLICATION NOTE.
+
+ Information
+ For further information on technology, delivery terms and conditions and prices please contact your
+ nearest Infineon Technologies Office (www.infineon.com).
+
+
+ Warnings
+ Due to technical requirements components may contain dangerous substances. For information on the
+ types in question please contact your nearest Infineon Technologies Office. Infineon Technologies
+ Components may only be used in life-support devices or systems with the express written approval of
+ Infineon Technologies, if a failure of such components can reasonably be expected to cause the failure of
+ that life-support device or system, or to affect the safety or effectiveness of that device or system. Life
+ support devices or systems are intended to be implanted in the human body, or to support and/or maintain
+ and sustain and/or protect human life. If they fail, it is reasonable to assume that the health of the user or
+ other persons may be endangered.
+
+
+ AN 2014-02
+ Revision History: 14-02-07, V2.0
+ Previous Version: 05-04-20, V1.0
+ Subjects: Update on Infineon Power MOSFET and Infineon format style
+ Authors: Franz Stueckler (IFAT PMM APS SE AC), Kevni Bueyuektas (IFAG PMM DPC HVM) and
+ Gerhard Noebauer (IFAT PMM DPC LVM PD)
+
+ We Listen to Your Comments
+
+
+ Any information within this document that you feel is wrong, unclear or missing at all? Your feedback will
+ help us to continuously improve the quality of this document. Please send your proposal (including a
+ reference to this document) to: Franz.Stueckler@infineon.com or Kevni.Bueyuektas@infineon.com
+
+
+
+
+                                                      2
+                                                                                                                                  Application Note AN 2014-02
+Simulation models for Infineon Power MOSFET
+                                                                                                                                  V2.0 Feb. 2014
+
+
+
+
+Table of contents
+
+
+
+1 Introduction..................................................................................................................................................4
+2 Model Library Files ......................................................................................................................................4
+
+     2.1       File Types...........................................................................................................................................4
+                                                                   TM
+     2.2       Library implementation in SIMetrix                       .................................................................................................5
+3 Definition of Modelling Levels....................................................................................................................6
+
+     3.1       Infineon Level 0 (basic function) ........................................................................................................7
+
+     3.2       Infineon Level 1 (constant temperature) ............................................................................................7
+
+     3.3       Infineon Level 2 (dynamic temperature setting).................................................................................8
+
+     3.4       Infineon Level 3 (electro-thermal calculation) ....................................................................................8
+4 CoolMOS™ models for 4pin devices.........................................................................................................9
+5 Optional parameters for Infineon Power MOSFET models ...................................................................11
+6 Typical simulation parameters.................................................................................................................11
+
+     6.1       For SIMetrix™ ..................................................................................................................................11
+
+     6.2       For OrCAD .......................................................................................................................................12
+7 Modelling contact address .......................................................................................................................12
+
+
+
+
+                                                                                  3
+                                                                                    Application Note AN 2014-02
+Simulation models for Infineon Power MOSFET
+                                                                                    V2.0 Feb. 2014
+
+
+
+
+1 Introduction
+Models provided by Infineon are not warranted by Infineon as fully representing all the specifications and
+operating characteristics of the semiconductor product to which the model relates. The models describe the
+characteristics of typical devices. In all cases, the current data sheet information for a given device is the
+final design guideline and the only actual performance specification.
+Although models can be a useful tool in evaluating device performance, they cannot model exact device
+performance under all conditions, nor are they intended to replace breadboarding for final verification.
+Infineon therefore does not assume any liability arising from their use.
+Infineon reserves the right to change models without prior notice.
+
+
+2 Model Library Files
+                                                                     TM
+The models for Infineon Power MOSFET are evaluated with SIMetrix -PSpice simulator.
+The Infineon Power MOSFET models are tested, verified and provided in PSpice simulation code. All power
+device models are centralized in dedicated library files, according to their voltage class and product
+technology.
+
+
+
+2.1 File Types
+Numerous simulator tools are able to process models programmed in PSpice code. The available model
+library files consist of:
+
+
+ File    Simulator                       Description                                   Support
+         SiMetrix™
+                                                                           All Infineon Power MOSFET
+ .lib    LT-Spice       files comprising the PSpice code
+                                                                           products
+         Multisim
+                                                                           Not provided for latest Infineon
+                        files providing symbols for the models required
+                                                                           Power MOSFET products; The
+                        by the        graphic  user    interface  (GUI)
+                                                                           .slb files can be provided on
+                        ‘Schematics’. (In order to be usable in
+ .slb    OrCAD
+                        evaluation versions of the PSpice/Schematics
+                                                                           request. The .slb files need to be
+                                                                           installed via the menu ‘Options 
+                        system, each symbol library does not contain
+                                                                           Editor Configuration  Library
+                        more than twenty symbols.)
+                                                                           Settings’.
+                        files comprising symbols for the graphical user
+                        interface ‘Capture’ If ‘Schematics’ is used as     Not provided for latest Infineon
+                        GUI, the .lib files must be installed via the      Power MOSFET products; slb
+ .olb    OrCAD
+                        ‘Analysis  Library and Include Files’ menu.       files can be imported to OrCAD
+                        Permanent installation via ‘Add Library*’ is       and converted to olb files.
+                        recommended.
+
+
+Table 2.1: File types
+
+
+The .lib files are available on the following Infineon web page:
+http://www.infineon.com
+Please search under Products  MOSFETs  Power MOSFETs
+
+
+
+
+                                                      4
+                                                                                       Application Note AN 2014-02
+Simulation models for Infineon Power MOSFET
+                                                                                       V2.0 Feb. 2014
+
+
+
+
+                                                   TM
+2.2 Library implementation in SIMetrix
+Before setting up a simulation the model libraries of interest must be integrated in the simulator tool. This
+                                                                                         TM
+section gives a introduction about the installation of the PSpice .lib files in SIMetrix . For the installation of
+the different library files please consider to check the online help of the discrete simulation tool.
+
+                                                             TM
+The implementation of a PSpice library file into SIMetrix is based on using version 7.10 of the simulator.
+The procedure is valid in the same way for former software versions. Figure 1 shows the single steps how
+                                                                                   TM
+the library files can be installed easily to the simulator. After starting SIMetrix it is necessary to open a file
+manager window, entering the path to the library files to be implemented.
+
+Insert the library into the main window by drag and drop. The confirmation dialog informs the user if the
+action was successful and the installation is completed. The tooling allows to install several files at once. For
+this the required libraries have to be marked and shifted to the main window in one action.
+
+
+
+
+                                                    TM
+                                Figure 1: SIMetrix       library implementation
+
+
+
+
+                                                         5
+                                                                                        Application Note AN 2014-02
+Simulation models for Infineon Power MOSFET
+                                                                                        V2.0 Feb. 2014
+
+
+
+
+3 Definition of Modelling Levels
+Infineon provides up to four different types of models for MOSFET devices. Three of them are based on a
+physical temperature-dependent model of the MOSFET structure and the package (so-called ‘Level 1’ till
+‘Level 3’). The fourth is a more empirical model that is less complex, but faster and suitable for other Spice
+variants or simulators that can import Spice-like models (‘Level 0’).
+
+The nomenclature of the models is basically the device name added with a suffix identifying the level:
+
+
+      Suffix         Infineon Level
+_L0                 0
+_L1                 1
+_L2                 2
+_L3 or without      3
+
+
+Table 3.1: Modelling Level Nomenclature
+
+                                                                       TM
+For example, the Level 3 model of the 650V, 45mOhm CoolMOS                  C7 IPP65R045C7 has the part name
+IPP65R045C7_L3.
+
+The table below offers a condense overview on the different levels and there preferred usage.
+
+  Infineon     Terminals            Usage suggestion
+  Level
+  L0           G, D, S              General electrical simulations/ whole application circuits.
+  L1           G, D, S              Transient, switching losses and efficiency analyses. Behavior of device
+                                    over full temperature range.
+  L2           G, D, S, Tj, Tcase   Same as L1 but with individual device temperature. This model is not
+                                    supported because it is covered by L3-model.
+  L3           G, D, S, Tj, Tcase   Self-heating effects, modeling of heat flow including thermal models of
+                                    application.
+
+
+Table 3.2: Usage of Levels
+
+
+
+
+                                                         6
+                                                                                   Application Note AN 2014-02
+Simulation models for Infineon Power MOSFET
+                                                                                   V2.0 Feb. 2014
+
+
+
+
+3.1 Infineon Level 0 (basic function)
+If the simulation focus is very much on speed, then the Level 0 PSpice model is the best choice for most of
+the application simulations. The structure is an equivalent subcircuit basically composed of standard
+elements.
+
+These models can also be used in other Spice-like simulators that do not work with PSpice specific syntax
+like functional statements. The model name of the IPP65R045C7 is IPP65R045C7_L0, i.e. the suffix _L0 is
+used. Infineon´s level 0 model symbol (three pins) is depicted in Figure 2.
+
+
+                                                              D
+
+
+                                       IPP65R045C7_L0
+
+
+                                                   G
+                                                             Q1
+
+                                                              S
+
+
+
+                                     Figure 2: Level 0 model symbol
+
+
+
+3.2 Infineon Level 1 (constant temperature)
+Level 1 models assume a constant device temperature for the entire circuit and during a transient simulation
+(the temperature has to be given in the analysis setup). Furthermore the voltage dependency of the
+capacitances is modeled very accurately. Due to the increased complexity this model takes more computing
+power than level 0.
+
+The temperature of the simulation can be changed in the simulation tool by editing and updating the global
+setting for environment temperature. Infineon´s level 1 model symbol (three pins) is depicted in
+Figure 3.
+
+
+
+
+                                                               D
+
+
+                                      IPP65R045C7_L1
+
+
+                                                  G
+                                                             Q1
+
+                                                               S
+
+                                     Figure 3: Level 1 model symbol
+
+
+
+                                                       7
+                                                                                         Application Note AN 2014-02
+Simulation models for Infineon Power MOSFET
+                                                                                         V2.0 Feb. 2014
+
+
+
+
+3.3 Infineon Level 2 (dynamic temperature setting)
+Level 2 models enable the user to define different temperatures for individual parts in the circuit. These
+temperatures can be changed dynamically during transient computations by connecting a voltage source to
+the Tj (junction temperature) pin. The voltage is converted into degree Celsius. If the Tj pin is not connected,
+a default temperature of 27 °C is used for the computation.
+
+Level 2 models are not available for CoolMOS™ devices, since all features of the Level 2 are completely
+covered by Level 3 model types.
+
+
+
+
+3.4 Infineon Level 3 (electro-thermal calculation)
+In order to be able to compute the self heating dynamically, the electrical model is coupled with a thermal
+model of the device in Level 3 models. To do this, the current power dissipation in the transistor is
+determined permanently, and a current proportional to this power is fed into the thermal equivalent network.
+The voltage at the Tj node then contains the information about the time-dependent junction temperature
+which in turn acts directly on the temperature-dependent electrical model. Infineon´s level 3 model symbol
+(five pins) is depicted in Figure 4.
+
+
+
+                                                            D             Tj
+                             IPP65R045C7_L3
+                                                                          Tcase
+                                          G
+
+
+
+                                                            S
+                                                                                     .
+
+
+                                       Figure 4: Level 3 model symbol
+
+Symbols with 5-pins are used since the Level 3 models have two external thermal nodes:
+    The temperature connections are working as voltage pins. Therefore a potential difference of 1V
+       refers to a temperature difference of 1°C.
+
+       The upper additional connection is Tj, where the user can monitor the junction temperature easily.
+        Usually, this node should not be connected. However, when the computation should start with a
+        device junction temperature different to the thermal equilibrium, connecting Tj with a small capacitor
+        (typically 1pF) to ground and stating an initial value (parameter IC) for the initial potential difference
+        (which is used as a measure for the initial temperature in °C) enables these types of simulations.
+
+       The second thermal pin is Tcase (or, in die models, Tpad). This pin has to be connected. An external
+        resistor-capacitor-network can be added between the Tcase pin and ground potential. The right-hand
+        side terminal of the thermal network has to be connected to a thermal source to define the ambient
+        temperature. (see Figure 5). On the other hand, shorting these pins leads to a network where
+        optimum heat transfer is modeled.
+
+
+                                                        8
+                                                                                                  Application Note AN 2014-02
+Simulation models for Infineon Power MOSFET
+                                                                                                  V2.0 Feb. 2014
+
+
+
+
+                  D                                                                                   D
+                                Tj                                                                                  Tj
+
+
+
+                                Tcase         R1                 R2                                                 Tcase
+    G                                                                                   G
+                                              1                2.5
+                                                                             Vth(t)                                      25
+                                                                                                                         Vth
+                                                          C1
+                  S                                       300m                                        S
+
+
+
+
+                                 Figure 5: Connecting external thermal networks
+The Figure 5 depicts an example for simulation circuit with external heat sink. On the left picture R1 refers to
+the Rth of the interface between heat slug and heat sink. C1 and R2 are parameters from the used heat sink
+with its thermal capacitance (C1) and its Rth to the environment (R2). The Vth-signal describes the
+environment temperature behavior for the simulation.
+On the right picture the heat slug of the package is fixed to 25°C. With such schematic it is possible to
+investigate on device behavior according to datasheet graphs.
+
+
+
+4 CoolMOS™ models for 4pin devices
+                                                                              TM
+Some Infineon Power MOSFET portfolios (for example CoolMOS C7) also include products with separate
+source connection for fast and efficient switching behavior of the MOSFET. These products are featured with
+additional connection for the gate driving ground, called source sense (SS). Please also refer to 4pin
+                1
+application note .
+
+The 4pin models do not include the internal parasitic source inductance (package) as defined in the 3pin
+configuration. This enables a conversion of the model to other simulation systems than PSpice without
+requiring a dedicated symbol.
+
+
+
+
+1                                        TM
+    F. Stueckler, E. Vecino, " CoolMOS        C7 650V Switch in a Kelvin Source Configuration", Infineon Technologies,
+     application note AN2013-05
+
+
+                                                                      9
+                                                                                        Application Note AN 2014-02
+Simulation models for Infineon Power MOSFET
+                                                                                        V2.0 Feb. 2014
+
+
+
+
+                                                                          TM
+                         Figure 6 Schematic symbol of 4pin CoolMOS             device
+
+
+
+For this reason the simulation schematic must be fitted with external an parasitic inductance according to the
+real PCB-layout. The value of this inductance can either be chosen as a first order approach with 1nH per
+mm of trace length, or determined by 3D simulation models like Q3D of the 3D PCB model. In addition to the
+external inductance the internal value to be added depends on the package. For TO247 consider an internal
+                                                             TM
+inductance of 5nH on the source (S) pin. In case of ThinPAK the internal inductance to be added is 1nH.
+
+
+
+
+                             Figure 7 Simulation schematic for 4pin devices
+
+
+
+
+                                                     10
+                                                                                      Application Note AN 2014-02
+Simulation models for Infineon Power MOSFET
+                                                                                      V2.0 Feb. 2014
+
+
+
+
+5 Optional parameters for Infineon Power MOSFET models
+Infineon’s Power MOSFET model parameters are chosen to give the behavior of a typical device. However,
+in order to enable worst-case analyses, Infineon’s Power MOSFET models provide important parameters to
+be closer by the user.
+
+Generally, the deviations are scaled to the range [-1;1] where a value of -1 refers to the minimum value, 0 is
+the typical value (default) and 1 accounts for the maximum value of the model parameter. Note that the
+parameters have different priorities, such that not all combinations are possible.
+
+First, in Level 3 models the user can choose between the typical (physically minimum) transient thermal
+impedance and the maximum value guaranteed by Infineon. This can be done by changing the optional
+parameter dZth from its default value of 0 (typical Zth) to 1 (maximum Zth). Intermediate values are possible.
+User who prefer netlist input, can use this feature by adding PARAMS: Zth,type=1 to the netlist line. In this
+example, the 1 would refer to the maximum Zth behavior.
+
+Second, the on-resistance of the device can be chosen between typical and maximum value. The allowed
+range for dRDS(on) is [0;1] where, similarly to the dZth attribute, 0 is the typical and 1 the maximum value
+(netlist code: PARAMS: RDS(on)=1).
+
+Third, all types of models have the attribute dVth to model threshold voltage deviations from the typical value.
+Hence, a default value of 0 gives the typical device, -1 the minimum and 1 the maximum threshold voltage
+(netlist code: PARAMS: dVth=1). Setting a value dRDS(on) ≠ 0 overwrites dVth.
+
+The modeling of device performance deviations is a complex task since typically there is no one-to-one
+relation between a deviation in the manufacturing process and the variation in a particular device parameter.
+The use of the given optional parameters does therefore not account for all cases and might in special cases
+even result in performance that does not fulfill the specifications guaranteed by Infineon.
+
+
+
+
+6 Typical simulation parameters
+
+
+6.1 For SIMetrix™
+The following setting has been found to be helpful for SIMetrix™ simulation
+
+                        Forces the Simulation to look for DC and transient points. Has only impact on
+     noOpIter
+                        simulation time. Accuracy is not affected.
+                        In most cases works better than default trapezoidal method. According to PSpice-
+     Method = Gear
+                        manual it can cause numerical oscillations.
+                        Current tolerance can be increased up to 10nA. A conservative value would be 1n.
+     Abstol = 10n
+                        The higher abstol, the faster the simulation becomes at the expense of accuracy.
+                        Depends on the accuracy requirement. A lower value leads to higher accuracy, but
+     pointTol = 0.001
+                        increases simulation time.
+
+
+Table 6.1: Settings for SIMetrix™
+Ke
+
+
+
+
+                                                      11
+                                                                                   Application Note AN 2014-02
+Simulation models for Infineon Power MOSFET
+                                                                                   V2.0 Feb. 2014
+
+
+
+
+6.2 For OrCAD
+
+As PSpice was originally not designed for power electronics and highly non-linear components, the standard
+simulation parameters (Simulation Setup/Options) are often not suitable. In common, the following typical
+values facilitate convergence:
+
+    ABSTOL = 1nA       (maximum current accuracy)
+    CHGTOL = 1pC       (maximum charge accuracy)
+    ITL1= 150          (maximum number of iterations for DC analyses without initial conditions)
+    ITL2 = 150         (maximum number of iterations for DC analyses with initial conditions)
+    ITL4 = 500         (maximum number of iterations for transient analyses time steps)
+    RELTOL =0,01       (relative accuracy of voltages and currents)
+
+
+Table 6.2: Settings for OrCAD
+
+In many cases it is necessary to limit the step size for transient analyses. The circuit system contains many
+different time scales, where the automatic step control of the PSpice simulator sometimes disregards
+essential fast-time-scale information which eventually leads to convergence problems. Typically, a step
+ceiling of the size of 1 ns is a remedy to this problem.
+
+In cases where the time to be simulated (TSTOP) is relatively large (typically if thermal phenomena are of
+main interest) and sharp gradients are occurring, the minimum step size might be too large. In those cases it
+is helpful to start with a reduced TSTOP, interrupt the simulation process and change TSTOP to the desired
+value.
+
+
+7 Modelling contact address
+
+If you have further questions, feel free to contact us via our local sales offices, the internet
+(http://www.infineon.com) or email to the authors
+
+Note: models must never be abused for circuit design outside the safe operating area. The final decisive
+component specification is always the data sheet!!
+
+
+
+
+                                                     12
+

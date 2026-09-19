@@ -1,0 +1,2405 @@
+{
+  "timestamp": "2026-09-17T18:24:52-0500",
+  "scope": "Model screening, not hardware qualification",
+  "sha256": {
+    "C:\\Users\\jared\\AppData\\Local\\LTspice\\lib\\sub\\LT3010.lib": "ba6628a27c8983e46719503d214493e6616c6f76d047bcf673338684e5647f09",
+    "C:\\Users\\jared\\AppData\\Local\\LTspice\\lib\\sub\\LTC4359.sub": "d3863307dafbba31512b7923258b7cab20d3ccd6ac455827852fdc66770b1787",
+    "C:\\Users\\jared\\AppData\\Local\\LTspice\\lib\\sub\\LTC4368-1.sub": "e0306198293d852be3f49d83ae2d245f432a31b651a0c1373330acca82f853b8",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\audit\\pdb_release-before-infineon.lib": "1985b23abe050a88e80728fd95fb7ad3369463f094f62e3494d5595dac0a35fa",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\model_sanity.cir": "783cfc375a849e507bc5da3b2c5e1c2ae2780c8347fd23be8a8b250476eff6ed",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\models\\pdb_devices.lib": "65649a15f884438df463e1368060901f1eb11b166b43ccd4125ad8150b36109d",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\models\\pdb_screen17_devices.lib": "942970c0c302d76781579730aaa98231d8b427ce0144b6ea90e79d29486b0ba3",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\osiris\\osiris_eco.lib": "a733521144dc99a5c348062ee222678cae242b750ae401efbc1fc92a7b292e6c",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\osiris\\osiris_reva.lib": "772c3600c894da54f5987849d1f77e9de8b530c9ed891e3415d29a6c6c6608c5",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\osiris\\osiris_screen17_nominal.lib": "73967446e53a109441c906bed5ec0cc012ef49e0c9607dd95a1e93fe5ef843c9",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_12m.lib": "c86431dcf30ac0d32f2c5727bf140a9c20d6dd38e7168caede5451810228a5fe",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_ap2.lib": "f13ce5b2ff7de6087f4186fec7d7e533d5c1837ffb393afae209fd899d34f8a7",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_ap2_revb.lib": "acca19aba72db16d851e4654006fab7f3f1c9adc655ee8174d5d179160290305",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_closure.lib": "38a7136268c2b354c4fd4252406386d39364f43e39ac863c784e0d3fc1a4a95d",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_coordinated.lib": "70066ea3dedfbff2cfa92a629761f0773c914c899c1862423ede15b1a30391bb",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_current.lib": "cc088843a4999e847b2775a7edf93d4a770024674795a0e60db7d7d925e0f7ba",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_damped.lib": "9d50326a3d2635225373981f8c59e8c084a47796f3c05fdbea15bbb38d187fac",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_eco.lib": "c01593138003d3f13aafc9eb268d24d01f3d4b8763ff74fbd45718a66b98253f",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_filter.lib": "7661e36c3c16a2acea164a67bad5c885b00ad8ff3bba229829200ba23cd11478",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_final.lib": "41c5bf704c8b61c1708dd0b5ee0bc71596e1fd8127875f282578d1ff337a98e2",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_gate470.lib": "68953b8a9e8cb13ed9534c70477b4db1e9cf6bd385d4c0ca9dc257d1658c4cc9",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_gate_hold.lib": "4f2bb693dd4be6cbf88643bd36e50edd1d1e1e1e2bbaf2da9600b3f84032bb3f",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_gatefix.lib": "09b54fae4b91560975a5dddd24ee1940ba2624d26082498f4d38880a31a511d5",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hva.lib": "7dedb270db2226936b06d630067a2232fecf6a004a6803c0a10d3284c33b10a9",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hvb.lib": "c78fdbb5670308a6a3b46fabd7dff6901de714afb58bd91aaba7da6b2854d8b7",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hvc.lib": "4366b06cc51396f6a33256c2bbe614a24c1671b715a2ba4b940c27d3b09ecd3a",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hvd.lib": "58af6666cc222d3a7c3ae1b6312bb16e705d1942ba226aa9f698cdbd03937f4b",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hve.lib": "9ff767b16e0debe314c0df36c9dc758df163da2ec8eec5a6bd5d9b40e1a9508a",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_hvf.lib": "35442602709381335cd101e115b6276a7128c17855b4a73de69d318c66d66266",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_ideal.lib": "984c0d5c711b6526ccc6500d3b5c92dcbbeec2408a04a0ce51b614ec6b8d799f",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_large_tvs.lib": "77d104fc6c891a1a365692ee04cc504c2e7c03e9102fc912edab549df4a0fb7a",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_now.lib": "eee07c946460d0f8b38c124b146ac2237a24e86fb60ffead12f3b9a49462cfca",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_only_1u.lib": "c6383a9406d4179363f6514f212eb587a2120e6ea6d39679b3def1749c8bfdf8",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_only_220n.lib": "365ba7f44761e72c6cd1a039248a0d4be1390e8f2cdc4d2b0a7fd93cc677ec14",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_only_470n.lib": "d0815e97c7c424162674ee47aab86a68b0aaf013edf9e1c920b0f1752b0e611b",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_only_5m.lib": "9ee2c4f37c2c4007be3b4798a4a7b216d6b0df666e068655d72e2c2643f6c634",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_passive.lib": "5b966524f78c9d6983ebca313eacdf2ae260ca7d9ae235c429187d050297cb21",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_release.lib": "6e1ff27756268092f25ef2ca098f916519e6aac442675ae9b3f816b77668a45e",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_screen17.lib": "570f87284f5f4778667c69f9fca681474b25e6e6b9c4b8146090cb07aa9fdb05",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_selected.lib": "2827560bc93078eea67196e58b43687c877fb7b0d91500f952762bdeed60b13f",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_slowgate.lib": "72bb1119c575f79dc6536eb58ebfaa9f20f02387996ce5737cf32fe468b54911",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\pdb\\pdb_tvs.lib": "013e7e1742095fe691518bbc6489b747b873179853ff5dd674bdd92686fa7cda",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\release_corners.cir": "079f843bb403289262b489d233399858a6fad8a12b5cf018033d4d6205383b21",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\release_faults.cir": "0a537ee4b3dbfbc0cfc4d0b2258ea584e7f853620423002c96f070b52c69132d",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\release_faults_fine.cir": "4ec103a165fb56ad82c4f2a5d014cb3f488f48b6a2e173242a0fda11779112cf",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\release_lowtrip.cir": "a011b87b06c71a1181ca027f3d4527b90607be56795a204857e7283b7005007a",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\release_reverse.cir": "6912719292a1f54217ecd8671f896d6196d93d4ae1a3f5b040002c658bc666d9",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\release_reverse25.cir": "9ab2b3abbc56c1f85557bda79e6149025c40f74172f1bf51500e02d26b38f2d3",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\release_temperature.cir": "cc150efc405fe5f4bdc61a65a8fc4504456f737201d6ebbda86c41cb81257d03",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\combined-20260915\\release_transients.cir": "f928ab63f0f0050ec3da8d0f26c976498fe14cdfbf96e7aed0c28969c02b5ed3",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\models\\U21_SCREEN.lib": "84c155a3457211050aa5335768d3043a193ac075e53d968be6880183b05c79af",
+    "C:\\Users\\jared\\Desktop\\PCB\\Kicad\\Osiris_PDB_RevA\\Simulation\\vendor-models\\infineon-60v\\03_OptiMOS_OptiMOS5\\OptiMOS_OptiMOS5_60V_LTSpice.lib": "6309f9b70959f636ee3cea927251da7f6cc7f5d73b444a1a3c4b2489e470917e"
+  },
+  "results": [
+    {
+      "deck": "release_corners.cir",
+      "status": "PASS",
+      "seconds": 152.61,
+      "errors": [],
+      "measurements": {
+        "options": [
+          0.003
+        ],
+        "vpdbout": [
+          11.8678071829,
+          16.697271347,
+          11.8678065791,
+          16.4406503407,
+          11.496576673,
+          16.4406503377,
+          11.4965538255,
+          16.4406123554
+        ],
+        "vosin": [
+          11.8541071769,
+          16.6875514984,
+          11.854106573,
+          16.3684583874,
+          11.3926840243,
+          16.3684584821,
+          11.3926561134,
+          16.3684120957
+        ],
+        "v5_ss": [
+          5.16108703613,
+          5.16108703613,
+          5.16108703613,
+          5.16108703613,
+          5.16108703613,
+          5.16108703613,
+          5.16193898024,
+          5.16197449462
+        ],
+        "v3_ss": [
+          3.30484646321,
+          3.30469942093,
+          3.30489658414,
+          3.30470006844,
+          3.30531584388,
+          3.30469942093,
+          3.30469942093,
+          3.30469942093
+        ],
+        "v5p_ss": [
+          5.14809131622,
+          5.14809131622,
+          5.14809131622,
+          5.14809131622,
+          5.14809131622,
+          5.14809131622,
+          5.14894335008,
+          5.1489788634
+        ],
+        "vjet_ss": [
+          5.15837526321,
+          5.15837526321,
+          5.15837526321,
+          5.15837526321,
+          5.15837526321,
+          5.15837526321,
+          5.15922706971,
+          5.15926258373
+        ],
+        "v3v3_pdb": [
+          3.28260850906,
+          3.2793264389,
+          3.28260850906,
+          3.27950048447,
+          3.28286123276,
+          3.27950048447,
+          3.28286123276,
+          3.2795004849
+        ],
+        "iin_peak": [
+          2.00261998177,
+          2.31783485413,
+          3.40695023537,
+          2.9202299118,
+          3.73042440414,
+          3.16609382629,
+          3.83568429947,
+          3.27307653427
+        ],
+        "iin_ss": [
+          1.95940573874,
+          1.39074160449,
+          1.95941589592,
+          1.4178372056,
+          2.0393780559,
+          1.41783713307,
+          2.03947653872,
+          1.41800118832
+        ],
+        "iin_step": [
+          2.31222627848,
+          1.63862742607,
+          2.31222627883,
+          1.67665301223,
+          2.42596142728,
+          1.67665301299,
+          2.42596142981,
+          1.67665301241
+        ],
+        "iin_stepk": [
+          2.30153304325,
+          1.63112474617,
+          2.30153297377,
+          1.6687801308,
+          2.41412508338,
+          1.66878014744,
+          2.41412518096,
+          1.66878017448
+        ],
+        "t_pdbon": [
+          0.040718819737,
+          0.0402779853576,
+          0.0407188178742,
+          0.0402784624302,
+          0.0407191199384,
+          0.0402783017386,
+          0.0407191199384,
+          0.0402783017386
+        ],
+        "t_osvin": [
+          0.0438677701746,
+          0.0432734478853,
+          0.0438677683118,
+          0.0432742002792,
+          0.0438686333391,
+          0.0432740395791,
+          0.0438686333391,
+          0.0432740395791
+        ],
+        "t_5v0": [
+          0.0627827307093,
+          0.0622955577149,
+          0.0626506173417,
+          0.0620233531784,
+          0.0626073947668,
+          0.0619435564057,
+          0.0625773342416,
+          0.061922860805
+        ],
+        "t_3v3": [
+          0.125761969567,
+          0.125274793089,
+          0.125629948551,
+          0.125003062469,
+          0.125586709036,
+          0.124923280129,
+          0.125556674629,
+          0.124902574382
+        ],
+        "t_5vprot": [
+          0.108499037928,
+          0.108011762995,
+          0.10813769051,
+          0.107510797319,
+          0.108027560033,
+          0.107364524669,
+          0.107970094486,
+          0.107315993697
+        ],
+        "vdrop_tot": [
+          0.14589282311,
+          0.112447738647,
+          0.145893427017,
+          0.431540849649,
+          0.607315975726,
+          0.431540754977,
+          0.607343886612,
+          0.43158714133
+        ],
+        "vdrop_pdb": [
+          0.0930047137215,
+          0.0749130914452,
+          0.0930051626379,
+          0.0757820312129,
+          0.0955477141142,
+          0.075782032533,
+          0.0955508649463,
+          0.0757874028064
+        ],
+        "vdrop_cbl": [
+          0.0137000060036,
+          0.00971984863281,
+          0.0137000061035,
+          0.0721919533146,
+          0.103892648768,
+          0.0721918556213,
+          0.103897712072,
+          0.0722002596432
+        ],
+        "gate_drv": [
+          10.87156273,
+          10.8810291534,
+          10.8715628152,
+          10.8817561921,
+          10.8674790376,
+          10.8817563147,
+          10.8674768226,
+          10.8817533658
+        ],
+        "fuse_i2t": [
+          3.35705229017,
+          1.69170122205,
+          3.35798047041,
+          1.7631410539,
+          3.65825511026,
+          1.76333793145,
+          3.65878146786,
+          1.76380104252
+        ],
+        "iin_lowv": [
+          0.079900868237,
+          0.0829467102885,
+          0.079900868237,
+          0.0828611031175,
+          0.0797905474901,
+          0.0828611031175,
+          0.0797905474901,
+          0.0828611031175
+        ],
+        "inrush_i2t": [
+          0.0167131478809,
+          0.00996314459053,
+          0.0171140742238,
+          0.0101792619258,
+          0.0175270394029,
+          0.0102777546246,
+          0.0176314047028,
+          0.0103757202998
+        ],
+        "pout_step": [
+          27.3715089402,
+          27.3008086825,
+          27.3715089366,
+          27.4266543736,
+          27.6465935477,
+          27.4266543818,
+          27.6465935859,
+          27.4266543727
+        ],
+        "inp_min": [
+          2.74249009635e-06,
+          2.74249100585e-06,
+          2.74249009635e-06,
+          2.74249100585e-06,
+          2.74249009635e-06,
+          2.74249100585e-06,
+          2.74249009635e-06,
+          2.74249100585e-06
+        ],
+        "inn_min": [
+          2.74248986898e-06,
+          2.74249077847e-06,
+          2.74248986898e-06,
+          2.74249077847e-06,
+          2.74248986898e-06,
+          2.74249077847e-06,
+          2.74248986898e-06,
+          2.74249077847e-06
+        ],
+        "vbus_min": [
+          2.74221565633e-06,
+          2.74221656582e-06,
+          2.74221542895e-06,
+          2.74221656582e-06,
+          2.74221565633e-06,
+          2.74221656582e-06,
+          2.74221565633e-06,
+          2.74221656582e-06
+        ],
+        "inp_max": [
+          11.9703502655,
+          16.7667732239,
+          11.9700527191,
+          16.7600364685,
+          11.9635858536,
+          16.7599411011,
+          11.9635257721,
+          16.7599220276
+        ],
+        "inn_max": [
+          11.970246315,
+          16.7665710449,
+          11.9699449539,
+          16.7598648071,
+          11.9634780884,
+          16.7597675323,
+          11.9634170532,
+          16.7597484589
+        ],
+        "vbus_max": [
+          11.9662704468,
+          16.7648696899,
+          11.9662094116,
+          16.7581634521,
+          11.9612178802,
+          16.7580661774,
+          11.9611759186,
+          16.7580471039
+        ],
+        "q3_vds": [
+          0.475106239319,
+          0.483991622925,
+          0.475106239319,
+          0.483985900879,
+          0.475099563599,
+          0.483985900879,
+          0.475099563599,
+          0.483985900879
+        ],
+        "q3_vgs": [
+          5.66836929321,
+          4.78224563599,
+          5.66836929321,
+          4.82924461365,
+          5.82863044739,
+          4.82924461365,
+          5.82863044739,
+          4.82924461365
+        ],
+        "u5_in_min": [
+          -1.17839704184e-07,
+          -1.17839718395e-07,
+          -1.17839704184e-07,
+          -1.17839718259e-07,
+          -1.17839704048e-07,
+          -1.17839718259e-07,
+          -1.17839704048e-07,
+          -1.17839718259e-07
+        ],
+        "u5_in_max": [
+          11.9234555401,
+          16.7050507423,
+          11.9398067035,
+          16.6873207092,
+          11.9161413014,
+          16.6898184121,
+          11.9169215262,
+          16.6920670271
+        ],
+        "u5_out_min": [
+          -2.61119566858e-07,
+          -3.72063368559e-07,
+          -2.61468812823e-07,
+          -3.27825546265e-07,
+          -2.30735167861e-07,
+          -3.2689422369e-07,
+          -2.30735167861e-07,
+          -3.2689422369e-07
+        ],
+        "u5_out_max": [
+          11.8211595416,
+          16.6122750044,
+          11.8211595416,
+          16.6121978015,
+          11.8210888654,
+          16.6121978015,
+          11.8210888654,
+          16.6121978015
+        ],
+        "u5_gs_min": [
+          -0.0315850973129,
+          -0.038960814476,
+          -0.0315857231617,
+          -0.0389414727688,
+          -0.0315416157246,
+          -0.0389410555363,
+          -0.0315416157246,
+          -0.0389410555363
+        ],
+        "u5_gs_max": [
+          5.66836929321,
+          4.78224563599,
+          5.66836929321,
+          4.82924461365,
+          5.82863044739,
+          4.82924461365,
+          5.82863044739,
+          4.82924461365
+        ],
+        "c11_stress": [
+          11.8211595416,
+          16.6122750044,
+          11.8211595416,
+          16.6121978015,
+          11.8210888654,
+          16.6121978015,
+          11.8210888654,
+          16.6121978015
+        ],
+        "c16_stress": [
+          11.9999837875,
+          16.7999820709,
+          11.9999837875,
+          16.799905777,
+          11.999915123,
+          16.799905777,
+          11.999915123,
+          16.799905777
+        ],
+        "ina_diff": [
+          0.0116834640503,
+          0.0109767913818,
+          0.0153760910034,
+          0.0135703086853,
+          0.0168976783752,
+          0.0146789550781,
+          0.01735496521,
+          0.0151672363281
+        ]
+      },
+      "limits": {
+        "v5_ss": [
+          5,
+          5.3
+        ],
+        "v3_ss": [
+          3.1,
+          3.5
+        ],
+        "v5p_ss": [
+          4.9,
+          5.3
+        ],
+        "v3v3_pdb": [
+          3.1,
+          3.5
+        ],
+        "iin_peak": [
+          0,
+          7.5
+        ],
+        "iin_lowv": [
+          0,
+          5.8
+        ],
+        "iin_step": [
+          0,
+          2.5
+        ],
+        "t_3v3": [
+          0.03,
+          0.25
+        ],
+        "inp_min": [
+          -0.3,
+          85
+        ],
+        "inn_min": [
+          -0.3,
+          85
+        ],
+        "vbus_min": [
+          -0.3,
+          85
+        ],
+        "inp_max": [
+          -0.3,
+          85
+        ],
+        "inn_max": [
+          -0.3,
+          85
+        ],
+        "vbus_max": [
+          -0.3,
+          85
+        ],
+        "q3_vds": [
+          0,
+          100
+        ],
+        "q3_vgs": [
+          0,
+          20
+        ],
+        "u5_in_min": [
+          -40,
+          100
+        ],
+        "u5_in_max": [
+          -40,
+          100
+        ],
+        "u5_out_min": [
+          -0.3,
+          100
+        ],
+        "u5_out_max": [
+          -0.3,
+          100
+        ],
+        "u5_gs_min": [
+          -1,
+          20
+        ],
+        "u5_gs_max": [
+          -1,
+          20
+        ],
+        "c11_stress": [
+          0,
+          63
+        ],
+        "c16_stress": [
+          0,
+          63
+        ],
+        "ina_diff": [
+          0,
+          40
+        ]
+      }
+    },
+    {
+      "deck": "release_lowtrip.cir",
+      "status": "PASS",
+      "seconds": 153.03,
+      "errors": [],
+      "measurements": {
+        "options": [
+          0.003
+        ],
+        "vpdbout": [
+          11.8653102009,
+          16.6955070495,
+          11.8653120699,
+          16.4388231621,
+          11.4939186402,
+          16.4388231589,
+          11.493918639,
+          16.4387802263
+        ],
+        "vosin": [
+          11.8516073265,
+          16.6857872009,
+          11.8516094531,
+          16.366623386,
+          11.3900080334,
+          16.3666233825,
+          11.390008032,
+          16.3665707695
+        ],
+        "v5_ss": [
+          5.16108703613,
+          5.16108703613,
+          5.16108703613,
+          5.16108703613,
+          5.16108703613,
+          5.16108703613,
+          5.16108703613,
+          5.16208361668
+        ],
+        "v3_ss": [
+          3.30488450517,
+          3.30469942093,
+          3.30469942093,
+          3.30469942093,
+          3.30469942093,
+          3.30469942093,
+          3.30469942093,
+          3.30469942093
+        ],
+        "v5p_ss": [
+          5.14809131622,
+          5.14809131622,
+          5.14809131622,
+          5.14809131622,
+          5.14809131622,
+          5.14809131622,
+          5.14809131622,
+          5.14908798504
+        ],
+        "vjet_ss": [
+          5.15837526321,
+          5.15837526321,
+          5.15837526321,
+          5.15837526321,
+          5.15837526321,
+          5.15837526321,
+          5.15837526321,
+          5.15937170572
+        ],
+        "v3v3_pdb": [
+          3.28261041641,
+          3.279327631,
+          3.28261041641,
+          3.27950191498,
+          3.2828631401,
+          3.27950191498,
+          3.2828631401,
+          3.27950191498
+        ],
+        "iin_peak": [
+          1.99081408978,
+          2.31764125824,
+          3.41178059578,
+          2.93527817726,
+          3.74035263062,
+          3.16637659073,
+          3.87856316566,
+          3.37141013145
+        ],
+        "iin_ss": [
+          1.95982910142,
+          1.39088859451,
+          1.95979193606,
+          1.41799605454,
+          2.03973206912,
+          1.41799606544,
+          2.03973207509,
+          1.41818047292
+        ],
+        "iin_step": [
+          2.31280865579,
+          1.63883221224,
+          2.31280865552,
+          1.67687775351,
+          2.42667045982,
+          1.67687775566,
+          2.42667045788,
+          1.67687775362
+        ],
+        "iin_stepk": [
+          2.30210985544,
+          1.63132757117,
+          2.3021099995,
+          1.6690026104,
+          2.41482667345,
+          1.66900263433,
+          2.41482670344,
+          1.6690026618
+        ],
+        "t_pdbon": [
+          0.0407188576534,
+          0.0402780219098,
+          0.0407188576534,
+          0.0402784498265,
+          0.0407191550829,
+          0.0402784491939,
+          0.0407191550829,
+          0.040278463768
+        ],
+        "t_osvin": [
+          0.043867880423,
+          0.0432735569443,
+          0.043867880423,
+          0.0432742670513,
+          0.0438687407394,
+          0.0432742657146,
+          0.0438687407394,
+          0.0432742753234
+        ],
+        "t_5v0": [
+          0.0627863524136,
+          0.0622953087666,
+          0.062637617184,
+          0.0620249645559,
+          0.0626149529781,
+          0.0619434741493,
+          0.0625863753396,
+          0.0619106344948
+        ],
+        "t_3v3": [
+          0.125765606673,
+          0.125274551094,
+          0.12561694204,
+          0.125004677366,
+          0.125594221091,
+          0.124923136815,
+          0.125565638014,
+          0.124890356238
+        ],
+        "t_5vprot": [
+          0.108502675659,
+          0.108011618828,
+          0.108124685884,
+          0.107512409599,
+          0.108036193443,
+          0.107365086164,
+          0.10797939635,
+          0.1073037726
+        ],
+        "vdrop_tot": [
+          0.148392673484,
+          0.114212036133,
+          0.148390546937,
+          0.433375851028,
+          0.609991966618,
+          0.433375854593,
+          0.609991967977,
+          0.43342846757
+        ],
+        "vdrop_pdb": [
+          0.0954932011869,
+          0.0766754150391,
+          0.0954919156508,
+          0.077577557373,
+          0.0981348815897,
+          0.0775775569915,
+          0.0981348815182,
+          0.0775836952227
+        ],
+        "vdrop_cbl": [
+          0.0137028743744,
+          0.00971984863281,
+          0.0137026168823,
+          0.0721997760773,
+          0.103910606766,
+          0.0721997764587,
+          0.103910606956,
+          0.0722094568261
+        ],
+        "gate_drv": [
+          10.8690933607,
+          10.8792991913,
+          10.8690947144,
+          10.8799928558,
+          10.8649059526,
+          10.8799929275,
+          10.864905944,
+          10.879989398
+        ],
+        "fuse_i2t": [
+          3.35857373711,
+          1.69201857755,
+          3.35937193829,
+          1.7635635391,
+          3.65971679283,
+          1.76380540296,
+          3.66003141495,
+          1.76425554865
+        ],
+        "iin_lowv": [
+          0.0798873230815,
+          0.0829320400953,
+          0.0798873230815,
+          0.0828464627266,
+          0.0797770470381,
+          0.0828464627266,
+          0.0797770470381,
+          0.0828464627266
+        ],
+        "inrush_i2t": [
+          0.0167084178208,
+          0.00995854211103,
+          0.0171075487541,
+          0.0101806668962,
+          0.0175098253013,
+          0.0102766085166,
+          0.0176083930154,
+          0.0103597128314
+        ],
+        "pout_step": [
+          27.3715909264,
+          27.3008216443,
+          27.371590923,
+          27.4267028581,
+          27.6468521866,
+          27.4267028863,
+          27.6468521839,
+          27.4267028602
+        ],
+        "inp_min": [
+          2.74249009635e-06,
+          2.74249100585e-06,
+          2.74249009635e-06,
+          2.74249100585e-06,
+          2.74249009635e-06,
+          2.74249100585e-06,
+          2.74249009635e-06,
+          2.74249100585e-06
+        ],
+        "inn_min": [
+          2.74248986898e-06,
+          2.74249077847e-06,
+          2.74248986898e-06,
+          2.74249077847e-06,
+          2.74248986898e-06,
+          2.74249077847e-06,
+          2.74248986898e-06,
+          2.74249077847e-06
+        ],
+        "vbus_min": [
+          2.74221565633e-06,
+          2.74221656582e-06,
+          2.74221565633e-06,
+          2.74221656582e-06,
+          2.74221565633e-06,
+          2.74221656582e-06,
+          2.74221565633e-06,
+          2.74221656582e-06
+        ],
+        "inp_max": [
+          11.9703369141,
+          16.7667732239,
+          11.9700088501,
+          16.7600383759,
+          11.9635906219,
+          16.7599391937,
+          11.9635362625,
+          16.7599010468
+        ],
+        "inn_max": [
+          11.9702062607,
+          16.7665195465,
+          11.9698734283,
+          16.7598228455,
+          11.9634552002,
+          16.759721756,
+          11.9633998871,
+          16.759683609
+        ],
+        "vbus_max": [
+          11.9662294388,
+          16.7648181915,
+          11.9661598206,
+          16.7581214905,
+          11.9611968994,
+          16.758020401,
+          11.9611587524,
+          16.757982254
+        ],
+        "q3_vds": [
+          0.475106239319,
+          0.483991622925,
+          0.475106239319,
+          0.483985900879,
+          0.475099563599,
+          0.483985900879,
+          0.475099563599,
+          0.483985900879
+        ],
+        "q3_vgs": [
+          5.66915512085,
+          4.78249549866,
+          5.66915512085,
+          4.82951927185,
+          5.82960796356,
+          4.82951927185,
+          5.82960796356,
+          4.82951927185
+        ],
+        "u5_in_min": [
+          -1.17839704184e-07,
+          -1.17839718395e-07,
+          -1.17839704184e-07,
+          -1.17839718259e-07,
+          -1.17839704048e-07,
+          -1.17839718259e-07,
+          -1.17839704048e-07,
+          -1.17839718259e-07
+        ],
+        "u5_in_max": [
+          11.924147021,
+          16.7061128058,
+          11.9421947934,
+          16.6864623502,
+          11.9138833284,
+          16.6896706223,
+          11.9177147821,
+          16.6919938028
+        ],
+        "u5_out_min": [
+          -2.60188244283e-07,
+          -3.70666384697e-07,
+          -2.60188244283e-07,
+          -3.26661393046e-07,
+          -2.3003667593e-07,
+          -3.27592715621e-07,
+          -2.3003667593e-07,
+          -3.27825546265e-07
+        ],
+        "u5_out_max": [
+          11.8211595565,
+          16.6122750044,
+          11.8211595565,
+          16.6121978015,
+          11.8210888803,
+          16.6121978015,
+          11.8210888803,
+          16.6121978015
+        ],
+        "u5_gs_min": [
+          -0.0315849483013,
+          -0.0389607548714,
+          -0.0315849483013,
+          -0.0389426648617,
+          -0.0315097570419,
+          -0.0389423072338,
+          -0.0315097570419,
+          -0.0389411747456
+        ],
+        "u5_gs_max": [
+          5.66915512085,
+          4.78249549866,
+          5.66915512085,
+          4.82951927185,
+          5.82960796356,
+          4.82951927185,
+          5.82960796356,
+          4.82951927185
+        ],
+        "c11_stress": [
+          11.8211595565,
+          16.6122750044,
+          11.8211595565,
+          16.6121978015,
+          11.8210888803,
+          16.6121978015,
+          11.8210888803,
+          16.6121978015
+        ],
+        "c16_stress": [
+          11.9999837875,
+          16.7999820709,
+          11.9999837875,
+          16.799905777,
+          11.999915123,
+          16.799905777,
+          11.999915123,
+          16.799905777
+        ],
+        "ina_diff": [
+          0.0146074295044,
+          0.0137100219727,
+          0.0192799568176,
+          0.0170516967773,
+          0.0211272239685,
+          0.0183491706848,
+          0.0218505859375,
+          0.0195035934448
+        ]
+      },
+      "limits": {
+        "v5_ss": [
+          5,
+          5.3
+        ],
+        "v3_ss": [
+          3.1,
+          3.5
+        ],
+        "v5p_ss": [
+          4.9,
+          5.3
+        ],
+        "v3v3_pdb": [
+          3.1,
+          3.5
+        ],
+        "iin_peak": [
+          0,
+          7.5
+        ],
+        "iin_lowv": [
+          0,
+          5.8
+        ],
+        "iin_step": [
+          0,
+          2.5
+        ],
+        "t_3v3": [
+          0.03,
+          0.25
+        ],
+        "inp_min": [
+          -0.3,
+          85
+        ],
+        "inn_min": [
+          -0.3,
+          85
+        ],
+        "vbus_min": [
+          -0.3,
+          85
+        ],
+        "inp_max": [
+          -0.3,
+          85
+        ],
+        "inn_max": [
+          -0.3,
+          85
+        ],
+        "vbus_max": [
+          -0.3,
+          85
+        ],
+        "q3_vds": [
+          0,
+          100
+        ],
+        "q3_vgs": [
+          0,
+          20
+        ],
+        "u5_in_min": [
+          -40,
+          100
+        ],
+        "u5_in_max": [
+          -40,
+          100
+        ],
+        "u5_out_min": [
+          -0.3,
+          100
+        ],
+        "u5_out_max": [
+          -0.3,
+          100
+        ],
+        "u5_gs_min": [
+          -1,
+          20
+        ],
+        "u5_gs_max": [
+          -1,
+          20
+        ],
+        "c11_stress": [
+          0,
+          63
+        ],
+        "c16_stress": [
+          0,
+          63
+        ],
+        "ina_diff": [
+          0,
+          40
+        ]
+      }
+    },
+    {
+      "deck": "release_temperature.cir",
+      "status": "FAIL",
+      "seconds": 300.26,
+      "errors": [
+        "timeout after 300s",
+        "missing completed fresh log",
+        "VPDBOUT: expected 15 finite values, got 0",
+        "VOSIN: expected 15 finite values, got 0",
+        "V5_SS: expected 15 finite values, got 0",
+        "V3_SS: expected 15 finite values, got 0",
+        "V5P_SS: expected 15 finite values, got 0",
+        "VJET_SS: expected 15 finite values, got 0",
+        "V3V3_PDB: expected 15 finite values, got 0",
+        "IIN_PEAK: expected 15 finite values, got 0",
+        "IIN_SS: expected 15 finite values, got 0",
+        "IIN_STEP: expected 15 finite values, got 0",
+        "IIN_STEPK: expected 15 finite values, got 0",
+        "T_PDBON: expected 15 finite values, got 0",
+        "T_OSVIN: expected 15 finite values, got 0",
+        "T_5V0: expected 15 finite values, got 0",
+        "T_3V3: expected 15 finite values, got 0",
+        "T_5VPROT: expected 15 finite values, got 0",
+        "VDROP_TOT: expected 15 finite values, got 0",
+        "VDROP_PDB: expected 15 finite values, got 0",
+        "VDROP_CBL: expected 15 finite values, got 0",
+        "GATE_DRV: expected 15 finite values, got 0",
+        "FUSE_I2T: expected 15 finite values, got 0",
+        "IIN_LOWV: expected 15 finite values, got 0",
+        "INRUSH_I2T: expected 15 finite values, got 0",
+        "POUT_STEP: expected 15 finite values, got 0",
+        "INP_MIN: expected 15 finite values, got 0",
+        "INN_MIN: expected 15 finite values, got 0",
+        "VBUS_MIN: expected 15 finite values, got 0",
+        "INP_MAX: expected 15 finite values, got 0",
+        "INN_MAX: expected 15 finite values, got 0",
+        "VBUS_MAX: expected 15 finite values, got 0",
+        "Q3_VDS: expected 15 finite values, got 0",
+        "Q3_VGS: expected 15 finite values, got 0",
+        "U5_IN_MIN: expected 15 finite values, got 0",
+        "U5_IN_MAX: expected 15 finite values, got 0",
+        "U5_OUT_MIN: expected 15 finite values, got 0",
+        "U5_OUT_MAX: expected 15 finite values, got 0",
+        "U5_GS_MIN: expected 15 finite values, got 0",
+        "U5_GS_MAX: expected 15 finite values, got 0",
+        "C11_STRESS: expected 15 finite values, got 0",
+        "C16_STRESS: expected 15 finite values, got 0",
+        "INA_DIFF: expected 15 finite values, got 0",
+        "v5_ss: [] outside [5, 5.3]",
+        "v3_ss: [] outside [3.1, 3.5]",
+        "v5p_ss: [] outside [4.9, 5.3]",
+        "v3v3_pdb: [] outside [3.1, 3.5]",
+        "iin_peak: [] outside [0, 7.5]",
+        "iin_lowv: [] outside [0, 5.8]",
+        "iin_step: [] outside [0, 2.5]",
+        "t_3v3: [] outside [0.03, 0.25]",
+        "inp_min: [] outside [-0.3, 85]",
+        "inn_min: [] outside [-0.3, 85]",
+        "vbus_min: [] outside [-0.3, 85]",
+        "inp_max: [] outside [-0.3, 85]",
+        "inn_max: [] outside [-0.3, 85]",
+        "vbus_max: [] outside [-0.3, 85]",
+        "q3_vds: [] outside [0, 100]",
+        "q3_vgs: [] outside [0, 20]",
+        "u5_in_min: [] outside [-40, 100]",
+        "u5_in_max: [] outside [-40, 100]",
+        "u5_out_min: [] outside [-0.3, 100]",
+        "u5_out_max: [] outside [-0.3, 100]",
+        "u5_gs_min: [] outside [-1, 20]",
+        "u5_gs_max: [] outside [-1, 20]",
+        "c11_stress: [] outside [0, 63]",
+        "c16_stress: [] outside [0, 63]",
+        "ina_diff: [] outside [0, 40]"
+      ],
+      "measurements": {
+        "options": [
+          0.003
+        ]
+      },
+      "limits": {
+        "v5_ss": [
+          5,
+          5.3
+        ],
+        "v3_ss": [
+          3.1,
+          3.5
+        ],
+        "v5p_ss": [
+          4.9,
+          5.3
+        ],
+        "v3v3_pdb": [
+          3.1,
+          3.5
+        ],
+        "iin_peak": [
+          0,
+          7.5
+        ],
+        "iin_lowv": [
+          0,
+          5.8
+        ],
+        "iin_step": [
+          0,
+          2.5
+        ],
+        "t_3v3": [
+          0.03,
+          0.25
+        ],
+        "inp_min": [
+          -0.3,
+          85
+        ],
+        "inn_min": [
+          -0.3,
+          85
+        ],
+        "vbus_min": [
+          -0.3,
+          85
+        ],
+        "inp_max": [
+          -0.3,
+          85
+        ],
+        "inn_max": [
+          -0.3,
+          85
+        ],
+        "vbus_max": [
+          -0.3,
+          85
+        ],
+        "q3_vds": [
+          0,
+          100
+        ],
+        "q3_vgs": [
+          0,
+          20
+        ],
+        "u5_in_min": [
+          -40,
+          100
+        ],
+        "u5_in_max": [
+          -40,
+          100
+        ],
+        "u5_out_min": [
+          -0.3,
+          100
+        ],
+        "u5_out_max": [
+          -0.3,
+          100
+        ],
+        "u5_gs_min": [
+          -1,
+          20
+        ],
+        "u5_gs_max": [
+          -1,
+          20
+        ],
+        "c11_stress": [
+          0,
+          63
+        ],
+        "c16_stress": [
+          0,
+          63
+        ],
+        "ina_diff": [
+          0,
+          40
+        ]
+      }
+    },
+    {
+      "deck": "release_faults.cir",
+      "status": "PASS",
+      "seconds": 112.13,
+      "errors": [],
+      "measurements": {
+        "options": [
+          0.003
+        ],
+        "t_pdbon": [
+          0.0403300416834
+        ],
+        "t_5v0": [
+          0.0619496180906
+        ],
+        "t_3v3": [
+          0.124928730913
+        ],
+        "iin_peak": [
+          1.88569712639
+        ],
+        "iin_ss": [
+          1.57343966772
+        ],
+        "v5_ss": [
+          5.16312471948
+        ],
+        "v3_ss": [
+          3.30497584558
+        ],
+        "v3v3_pdb": [
+          3.28069111821
+        ],
+        "vdrop_pdb": [
+          0.0806673576474
+        ],
+        "ov_vosin": [
+          3.83130863045
+        ],
+        "ov_rec_v5": [
+          5.16296943506
+        ],
+        "uv_vosin": [
+          0.909821263629
+        ],
+        "uv_rec_v5": [
+          5.1606856937
+        ],
+        "uv_rec_v3": [
+          3.30604777306
+        ],
+        "sh_ipk": [
+          153.361557007
+        ],
+        "sh_vosin": [
+          8.30356097519e-10
+        ],
+        "t_rec_v3": [
+          1.57520330075
+        ],
+        "rec_vosin": [
+          14.6595582962
+        ],
+        "rec_v5": [
+          5.16040897369
+        ],
+        "rec_v3": [
+          3.30469942092
+        ],
+        "rec_v5p": [
+          5.14741325378
+        ],
+        "sh_i2t": [
+          0.11169662509
+        ],
+        "inp_min": [
+          -0.00572527665645
+        ],
+        "inn_min": [
+          -0.0255644544959
+        ],
+        "vbus_min": [
+          -5.64992097551e-09
+        ],
+        "inp_max": [
+          18.7540626526
+        ],
+        "inn_max": [
+          18.7476882935
+        ],
+        "vbus_max": [
+          18.707616806
+        ],
+        "q3_vds": [
+          2.31174945831
+        ],
+        "q3_vgs": [
+          6.37279033661
+        ],
+        "u5_in_min": [
+          -1.17839704184e-07
+        ],
+        "u5_in_max": [
+          19.3566326797
+        ],
+        "u5_out_min": [
+          -3.24565917253e-07
+        ],
+        "u5_out_max": [
+          19.309822455
+        ],
+        "u5_gs_min": [
+          -0.60572052002
+        ],
+        "u5_gs_max": [
+          6.37279033661
+        ],
+        "c11_stress": [
+          19.309822455
+        ],
+        "c16_stress": [
+          19.4999809265
+        ],
+        "ina_diff": [
+          0.239305496216
+        ]
+      },
+      "limits": {
+        "rec_v5": [
+          5,
+          5.3
+        ],
+        "rec_v3": [
+          3.1,
+          3.5
+        ],
+        "uv_rec_v5": [
+          5,
+          5.3
+        ],
+        "uv_rec_v3": [
+          3.1,
+          3.5
+        ],
+        "ov_rec_v5": [
+          5,
+          5.3
+        ],
+        "sh_vosin": [
+          -0.3,
+          0.5
+        ],
+        "sh_i2t": [
+          1e-06,
+          1
+        ],
+        "t_rec_v3": [
+          1.1,
+          2.9
+        ],
+        "inp_min": [
+          -0.3,
+          85
+        ],
+        "inn_min": [
+          -0.3,
+          85
+        ],
+        "vbus_min": [
+          -0.3,
+          85
+        ],
+        "inp_max": [
+          -0.3,
+          85
+        ],
+        "inn_max": [
+          -0.3,
+          85
+        ],
+        "vbus_max": [
+          -0.3,
+          85
+        ],
+        "q3_vds": [
+          0,
+          100
+        ],
+        "q3_vgs": [
+          0,
+          20
+        ],
+        "u5_in_min": [
+          -40,
+          100
+        ],
+        "u5_in_max": [
+          -40,
+          100
+        ],
+        "u5_out_min": [
+          -0.3,
+          100
+        ],
+        "u5_out_max": [
+          -0.3,
+          100
+        ],
+        "u5_gs_min": [
+          -1,
+          20
+        ],
+        "u5_gs_max": [
+          -1,
+          20
+        ],
+        "c11_stress": [
+          0,
+          63
+        ],
+        "c16_stress": [
+          0,
+          63
+        ],
+        "ina_diff": [
+          0,
+          40
+        ]
+      }
+    },
+    {
+      "deck": "release_faults_fine.cir",
+      "status": "PASS",
+      "seconds": 247.1,
+      "errors": [],
+      "measurements": {
+        "options": [
+          0.003
+        ],
+        "t_pdbon": [
+          0.0403306432523
+        ],
+        "t_5v0": [
+          0.0619452637839
+        ],
+        "t_3v3": [
+          0.124924818983
+        ],
+        "iin_peak": [
+          1.82918024063
+        ],
+        "iin_ss": [
+          1.57298782289
+        ],
+        "v5_ss": [
+          5.16109406642
+        ],
+        "v3_ss": [
+          3.30471978831
+        ],
+        "v3v3_pdb": [
+          3.28069110306
+        ],
+        "vdrop_pdb": [
+          0.0806528120143
+        ],
+        "ov_vosin": [
+          3.82751287118
+        ],
+        "ov_rec_v5": [
+          5.16153251554
+        ],
+        "uv_vosin": [
+          0.910407079703
+        ],
+        "uv_rec_v5": [
+          5.16047933493
+        ],
+        "uv_rec_v3": [
+          3.30488512108
+        ],
+        "sh_ipk": [
+          153.166000366
+        ],
+        "sh_vosin": [
+          8.30372033569e-10
+        ],
+        "sh_i2t": [
+          0.111681472803
+        ],
+        "inp_min": [
+          -0.00572146708146
+        ],
+        "inn_min": [
+          -0.0255697183311
+        ],
+        "vbus_min": [
+          -5.70546809797e-09
+        ],
+        "inp_max": [
+          18.7559700012
+        ],
+        "inn_max": [
+          18.7495975494
+        ],
+        "vbus_max": [
+          18.7095241547
+        ],
+        "q3_vds": [
+          2.31173419952
+        ],
+        "q3_vgs": [
+          6.37260818481
+        ],
+        "u5_in_min": [
+          -1.17839704184e-07
+        ],
+        "u5_in_max": [
+          19.3563936204
+        ],
+        "u5_out_min": [
+          -3.25264409184e-07
+        ],
+        "u5_out_max": [
+          19.3098240495
+        ],
+        "u5_gs_min": [
+          -0.605500221252
+        ],
+        "u5_gs_max": [
+          6.37260818481
+        ],
+        "c11_stress": [
+          19.3098240495
+        ],
+        "c16_stress": [
+          19.4999809265
+        ],
+        "ina_diff": [
+          0.239328384399
+        ]
+      },
+      "limits": {
+        "sh_vosin": [
+          -0.3,
+          0.5
+        ],
+        "sh_i2t": [
+          1e-06,
+          1
+        ],
+        "uv_rec_v3": [
+          3.1,
+          3.5
+        ],
+        "inp_min": [
+          -0.3,
+          85
+        ],
+        "inn_min": [
+          -0.3,
+          85
+        ],
+        "vbus_min": [
+          -0.3,
+          85
+        ],
+        "inp_max": [
+          -0.3,
+          85
+        ],
+        "inn_max": [
+          -0.3,
+          85
+        ],
+        "vbus_max": [
+          -0.3,
+          85
+        ],
+        "q3_vds": [
+          0,
+          100
+        ],
+        "q3_vgs": [
+          0,
+          20
+        ],
+        "u5_in_min": [
+          -40,
+          100
+        ],
+        "u5_in_max": [
+          -40,
+          100
+        ],
+        "u5_out_min": [
+          -0.3,
+          100
+        ],
+        "u5_out_max": [
+          -0.3,
+          100
+        ],
+        "u5_gs_min": [
+          -1,
+          20
+        ],
+        "u5_gs_max": [
+          -1,
+          20
+        ],
+        "c11_stress": [
+          0,
+          63
+        ],
+        "c16_stress": [
+          0,
+          63
+        ],
+        "ina_diff": [
+          0,
+          40
+        ]
+      }
+    },
+    {
+      "deck": "release_reverse.cir",
+      "status": "PASS",
+      "seconds": 37.14,
+      "errors": [],
+      "measurements": {
+        "options": [
+          0.003
+        ],
+        "rev_vbin": [
+          -16.7999916077,
+          -14.7999925613
+        ],
+        "rev_vosin": [
+          -0.000142978628408,
+          -0.000120720858472
+        ],
+        "rev_pdbout": [
+          -0.000142978628408,
+          -0.000120720862092
+        ],
+        "rev_v5": [
+          0.0,
+          0.0
+        ],
+        "rev_v3": [
+          0.0,
+          0.0
+        ],
+        "rev_pdb3v3": [
+          -1.00493443135e-10,
+          -6.83000243845e-11
+        ],
+        "rev_iin": [
+          0.000447077356512,
+          0.000388806278352
+        ],
+        "rev_tvs_i2t": [
+          5.98926500791e-08,
+          4.5296214014e-08
+        ],
+        "rev_gate": [
+          -0.0555178143925,
+          -0.0458196686041
+        ],
+        "rec_vosin": [
+          14.6595605522,
+          14.659560552
+        ],
+        "rec_v5": [
+          5.16040899506,
+          5.16040899503
+        ],
+        "rec_v3": [
+          3.30469942093,
+          3.30469942093
+        ],
+        "rec_v5prot": [
+          5.14741342986,
+          5.14741343004
+        ],
+        "inp_min": [
+          -0.000147392973304,
+          -0.000128952829982
+        ],
+        "inn_min": [
+          -0.000147389087942,
+          -0.000128948537167
+        ],
+        "vbus_min": [
+          -0.000145368248923,
+          -0.00012693926692
+        ],
+        "inp_max": [
+          14.7682657242,
+          14.7682657242
+        ],
+        "inn_max": [
+          14.7681541443,
+          14.7681541443
+        ],
+        "vbus_max": [
+          14.7666654587,
+          14.766664505
+        ],
+        "q3_vds": [
+          16.5098917782,
+          14.5632086396
+        ],
+        "q3_vgs": [
+          5.06637001038,
+          5.06637001038
+        ],
+        "u5_in_min": [
+          -16.3539221585,
+          -14.4121606648
+        ],
+        "u5_in_max": [
+          14.710924916,
+          14.7104877308
+        ],
+        "u5_out_min": [
+          -0.00543391704559,
+          -0.00507897138596
+        ],
+        "u5_out_max": [
+          14.6146154553,
+          14.6146154255
+        ],
+        "u5_gs_min": [
+          -0.0101217627525,
+          -0.00947785377502
+        ],
+        "u5_gs_max": [
+          5.06637001038,
+          5.06637001038
+        ],
+        "c11_stress": [
+          14.6146154553,
+          14.6146154255
+        ],
+        "c16_stress": [
+          16.8001747131,
+          14.8002519608
+        ],
+        "ina_diff": [
+          0.00932598114014,
+          0.00932598114014
+        ]
+      },
+      "limits": {
+        "rec_v5": [
+          5,
+          5.3
+        ],
+        "rec_v3": [
+          3.1,
+          3.5
+        ],
+        "rev_vosin": [
+          -0.3,
+          0.1
+        ],
+        "rev_iin": [
+          0,
+          0.002
+        ],
+        "rev_v5": [
+          -0.05,
+          0.1
+        ],
+        "rev_v3": [
+          -0.05,
+          0.1
+        ],
+        "inp_min": [
+          -0.3,
+          85
+        ],
+        "inn_min": [
+          -0.3,
+          85
+        ],
+        "vbus_min": [
+          -0.3,
+          85
+        ],
+        "inp_max": [
+          -0.3,
+          85
+        ],
+        "inn_max": [
+          -0.3,
+          85
+        ],
+        "vbus_max": [
+          -0.3,
+          85
+        ],
+        "q3_vds": [
+          0,
+          100
+        ],
+        "q3_vgs": [
+          0,
+          20
+        ],
+        "u5_in_min": [
+          -40,
+          100
+        ],
+        "u5_in_max": [
+          -40,
+          100
+        ],
+        "u5_out_min": [
+          -0.3,
+          100
+        ],
+        "u5_out_max": [
+          -0.3,
+          100
+        ],
+        "u5_gs_min": [
+          -1,
+          20
+        ],
+        "u5_gs_max": [
+          -1,
+          20
+        ],
+        "c11_stress": [
+          0,
+          63
+        ],
+        "c16_stress": [
+          0,
+          63
+        ],
+        "ina_diff": [
+          0,
+          40
+        ]
+      }
+    },
+    {
+      "deck": "release_reverse25.cir",
+      "status": "PASS",
+      "seconds": 15.51,
+      "errors": [],
+      "measurements": {
+        "options": [
+          0.003
+        ],
+        "rev_vbin": [
+          -24.9999866486
+        ],
+        "rev_vosin": [
+          -0.000796547450591
+        ],
+        "rev_pdbout": [
+          -0.000796547508799
+        ],
+        "rev_v5": [
+          0.0
+        ],
+        "rev_v3": [
+          0.0
+        ],
+        "rev_pdb3v3": [
+          -1.31219772818e-09
+        ],
+        "rev_iin": [
+          0.000686115759891
+        ],
+        "rev_tvs_i2t": [
+          1.41035624297e-07
+        ],
+        "rev_gate": [
+          -0.0874486898447
+        ],
+        "rec_vosin": [
+          14.6595605522
+        ],
+        "rec_v5": [
+          5.16040899507
+        ],
+        "rec_v3": [
+          3.30469942093
+        ],
+        "rec_v5prot": [
+          5.14741342987
+        ],
+        "inp_min": [
+          -0.000796547508799
+        ],
+        "inn_min": [
+          -0.000796547508799
+        ],
+        "vbus_min": [
+          -0.000796467822511
+        ],
+        "inp_max": [
+          14.7682657242
+        ],
+        "inn_max": [
+          14.7681541443
+        ],
+        "vbus_max": [
+          14.766664505
+        ],
+        "q3_vds": [
+          24.5043228269
+        ],
+        "q3_vgs": [
+          5.06637001038
+        ],
+        "u5_in_min": [
+          -24.3154361248
+        ],
+        "u5_in_max": [
+          14.7102851234
+        ],
+        "u5_out_min": [
+          -0.00664967298508
+        ],
+        "u5_out_max": [
+          14.6146155596
+        ],
+        "u5_gs_min": [
+          -0.0127071142197
+        ],
+        "u5_gs_max": [
+          5.06637001038
+        ],
+        "c11_stress": [
+          14.6146155596
+        ],
+        "c16_stress": [
+          25.0002708435
+        ],
+        "ina_diff": [
+          0.00932598114014
+        ]
+      },
+      "limits": {
+        "rec_v5": [
+          5,
+          5.3
+        ],
+        "rec_v3": [
+          3.1,
+          3.5
+        ],
+        "rev_vosin": [
+          -0.3,
+          0.1
+        ],
+        "rev_iin": [
+          0,
+          0.002
+        ],
+        "rev_v5": [
+          -0.05,
+          0.1
+        ],
+        "rev_v3": [
+          -0.05,
+          0.1
+        ],
+        "inp_min": [
+          -0.3,
+          85
+        ],
+        "inn_min": [
+          -0.3,
+          85
+        ],
+        "vbus_min": [
+          -0.3,
+          85
+        ],
+        "inp_max": [
+          -0.3,
+          85
+        ],
+        "inn_max": [
+          -0.3,
+          85
+        ],
+        "vbus_max": [
+          -0.3,
+          85
+        ],
+        "q3_vds": [
+          0,
+          100
+        ],
+        "q3_vgs": [
+          0,
+          20
+        ],
+        "u5_in_min": [
+          -40,
+          100
+        ],
+        "u5_in_max": [
+          -40,
+          100
+        ],
+        "u5_out_min": [
+          -0.3,
+          100
+        ],
+        "u5_out_max": [
+          -0.3,
+          100
+        ],
+        "u5_gs_min": [
+          -1,
+          20
+        ],
+        "u5_gs_max": [
+          -1,
+          20
+        ],
+        "c11_stress": [
+          0,
+          63
+        ],
+        "c16_stress": [
+          0,
+          63
+        ],
+        "ina_diff": [
+          0,
+          40
+        ]
+      }
+    },
+    {
+      "deck": "release_transients.cir",
+      "status": "FAIL",
+      "seconds": 300.21,
+      "errors": [
+        "timeout after 300s",
+        "missing completed fresh log",
+        "INP_MIN: expected 2 finite values, got 0",
+        "INN_MIN: expected 2 finite values, got 0",
+        "VBUS_MIN: expected 2 finite values, got 0",
+        "U1_VIN_MIN: expected 2 finite values, got 0",
+        "U1_VIN_MAX: expected 2 finite values, got 0",
+        "U1_VOUT_MIN: expected 2 finite values, got 0",
+        "U1_VOUT_MAX: expected 2 finite values, got 0",
+        "U1_SENSE_MIN: expected 2 finite values, got 0",
+        "U1_SENSE_MAX: expected 2 finite values, got 0",
+        "U1_VOUT_SENSE_ABS: expected 2 finite values, got 0",
+        "U1_VIN_VOUT_MIN: expected 2 finite values, got 0",
+        "U1_VIN_VOUT_MAX: expected 2 finite values, got 0",
+        "U1_GATE_MIN: expected 2 finite values, got 0",
+        "U1_GATE_VIN_MAX: expected 2 finite values, got 0",
+        "U1_RETRY_MIN: expected 2 finite values, got 0",
+        "U1_RETRY_MAX: expected 2 finite values, got 0",
+        "U1_UV_MIN: expected 2 finite values, got 0",
+        "U1_OV_MIN: expected 2 finite values, got 0",
+        "U1_OV_MAX: expected 2 finite values, got 0",
+        "U1_SHDN_MIN: expected 2 finite values, got 0",
+        "BUS_MIN: expected 2 finite values, got 0",
+        "Q1_VDS: expected 2 finite values, got 0",
+        "Q2_VDS: expected 2 finite values, got 0",
+        "VGS_MAX: expected 2 finite values, got 0",
+        "V3V3_MAX: expected 2 finite values, got 0",
+        "VOUT_FINAL: expected 2 finite values, got 0",
+        "Q3_VDS: expected 2 finite values, got 0",
+        "Q3_VGS: expected 2 finite values, got 0",
+        "U5_IN_MIN: expected 2 finite values, got 0",
+        "U5_IN_MAX: expected 2 finite values, got 0",
+        "U5_OUT_MIN: expected 2 finite values, got 0",
+        "U5_OUT_MAX: expected 2 finite values, got 0",
+        "INP_MAX: expected 2 finite values, got 0",
+        "INN_MAX: expected 2 finite values, got 0",
+        "VBUS_MAX: expected 2 finite values, got 0",
+        "U5_GS_MIN: expected 2 finite values, got 0",
+        "U5_GS_MAX: expected 2 finite values, got 0",
+        "C11_STRESS: expected 2 finite values, got 0",
+        "C16_STRESS: expected 2 finite values, got 0",
+        "INA_DIFF: expected 2 finite values, got 0",
+        "u1_vin_min: [] outside [-40, 100]",
+        "u1_vin_max: [] outside [-40, 100]",
+        "u1_vout_min: [] outside [-10, 80]",
+        "u1_vout_max: [] outside [-10, 80]",
+        "u1_sense_min: [] outside [-10, 80]",
+        "u1_sense_max: [] outside [-10, 80]",
+        "u1_vout_sense_abs: [] outside [0, 10]",
+        "u1_vin_vout_min: [] outside [-60, 100]",
+        "u1_vin_vout_max: [] outside [-60, 100]",
+        "u1_gate_min: [] outside [-40, 100]",
+        "u1_gate_vin_max: [] outside [-40, 14]",
+        "u1_retry_min: [] outside [-0.3, 5]",
+        "u1_retry_max: [] outside [-0.3, 5]",
+        "q1_vds: [] outside [0, 60]",
+        "q2_vds: [] outside [0, 60]",
+        "vgs_max: [] outside [0, 20]",
+        "inp_min: [] outside [-0.3, 85]",
+        "inn_min: [] outside [-0.3, 85]",
+        "vbus_min: [] outside [-0.3, 85]",
+        "v3v3_max: [] outside [0, 3.6]",
+        "vout_final: [] outside [12, 16.8]",
+        "inp_max: [] outside [-0.3, 85]",
+        "inn_max: [] outside [-0.3, 85]",
+        "vbus_max: [] outside [-0.3, 85]",
+        "q3_vds: [] outside [0, 100]",
+        "q3_vgs: [] outside [0, 20]",
+        "u5_in_min: [] outside [-40, 100]",
+        "u5_in_max: [] outside [-40, 100]",
+        "u5_out_min: [] outside [-0.3, 100]",
+        "u5_out_max: [] outside [-0.3, 100]",
+        "u5_gs_min: [] outside [-1, 20]",
+        "u5_gs_max: [] outside [-1, 20]",
+        "c11_stress: [] outside [0, 63]",
+        "c16_stress: [] outside [0, 63]",
+        "ina_diff: [] outside [0, 40]"
+      ],
+      "measurements": {},
+      "limits": {
+        "u1_vin_min": [
+          -40,
+          100
+        ],
+        "u1_vin_max": [
+          -40,
+          100
+        ],
+        "u1_vout_min": [
+          -10,
+          80
+        ],
+        "u1_vout_max": [
+          -10,
+          80
+        ],
+        "u1_sense_min": [
+          -10,
+          80
+        ],
+        "u1_sense_max": [
+          -10,
+          80
+        ],
+        "u1_vout_sense_abs": [
+          0,
+          10
+        ],
+        "u1_vin_vout_min": [
+          -60,
+          100
+        ],
+        "u1_vin_vout_max": [
+          -60,
+          100
+        ],
+        "u1_gate_min": [
+          -40,
+          100
+        ],
+        "u1_gate_vin_max": [
+          -40,
+          14
+        ],
+        "u1_retry_min": [
+          -0.3,
+          5
+        ],
+        "u1_retry_max": [
+          -0.3,
+          5
+        ],
+        "q1_vds": [
+          0,
+          60
+        ],
+        "q2_vds": [
+          0,
+          60
+        ],
+        "vgs_max": [
+          0,
+          20
+        ],
+        "inp_min": [
+          -0.3,
+          85
+        ],
+        "inn_min": [
+          -0.3,
+          85
+        ],
+        "vbus_min": [
+          -0.3,
+          85
+        ],
+        "v3v3_max": [
+          0,
+          3.6
+        ],
+        "vout_final": [
+          12,
+          16.8
+        ],
+        "inp_max": [
+          -0.3,
+          85
+        ],
+        "inn_max": [
+          -0.3,
+          85
+        ],
+        "vbus_max": [
+          -0.3,
+          85
+        ],
+        "q3_vds": [
+          0,
+          100
+        ],
+        "q3_vgs": [
+          0,
+          20
+        ],
+        "u5_in_min": [
+          -40,
+          100
+        ],
+        "u5_in_max": [
+          -40,
+          100
+        ],
+        "u5_out_min": [
+          -0.3,
+          100
+        ],
+        "u5_out_max": [
+          -0.3,
+          100
+        ],
+        "u5_gs_min": [
+          -1,
+          20
+        ],
+        "u5_gs_max": [
+          -1,
+          20
+        ],
+        "c11_stress": [
+          0,
+          63
+        ],
+        "c16_stress": [
+          0,
+          63
+        ],
+        "ina_diff": [
+          0,
+          40
+        ]
+      }
+    },
+    {
+      "deck": "model_sanity.cir",
+      "status": "PASS",
+      "seconds": 1.62,
+      "errors": [],
+      "measurements": {
+        "dead_min": [
+          0.0
+        ],
+        "ldo_min": [
+          0.0
+        ],
+        "disabled_delivery": [
+          0.0
+        ],
+        "boot_early": [
+          0.0487652932822
+        ],
+        "boot_late": [
+          0.99849951105
+        ]
+      },
+      "limits": {
+        "dead_min": [
+          -0.001,
+          0.001
+        ],
+        "ldo_min": [
+          -0.001,
+          0.001
+        ],
+        "disabled_delivery": [
+          0,
+          1e-06
+        ],
+        "boot_early": [
+          0,
+          0.15
+        ],
+        "boot_late": [
+          0.9,
+          1.01
+        ]
+      }
+    }
+  ]
+}

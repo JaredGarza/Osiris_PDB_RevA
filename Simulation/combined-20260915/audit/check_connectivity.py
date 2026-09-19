@@ -68,7 +68,16 @@ for ref,c in components.items():
 
 assert lines['RSH'][1:4]==['SHUNT_HI','SHUNT_LO','{RSHUNT}']
 assert params['RSHUNT']=='5m'
+for ref in ('Q1','Q2'):
+ expected=[pins[(ref,p)] for p in ('5','4','1')]
+ # CAD has one gate net; the model splits it with a documented 1 mOhm copper stub.
+ assert lines['RGF'][1:4]==['GP','GF','1m']
+ if expected[1]=='GP': expected[1]='GF'
+ assert lines['X'+ref][1:4]==expected,(ref,lines['X'+ref][1:4],expected)
+ assert lines['X'+ref][4]=='ISC015N06NM5LF2_L1'
 assert lines['XU1'][1:11]==['VBAT_FUSED','N_UV','N_OV','N_RETRY','GND','SHDN_LTC','FAULT','SHUNT_LO','SHUNT_HI','GP']
+assert lines['XQ3'][1:4]==[pins[('Q3',p)] for p in ('5','4','1')], 'Q3 drain/gate/source mismatch'
+assert lines['XQ3'][4]=='BSC070N10NS5_L1'
 assert lines['XU3'][1:9]==['V3V3','PDB_LDO_ADJ','NC3','GND','VOUT','NC6','NC7','VOUT']
 assert lines['XU5'][1:7]==['VBAT_FUSED','IDEAL_GATE','IDEAL_IN','IDEAL_IN','IDEAL_IN','IDEAL_VSS']
 report={'components':59,'bom_files_match':True,'live_netlist':str(live),

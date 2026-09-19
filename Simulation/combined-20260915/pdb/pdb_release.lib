@@ -1,5 +1,11 @@
 * A-P4-DRAFT: direct gate drive, series RC branch, standard 5 mOhm shunt.
-* Kelvin force stubs, fuse, FETs and IC models retain documented approximations.
+* Q1/Q2 use Infineon L1 constant-temperature electrical models with package parasitics.
+* Q3 also uses the manufacturer L1 electrical model; no self-heating is modeled.
+* TVSs, Kelvin force stubs and fuse retain documented approximations.
+* More Newton iterations for the vendor model; accuracy tolerances are unchanged.
+.options itl4=1000 solver=alt
+.lib "C:/Users/jared/Desktop/PCB/Kicad/Osiris_PDB_RevA/Simulation/vendor-models/infineon-100v/OptiMOS5/OptiMOS5_100V_LTSpice.lib"
+.lib "C:/Users/jared/Desktop/PCB/Kicad/Osiris_PDB_RevA/Simulation/vendor-models/infineon-60v/03_OptiMOS_OptiMOS5/OptiMOS_OptiMOS5_60V_LTSpice.lib"
 .subckt PDB_CURRENT VIN VOUT V3V3 GP GF COMMON FAULT ALERT SCL SDA GND
 + PARAMS: CDERATE=0.65 CDERATE3=0.50 RXT60=0.3m RFUSE=23.48m
 +          RSHUNT=5m R1V=237k RUVBV=11.8k ROVTV=2Meg ROVBV=54.9k
@@ -9,7 +15,7 @@ RJ1P VIN   VBAT_RAW {RXT60}
 
 RF1 VBAT_RAW IDEAL_IN {RFUSE}
 * LTC4359 upstream ideal diode; 100 V Q3. A-P4 selected circuit.
-MQ3 VBAT_FUSED IDEAL_GATE IDEAL_IN IDEAL_IN BSC070N10NS5
+XQ3 VBAT_FUSED IDEAL_GATE IDEAL_IN BSC070N10NS5_L1
 XU5 VBAT_FUSED IDEAL_GATE IDEAL_IN IDEAL_IN IDEAL_IN IDEAL_VSS LTC4359
 R19 IDEAL_VSS GND 1k
 XD4 IDEAL_IN IDEAL_VSS SMAJ24CA
@@ -38,8 +44,8 @@ R4 GP GATE_RC 22k
 C1   GATE_RC GND 22n Rser=50m
 * D2 omitted; gate directly driven as in ADI Figure 7.
 
-MQ1  VBAT_FUSED     GF COMMON COMMON ISC015N06NM5LF2
-MQ2  PDB_PROTECTED  GF COMMON COMMON ISC015N06NM5LF2
+XQ1  VBAT_FUSED     GF COMMON ISC015N06NM5LF2_L1
+XQ2  PDB_PROTECTED  GF COMMON ISC015N06NM5LF2_L1
 
 RSH_F1 PDB_PROTECTED SHUNT_HI 0.5m
 RSH    SHUNT_HI      SHUNT_LO {RSHUNT}

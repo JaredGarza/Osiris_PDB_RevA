@@ -1,0 +1,13 @@
+* Standalone BSC070N10NS5_L1 electrical spot check; no thermal qualification.
+.lib "C:/Users/jared/Desktop/PCB/Kicad/Osiris_PDB_RevA/Simulation/vendor-models/infineon-100v/OptiMOS5/OptiMOS5_100V_LTSpice.lib"
+.temp 25
+VG G 0 10
+I_TYP 0 D_TYP 40
+I_MAX 0 D_MAX 40
+X_TYP D_TYP G 0 BSC070N10NS5_L1
+X_MAX D_MAX G 0 BSC070N10NS5_L1 PARAMS: dRdson=1
+.tran 0 100u 0 1u
+.options solver=alt itl4=1000 reltol=0.0001
+.meas TRAN RON_TYP AVG V(D_TYP)/40 FROM 50u TO 100u
+.meas TRAN RON_MAX AVG V(D_MAX)/40 FROM 50u TO 100u
+.end

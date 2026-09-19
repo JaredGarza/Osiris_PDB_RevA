@@ -1,6 +1,18 @@
 # A-P4 PDB + Osiris power-path verification — 2026-09-17
 
+Historical report: the tables and measurements below describe the pre-Infineon-Q1/Q2 baseline, not the current vendor-model release. Current status and limitations are in [MODEL-VERIFICATION-20260918.md](MODEL-VERIFICATION-20260918.md). Do not interpret the older 9/9 statement as verification of the updated release.
+
 ## Result
+
+Subsequent Infineon model update: Q1/Q2 now use the exact ISC015N06NM5LF2_L1 manufacturer model. The previous 9/9 results below apply to the earlier fitted MOSFETs and are historical. Initial vendor-model startup sweeps stopped at an iteration limit; verification of the updated model is in progress. See audit/verification.json for the latest completed run and audit/verification-before-infineon-q1q2.json for the preserved ST-clamp baseline.
+
+Updated after processing the supplied downloads: the 14:26 LTspice run passed all 9 active decks using ST's STPST10H100SB manufacturer electrical model for D3. All recorded dependency hashes match the current files. Connectivity and 8 runner self-tests passed again. The schematic was not electrically changed during this model update.
+
+The transient checks now also enforce the previously omitted controller/Q1/Q2 stress bounds, including the actual 60 V Q1/Q2 ratings. C11/C16 checks were corrected from 100 V to their fitted 63 V ratings. Earlier green results did not enforce these checks. With the ST model, transient Q1/Q2 peaks are 33.434/9.760 V, Q3 peaks at 63.220 V, LTC4359 IN reaches -35.219 V relative to VSS, and C16 reaches 46.831 V. The short-event sense differential is 313.693 mV and source I-squared-time is 0.120399 A²s.
+
+This 9-deck result excludes the separate unfinished fine-transient and filter-mismatch decks, as well as physical thermal, fuse-clearing and hardware tests. It is not 100% completion of combined-board qualification.
+
+The supplied MOSFET ZIP contains KiCad assets only. The supplied TVS models are from ST and Taiwan Semiconductor, whereas D1/D4 specify Bourns. Those models were retained for comparison without changing the TVS manufacturer in the BOM. See `../vendor-models/received-20260917/README.md` for the file inventory. The ST D3 model has no thermal network or reverse-breakdown parameter; pulse survival remains unqualified.
 
 The current A-P4 PDB schematic passes the recorded LTspice screening suite: **9 of 9 active decks passed**. KiCad ERC reports **0 violations**. The live schematic, both BOMs and the A-P4 SPICE population pass the connectivity/value check.
 
@@ -53,7 +65,7 @@ This is a circuit-screening result, not fabrication or flight qualification. The
 ## Open qualification items
 
 - Q1/Q2/Q3 MOSFET SOA, avalanche, thermal impedance and repeated-fault survival are not represented by the fitted models.
-- D1/D3/D4 pulse energy, temperature and production tolerance need vendor models plus bench correlation.
+- D3 now uses the supplied ST electrical model; pulse energy and thermal survival still need separate validation. D1/D4 remain fitted Bourns surrogates. Production tolerance and bench correlation remain open.
 - The fuse is modeled as resistance only; opening, arcing and interrupt capability are not simulated.
 - The Osiris LM73100, AP64501 converters and digital loads are behavioral models. A current Rev B schematic and measured startup/steady/transient load profile are required for combined-system signoff.
 - PCB parasitics, thermal design, EMI, firmware sequencing, I2C operation and physical connector polarity require layout/bench tests.

@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\jared\Desktop\PCB\Kicad\Osiris_PDB_RevA\Osiris_PDB_RevA.kicad_sch</source>
-    <date>2026-09-17T14:20:32</date>
+    <date>2026-09-18T22:27:06</date>
     <tool>Eeschema 10.0.5</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -11,7 +11,7 @@
         <rev>A-P4-DRAFT</rev>
         <date>2026-09-17</date>
         <source>Osiris_PDB_RevA.kicad_sch</source>
-        <comment number="1" value="Selected components; original Osiris hardware retained"/>
+        <comment number="1" value="PDB power-path draft; Osiris Rev B replacement interface"/>
         <comment number="2" value="Electrical design draft - PCB and bench validation required"/>
         <comment number="3" value=""/>
         <comment number="4" value=""/>

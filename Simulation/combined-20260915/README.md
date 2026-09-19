@@ -1,5 +1,11 @@
 # PDB and Osiris power simulation
 
+Q3 model update: the supplied Infineon 100 V archive has now replaced the fitted Q3 with `BSC070N10NS5_L1`. Earlier 10/11 results below are historical and must not be applied to this changed model. See `Q3-MODEL-VERIFICATION.md` for the new run status.
+
+Latest manufacturer-model verification: [2026-09-18 status](MODEL-VERIFICATION-20260918.md). The previous 9/9 report used fitted Q1/Q2 models and is historical.
+
+Historical pre-Q3 consolidated evidence: `audit/verification-before-q3.json` — 10/11 independent decks passed with the fitted Q3. The three independent transient decks replace one stepped deck, retaining its original cases and limits. Current Q3-model status is in `Q3-MODEL-VERIFICATION.md`; `audit/verification.json` contains only the latest individual invocation.
+
 The active A-P4 KiCad schematic has **59 component symbols, 57 populated**,
 a 5 mOhm shunt, a 4 A fuse, an LTC4359/BSC070N10NS5 reverse-current stage,
 filtered INA228 inputs and an STPST10H100SB output clamp. The default

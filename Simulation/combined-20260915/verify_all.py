@@ -39,6 +39,8 @@ PIN_STRESS = {
 }
 
 def limits(name):
+    if name in ('release_transients_0p2u_isolated', 'release_transients_2u_isolated', 'release_transients_20u_isolated', 'release_transients_20u_trap'):
+        return limits('release_transients')
     # A-P4 release decks are the live 59-symbol KiCad population. Reuse the
     # established A-P3 functional bounds and add the new front-end stresses.
     if name.startswith('release_'):
@@ -126,7 +128,7 @@ def run(deck, engine, timeout):
     log = logpath.read_text(errors='replace') if logpath.exists() else ''
     if not log or 'Total elapsed time:' not in log: errors.append('missing completed fresh log')
     for line in log.splitlines():
-        if re.search(r'^Error|Fatal|timestep too small|singular matrix|is floating|tolerance relaxed|unknown subcircuit|could not open|not found', line, re.I): errors.append(line.strip())
+        if re.search(r'^Error|Fatal|Simulation Failed|iteration limit reached|timestep too small|singular matrix|is floating|tolerance relaxed|unknown subcircuit|could not open|not found', line, re.I): errors.append(line.strip())
     data = measurements(log)
     expected = re.findall(r'^\.meas\s+\w+\s+(\w+)', deck.read_text(), re.I|re.M)
     optional = {'extra_t'} if deck.stem in ('revb_thresholds','revb_fbnode') else set()

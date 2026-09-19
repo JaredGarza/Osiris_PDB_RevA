@@ -6,6 +6,8 @@
   "release_faults_fine.cir",
   "release_reverse.cir",
   "release_reverse25.cir",
-  "release_transients.cir",
+  "release_transients_0p2u_isolated.cir",
+  "release_transients_2u_isolated.cir",
+  "release_transients_20u_isolated.cir",
   "model_sanity.cir"
 ]

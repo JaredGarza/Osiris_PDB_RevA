@@ -9,6 +9,15 @@
   },
   "models": [
     {
+      "device": "Q3 Infineon BSC070N10NS5 (PDB)",
+      "file": "../vendor-models/infineon-100v/OptiMOS5/OptiMOS5_100V_LTSpice.lib",
+      "provenance": "User-supplied Infineon 100 V archive; library version 240725",
+      "original_library_sha256": "775c1b18bdbf61ae6f1662fa42aaaa86eb34b4977896d3c979abadf3edfb91b3",
+      "fidelity": "VENDOR ELECTRICAL L1",
+      "pin_order": "drain, gate, source",
+      "limits": "BSC070N10NS5_L1, original parameters and package parasitics. Fixed simulation temperature, no self-heating. Previous fitted-Q3 results are historical pending rerun."
+    },
+    {
       "device": "D3 STPST10H100SB-TR (PDB)",
       "file": "pdb/pdb_release.lib: STPST10H100SB subcircuit",
       "provenance": "ST_POWER_SCHOTTKY_V10.LIB inside user-supplied resources.zip / st_power_schottky_diodes_pspice_models_v6.zip; original retained in Simulation/vendor-models/received-20260917/st-schottky",
@@ -35,10 +44,12 @@
     },
     {
       "device": "Q1/Q2 Infineon ISC015N06NM5LF2 (PDB)",
-      "file": "models/pdb_devices.lib",
-      "provenance": "DATASHEET-FITTED VDMOS, built here. No Infineon SPICE model was available.",
-      "fidelity": "SURROGATE",
-      "limits": "Square-law VDMOS cannot match RDS(on)=1.3 mohm and gfs=56 S simultaneously; RDS(on) was held, so gm is roughly 2x high and the Miller plateau sits ~0.3 V low. Inrush is therefore mildly optimistic. NO SOA, avalanche, or thermal validity. The 178.7 A short-circuit peak is NOT an SOA demonstration."
+      "file": "../vendor-models/infineon-60v/03_OptiMOS_OptiMOS5/OptiMOS_OptiMOS5_60V_LTSpice.lib",
+      "provenance": "User-supplied Infineon 60 V simulation library, version 030726; exact ISC015N06NM5LF2_L1 subcircuit",
+      "fidelity": "VENDOR ELECTRICAL L1",
+      "sha256": "6309f9b70959f636ee3cea927251da7f6cc7f5d73b444a1a3c4b2489e470917e",
+      "pin_order": "drain gate source",
+      "limits": "Constant device temperature from TEMP, default typical process parameters, vendor package parasitics retained. No self-heating in L1. Five-pin electrothermal variant is available but requires application thermal boundary conditions. Historical surrogate results do not validate this updated model."
     },
     {
       "device": "D1 SMAJ24CA (PDB)",

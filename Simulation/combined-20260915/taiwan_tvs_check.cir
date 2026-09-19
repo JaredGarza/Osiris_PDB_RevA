@@ -1,0 +1,13 @@
+* Standalone user-supplied Taiwan SMAJ24CA model check, not Bourns qualification.
+.include "../vendor-models/received-20260917/Taiwan-SMAJ24CA.txt"
+VTEST DRIVE 0 0
+RLIMIT DRIVE TVS 1k
+XTVS TVS 0 SMAJ24A
+.temp 25
+.dc VTEST -35 35 0.01
+.options solver=alt reltol=0.0001
+.meas DC CLAMP_POS FIND V(TVS) AT=35
+.meas DC CLAMP_NEG FIND V(TVS) AT=-35
+.meas DC LEAK_POS FIND I(VTEST) AT=24
+.meas DC LEAK_NEG FIND I(VTEST) AT=-24
+.end
