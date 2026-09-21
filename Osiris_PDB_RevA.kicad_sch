@@ -7030,7 +7030,7 @@
 				)
 			)
 		)
-		(property "Value" "LTC4368IMS-1-PBF"
+		(property "Value" "LTC4368HMS-1-PBF"
 			(at 198.1200 69.8500 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7064,7 +7064,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Approved H-temperature-grade LTC4368-1; pin/function-compatible with LTC4368IMS-1 and rated -40 C to 125 C"
 			(at 198.1200 69.8500 0)
 			(hide yes)
 			(show_name no)
@@ -7086,7 +7086,7 @@
 				)
 			)
 		)
-		(property "MPN" "LTC4368IMS-1#TRPBF"
+		(property "MPN" "LTC4368HMS-1#TRPBF"
 			(at 175.2600 81.2800 0)
 			(hide yes)
 			(show_name no)

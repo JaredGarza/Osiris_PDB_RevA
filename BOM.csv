@@ -33,7 +33,7 @@ TP4,TestPoint,test point,TestPoint:TestPoint_Pad_D1.5mm,,,,,,Bare copper test pa
 TP5,TestPoint,test point,TestPoint:TestPoint_Pad_D1.5mm,,,,,,Bare copper test pad; no fitted part required,
 TP6,TestPoint,test point,TestPoint:TestPoint_Pad_D1.5mm,,,,,,Bare copper test pad; no fitted part required,
 TP7,TestPoint,test point,TestPoint:TestPoint_Pad_D1.5mm,,,,,,Bare copper test pad; no fitted part required,
-U1,LTC4368IMS-1-PBF,,PDB_Footprints:MS_10-MSOP_ADI,Analog Devices,LTC4368IMS-1#TRPBF,,,,,${KIPRJMOD}/Datasheets/LTC4368 (Rev C).pdf
+U1,LTC4368HMS-1-PBF,,PDB_Footprints:MS_10-MSOP_ADI,Analog Devices,LTC4368HMS-1#TRPBF,,,,Approved H-temperature-grade LTC4368-1; pin/function-compatible with LTC4368IMS-1 and rated -40 C to 125 C,${KIPRJMOD}/Datasheets/LTC4368 (Rev C).pdf
 U2,INA228AIDGSR,,PDB_Footprints:VSSOP10_DGS_TEX,Texas Instruments,INA228AIDGSR,,,,,${KIPRJMOD}/Datasheets/INA228.pdf
 U3,LT3010EMS8E,50mA adjustable LDO; reverse-input/current protection,Package_SO:MSOP-8-1EP_3x3mm_P0.65mm_EP1.68x1.88mm,Analog Devices,LT3010EMS8E#TRPBF,,,,"A-P2 engineering draft: reverse-input/current-protected LT3010; R11/R12/C10 set nominal 3.29 V. Verify startup, effective C6 and assembled rail transients.",https://www.analog.com/media/en/technical-documentation/data-sheets/lt3010-3010-5.pdf
 U4,74AUP1G07GW,"Single Buffer Gate, Open Drain, Low-Voltage CMOS",Package_TO_SOT_SMD:SOT-353_SC-70-5,Nexperia,"74AUP1G07GW,125",,,,,${KIPRJMOD}/Datasheets/Nexperia_74AUP1G07.pdf
