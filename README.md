@@ -1,16 +1,18 @@
 # Osiris PDB Rev A
 
-Current simulation/design audit: [review](Simulation/combined-20260915/REVIEW.md). This supersedes earlier population and simulation claims.
+**Current manufacturing review: [28 September 2026](MANUFACTURING_REVIEW_2026-09-28.md). Do not order this board yet.**
 
-Active 48-component A-P2-DRAFT 4S avionics power protection and I2C telemetry schematic.
+The current `A-P4-DRAFT` CAD has 64 board footprints and 60 schematic BOM entries
+(including seven test pads). Earlier simulation and purchasing documents describe
+older populations; use the current schematic and fresh BOM for this draft.
 Open `Osiris_PDB_RevA.kicad_pro` in KiCad 10. Project libraries use `${KIPRJMOD}`.
 This folder and its `origin` remote are the **power distribution board only**.
 The active Osiris Rev B main-board project is in the separate
 [Hardware repository's Osiris Rev B branch](https://github.com/modifly-technologies/Hardware/tree/codex/osiris-revb-power-route/OSIRIS_RevB), at
 `OSIRIS_RevB/OsirisRevB.kicad_pro`.
 
-**September 15 engineering draft:** U3 is now LT3010 with R11/R12/C10.
-See the [electrical review](docs/PDB-ELECTRICAL-REVIEW-20260915.md) and
+**Current electrical draft:** U3 is LT3010 with R11/R12/C10.
+See the [earlier electrical review](docs/PDB-ELECTRICAL-REVIEW-20260915.md) and
 [proposed interface](docs/PDB-INTERFACE-PROPOSAL-20260915.md). Actual loads and
 mechanical constraints remain undecided; negative-input protection and fault
 qualification remain open. The previous parts baseline is historical.
@@ -36,10 +38,10 @@ be treated as instructions to regenerate the current design.
 
 ## Repository contents and checks
 
-The schematic, project-local libraries, engineering and purchasing BOMs, datasheets,
-simulation sources and review evidence are versioned together. Full Osiris board
-imports, editor state and LTspice binary outputs are kept out of Git. Git history
-retains the obsolete PCB; it is not a layout for the current circuit.
+The current schematic, PCB, project-local libraries, engineering and purchasing
+BOMs, datasheets, simulation sources and review evidence are versioned together.
+Full Osiris board imports, editor state and LTspice binary outputs are kept out
+of Git. The current PCB is a draft under manufacturing review.
 
 Install KiCad 10 and run from this project's root. Current draft checks:
 
