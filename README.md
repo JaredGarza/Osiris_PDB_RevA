@@ -6,7 +6,7 @@ Active 48-component A-P2-DRAFT 4S avionics power protection and I2C telemetry sc
 Open `Osiris_PDB_RevA.kicad_pro` in KiCad 10. Project libraries use `${KIPRJMOD}`.
 This folder and its `origin` remote are the **power distribution board only**.
 The active Osiris Rev B main-board project is in the separate
-[Hardware repository](https://github.com/modifly-technologies/Hardware), at
+[Hardware repository's Osiris Rev B branch](https://github.com/modifly-technologies/Hardware/tree/codex/osiris-revb-power-route/OSIRIS_RevB), at
 `OSIRIS_RevB/OsirisRevB.kicad_pro`.
 
 **September 15 engineering draft:** U3 is now LT3010 with R11/R12/C10.
