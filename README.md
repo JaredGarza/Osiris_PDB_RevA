@@ -4,6 +4,10 @@ Current simulation/design audit: [review](Simulation/combined-20260915/REVIEW.md
 
 Active 48-component A-P2-DRAFT 4S avionics power protection and I2C telemetry schematic.
 Open `Osiris_PDB_RevA.kicad_pro` in KiCad 10. Project libraries use `${KIPRJMOD}`.
+This folder and its `origin` remote are the **power distribution board only**.
+The active Osiris Rev B main-board project is in the separate
+[Hardware repository](https://github.com/modifly-technologies/Hardware), at
+`OSIRIS_RevB/OsirisRevB.kicad_pro`.
 
 **September 15 engineering draft:** U3 is now LT3010 with R11/R12/C10.
 See the [electrical review](docs/PDB-ELECTRICAL-REVIEW-20260915.md) and
@@ -14,13 +18,13 @@ qualification remain open. The previous parts baseline is historical.
 **Historical parts-planning baseline: 13 September 2026.** See the
 [freeze note](procurement/2026-09-13/FREEZE-NOTE.md) and
 [parts workbook](outputs/procurement-20260913/PDB-RevA-Parts-Planning.xlsx).
-New Osiris Rev B power and top-facing ports are planned, not yet drawn; shared-part
-counts from the old imported PCB remain candidates.
+This is a historical PDB parts-planning baseline. Current Osiris Rev B power
+path work lives in the separate Hardware repository above.
 
 See the [PDB and Osiris completion plan](docs/PDB-AND-OSIRIS-COMPLETION-PLAN.md)
 for achieved milestones, remaining review gates, interface decisions and proposed dates.
 
-**Not flight-ready. No current PDB PCB layout exists.** Start with
+**Not flight-ready. The PDB PCB layout is still under review.** Start with
 [Rev A readiness and completion plan](docs/REV-A-READINESS.md) and
 [current scope](DESIGN-SPEC.md).
 
