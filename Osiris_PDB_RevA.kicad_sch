@@ -12,7 +12,7 @@
 		(comment 2 "Electrical design draft - PCB and bench validation required")
 	)
 	(lib_symbols
-		(symbol "74xGxx:74AUP1G07"
+		(symbol "PDB_Symbols:74AUP1G07_PDB"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -82,7 +82,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOT?23* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm*"
+			(property "ki_fp_filters" "SOT?23* Texas?R-PDSO-G5?DCK* Texas?R-PDSO-N5?DRL* Texas?X2SON*0.8x0.8mm*P0.48mm* SOT-353_SC-70-5"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -93,7 +93,7 @@
 					)
 				)
 			)
-			(symbol "74AUP1G07_0_1"
+			(symbol "74AUP1G07_PDB_0_1"
 				(polyline
 					(pts
 						(xy -7.62 6.35) (xy -7.62 -6.35) (xy 5.08 0) (xy -7.62 6.35)
@@ -131,7 +131,7 @@
 					)
 				)
 			)
-			(symbol "74AUP1G07_1_1"
+			(symbol "74AUP1G07_PDB_1_1"
 				(pin free line
 					(at -2.54 -10.16 90)
 					(length 6.35)
@@ -506,7 +506,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_01x04"
+		(symbol "PDB_Symbols:Conn_01x04_PDB"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -580,7 +580,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(property "ki_fp_filters" "Connector*:*_1x??_* *JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -591,7 +591,7 @@
 					)
 				)
 			)
-			(symbol "Conn_01x04_1_1"
+			(symbol "Conn_01x04_PDB_1_1"
 				(rectangle
 					(start -1.27 3.81)
 					(end 1.27 -6.35)
@@ -1151,7 +1151,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:D_Schottky"
+		(symbol "PDB_Symbols:D_Schottky_PDB"
 			(pin_numbers
 				(hide yes)
 			)
@@ -1228,7 +1228,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_* *STPST10H100SB_DPAK"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1239,7 +1239,7 @@
 					)
 				)
 			)
-			(symbol "D_Schottky_0_1"
+			(symbol "D_Schottky_PDB_0_1"
 				(polyline
 					(pts
 						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
@@ -1277,7 +1277,7 @@
 					)
 				)
 			)
-			(symbol "D_Schottky_1_1"
+			(symbol "D_Schottky_PDB_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 2.54)
@@ -2337,7 +2337,7 @@
 					(justify left bottom)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:TDSON-8-1"
+			(property "Footprint" "PDB_Footprints:BSC070N10NS5_TDSON8"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3994,7 +3994,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "MS_10_ADI MS_10_ADI-M MS_10_ADI-L"
+			(property "ki_fp_filters" "MS_10_ADI MS_10_ADI-M MS_10_ADI-L MS_10-MSOP_ADI"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -11085,7 +11085,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:TDSON-8-1"
+		(property "Footprint" "PDB_Footprints:BSC070N10NS5_TDSON8"
 			(at 86.36 12.7 0)
 			(hide yes)
 			(show_name no)
@@ -11775,7 +11775,7 @@
 		)
 	)
 	(symbol
-		(lib_id "74xGxx:74AUP1G07")
+		(lib_id "PDB_Symbols:74AUP1G07_PDB")
 		(at 172.72 210.82 0)
 		(unit 1)
 		(body_style 1)
@@ -12542,7 +12542,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
+		(lib_id "PDB_Symbols:Conn_01x04_PDB")
 		(at 388.62 236.22 0)
 		(unit 1)
 		(body_style 1)
@@ -15830,7 +15830,7 @@
 				)
 			)
 		)
-		(property "Description" "5 A, 32 VDC MINI blade fuse; backup protection for a fault the MOSFETs cannot interrupt"
+		(property "Description" "4 A, 32 VDC MINI blade fuse; backup protection for a fault the MOSFETs cannot interrupt"
 			(at 40.64 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -16721,7 +16721,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:D_Schottky")
+		(lib_id "PDB_Symbols:D_Schottky_PDB")
 		(at 345.44 55.88 270)
 		(unit 1)
 		(body_style 1)

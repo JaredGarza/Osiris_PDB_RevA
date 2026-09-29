@@ -1,10 +1,12 @@
 # Osiris PDB Rev A
 
-**Current manufacturing review: [28 September 2026](MANUFACTURING_REVIEW_2026-09-28.md). Do not order this board yet.**
+**Current manufacturing review: [28 September 2026](MANUFACTURING_REVIEW_2026-09-28.md). CAD checks pass; electrical and assembly release gates remain open. Do not order this board yet.**
 
 The current `A-P4-DRAFT` CAD has 64 board footprints and 60 schematic BOM entries
 (including seven test pads). Earlier simulation and purchasing documents describe
-older populations; use the current schematic and fresh BOM for this draft.
+older populations. Use `review/2026-09-28/schematic-bom-current.csv` and the
+assembly drafts in that folder for the current population; the root `BOM.csv`
+and `BOM_purchasing.csv` are historical exports.
 Open `Osiris_PDB_RevA.kicad_pro` in KiCad 10. Project libraries use `${KIPRJMOD}`.
 This folder and its `origin` remote are the **power distribution board only**.
 The active Osiris Rev B main-board project is in the separate
@@ -26,7 +28,7 @@ path work lives in the separate Hardware repository above.
 See the [PDB and Osiris completion plan](docs/PDB-AND-OSIRIS-COMPLETION-PLAN.md)
 for achieved milestones, remaining review gates, interface decisions and proposed dates.
 
-**Not flight-ready. The PDB PCB layout is still under review.** Start with
+**Not flight-ready. Electrical and JLCPCB assembly checks remain open.** Start with
 [Rev A readiness and completion plan](docs/REV-A-READINESS.md) and
 [current scope](DESIGN-SPEC.md).
 

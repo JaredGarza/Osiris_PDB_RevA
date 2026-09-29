@@ -16,9 +16,10 @@ pin 4 ground.
 The board layout and current BOM supersede the September 15 planning numbers
 in older review files. The schematic export has 60 BOM entries, including
 seven test pads; the PCB has 64 footprints, including four mounting holes.
-The J3/J4 cable polarity and mating, H3 mounting-hole clearance, protection
-transients, fuse/trace coordination, and MOSFET footprint representation need
-sign-off before manufacturing.
+The H3 courtyard conflict and MOSFET pin-count discrepancies have been corrected
+in CAD. J3/J4 cable polarity and mating, actual mounting fit, protection
+transients, fuse/trace coordination, assembly sourcing, and first-article
+verification still need closure before release.
 
 See [the current manufacturing review](MANUFACTURING_REVIEW_2026-09-28.md) for
 the measured CAD checks, remaining blockers, and manufacturing status. The
