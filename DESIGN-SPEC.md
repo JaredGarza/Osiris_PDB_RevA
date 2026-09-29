@@ -1,5 +1,12 @@
 # Osiris PDB Rev A — current CAD scope
 
+**New layout study:** [single-battery through-PDB power foundation](docs/SINGLE_BATTERY_POWER_PATH_FOUNDATION_2026-09-29.md)
+and its [two-Phoenix-terminal placement board](design-studies/phoenix-through-pdb/Osiris_PDB_RevA.kicad_pcb)
+show the proposed battery XT60 adapter → PDB → AERO SELFIE ESC path. This
+study is not routed or synchronized with the active schematic. The active
+root PCB described below remains the three-XT60 candidate. Neither design
+is qualified for the provisional 60/100 A propulsion target.
+
 The active schematic is `A-P5-DRAFT` in `Osiris_PDB_RevA.kicad_pro`. It is a
 two-layer, 1.6 mm, nominal 1 oz copper avionics power-protection board with
 INA228 I²C telemetry. The PCB is now a compact, routed **candidate** for the
