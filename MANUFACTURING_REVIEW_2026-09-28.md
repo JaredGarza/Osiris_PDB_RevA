@@ -54,7 +54,11 @@ not certify stencil volume or first-article solder joints.
 1. **Load path and fuse rating.** This layout was designed as a 4S **avionics**
    branch for up to 25 W and 2.5 A simultaneously. Its 4 A MINI fuse and power
    copper are not a qualified four-motor ESC feed. Confirm that ESC propulsion
-   power bypasses J3/J4. If it does not, redesign the PDB power path using
+   power bypasses J3/J4. J3 and J4 are parallel connections to the **same**
+   `PDB_VOUT` and GND nets; the two load currents add through the common fuse,
+   MOSFETs, and shunt. D3 is a ground-to-output clamp and does not isolate the
+   connectors. See the [output topology note](docs/OUTPUTS-AND-DIODE-20260928.md).
+   If ESC power uses either connector, redesign the PDB power path using
    actual maximum and startup currents; motor averages are insufficient. Even
    with the ESCs separate, the [Osiris Rev B power review](https://github.com/modifly-technologies/Hardware/blob/codex/osiris-revb-power-route/OSIRIS_RevB/REV_B_POWER_REVIEW.md)
    estimates that a 25 W Jetson mode alone would exceed this branch's 25 W
