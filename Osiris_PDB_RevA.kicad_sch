@@ -6,9 +6,9 @@
 	(paper "A3")
 	(title_block
 		(title "Osiris PDB - engineering draft")
-		(date "2026-09-17")
-		(rev "A-P4-DRAFT")
-		(comment 1 "PDB power-path draft; Osiris Rev B replacement interface")
+		(date "2026-09-29")
+		(rev "A-P5-DRAFT")
+		(comment 1 "Dedicated ESC branch draft; Osiris avionics remains separately protected")
 		(comment 2 "Electrical design draft - PCB and bench validation required")
 	)
 	(lib_symbols
@@ -4958,7 +4958,7 @@
 		)
 		(uuid "5b864bc5-4fa5-4eb7-8eb3-1ab73158cf8d")
 	)
-	(text "MAIN POWER PATH  |  BATTERY -> PROTECTED RAW 4S TO OSIRIS"
+	(text "AVIONICS POWER  |  4S BATTERY -> PROTECTED RAW 4S TO OSIRIS (JETSON 15 W MODE)"
 		(exclude_from_sim no)
 		(at 20.32 17.78 0)
 		(effects
@@ -4980,7 +4980,7 @@
 		)
 		(uuid "b463680a-ea80-4e87-8a91-b8eb62cbdacf")
 	)
-	(text "Same electrical circuit; drawing rearranged only. No capacitor values or footprints changed.\nPDB supplies raw battery voltage; Osiris Rev B requires its replacement power section.\nC11-C16: 1 uF / 63 V non-polar film. Keep local bypass capacitors close to their ICs."
+	(text "A-P5 DRAFT: dedicated ESC branch added; PCB placement/routing is not updated.\nAvionics: J4 power + J2 I2C to Osiris. ESC: J3 only, directly from VBAT_RAW through F2.\nC11-C16: 1 uF / 63 V non-polar film. Keep local bypass capacitors close to their ICs."
 		(exclude_from_sim no)
 		(at 20.32 276.86 0)
 		(effects
@@ -5198,6 +5198,76 @@
 		(color 0 0 0 0)
 		(uuid "fd9ec842-baf1-421f-9f9e-1231dacde288")
 	)
+	(text "DEDICATED ESC POWER  |  4S / 60 A CONTINUOUS / 100 A FOR 30 s (PROVISIONAL)"
+		(exclude_from_sim no)
+		(at 255.27 91.44 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left)
+		)
+		(uuid "dc0a81d6-7110-46d3-9730-97a552e35f59")
+	)
+	(text "J3 ESC ONLY. F2/D5/C17-C19 bypass avionics F1, Q3, Q1/Q2, U1 and R5.\nRoute ESC positive and return directly to the battery-entry star with matched high-current copper.\nConnector, fuse, heavy-copper land pattern, pack fault current, inrush and thermal rise require qualification."
+		(exclude_from_sim no)
+		(at 255.27 97.79 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "5553c80a-e0ba-480b-8748-c377221c2fe3")
+	)
+	(junction
+		(at 300.99 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "699452cb-7ccf-402a-abd2-5a170628889e")
+	)
+	(junction
+		(at 322.58 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5ae8f76e-4f3b-4272-b4c0-0cfd7989cc97")
+	)
+	(junction
+		(at 345.44 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "634a5ae8-c151-4719-bdae-120f11162ed0")
+	)
+	(junction
+		(at 363.22 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3fceebaa-3eb1-438d-9eea-d5bd7f95a51b")
+	)
+	(junction
+		(at 300.99 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0cbf9b90-7fd7-444b-afbc-9707d3f9fd55")
+	)
+	(junction
+		(at 322.58 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0346bd9a-2340-4408-94d3-cbd5a9701270")
+	)
+	(junction
+		(at 345.44 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d926e66a-5ca5-4dbd-8ae4-0736a157f1c1")
+	)
+	(junction
+		(at 363.22 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "48c067e7-f98b-4ebf-ac9f-d9bd6d78bf64")
+	)
 	(no_connect
 		(at 33.02 195.58)
 		(uuid "05b1321f-6a39-4c8a-94a1-eec9af3e2084")
@@ -5285,16 +5355,6 @@
 			(type default)
 		)
 		(uuid "03906d47-f9f2-4844-a0d9-918bfb492e90")
-	)
-	(wire
-		(pts
-			(xy 378.46 50.8) (xy 378.46 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0474bbef-b2e8-490f-9b46-fb2d969c78c5")
 	)
 	(wire
 		(pts
@@ -5425,16 +5485,6 @@
 			(type default)
 		)
 		(uuid "153209f9-375b-41a6-9d42-0a2d4d7feb74")
-	)
-	(wire
-		(pts
-			(xy 373.38 38.1) (xy 373.38 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1c5de8d2-8762-4227-b743-9fac42b4cefc")
 	)
 	(wire
 		(pts
@@ -5958,16 +6008,6 @@
 	)
 	(wire
 		(pts
-			(xy 383.54 53.34) (xy 373.38 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5545290c-7d68-4cc5-9fef-0b710db2a8b8")
-	)
-	(wire
-		(pts
 			(xy 317.5 195.58) (xy 323.85 195.58)
 		)
 		(stroke
@@ -6165,16 +6205,6 @@
 			(type default)
 		)
 		(uuid "6bf6e542-4884-43fd-8f54-6f638b5a7de0")
-	)
-	(wire
-		(pts
-			(xy 383.54 50.8) (xy 378.46 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6f3879bc-7820-4c03-a171-b8aa0031fc78")
 	)
 	(wire
 		(pts
@@ -7115,6 +7145,106 @@
 			(type default)
 		)
 		(uuid "fcd350de-e263-4f4c-8a02-baff71d5d8e1")
+	)
+	(wire
+		(pts
+			(xy 260.35 74.93) (xy 270.51 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70d18105-8172-4321-945f-177224be8a91")
+	)
+	(wire
+		(pts
+			(xy 278.13 74.93) (xy 383.54 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcd70887-eb9a-4a3c-a7fe-33a6f24e7583")
+	)
+	(wire
+		(pts
+			(xy 300.99 82.55) (xy 300.99 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb03af3b-2cad-4fc8-944f-92922ed1dbc6")
+	)
+	(wire
+		(pts
+			(xy 322.58 82.55) (xy 322.58 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9634a6a4-c551-4277-af11-3305bd30a5a5")
+	)
+	(wire
+		(pts
+			(xy 345.44 82.55) (xy 345.44 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57fa4503-ad42-41a3-9c4d-df8dca1eb751")
+	)
+	(wire
+		(pts
+			(xy 363.22 82.55) (xy 363.22 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e62b6e7a-e07c-49ac-ab75-99e31d5e3512")
+	)
+	(wire
+		(pts
+			(xy 300.99 87.63) (xy 383.54 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bd647468-a8d6-4322-bac5-24e7b67caaf7")
+	)
+	(wire
+		(pts
+			(xy 383.54 72.39) (xy 383.54 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d58e75af-2087-4c48-ba2b-97c512e41b9e")
+	)
+	(label "VBAT_RAW"
+		(at 260.35 74.93 180)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify right bottom)
+		)
+		(uuid "737f06ae-5cf7-4158-8c2b-1398867bcd18")
+	)
+	(label "ESC_VBAT"
+		(at 279.4 74.93 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "10b41af3-a6fc-468b-97d9-fd12dc7ff69d")
 	)
 	(label "IDEAL_GATE"
 		(at 83.82 22.86 0)
@@ -9682,85 +9812,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 378.46 55.88 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "32ef8df7-ca6b-4a43-baf2-f5e499b507ab")
-		(property "Reference" "#PWR0130"
-			(at 378.46 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 378.46 60.96 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 378.46 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 378.46 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 378.46 55.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f4674937-82a0-49aa-9463-28281808f500")
-		)
-		(instances
-			(project "Osiris_PDB_RevA"
-				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
-					(reference "#PWR0130")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 25.4 113.03 0)
 		(unit 1)
 		(body_style 1)
@@ -11908,7 +11959,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "74dbfffc-d519-4ff9-9d7b-ca3bef50bdd7")
-		(property "Reference" "J3"
+		(property "Reference" "J4"
 			(at 388.62 27.94 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11950,7 +12001,7 @@
 				)
 			)
 		)
-		(property "Description" "Protected raw-4S power output: pin 1 GND, pin 2 PDB_VOUT; map physical contacts to new Osiris power entry."
+		(property "Description" "Avionics raw-4S output to Osiris: pin 1 GND, pin 2 PDB_VOUT. This connector remains on the protected 4 A avionics branch."
 			(at 388.62 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -11961,7 +12012,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "PDB polarity fixed. Verify physical cable contacts and board-edge clearance; old Osiris J16 numbering is not the new Rev B interface."
+		(property "Selection_Status" "OSIRIS POWER ONLY. Verify physical cable contacts and board-edge clearance; do not connect the four-motor ESC here."
 			(at 388.62 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -12003,7 +12054,7 @@
 		(instances
 			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
-					(reference "J3")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -17326,7 +17377,7 @@
 				)
 			)
 		)
-		(property "Value" "XT60PW-M"
+		(property "Value" "125A TERM"
 			(at 17.78 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17336,7 +17387,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal"
+		(property "Footprint" ""
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17347,7 +17398,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/AMASS_XT60PW-M.pdf"
+		(property "Datasheet" "https://www.phoenixcontact.com/en-de/products/pcb-terminal-block-mkdsp-25-2-1500-1932588"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17358,7 +17409,7 @@
 				)
 			)
 		)
-		(property "Description" "Battery input; PCB right-angle XT60; pin 1 GND, pin 2 VBAT_RAW"
+		(property "Description" "High-current 4S battery input; pin 1 GND, pin 2 VBAT_RAW. Candidate terminal is Phoenix 1932588, 125 A nominal with specified conductor."
 			(at 17.78 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -17369,7 +17420,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Assigned; verify cable mating, polarity and board-edge clearance"
+		(property "Selection_Status" "PROVISIONAL: input must carry ESC plus avionics current. Final footprint, wire gauge, torque, assembly method, polarity and thermal rise require qualification."
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17380,7 +17431,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "AMASS"
+		(property "Manufacturer" "Phoenix Contact"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17391,7 +17442,7 @@
 				)
 			)
 		)
-		(property "MPN" "XT60PW-M"
+		(property "MPN" "1932588"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17496,7 +17547,7 @@
 	)
 	(symbol
 		(lib_id "PDB_Symbols:XT60PW_F")
-		(at 388.62 50.8 0)
+		(at 388.62 72.39 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -17506,8 +17557,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ed386e18-4793-4be3-9dfd-7a7c89dec4a5")
-		(property "Reference" "J4"
-			(at 388.62 43.18 0)
+		(property "Reference" "J3"
+			(at 388.62 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17516,8 +17567,41 @@
 				)
 			)
 		)
-		(property "Value" "XT60PW-F"
+		(property "Value" "125A TERM"
+			(at 388.62 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 388.62 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.phoenixcontact.com/en-de/products/pcb-terminal-block-mkdsp-25-2-1500-1932588"
+			(at 388.62 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Dedicated four-motor ESC output; pin 1 is the high-current battery return and pin 2 is ESC_VBAT after F2. Candidate terminal is Phoenix 1932588, 125 A nominal with specified conductor."
 			(at 388.62 45.72 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -17526,7 +17610,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
+		(property "Selection_Status" "PROVISIONAL: size for 60 A continuous and 100 A for 30 s. Final footprint, cable, assembly method, temperature rise, and mate must be qualified before release."
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -17537,7 +17621,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf"
+		(property "Manufacturer" "Phoenix Contact"
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -17548,40 +17632,7 @@
 				)
 			)
 		)
-		(property "Description" "Protected raw-4S power output: pin 1 GND, pin 2 PDB_VOUT; map physical contacts to new Osiris power entry."
-			(at 388.62 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Selection_Status" "PDB polarity fixed. Verify physical cable contacts and board-edge clearance; old Osiris J16 numbering is not the new Rev B interface."
-			(at 388.62 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "AMASS"
-			(at 388.62 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "XT60PW-F"
+		(property "MPN" "1932588"
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -17601,7 +17652,7 @@
 		(instances
 			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
-					(reference "J4")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -17967,6 +18018,374 @@
 			(project "Osiris_PDB_RevA"
 				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
 					(reference "#PWR109")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 274.32 74.93 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "022b7ac5-f65d-4ffb-97ca-eeedfb3cf934")
+		(property "Reference" "F2"
+			(at 274.32 64.77 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "UHS 100A"
+			(at 274.32 67.31 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 274.32 74.168 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" "https://www.schurter.com/en/datasheet/UHS"
+			(at 274.32 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "100 A surface-mount high-current fuse candidate for the dedicated ESC branch"
+			(at 274.32 67.31 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Manufacturer" "SCHURTER"
+			(at 274.32 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "MPN" "3-140-177"
+			(at 274.32 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Selection_Status" "PROVISIONAL: verify 60 A continuous temperature rise, 100 A/30 s time-current behavior, 4S pack fault current, breaking capacity, and required heavy-copper land pattern."
+			(at 274.32 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "4d13bd66-2ede-4f65-9d83-d0eeb85ecc0c"))
+		(pin "2" (uuid "6d75c8d3-b674-46b4-a2a5-5625c7451cd6"))
+		(instances
+			(project "Osiris_PDB_RevA"
+				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
+					(reference "F2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D_TVS")
+		(at 300.99 78.74 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e7c6d47c-055b-49e1-8ae5-bfe5883643aa")
+		(property "Reference" "D5"
+			(at 304.8 77.47 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "SMBJ24CA"
+			(at 304.8 80.01 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Footprint" "Diode_SMD:D_SMB"
+			(at 300.99 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 300.99 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Bidirectional 24 V TVS candidate for local ESC connector ringing control; validate pulse energy and clamp voltage on the installed harness."
+			(at 304.8 77.47 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Selection_Status" "PROVISIONAL: local transient suppressor only; not a substitute for ESC input capacitors or harness testing."
+			(at 300.99 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "e6d115a2-3986-4e23-9847-b21564d990e3"))
+		(pin "2" (uuid "d9bc6d83-0b5a-48ef-8133-12319b2ed609"))
+		(instances
+			(project "Osiris_PDB_RevA"
+				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 322.58 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3c337106-31a5-47eb-bc8a-69daee2ad90e")
+		(property "Reference" "C17"
+			(at 326.39 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "470u/35V"
+			(at 326.39 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5"
+			(at 323.5452 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 322.58 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Local low-ESR bulk capacitor at ESC connector; final capacitance and ripple-current rating must be coordinated with the ESC vendor."
+			(at 326.39 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Selection_Status" "PROVISIONAL 4S value; use 35 V minimum rating and qualify ripple current, ESR, temperature, polarity, and inrush."
+			(at 322.58 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "2fe69ddd-1215-43c3-92c9-937b12c6409c"))
+		(pin "2" (uuid "2ad9644a-4741-464b-8c4c-a71928e1ca4c"))
+		(instances
+			(project "Osiris_PDB_RevA"
+				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
+					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 345.44 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0a696b28-fb1c-4810-815e-b7d50f412b5c")
+		(property "Reference" "C18"
+			(at 349.25 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "1u/50V"
+			(at 349.25 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 346.4052 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 345.44 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "50 V X7R ceramic bypass for the ESC branch"
+			(at 349.25 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "06744209-6561-4b73-9eaa-e948d43831c1"))
+		(pin "2" (uuid "b2cc9d26-e5ac-4d57-9f69-b2a35daaa61b"))
+		(instances
+			(project "Osiris_PDB_RevA"
+				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
+					(reference "C18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 363.22 78.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e9b97c4b-c6d3-473a-be7e-d35121fd6261")
+		(property "Reference" "C19"
+			(at 367.03 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Value" "100n/50V"
+			(at 367.03 80.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)) (justify left))
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 364.1852 80.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 363.22 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "50 V X7R high-frequency bypass for the ESC branch"
+			(at 367.03 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "420e2abe-93f9-4570-a401-c2819f8f8dc3"))
+		(pin "2" (uuid "e6572b81-fa71-4f0f-a1ca-3a3724f657fb"))
+		(instances
+			(project "Osiris_PDB_RevA"
+				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
+					(reference "C19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 383.54 87.63 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce4f4fd4-6ec6-449e-995d-3832d3b09dbd")
+		(property "Reference" "#PWR0130"
+			(at 383.54 91.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Value" "GND"
+			(at 383.54 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Footprint" ""
+			(at 383.54 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Datasheet" ""
+			(at 383.54 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(property "Description" "Power symbol creates a global label with name GND, ground"
+			(at 383.54 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects (font (size 1.27 1.27)))
+		)
+		(pin "1" (uuid "905059f1-f3d4-4fc8-af17-c8591081ffe7"))
+		(instances
+			(project "Osiris_PDB_RevA"
+				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
+					(reference "#PWR0130")
 					(unit 1)
 				)
 			)

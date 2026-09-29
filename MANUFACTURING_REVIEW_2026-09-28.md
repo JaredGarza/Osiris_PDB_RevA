@@ -1,14 +1,16 @@
 # PDB manufacturing review — 28 September 2026
 
-**Status: CAD checks pass; assembled-board release remains on hold.** The active
-project is `Osiris_PDB_RevA.kicad_pro`, revision `A-P4-DRAFT`. The temporary
-Gerbers are a review export, not an order package.
+**Status: schematic ERC passes; assembled-board release remains on hold.** The
+active project is `Osiris_PDB_RevA.kicad_pro`, schematic revision
+`A-P5-DRAFT`. The PCB is still the earlier A-P4 parallel-output layout and has
+not been synchronized to the new motor branch. The temporary Gerbers are a
+review export, not an order package.
 
 ## Current CAD result
 
 | Check | Result |
 | --- | --- |
-| KiCad 10.0.5 schematic ERC | 0 violations; footprint-filter checking enabled |
+| KiCad 10.0.5 schematic ERC | 0 errors; 4 expected footprint warnings for provisional J1, J3, F2 and C17 selections |
 | PCB DRC after zone refill | 0 violations |
 | PCB connectivity | 0 unconnected items |
 | Schematic-to-PCB parity | 0 issues |
@@ -51,18 +53,17 @@ not certify stencil volume or first-article solder joints.
 
 ## Open release gates
 
-1. **Load path and fuse rating.** This layout was designed as a 4S **avionics**
-   branch for up to 25 W and 2.5 A simultaneously. Its 4 A MINI fuse and power
-   copper are not a qualified four-motor ESC feed. The intended use is now
-   confirmed as **J3 to Osiris and J4 to the ESC**; this is a release blocker
-   until the motor path is separated or completely redesigned. J3 and J4 are
-   parallel connections to the **same**
-   `PDB_VOUT` and GND nets; the two load currents add through the common fuse,
-   MOSFETs, and shunt. D3 is a ground-to-output clamp and does not isolate the
-   connectors. See the [output topology note](docs/OUTPUTS-AND-DIODE-20260928.md).
-   The user requires the ESC to remain on J4, so redesign the PCB with a
-   **separate motor-current branch** and a battery input, J4, protection,
-   copper, and return path rated for that branch plus the avionics load.
+1. **Load path and fuse rating.** The existing PCB layout was designed as a 4S
+   **avionics** branch for up to 25 W and 2.5 A simultaneously. Its 4 A MINI
+   fuse and power copper are not a qualified four-motor ESC feed. A-P5 now
+   separates the schematic roles: **J2 is the Osiris I²C link, J4 is Osiris
+   power, and J3 is the ESC output**. The new ESC schematic path is
+   `VBAT_RAW → F2 → ESC_VBAT → J3`, with D5 and C17–C19 at the output. The PCB
+   still has the old J3/J4 parallel copper, so the release blocker remains
+   until placement, footprints, high-current positive/return copper and board
+   rules are redesigned and checked. The
+   [output topology note](docs/OUTPUTS-AND-DIODE-20260928.md) describes the
+   superseded A-P4 connection that prompted this change.
    The reported ESC is an AERO SELFIE 45 A four-in-one; the manufacturer's
    [45 A stack listing](https://aeroselfie.myshopify.com/products/aero-selfie-h743-flight-controller-stack-30-x-30-stack-with-45a)
    calls the 45 A rating **per channel**. The actual four-motor battery-input
@@ -78,7 +79,7 @@ not certify stencil volume or first-article solder joints.
    avionics load, and the ESC's continuous/peak input requirements remain to
    be confirmed before resizing F1 or releasing the board. For layout work,
    the user asked for a conservative normal-use estimate; the provisional
-   design targets are **60 A continuous and 100 A for 30 seconds at J4**,
+   design targets are **60 A continuous and 100 A for 30 seconds at J3**,
    with the current outline retained. The
    [motor-branch design basis](docs/MOTOR-BRANCH-DESIGN-BASIS-20260928.md)
    records why the present XT60s and 1 oz layout cannot implement it directly.
@@ -93,8 +94,10 @@ not certify stencil volume or first-article solder joints.
    current values are **4 A** and **5 mΩ**.
 3. **Actual fit and wiring.** Verify the shifted H3 hole, mounting hardware,
    J1/J3/J4 mating and polarity, cable exit, fuse access, and output polarity
-   against the airframe and harness. J1 pin 2 is battery positive; J3/J4 pin 2
-   is protected positive; pin 1 on each XT60 is ground.
+   against the airframe and harness. In A-P5, J1 pin 2 is `VBAT_RAW`, J3 pin 2
+   is `ESC_VBAT`, J4 pin 2 is protected `PDB_VOUT`, and pin 1 is ground on all
+   three. J1/J3 are provisional 125 A terminal candidates; J4 remains the
+   avionics XT60 candidate.
 4. **JLCPCB sourcing and assembly.** Match every fitted BOM MPN to an available
    JLCPCB/LCSC part or approved global-sourcing item. The F1 footprint is the
    **Keystone 3568 holder**; it also needs a separate **Littelfuse

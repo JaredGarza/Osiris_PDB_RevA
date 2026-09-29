@@ -1,7 +1,13 @@
 # PDB J3/J4 output topology — 28 September 2026
 
-The active schematic and PCB netlist show **one protected output bus with two
-connectors**, not two separately protected power paths:
+> **Historical A-P4 note.** A-P5 now assigns J3 to a dedicated ESC branch,
+> keeps J4 on the protected Osiris power path, and keeps J2 as the Osiris I²C
+> interface. The PCB still reflects the parallel A-P4 topology described below
+> until placement and routing are redesigned.
+
+The A-P4 schematic and the still-unsynchronized PCB netlist show **one
+protected output bus with two connectors**, not two separately protected
+power paths:
 
 `J1 battery → F1 4 A fuse → Q3/U5 ideal diode → Q1/Q2/U1 protection → R5 5 mΩ shunt → PDB_VOUT → J3 and J4`
 
