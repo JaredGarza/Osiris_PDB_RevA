@@ -76,7 +76,12 @@ not certify stencil volume or first-article solder joints.
    operating range. A 25 W Jetson mode alone exceeds this branch's 25 W
    input budget after conversion loss. The installed module, every concurrent
    avionics load, and the ESC's continuous/peak input requirements remain to
-   be confirmed before resizing F1 or releasing the board.
+   be confirmed before resizing F1 or releasing the board. For layout work,
+   the user asked for a conservative normal-use estimate; the provisional
+   design targets are **60 A continuous and 100 A for 30 seconds at J4**,
+   with the current outline retained. The
+   [motor-branch design basis](docs/MOTOR-BRANCH-DESIGN-BASIS-20260928.md)
+   records why the present XT60s and 1 oz layout cannot implement it directly.
 2. **Electrical fault behavior.** Demonstrate that the INA228 IN+, IN−, and
    VBUS pins remain within their −0.3 V minimum during reverse input, output
    collapse, and harness transients. Qualify TVS clamp energy and peak voltage,
