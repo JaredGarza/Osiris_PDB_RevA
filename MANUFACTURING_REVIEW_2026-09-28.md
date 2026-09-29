@@ -60,11 +60,18 @@ not certify stencil volume or first-article solder joints.
    `PDB_VOUT` and GND nets; the two load currents add through the common fuse,
    MOSFETs, and shunt. D3 is a ground-to-output clamp and does not isolate the
    connectors. See the [output topology note](docs/OUTPUTS-AND-DIODE-20260928.md).
-   The recommended correction is a separately protected battery-to-ESC
-   harness branch, leaving this PCB for avionics, if the ESC need not plug
-   into the PDB. Otherwise redesign the PCB motor branch using the ESC's
-   specified maximum and startup currents; motor averages are insufficient. Even
-   with the ESCs separate, the [Osiris Rev B power review](https://github.com/modifly-technologies/Hardware/blob/codex/osiris-revb-power-route/OSIRIS_RevB/REV_B_POWER_REVIEW.md)
+   The user requires the ESC to remain on J4, so redesign the PCB with a
+   **separate motor-current branch** and a battery input, J4, protection,
+   copper, and return path rated for that branch plus the avionics load.
+   The reported ESC is an AERO SELFIE 45 A four-in-one; the manufacturer's
+   [45 A stack listing](https://aeroselfie.myshopify.com/products/aero-selfie-h743-flight-controller-stack-30-x-30-stack-with-45a)
+   calls the 45 A rating **per channel**. The actual four-motor battery-input
+   maximum still requires motor/propeller data or measurement; motor averages
+   are insufficient. The called-out XT60PW connectors also need requalification:
+   AMASS lists the [M30](https://www.china-amass.net/xt60pw-m-product/) and
+   [F30](https://www.china-amass.net/xt60pw-f-product/) variants at 35 A with
+   up to 85 K rise; J1 would carry both motor and avionics current. With
+   separate ESC and Osiris branches, the [Osiris Rev B power review](https://github.com/modifly-technologies/Hardware/blob/codex/osiris-revb-power-route/OSIRIS_RevB/REV_B_POWER_REVIEW.md)
    now uses 25 W as the module design case within the requested 15–25 W
    operating range. A 25 W Jetson mode alone exceeds this branch's 25 W
    input budget after conversion loss. The installed module, every concurrent

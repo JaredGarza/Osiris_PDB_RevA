@@ -26,16 +26,38 @@ connector can remove power from both. The current PDB was designed around
 for the Jetson's new 25 W design case. The J4 ESC connection is therefore a
 **release blocker**, not a second usable motor-power branch.
 
-Recommended architecture if the ESC can use a separate battery harness:
-split the 4S battery feed into separately rated and protected avionics and
-ESC branches. Keep `battery → PDB J1 → J3 → Osiris J16` for avionics, and feed
-the ESC from its own branch with wire, connectors, fuse/protection, and return
-conductors sized to the ESC's actual maximum and startup current. Remove J4
-from this avionics PCB when that architecture is selected. If J4 must stay
-on the PCB, create a genuinely separate motor-current path and qualify J1,
-J4, copper on both layers, return current, protection, and heating for the
-ESC's specified current. Merely moving J4 to the raw battery net or fitting
-a larger F1 is not a qualified fix.
+The reported ESC is an **AERO SELFIE 45 A four-in-one, Oneshot-capable model**
+(reported identifier `X004186FZF`). The matching
+[manufacturer listing](https://aeroselfie.myshopify.com/products/45a-4-in-1-esc-brushless-motor-speed-controller)
+states 2S–6S input, 45 A continuous and 55 A bursts for up to 30 seconds.
+Its separate [45 A stack listing](https://aeroselfie.myshopify.com/products/aero-selfie-h743-flight-controller-stack-30-x-30-stack-with-45a)
+explicitly says **45 A per motor channel**. This is an ESC channel rating,
+not a measured combined battery-input current; four motors may demand far
+more than 4 A at the battery. Confirm the exact item from its label or
+purchase record before sizing the motor-power branch.
+
+The user requires **J4 to remain on the PDB as the ESC supply**. The required
+architecture is a new, separately protected **motor-power branch** from a
+battery input rated for the combined loads to J4. The existing F1, Q3,
+Q1/Q2, R5, and their narrow avionics copper should feed **J3/Osiris only**.
+J4 needs its own correctly rated positive path and return path, and its own
+fault protection. If one battery connector J1 remains, its contacts, solder
+joints, wire, and upstream fuse must carry the sum of both branches. The
+present two-layer, 1 oz, avionics-sized layout cannot be approved for that
+motor branch by renaming J4's net or fitting a larger F1.
+
+The schematic calls out `XT60PW-M` at J1 and `XT60PW-F` at J4 without a
+fully specified manufacturer variant. AMASS lists its [XT60PW-M30](https://www.china-amass.net/xt60pw-m-product/)
+and [XT60PW-F30](https://www.china-amass.net/xt60pw-f-product/) at **35 A with
+up to 85 K temperature rise**. That does not establish an acceptable rating
+for this assembly, and the shared J1 input would carry both branches. Confirm
+the exact connector variant and mating cable, then select connectors against
+the measured or specified combined battery current and permitted heating.
+
+```text
+4S battery → rated PDB input ┬→ dedicated ESC protection and heavy power/return path → J4 → ESC
+                             └→ F1 → Q3 → Q1/Q2 → R5 → J3 → Osiris J16
+```
 
 The ESC model, continuous and peak input currents, battery fault-current
 capability, and mating-harness polarity are still required to size either
