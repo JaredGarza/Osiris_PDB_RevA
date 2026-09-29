@@ -53,6 +53,8 @@ still set to nominal **1 oz copper**.
    plus avionics current. The three-XT60 arrangement therefore does not
    satisfy the requested electrical target. Select and qualify a connector
    architecture rated for the actual harness and duty cycle before release.
+   The reported ESC's 45 A rating is per motor channel; see the
+   [representative 4S input estimate](docs/AERO_SELFIE_ESC_INPUT_ESTIMATE_2026-09-29.md).
 2. **Copper and returns:** The front positive areas and back GND plane are
    connectivity routes, not 60 A / 100 A conductors verified by calculation
    or temperature testing. In particular, the fuse pads, XT60 pins,
@@ -63,6 +65,7 @@ still set to nominal **1 oz copper**.
    [Schurter UHS](https://www.schurter.com/en/datasheet/UHS) footprint.
    Confirm its exact 100 A device, land pattern, solder process, time-current
    behavior, DC interrupt rating, and coordination with the battery and PCB.
+   A nominal 100 A fuse does not enforce a 100 A operating-current ceiling.
    Qualify D5 and C17–C19 against ESC ripple, inrush, and transient energy.
 4. **Mechanical and manufacturing:** Verify mated connector polarity and
    harness exit, XT60 board-edge seating, fuse access, the four mounting-hole

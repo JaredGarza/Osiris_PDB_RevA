@@ -40,6 +40,13 @@ avionics 4 A fuse and protection path. Its positive and return copper, the
 XT60 connectors, and the provisional fuse land pattern remain unqualified for
 this current target.
 
+The reported ESC is the AERO SELFIE `4IN1-ESC-LDO`, rated in its
+[manufacturer manual](https://cdn.shopify.com/s/files/1/0728/7321/4171/files/45A_4IN1-ESC_Manual_Book_EN-CN.pdf?v=1745301381)
+at **45 A continuous and 55 A peak per motor channel**, four channels total.
+These are channel ratings, not a measured common battery-input current. See
+the [representative 4S current estimate](docs/AERO_SELFIE_ESC_INPUT_ESTIMATE_2026-09-29.md)
+before treating the provisional 60/100 A PDB target as an operating limit.
+
 See [the 29 September layout review](COMPACT_XT60_ROUTE_REVIEW_2026-09-29.md) for
 the current CAD checks, remaining blockers, and manufacturing status. The
 [28 September manufacturing review](MANUFACTURING_REVIEW_2026-09-28.md) is

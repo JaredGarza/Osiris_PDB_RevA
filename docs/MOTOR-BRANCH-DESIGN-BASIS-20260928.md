@@ -1,5 +1,12 @@
 # PDB motor branch: provisional design basis — 28 September 2026
 
+**Historical basis.** The user later identified the AERO SELFIE
+`4IN1-ESC-LDO`; its confirmed per-channel ratings and a representative 4S
+input-current scenario are in the
+[29 September estimate](AERO_SELFIE_ESC_INPUT_ESTIMATE_2026-09-29.md).
+The older board-state and connector selections below are superseded by the
+[compact layout review](../COMPACT_XT60_ROUTE_REVIEW_2026-09-29.md).
+
 ## Load assumption for layout work
 
 The user requires this PDB to power a 4S, four-motor ESC at J3 and asked for

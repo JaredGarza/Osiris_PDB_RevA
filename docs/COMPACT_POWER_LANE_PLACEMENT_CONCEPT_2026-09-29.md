@@ -15,7 +15,9 @@ variant that establishes 60 A continuous and 100 A for 30 seconds. Even a
 hypothetical 60 A connector would leave no input margin at J1, which must
 carry the ESC branch plus avionics. Keep all three connector *positions* in
 this study, but select a higher-rated power interface before electrical
-release if the 60/100 A target is retained.
+release if the 60/100 A target is retained. The reported AERO SELFIE 45 A
+four-in-one ESC is analyzed in the
+[representative 4S current estimate](AERO_SELFIE_ESC_INPUT_ESTIMATE_2026-09-29.md).
 
 ## Preferred top-view arrangement
 
