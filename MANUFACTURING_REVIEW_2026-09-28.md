@@ -61,9 +61,11 @@ not certify stencil volume or first-article solder joints.
    If ESC power uses either connector, redesign the PDB power path using
    actual maximum and startup currents; motor averages are insufficient. Even
    with the ESCs separate, the [Osiris Rev B power review](https://github.com/modifly-technologies/Hardware/blob/codex/osiris-revb-power-route/OSIRIS_RevB/REV_B_POWER_REVIEW.md)
-   estimates that a 25 W Jetson mode alone would exceed this branch's 25 W
-   input budget after conversion loss. Confirm the intended Jetson power mode
-   and every concurrent avionics load.
+   now uses 25 W as the module design case within the requested 15–25 W
+   operating range. A 25 W Jetson mode alone exceeds this branch's 25 W
+   input budget after conversion loss. The installed module, every concurrent
+   avionics load, and the load on each of J3/J4 remain to be confirmed before
+   resizing F1 or releasing the board.
 2. **Electrical fault behavior.** Demonstrate that the INA228 IN+, IN−, and
    VBUS pins remain within their −0.3 V minimum during reverse input, output
    collapse, and harness transients. Qualify TVS clamp energy and peak voltage,
