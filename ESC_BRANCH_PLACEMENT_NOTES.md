@@ -1,5 +1,9 @@
 # ESC branch placement notes
 
+**Historical placement study.** The compact three-XT60 board and routing in
+[the 29 September review](COMPACT_XT60_ROUTE_REVIEW_2026-09-29.md) supersede
+the positions and unrouted status below.
+
 Date: 2026-09-29
 
 ## What was changed

@@ -1,12 +1,12 @@
 # Osiris PDB Rev A
 
-**Current manufacturing review: [28 September 2026](MANUFACTURING_REVIEW_2026-09-28.md). CAD checks pass; electrical and assembly release gates remain open. Do not order this board yet.**
+**Current layout: [29 September compact XT60 routing candidate](COMPACT_XT60_ROUTE_REVIEW_2026-09-29.md). The 60 A continuous / 100 A for 30 s target is not qualified; do not order this board.** The [28 September manufacturing review](MANUFACTURING_REVIEW_2026-09-28.md) describes the preceding layout.
 
-The current `A-P4-DRAFT` CAD has 64 board footprints and 60 schematic BOM entries
-(including seven test pads). Earlier simulation and purchasing documents describe
-older populations. Use `review/2026-09-28/schematic-bom-current.csv` and the
-assembly drafts in that folder for the current population; the root `BOM.csv`
-and `BOM_purchasing.csv` are historical exports.
+The current `A-P5-DRAFT` schematic and compact PCB candidate have three XT60
+power connections: J1 battery input, J3 ESC output, and J4 avionics output.
+J2 is the four-pin I²C data connector. Earlier simulation, purchasing, and
+assembly exports describe older populations. The root `BOM.csv` and
+`BOM_purchasing.csv` are historical exports.
 Open `Osiris_PDB_RevA.kicad_pro` in KiCad 10. Project libraries use `${KIPRJMOD}`.
 This folder and its `origin` remote are the **power distribution board only**.
 The active Osiris Rev B main-board project is in the separate

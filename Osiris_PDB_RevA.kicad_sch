@@ -4947,7 +4947,7 @@
 		)
 		(uuid "09098225-cbcd-4efc-a9db-d8c934599b60")
 	)
-	(text "J3 ESC ONLY. F2/D5/C17-C19 bypass avionics F1, Q3, Q1/Q2, U1 and R5.\nRoute ESC positive and return directly to the battery-entry star with matched high-current copper.\nConnector, fuse, heavy-copper land pattern, pack fault current, inrush and thermal rise require qualification."
+	(text "J3 ESC ONLY. F2/D5/C17-C19 bypass avionics F1, Q3, Q1/Q2, U1 and R5.\nCompact PCB candidate routes ESC positive on F.Cu and shared return on B.Cu.\nXT60 current rating, fuse land pattern, copper, pack fault current, inrush and thermal rise require qualification."
 		(exclude_from_sim no)
 		(at 255.27 97.79 0)
 		(effects
@@ -4991,7 +4991,7 @@
 		)
 		(uuid "b463680a-ea80-4e87-8a91-b8eb62cbdacf")
 	)
-	(text "A-P5 DRAFT: dedicated ESC branch added; PCB placement/routing is not updated.\nAvionics: J4 power + J2 I2C to Osiris. ESC: J3 only, directly from VBAT_RAW through F2.\nC11-C16: 1 uF / 63 V non-polar film. Keep local bypass capacitors close to their ICs."
+	(text "A-P5 DRAFT: compact three-XT60 PCB candidate routed; 60 A/100 A target remains unqualified.\nAvionics: J4 power + J2 I2C to Osiris. ESC: J3 only, directly from VBAT_RAW through F2.\nC11-C16: 1 uF / 63 V non-polar film. Keep local bypass capacitors close to their ICs."
 		(exclude_from_sim no)
 		(at 20.32 276.86 0)
 		(effects
@@ -5474,7 +5474,7 @@
 	)
 	(wire
 		(pts
-			(xy 383.54 74.93) (xy 383.54 87.63)
+			(xy 378.46 72.39) (xy 383.54 72.39)
 		)
 		(stroke
 			(width 0)
@@ -7302,6 +7302,16 @@
 		)
 		(uuid "10b41af3-a6fc-468b-97d9-fd12dc7ff69d")
 	)
+	(label "GND"
+		(at 378.46 72.39 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left bottom)
+		)
+		(uuid "98e04a8c-c260-4304-b101-42b9a691fe89")
+	)
 	(label "SHUNT_HI"
 		(at 336.55 175.26 0)
 		(effects
@@ -8104,7 +8114,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "PDB_Footprints:SCHURTER_UHS_8.4x9.4mm_PROVISIONAL"
 			(at 274.32 74.168 90)
 			(hide yes)
 			(show_name no)
@@ -17620,7 +17630,7 @@
 				)
 			)
 		)
-		(property "Value" "125A TERM"
+		(property "Value" "XT60PW-M"
 			(at 17.78 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17630,7 +17640,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_AMASS:AMASS_XT60PW-M_1x02_P7.20mm_Horizontal"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17641,7 +17651,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.phoenixcontact.com/en-de/products/pcb-terminal-block-mkdsp-25-2-1500-1932588"
+		(property "Datasheet" "${KIPRJMOD}/Datasheets/AMASS_XT60PW-M.pdf"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17652,7 +17662,7 @@
 				)
 			)
 		)
-		(property "Description" "High-current 4S battery input; pin 1 GND, pin 2 VBAT_RAW. Candidate terminal is Phoenix 1932588, 125 A nominal with specified conductor."
+		(property "Description" "4S battery input; pin 1 GND, pin 2 VBAT_RAW. XT60PW-M footprint study only; connector current rating does not meet the 60 A ESC plus avionics target."
 			(at 17.78 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -17663,7 +17673,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "PROVISIONAL: input must carry ESC plus avionics current. Final footprint, wire gauge, torque, assembly method, polarity and thermal rise require qualification."
+		(property "Selection_Status" "NOT CURRENT-QUALIFIED: XT60PW-M30 is rated 35 A; input must carry ESC plus avionics current and a 100 A burst target. Do not fabricate until connector architecture is changed or qualified."
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17674,7 +17684,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Phoenix Contact"
+		(property "Manufacturer" "AMASS"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17685,7 +17695,7 @@
 				)
 			)
 		)
-		(property "MPN" "1932588"
+		(property "MPN" "XT60PW-M30"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17983,7 +17993,7 @@
 				)
 			)
 		)
-		(property "Value" "125A TERM"
+		(property "Value" "XT60PW-F"
 			(at 388.62 67.31 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17993,7 +18003,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -18004,7 +18014,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.phoenixcontact.com/en-de/products/pcb-terminal-block-mkdsp-25-2-1500-1932588"
+		(property "Datasheet" "${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf"
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -18015,7 +18025,7 @@
 				)
 			)
 		)
-		(property "Description" "Dedicated four-motor ESC output; pin 1 is the high-current battery return and pin 2 is ESC_VBAT after F2. Candidate terminal is Phoenix 1932588, 125 A nominal with specified conductor."
+		(property "Description" "Dedicated ESC output; pin 1 GND, pin 2 ESC_VBAT after F2. XT60PW-F footprint study only; connector current rating does not meet the 60 A/100 A target."
 			(at 388.62 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -18026,7 +18036,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "PROVISIONAL: size for 60 A continuous and 100 A for 30 s. Final footprint, cable, assembly method, temperature rise, and mate must be qualified before release."
+		(property "Selection_Status" "NOT CURRENT-QUALIFIED: XT60PW-F30 is rated 35 A; ESC target is 60 A continuous and 100 A for 30 seconds. Do not fabricate until connector architecture is changed or qualified."
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -18037,7 +18047,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Phoenix Contact"
+		(property "Manufacturer" "AMASS"
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -18048,7 +18058,7 @@
 				)
 			)
 		)
-		(property "MPN" "1932588"
+		(property "MPN" "XT60PW-F30"
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)

@@ -1,5 +1,9 @@
 # PDB manufacturing review — 28 September 2026
 
+**Historical review.** This describes the preceding layout. The current
+compact three-XT60 routing candidate is documented in the
+[29 September layout review](COMPACT_XT60_ROUTE_REVIEW_2026-09-29.md).
+
 **Status: schematic ERC passes; assembled-board release remains on hold.** The
 active project is `Osiris_PDB_RevA.kicad_pro`, schematic revision
 `A-P5-DRAFT`. The PCB is still the earlier A-P4 parallel-output layout and has
