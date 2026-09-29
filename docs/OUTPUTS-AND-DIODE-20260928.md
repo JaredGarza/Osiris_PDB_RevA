@@ -18,21 +18,29 @@ absolute minimum during an actual negative transient. The U5/Q3 ideal-diode
 stage blocks reverse current toward the battery input; it is also upstream
 of both connectors and does not isolate them from each other.
 
-Two sockets on one bus are acceptable in principle for ordinary loads that
-share the same supply, provided their **combined** normal, startup, and fault
-currents fit the entire path and neither attached device can back-power the
-other through a second source. The current PDB design target is **25 W and
-2.5 A together** for the avionics branch. The 4 A fuse is not a 4 A operating
-allowance and is not sized for a four-motor ESC feed.
+The intended loads are now confirmed: **J3 feeds Osiris J16; J4 feeds the
+four-motor ESC**. As drawn, ESC startup and motor current pass through the
+same 4 A fuse and avionics protection path as Osiris. A fault at either
+connector can remove power from both. The current PDB was designed around
+**25 W and 2.5 A together** for avionics; even that target must be revised
+for the Jetson's new 25 W design case. The J4 ESC connection is therefore a
+**release blocker**, not a second usable motor-power branch.
 
-Before assigning J3/J4 to loads, identify what plugs into each connector,
-the maximum simultaneous demand (including startup), whether either load has
-another power source, the actual 4S battery's fault-current capability, and
-the mating-harness polarity. If an ESC uses either connector, redesign the
-power route from battery through connector, protection, fuse, copper, and
-return conductors for its specified current. If separate fault containment
-is required for two avionics loads, add independent branch protection rather
-than treating D3 as branch isolation.
+Recommended architecture if the ESC can use a separate battery harness:
+split the 4S battery feed into separately rated and protected avionics and
+ESC branches. Keep `battery → PDB J1 → J3 → Osiris J16` for avionics, and feed
+the ESC from its own branch with wire, connectors, fuse/protection, and return
+conductors sized to the ESC's actual maximum and startup current. Remove J4
+from this avionics PCB when that architecture is selected. If J4 must stay
+on the PCB, create a genuinely separate motor-current path and qualify J1,
+J4, copper on both layers, return current, protection, and heating for the
+ESC's specified current. Merely moving J4 to the raw battery net or fitting
+a larger F1 is not a qualified fix.
+
+The ESC model, continuous and peak input currents, battery fault-current
+capability, and mating-harness polarity are still required to size either
+motor-power implementation. Motor average current is not a substitute for
+peak, startup, or fault-current requirements.
 
 Sources: [ADI LTC4359 ideal-diode behavior](https://www.analog.com/media/en/technical-documentation/data-sheets/ltc4359.pdf),
 [TI INA228 absolute limits](https://www.ti.com/lit/ds/symlink/ina228.pdf),
