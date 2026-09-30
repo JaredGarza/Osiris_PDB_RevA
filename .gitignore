@@ -1,4 +1,4 @@
-# KiCad local state, locks, autosaves, and backups
+# KiCad editor state and backups
 *.kicad_prl
 *.lck
 ~*.*
@@ -8,44 +8,12 @@ _autosave-*
 .history/
 fp-info-cache
 
-# Local task backups
-library_reorg_backup_*/
-component-review-backup-*/
-_restore_backup_*/
-
-# LTspice source includes .asc, .cir and .lib. Exclude output at every depth.
-Simulation/**/*.raw
-Simulation/**/*.db
-Simulation/**/*.log
-Simulation/**/*.net
-
-# Generated and legacy netlist/report artifacts
+# Generated checks and local files
 *.net
-*-drc.rpt
-*-erc.rpt
-/Osiris_PDB_RevA.sch
-
-# Superseded duplicate footprint library retained locally as an archive
-/Osiris_PDB.pretty/
-
-# Editor and operating-system files
+*.rpt
+*.pyc
+__pycache__/
 Thumbs.db
 .DS_Store
 .vscode/
 .idea/
-
-# Local backups and extracted copies of the separate Osiris board
-fuse-connector-backup-*/
-requirements-backup-*/
-docs/osiris-power-audit/zip-source/
-docs/osiris-power-audit/*.kicad_pcb
-
-# Machine-specific migration helper and generated vendor example
-docs/revision-audit-20260912/update_review_notes.py
-Simulation/models/STARTUP.cir
-__pycache__/
-*.pyc
-*.xlsx.inspect.ndjson
-
-# Local simulation review tooling dependency junction
-Simulation/combined-20260915/audit/node_modules/
