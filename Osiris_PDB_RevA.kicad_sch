@@ -6,10 +6,10 @@
 	(paper "A3")
 	(title_block
 		(title "Osiris PDB - Phoenix lab board")
-		(date "2026-09-29")
-		(rev "PHOENIX-LAB-DRAFT")
+		(date "2026-10-01")
+		(rev "A-P6-PROTOTYPE")
 		(comment 1 "J1 common input; J3 ESC output; J4 protected Osiris avionics output")
-		(comment 2 "Electrical design draft - PCB and bench validation required")
+		(comment 2 "4-layer 2 oz prototype - physical qualification pending")
 	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
@@ -4935,6 +4935,321 @@
 			)
 			(embedded_fonts no)
 		)
+	
+		(symbol "PDB_Symbols:Conn_01x02_Phoenix"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "PDB_Footprints:Connector_MKDSP25_2_15mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x02_Phoenix_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	
+		(symbol "PDB_Symbols:CP_Elec_Panasonic"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "PDB_Footprints:CP_Elec_Panasonic_G16_10x16.5"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "CP_Elec_Panasonic_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "CP_Elec_Panasonic_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "STATUS / OPTIONAL PULL-UPS"
 		(exclude_from_sim no)
@@ -8104,7 +8419,7 @@
 				)
 			)
 		)
-		(property "Value" "SCHURTER UHS 100A 3-140-177 PROVISIONAL"
+		(property "Value" "UHS 100A 50V"
 			(at 274.32 67.31 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8114,7 +8429,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PDB_Footprints:SCHURTER_UHS_8.4x9.4mm_PROVISIONAL"
+		(property "Footprint" "PDB_Footprints:Fuse_SCHURTER_UHS_8.4x9.4mm"
 			(at 274.32 74.168 90)
 			(hide yes)
 			(show_name no)
@@ -8125,7 +8440,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.schurter.com/en/datasheet/UHS"
+		(property "Datasheet" "${KIPRJMOD}/Datasheets/SCHURTER_UHS.pdf"
 			(at 274.32 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -8136,7 +8451,7 @@
 				)
 			)
 		)
-		(property "Description" "100 A surface-mount high-current fuse candidate for the dedicated ESC branch"
+		(property "Description" "Dedicated ESC branch: SCHURTER 3-140-177, 100 A, 50 VDC. This is overload backup; the ESC branch does not have active reverse-polarity protection."
 			(at 274.32 67.31 90)
 			(hide yes)
 			(show_name no)
@@ -8169,7 +8484,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "PROVISIONAL: verify 60 A continuous temperature rise, 100 A/30 s time-current behavior, 4S pack fault current, breaking capacity, and required heavy-copper land pattern."
+		(property "Selection_Status" "Selected prototype fuse. Manufacturer pad pattern 3.4 x 6.15 mm, 3.3 mm gap. 100 A/30 s target subject to ambient derating and assembly thermal test; pack fault duty must remain within breaking rating."
 			(at 274.32 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -10328,7 +10643,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
+		(lib_id "PDB_Symbols:CP_Elec_Panasonic")
 		(at 322.58 78.74 0)
 		(unit 1)
 		(body_style 1)
@@ -10349,7 +10664,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470u 35V LOW-ESR"
+		(property "Value" "470u 35V HYBRID"
 			(at 326.39 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10360,7 +10675,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5"
+		(property "Footprint" "PDB_Footprints:CP_Elec_Panasonic_G16_10x16.5"
 			(at 323.5452 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -10371,7 +10686,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "${KIPRJMOD}/Datasheets/Panasonic_ZS.pdf"
 			(at 322.58 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -10382,7 +10697,7 @@
 				)
 			)
 		)
-		(property "Description" "Local low-ESR bulk capacitor at ESC connector; final capacitance and ripple-current rating must be coordinated with the ESC vendor."
+		(property "Description" "Local supplemental ESC capacitor: 470 uF, 35 V, hybrid, 11 mOhm ESR at 100 kHz, 4 Arms at 100 kHz/125 C. Preserve the ESC manufacturer-required capacitor at the ESC."
 			(at 326.39 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10393,7 +10708,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "PROVISIONAL 4S value; use 35 V minimum rating and qualify ripple current, ESR, temperature, polarity, and inrush."
+		(property "Selection_Status" "Selected EEHZS1V471P G16; 10 mm diameter, 16.5 mm height. Additional ESC-side capacitor and harness transient/ripple tests required."
 			(at 322.58 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -10417,6 +10732,16 @@
 					(unit 1)
 				)
 			)
+		)
+	
+		(property "MPN" "EEHZS1V471P"
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+	
+		(property "Manufacturer" "Panasonic"
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
 		)
 	)
 	(symbol
@@ -17609,7 +17934,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
+		(lib_id "PDB_Symbols:Conn_01x02_Phoenix")
 		(at 17.78 40.64 180)
 		(unit 1)
 		(body_style 1)
@@ -17630,7 +17955,7 @@
 				)
 			)
 		)
-		(property "Value" "MKDSP 25/2-15.00 PROVISIONAL"
+		(property "Value" "MKDSP 25/2-15.00"
 			(at 17.78 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17640,7 +17965,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PDB_Footprints:MKDSP25_2_15mm_PROVISIONAL"
+		(property "Footprint" "PDB_Footprints:Connector_MKDSP25_2_15mm"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17673,7 +17998,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "LAB DESIGN IN PROGRESS: verify exact terminal, footprint, conductor, wave-solder process, and power-path temperature before full-current use."
+		(property "Selection_Status" "Drawing checked 2026-10-01: 15 mm pole pitch, 3.8 mm paired pins, 12.5 mm row pitch, 1.6 mm holes. 125 A part rating is conditional on conductor and temperature; assembly and harness qualification required."
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -17787,7 +18112,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "PROVISIONAL: local transient suppressor only; not a substitute for ESC input capacitors or harness testing."
+		(property "Selection_Status" "SMBJ24CA retained for local ringing control. Clamp is not a 35 V ceiling; verify installed 4S harness waveforms and pulse energy."
 			(at 300.99 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -17972,7 +18297,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x02")
+		(lib_id "PDB_Symbols:Conn_01x02_Phoenix")
 		(at 388.62 72.39 0)
 		(unit 1)
 		(body_style 1)
@@ -17993,7 +18318,7 @@
 				)
 			)
 		)
-		(property "Value" "MKDSP 25/2-15.00 PROVISIONAL"
+		(property "Value" "MKDSP 25/2-15.00"
 			(at 388.62 67.31 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18003,7 +18328,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PDB_Footprints:MKDSP25_2_15mm_PROVISIONAL"
+		(property "Footprint" "PDB_Footprints:Connector_MKDSP25_2_15mm"
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -18036,7 +18361,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "LAB DESIGN IN PROGRESS: verify exact terminal, footprint, conductor, wave-solder process, and power-path temperature before full-current use."
+		(property "Selection_Status" "Drawing checked 2026-10-01: 15 mm pole pitch, 3.8 mm paired pins, 12.5 mm row pitch, 1.6 mm holes. 125 A part rating is conditional on conductor and temperature; assembly and harness qualification required."
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)

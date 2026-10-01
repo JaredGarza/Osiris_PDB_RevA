@@ -1,0 +1,37 @@
+** Drc report for Osiris_PDB_RevA.kicad_pcb **
+** Created on 2026-10-01T15:52:41 **
+** Report includes: Errors, Warnings **
+
+** Found 6 DRC violations **
+[shorting_items]: Items shorting two nets (nets GND and /ESC_VBAT)
+    Local override; error
+    @(157.2500 mm, 68.6000 mm): Via [GND] on F.Cu - B.Cu
+    @(156.8000 mm, 71.0000 mm): Pad 1 [/ESC_VBAT] of C17 on F.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.3000 mm; actual 0.0500 mm)
+    Rule: board setup constraints hole; error
+    @(156.8000 mm, 71.0000 mm): Pad 1 [/ESC_VBAT] of C17 on F.Cu
+    @(157.2500 mm, 68.6000 mm): Via [GND] on F.Cu - B.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(157.2500 mm, 68.6000 mm): Via [GND] on F.Cu - B.Cu
+    @(156.8000 mm, 71.0000 mm): Pad 1 [/ESC_VBAT] of C17 on F.Cu
+[isolated_copper]: Isolated copper fill
+    Local override; warning
+    @(213.5605 mm, 67.5000 mm): Zone [GND] on F.Cu, priority 0
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(138.8100 mm, 93.0300 mm): Segment of F1 on F.Silkscreen
+    @(136.6000 mm, 94.0000 mm): PCB text 'IDEAL IN' on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(136.6000 mm, 94.0000 mm): PCB text 'IDEAL IN' on F.Silkscreen
+    @(135.6700 mm, 94.8000 mm): PTH pad 2 [/IDEAL_IN] of F1
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Tuning profile track geometries
+
+** End of Report **

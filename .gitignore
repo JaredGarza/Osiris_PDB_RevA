@@ -17,3 +17,9 @@ Thumbs.db
 .DS_Store
 .vscode/
 .idea/
+
+# Local generation dependencies and inspection artifacts
+node_modules/
+*.inspect.ndjson
+.~lock.*#
+
