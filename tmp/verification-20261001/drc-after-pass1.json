@@ -1,0 +1,91 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-01T21:03:36",
+    "ignored_checks": [
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [],
+    "source": "Osiris_PDB_RevA.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of R7 on F.Silkscreen",
+                    "pos": {
+                        "x": 139.975,
+                        "y": 92.272936
+                    },
+                    "uuid": "8cf6e19d-15f9-457f-9d0b-7d0e9cce7fc7"
+                },
+                {
+                    "description": "PCB text 'IDEAL IN' on F.Silkscreen",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 94.0
+                    },
+                    "uuid": "ed7408f6-bfa2-412f-9b93-959c9ea1920b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'IDEAL IN' on F.Silkscreen",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 94.0
+                    },
+                    "uuid": "ed7408f6-bfa2-412f-9b93-959c9ea1920b"
+                },
+                {
+                    "description": "Pad 2 [/SHDN_LTC] of R7 on F.Cu",
+                    "pos": {
+                        "x": 140.71,
+                        "y": 93.4125
+                    },
+                    "uuid": "e48e4ab0-0723-48b4-ab61-e48b8d5836b5"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'IDEAL IN' on F.Silkscreen",
+                    "pos": {
+                        "x": 140.5,
+                        "y": 94.0
+                    },
+                    "uuid": "ed7408f6-bfa2-412f-9b93-959c9ea1920b"
+                },
+                {
+                    "description": "Pad 1 [GND] of R7 on F.Cu",
+                    "pos": {
+                        "x": 140.71,
+                        "y": 91.5875
+                    },
+                    "uuid": "ecc61c4a-2c49-4899-9a7e-8d629c1a7973"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}

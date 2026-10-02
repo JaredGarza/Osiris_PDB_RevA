@@ -1,0 +1,152 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-01T21:02:27",
+    "ignored_checks": [
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [],
+    "source": "Osiris_PDB_RevA.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Items shorting two nets (nets GND and /ESC_VBAT)",
+            "items": [
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 157.25,
+                        "y": 68.6
+                    },
+                    "uuid": "402f93ac-6570-4280-aeeb-bc0097420920"
+                },
+                {
+                    "description": "Pad 1 [/ESC_VBAT] of C17 on F.Cu",
+                    "pos": {
+                        "x": 156.8,
+                        "y": 71.0
+                    },
+                    "uuid": "a0dca377-9b82-437a-9cf2-635704f0392c"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Hole clearance violation (board setup constraints hole clearance 0.3000 mm; actual 0.0500 mm)",
+            "items": [
+                {
+                    "description": "Pad 1 [/ESC_VBAT] of C17 on F.Cu",
+                    "pos": {
+                        "x": 156.8,
+                        "y": 71.0
+                    },
+                    "uuid": "a0dca377-9b82-437a-9cf2-635704f0392c"
+                },
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 157.25,
+                        "y": 68.6
+                    },
+                    "uuid": "402f93ac-6570-4280-aeeb-bc0097420920"
+                }
+            ],
+            "severity": "error",
+            "type": "hole_clearance"
+        },
+        {
+            "description": "Front solder mask aperture bridges items with different nets",
+            "items": [
+                {
+                    "description": "Via [GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 157.25,
+                        "y": 68.6
+                    },
+                    "uuid": "402f93ac-6570-4280-aeeb-bc0097420920"
+                },
+                {
+                    "description": "Pad 1 [/ESC_VBAT] of C17 on F.Cu",
+                    "pos": {
+                        "x": 156.8,
+                        "y": 71.0
+                    },
+                    "uuid": "a0dca377-9b82-437a-9cf2-635704f0392c"
+                }
+            ],
+            "severity": "error",
+            "type": "solder_mask_bridge"
+        },
+        {
+            "description": "Isolated copper fill",
+            "items": [
+                {
+                    "description": "Zone [GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 213.560461,
+                        "y": 67.5
+                    },
+                    "uuid": "389df6dd-60fc-4af1-bb6b-ee198d58b374"
+                }
+            ],
+            "severity": "warning",
+            "type": "isolated_copper"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "items": [
+                {
+                    "description": "Segment of F1 on F.Silkscreen",
+                    "pos": {
+                        "x": 138.81,
+                        "y": 93.03
+                    },
+                    "uuid": "5fec5d56-114c-4599-bc64-b7cf8b356ca2"
+                },
+                {
+                    "description": "PCB text 'IDEAL IN' on F.Silkscreen",
+                    "pos": {
+                        "x": 136.6,
+                        "y": 94.0
+                    },
+                    "uuid": "ed7408f6-bfa2-412f-9b93-959c9ea1920b"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "PCB text 'IDEAL IN' on F.Silkscreen",
+                    "pos": {
+                        "x": 136.6,
+                        "y": 94.0
+                    },
+                    "uuid": "ed7408f6-bfa2-412f-9b93-959c9ea1920b"
+                },
+                {
+                    "description": "PTH pad 2 [/IDEAL_IN] of F1",
+                    "pos": {
+                        "x": 135.67,
+                        "y": 94.8
+                    },
+                    "uuid": "e18f18b9-ebe3-452b-af15-1cc2a16bd5db"
+                }
+            ],
+            "severity": "warning",
+            "type": "silk_over_copper"
+        }
+    ]
+}
