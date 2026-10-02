@@ -10047,7 +10047,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "5 mOhm 1% 2 W four-terminal. Nominal breaker 10 A; normal-condition range 7.92-12.12 A. F1 remains 4 A; conductor/fuse coordination required."
+		(property "Selection_Status" "5 mOhm 1% 2 W four-terminal. Nominal breaker 10 A; normal-condition range 7.92-12.12 A. F1 is 7.5 A for a 5 A continuous avionics allowance; conductor/fuse coordination required."
 			(at 187.96 -67.31 0)
 			(hide yes)
 			(show_name no)
@@ -16269,7 +16269,7 @@
 				)
 			)
 		)
-		(property "Value" "4A MINI"
+		(property "Value" "7.5A MINI"
 			(at 40.64 33.02 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -16301,7 +16301,7 @@
 				)
 			)
 		)
-		(property "Description" "4 A, 32 VDC MINI blade fuse; backup protection for a fault the MOSFETs cannot interrupt"
+		(property "Description" "7.5 A, 32 VDC MINI blade fuse; backup protection for a fault the MOSFETs cannot interrupt"
 			(at 40.64 33.02 90)
 			(hide yes)
 			(show_name no)
@@ -16312,7 +16312,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "4 A 32 V MINI; load envelope 2.5 A maximum. Fuse, source and conductor coordination remains a release requirement."
+		(property "Selection_Status" "7.5 A 32 V MINI selected for 5 A continuous avionics allowance (67% of fuse rating). Electronic breaker remains nominally 10 A; fuse, source and conductor coordination remains a release requirement."
 			(at 40.64 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -16334,7 +16334,7 @@
 				)
 			)
 		)
-		(property "MPN" "0297004.WXNV"
+		(property "MPN" "029707.5WXNV"
 			(at 40.64 38.1 0)
 			(hide yes)
 			(show_name no)
