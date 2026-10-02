@@ -1,0 +1,57 @@
+Designator,Type,Origin_X,Origin_Y,Mid_X,Mid_Y,Rotation,Pin_1_positions,Method
+C1,SMT,163.21,-87.75,163.21,-87.75,0.0,"[[162.26, -87.75, ""/GATE_RC""]]",KiCad component origin; confirm JLC library alignment
+C2,SMT,163.71,-90.5,163.71,-90.5,90.0,"[[163.71, -91.45, ""/SHUNT_LO""]]",KiCad component origin; confirm JLC library alignment
+C3,SMT,141.21,-87.0,141.21,-87.0,270.0,"[[141.21, -86.225, ""Net-(U1-RETRY)""]]",KiCad component origin; confirm JLC library alignment
+C4,SMT,166.71,-105.25,166.71,-105.25,0.0,"[[165.235, -105.25, ""GND""]]",KiCad component origin; confirm JLC library alignment
+C5,SMT,143.71,-111.0,143.71,-111.0,180.0,"[[144.485, -111.0, ""/PDB_3V3""]]",KiCad component origin; confirm JLC library alignment
+C6,SMT,162.71,-119.0,162.71,-119.0,90.0,"[[162.71, -119.95, ""GND""]]",KiCad component origin; confirm JLC library alignment
+C7,SMT,147.21,-112.75,147.21,-112.75,90.0,"[[147.21, -113.525, ""/INA_IN_P""]]",KiCad component origin; confirm JLC library alignment
+C8,SMT,133.96,-113.25,133.96,-113.25,90.0,"[[133.96, -114.025, ""GND""]]",KiCad component origin; confirm JLC library alignment
+C9,SMT,175.5,-108.25,175.5,-108.25,90.0,"[[175.5, -109.725, ""/PDB_VOUT""]]",KiCad component origin; confirm JLC library alignment
+C10,SMT,159.21,-111.5,159.21,-111.5,270.0,"[[159.21, -110.725, ""/PDB_3V3""]]",KiCad component origin; confirm JLC library alignment
+C11,THT,149.96,-102.75,149.96,-105.25,270.0,"[[149.96, -102.75, ""/VBAT_FUSED""]]",Courtyard/body center; confirm insertion position
+C12,THT,148.46,-115.75,148.46,-118.25,270.0,"[[148.46, -115.75, ""/INA_IN_P""]]",Courtyard/body center; confirm insertion position
+C13,THT,153.46,-115.75,153.46,-118.25,270.0,"[[153.46, -115.75, ""/INA_IN_N""]]",Courtyard/body center; confirm insertion position
+C14,THT,158.46,-115.75,158.46,-118.25,270.0,"[[158.46, -115.75, ""/INA_VBUS""]]",Courtyard/body center; confirm insertion position
+C15,THT,155.21,-102.75,155.21,-105.25,270.0,"[[155.21, -102.75, ""/VBAT_FUSED""]]",Courtyard/body center; confirm insertion position
+C16,THT,128.71,-105.75,126.21,-105.75,180.0,"[[128.71, -105.75, ""/INPUT_DAMP""]]",Courtyard/body center; confirm insertion position
+C17,SMT,156.8,-75.2,156.8,-75.2,270.0,"[[156.8, -71.0, ""/ESC_VBAT""]]",KiCad component origin; confirm JLC library alignment
+C18,SMT,171.95,-83.45,171.95,-83.45,270.0,"[[171.95, -82.5, ""/ESC_VBAT""]]",KiCad component origin; confirm JLC library alignment
+C19,SMT,174.2,-83.45,174.2,-83.45,270.0,"[[174.2, -82.5, ""/ESC_VBAT""]]",KiCad component origin; confirm JLC library alignment
+D1,SMT,151.71,-92.75,151.71,-92.75,0.0,"[[149.71, -92.75, ""/VBAT_FUSED""]]",KiCad component origin; confirm JLC library alignment
+D3,SMT,171.6375,-96.09,171.6375,-96.09,270.0,"[[171.6375, -91.05, ""/PDB_VOUT""], [171.6375, -97.35, ""/PDB_VOUT""]]",KiCad component origin; confirm JLC library alignment
+D4,SMT,143.21,-108.25,143.21,-108.25,180.0,"[[145.21, -108.25, ""/IDEAL_VSS""]]",KiCad component origin; confirm JLC library alignment
+D5,SMT,143.0,-75.0,143.0,-75.0,0.0,"[[140.85, -75.0, ""/ESC_VBAT""]]",KiCad component origin; confirm JLC library alignment
+F1,THT,125.75,-94.8,130.71,-96.5,0.0,"[[125.75, -94.8, ""/VBAT_RAW""], [125.75, -98.2, ""/VBAT_RAW""]]",Courtyard/body center; confirm insertion position
+F2,SMT,130.0,-76.0,130.0,-76.0,0.0,"[[126.65, -76.0, ""/VBAT_RAW""]]",KiCad component origin; confirm JLC library alignment
+J1,THT,104.85,-99.7,104.85,-93.55,0.0,"[[95.45, -93.45, ""GND""], [95.45, -105.95, ""GND""], [99.25, -93.45, ""GND""], [99.25, -105.95, ""GND""]]",Courtyard/body center; confirm insertion position
+J2,SMT,168.46,-120.85,168.46,-120.85,180.0,"[[170.335, -118.9, ""unconnected-(J2-Pin_1-Pad1)""]]",KiCad component origin; confirm JLC library alignment
+J3,THT,197.610978,-86.2,197.610978,-92.35,180.0,"[[207.010978, -92.45, ""GND""], [207.010978, -79.95, ""GND""], [203.210978, -92.45, ""GND""], [203.210978, -79.95, ""GND""]]",Courtyard/body center; confirm insertion position
+J4,THT,179.335,-120.75,185.985,-117.15,270.0,"[[179.335, -120.75, ""GND""]]",Courtyard/body center; confirm insertion position
+Q1,SMT,151.0985,-98.155,151.0985,-98.155,180.0,"[[153.96, -99.655, ""/SW_COMMON""]]",KiCad component origin; confirm JLC library alignment
+Q2,SMT,159.3215,-98.135,159.3215,-98.135,0.0,"[[156.46, -96.635, ""/SW_COMMON""]]",KiCad component origin; confirm JLC library alignment
+Q3,SMT,142.71,-98.4,142.71,-98.4,0.0,"[[139.81, -96.495, ""/IDEAL_IN""]]",KiCad component origin; confirm JLC library alignment
+R1,SMT,151.71,-88.5,151.71,-88.5,90.0,"[[151.71, -89.4125, ""/VBAT_FUSED""]]",KiCad component origin; confirm JLC library alignment
+R2,SMT,153.21,-85.75,153.21,-85.75,0.0,"[[152.2975, -85.75, ""/LTC_UV""]]",KiCad component origin; confirm JLC library alignment
+R3,SMT,149.21,-88.5,149.21,-88.5,90.0,"[[149.21, -89.4125, ""/VBAT_FUSED""]]",KiCad component origin; confirm JLC library alignment
+R4,SMT,159.71,-87.75,159.71,-87.75,0.0,"[[158.7975, -87.75, ""/GATE_PIN""]]",KiCad component origin; confirm JLC library alignment
+R5,SMT,166.0325,-96.7218,166.0325,-96.7218,0.0,"[[164.826, -97.3441, ""/PDB_PROTECTED""]]",KiCad component origin; confirm JLC library alignment
+R6,SMT,144.322656,-93.528707,144.322656,-93.528707,0.0,"[[143.410156, -93.528707, ""/SHDN_LTC""]]",KiCad component origin; confirm JLC library alignment
+R7,SMT,140.71,-92.5,140.71,-92.5,270.0,"[[140.71, -91.5875, ""GND""]]",KiCad component origin; confirm JLC library alignment
+R8,SMT,158.71,-93.0,158.71,-93.0,180.0,"[[159.6225, -93.0, ""/SHUNT_LO""]]",KiCad component origin; confirm JLC library alignment
+R9,SMT,163.46,-104.25,163.46,-104.25,270.0,"[[163.46, -103.3375, ""/SHUNT_HI""]]",KiCad component origin; confirm JLC library alignment
+R10,SMT,141.96,-117.75,141.96,-117.75,0.0,"[[141.0475, -117.75, ""/PDB_3V3""]]",KiCad component origin; confirm JLC library alignment
+R11,SMT,157.46,-112.0,157.46,-112.0,270.0,"[[157.46, -111.0875, ""/PDB_3V3""]]",KiCad component origin; confirm JLC library alignment
+R12,SMT,162.96,-114.75,162.96,-114.75,0.0,"[[162.0475, -114.75, ""/PDB_LDO_ADJ""]]",KiCad component origin; confirm JLC library alignment
+R13,SMT,149.21,-85.0,149.21,-85.0,90.0,"[[149.21, -85.9125, ""/LTC_OV""]]",KiCad component origin; confirm JLC library alignment
+R14,SMT,156.21,-88.5,156.21,-88.5,180.0,"[[157.1225, -88.5, ""/GATE_PIN""]]",KiCad component origin; confirm JLC library alignment
+R15,SMT,135.96,-113.25,135.96,-113.25,270.0,"[[135.96, -112.3375, ""/PDB_3V3""]]",KiCad component origin; confirm JLC library alignment
+R16,SMT,139.21,-114.75,139.21,-114.75,0.0,"[[138.2975, -114.75, ""/PDB_3V3""]]",KiCad component origin; confirm JLC library alignment
+R19,SMT,159.71,-105.25,159.71,-105.25,90.0,"[[159.71, -108.2125, ""/IDEAL_VSS""]]",KiCad component origin; confirm JLC library alignment
+R20,SMT,134.71,-105.5,134.71,-105.5,180.0,"[[137.6725, -105.5, ""/IDEAL_IN""]]",KiCad component origin; confirm JLC library alignment
+R21,SMT,168.21,-102.25,168.21,-102.25,0.0,"[[167.2975, -102.25, ""/PDB_VOUT""]]",KiCad component origin; confirm JLC library alignment
+U1,SMT,144.46,-88.0,144.46,-88.0,270.0,"[[145.460001, -85.8156, ""/VBAT_FUSED""]]",KiCad component origin; confirm JLC library alignment
+U2,SMT,152.46,-112.5,152.46,-112.5,180.0,"[[154.67615, -113.500001, ""GND""]]",KiCad component origin; confirm JLC library alignment
+U3,SMT,163.21,-112.0,163.21,-112.0,0.0,"[[161.06, -111.025, ""/PDB_3V3""]]",KiCad component origin; confirm JLC library alignment
+U4,SMT,142.96,-115.0,142.96,-115.0,90.0,"[[142.31, -115.8375, ""unconnected-(U4-NC-Pad1)""]]",KiCad component origin; confirm JLC library alignment
+U5,SMT,143.21,-103.75,143.21,-103.75,0.0,"[[141.0975, -102.775, ""/IDEAL_GATE""]]",KiCad component origin; confirm JLC library alignment

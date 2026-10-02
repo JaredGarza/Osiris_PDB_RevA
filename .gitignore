@@ -23,3 +23,11 @@ node_modules/
 *.inspect.ndjson
 .~lock.*#
 
+# Manufacturing review scratch work
+tmp/manufacturing-review/
+tmp/manufacturing-drc-current.json
+tmp/manufacturing-erc-current.json
+
+# Local extraction of the delivered manufacturing ZIP
+outputs/manufacturing-review-20261002/Osiris_PDB_RevA_JLCPCB_Prototype_Review/
+

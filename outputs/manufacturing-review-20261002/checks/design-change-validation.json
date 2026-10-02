@@ -1,0 +1,104 @@
+{
+  "baseline_commit": "acf0a5e7583a50788902bc0e071f621217504ed2",
+  "track_and_via_geometry_unchanged": true,
+  "track_and_via_count": 504,
+  "footprint_positions_orientations_unchanged": true,
+  "footprint_count": 69,
+  "pad_count": 218,
+  "pad_nets_and_drills_unchanged": true,
+  "expected_pad_size_changes": [
+    {
+      "reference": "J4",
+      "pad": "",
+      "old": {
+        "number": "",
+        "net": "",
+        "position": [
+          185335000,
+          110400000
+        ],
+        "size": [
+          900000,
+          2000000
+        ],
+        "drill": [
+          600000,
+          1700000
+        ],
+        "orientation": 270.0,
+        "shape": 1,
+        "drill_shape": 2,
+        "attribute": 0,
+        "layers": "00000000_00000000_55555555_5555555f"
+      },
+      "new": {
+        "number": "",
+        "net": "",
+        "position": [
+          185335000,
+          110400000
+        ],
+        "size": [
+          1200000,
+          2300000
+        ],
+        "drill": [
+          600000,
+          1700000
+        ],
+        "orientation": 270.0,
+        "shape": 1,
+        "drill_shape": 2,
+        "attribute": 0,
+        "layers": "00000000_00000000_55555555_5555555f"
+      }
+    },
+    {
+      "reference": "J4",
+      "pad": "",
+      "old": {
+        "number": "",
+        "net": "",
+        "position": [
+          185335000,
+          123900000
+        ],
+        "size": [
+          900000,
+          2000000
+        ],
+        "drill": [
+          600000,
+          1700000
+        ],
+        "orientation": 270.0,
+        "shape": 1,
+        "drill_shape": 2,
+        "attribute": 0,
+        "layers": "00000000_00000000_55555555_5555555f"
+      },
+      "new": {
+        "number": "",
+        "net": "",
+        "position": [
+          185335000,
+          123900000
+        ],
+        "size": [
+          1200000,
+          2300000
+        ],
+        "drill": [
+          600000,
+          1700000
+        ],
+        "orientation": 270.0,
+        "shape": 1,
+        "drill_shape": 2,
+        "attribute": 0,
+        "layers": "00000000_00000000_55555555_5555555f"
+      }
+    }
+  ],
+  "note": "Only J4 mounting-slot annular-pad sizes changed. Zone removal/refill and silk/library/metadata changes are documented in RELEASE_REVIEW.md. This comparison does not qualify thermal or transient behavior."
+}

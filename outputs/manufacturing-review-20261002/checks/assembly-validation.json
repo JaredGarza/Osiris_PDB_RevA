@@ -1,0 +1,28 @@
+{
+  "fitted_components": 56,
+  "bom_groups": 41,
+  "unique_cpl_designators": 56,
+  "bom_cpl_match": true,
+  "dnp": [
+    "R17",
+    "R18"
+  ],
+  "excluded_nonparts": [
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "TP1",
+    "TP2",
+    "TP3",
+    "TP4",
+    "TP5",
+    "TP6",
+    "TP7"
+  ],
+  "supply_separately": [
+    "029707.5WXNV"
+  ],
+  "jlc_part_matching": "Not yet performed; LCSC fields intentionally blank",
+  "jlc_orientation_preview": "Pending"
+}

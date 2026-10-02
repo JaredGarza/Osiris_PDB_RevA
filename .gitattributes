@@ -4,3 +4,6 @@
 *.stl binary
 *.step -text -whitespace
 *.svg -whitespace
+
+# Preserve the byte-exact manufacturing release and its SHA-256 manifest.
+outputs/manufacturing-review-20261002/** -text -whitespace

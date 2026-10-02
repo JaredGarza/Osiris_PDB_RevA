@@ -1,0 +1,412 @@
+{
+  "created_utc": "2026-10-02T21:43:05.292133+00:00",
+  "source_files": [
+    {
+      "file": "Osiris_PDB_RevA.kicad_pcb",
+      "sha256": "9f4080f22e91516d5c2b4251b11da288ffc02e1870233301006ca7d4986bddc1"
+    },
+    {
+      "file": "Osiris_PDB_RevA.kicad_sch",
+      "sha256": "559042f06fa07fb4d6ec8e8fb66c3c8064c70fede4c81c230ce13352107a54fd"
+    },
+    {
+      "file": "Osiris_PDB_RevA.kicad_pro",
+      "sha256": "da564e34846b6ccbd1d60a760a0fdcb25f73229e7466391670c808b6d179a65c"
+    },
+    {
+      "file": "fp-lib-table",
+      "sha256": "dd3929d8cafbb9d40b7e7d00ed220ec8cc685682b71c9bf80e85db9ab778adf0"
+    },
+    {
+      "file": "sym-lib-table",
+      "sha256": "f62718fa64222ebed9befa0af85c8436b33e8bd2d463ce7b194709d61dac77ae"
+    },
+    {
+      "file": "README.md",
+      "sha256": "3c22ef527b9a078c375747786019dc5388362ea7f82e8de840baaee2c5047875"
+    },
+    {
+      "file": "Libraries/PDB_3DModels.3dshapes/DGN0008C.stl",
+      "sha256": "673a3b4b25749b021f9c5b16baa0b2d8e42d2d2dea04b9f299bc5b15714c79d1"
+    },
+    {
+      "file": "Libraries/PDB_3DModels.3dshapes/DGS0010A.stl",
+      "sha256": "8b2f35a1d6a1237553d326b3b727ca656003bc8b814e70526d700d657bed2534"
+    },
+    {
+      "file": "Libraries/PDB_3DModels.3dshapes/MS_10-MSOP_ADI.step",
+      "sha256": "4207d31c20af532d5589e362bb15bbb5f0d79b055034af9385fbab0466e00a57"
+    },
+    {
+      "file": "Libraries/PDB_3DModels.3dshapes/SOT353-1.step",
+      "sha256": "2260ec34b9897aa63647c0905e001ee13d8a5ba646fb6b6213299e81c9cb102b"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/AMASS_XT60PW-F_1x02_P7.20mm_Horizontal.kicad_mod",
+      "sha256": "b3b4fccc7fdda4fb836e538a128581d3beb86e50b3c7bb66a6909783afb9b013"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/BSC070N10NS5_TDSON8.kicad_mod",
+      "sha256": "748b74fe90c321c02fc6749b0d73b7ba7c6838ed2e51b8e1a559f5c2c29ac317"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/C_Rect_L7.2mm_W4.5mm_P5.00mm_JLC.kicad_mod",
+      "sha256": "d9ffb6ce195a9718e566aec610411cf0ee6b2e4007d9f05d249c687d21c6997e"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/Connector_MKDSP25_2_15mm.kicad_mod",
+      "sha256": "91bea7930d4c69c3bc8c8672282b5015755f89261c2792b1271e35240a7241cf"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/CP_Elec_Panasonic_G16_10x16.5.kicad_mod",
+      "sha256": "d559a5d42c931105044229636b10dcb7513fefc79e8d51735279d3cda1a78eff"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/DGN0008C_N.kicad_mod",
+      "sha256": "fcb4c4f8f4f2acd0b15927e437ed1a66ef8d190bd187f4ed8e5c7241d1b31e35"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/FUSC9830X318N.kicad_mod",
+      "sha256": "48fe617b2e20354db9b00ffc239a1cd1f27ef5ac4b2436bf9db99852a9c48229"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/Fuse_SCHURTER_UHS_8.4x9.4mm.kicad_mod",
+      "sha256": "e472177629825b9a259da66feebb867a28e18b795bf546e0b390c0f68d470d33"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/ISC015N06NM5LF2_TDSON8FL.kicad_mod",
+      "sha256": "bcdb1c3f8b39119684cde40ba9719d40a18699232db5bd6bcccbe9668b38a38c"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/MKDSP25_2_15mm_PROVISIONAL.kicad_mod",
+      "sha256": "9a95328cb565a1c4e3c44c83c3585ed7e1ea362d19922bec5ed5546834be371a"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/MS_10-MSOP_ADI.kicad_mod",
+      "sha256": "d232c41f6b6837f38fe6d1d9d2408e681f0d43b6433bdd6acbfd48f3e3fc3572"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/OH_FC4L64_OHM.kicad_mod",
+      "sha256": "6a91fab7b0f8fc7c685a1694514d973deb65d0d877e4c2156bb640121bb8ac03"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/SCHURTER_UHS_8.4x9.4mm_PROVISIONAL.kicad_mod",
+      "sha256": "b26f6bf1d0bdbc49c46cb222e39e19e052eafcb8168dcaf696e3109ca2dd2999"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/STPST10H100SB_DPAK.kicad_mod",
+      "sha256": "206234a8414c9c342edf874fd9145865ce5703cbb41147aef4a0fc4be337ee66"
+    },
+    {
+      "file": "Libraries/PDB_Footprints.pretty/VSSOP10_DGS_TEX.kicad_mod",
+      "sha256": "0e72418c6da4e20b3c75fc52cd6e466b572df53963ff358929506154b0ef0e20"
+    },
+    {
+      "file": "Libraries/PDB_Symbols.kicad_sym",
+      "sha256": "ffe112146e41c1865742da4682c8d674506ea6532407a295350c2c34959dbc64"
+    }
+  ],
+  "package_files": [
+    {
+      "file": "assembly/ASSEMBLY_NOTES.md",
+      "bytes": 2685,
+      "sha256": "46b94e17a613dfbdc6273a9ea1c118328decd4a70c983c5e53b4f5ade5e3f7f0"
+    },
+    {
+      "file": "assembly/Assembly_Top.png",
+      "bytes": 102982,
+      "sha256": "770218fc7f514640203c9d74bce81df9da02529a6deb85eaf8a4f3faeeb8a566"
+    },
+    {
+      "file": "assembly/Assembly_Top.svg",
+      "bytes": 51063,
+      "sha256": "5ccf5834945365e20a72dedcd3e2b5057c841633d813b8613c7a1c76afcb5be6"
+    },
+    {
+      "file": "assembly/Do_Not_Populate.csv",
+      "bytes": 273,
+      "sha256": "81d7b38646e21bfbfa8e8a403504186ed8884b039330419e5128810892a597ae"
+    },
+    {
+      "file": "assembly/Engineering_BOM.csv",
+      "bytes": 12481,
+      "sha256": "6f1069ebe52c3e79c55aee631c486402230a553acbeaa18e744ce89cbd5e5264"
+    },
+    {
+      "file": "assembly/JLCPCB_BOM.csv",
+      "bytes": 2616,
+      "sha256": "fc72f0c6cb5e3bdf33418ed022469c8f5cecfbdbbd4c830416f5ca16da70cda1"
+    },
+    {
+      "file": "assembly/JLCPCB_CPL.csv",
+      "bytes": 1606,
+      "sha256": "4c6ab1dfff526ca6bc952b6a43982966cfd4ea394ad2e4b3053be354fc4db3ae"
+    },
+    {
+      "file": "assembly/Placement_Review.csv",
+      "bytes": 7797,
+      "sha256": "44098ac89370c8a5fd68bf1ff72de6521e03c7d49a29eec967164528db5789da"
+    },
+    {
+      "file": "assembly/Supply_Separately.csv",
+      "bytes": 204,
+      "sha256": "8da3dad77313773f1671ee2bd8d539443832be12db39f9f01b230e66536cf73b"
+    },
+    {
+      "file": "checks/assembly-validation.json",
+      "bytes": 482,
+      "sha256": "3b5fbc04591e1c95a96fe9a3a2314cc0f479a2781c1be1e4652ec3ef92ecce8a"
+    },
+    {
+      "file": "checks/board-statistics.json",
+      "bytes": 3417,
+      "sha256": "b6dd45502a01c441c152d2b5c8aeddca1acc9def245e132d632f7044e2f6ecc4"
+    },
+    {
+      "file": "checks/design-change-validation.json",
+      "bytes": 2452,
+      "sha256": "1fde17c88e6535ae4dd8457dca53b1c3464815c37a13910dbad4a8b778dad69a"
+    },
+    {
+      "file": "checks/drc.json",
+      "bytes": 556,
+      "sha256": "9fc196382c02f9724b9ed4799ac7d919be0ad5732eefd77141545f086ce7d18c"
+    },
+    {
+      "file": "checks/drill-report.txt",
+      "bytes": 1030,
+      "sha256": "c8075c782a5a7e63e697d31e2a887f35956c750f4e8a86ac42ac78528ece4bfe"
+    },
+    {
+      "file": "checks/erc.json",
+      "bytes": 902,
+      "sha256": "a834b47c5657926649c44bc361c241f9535e9b2b323c5912b6a7b823f88f7d06"
+    },
+    {
+      "file": "checks/gerber-metadata.json",
+      "bytes": 3513,
+      "sha256": "f2d72f6f9e205a3a197d8c38c45a5097635c5043b45307186b89b43c7a374a9d"
+    },
+    {
+      "file": "checks/netlist.ipc",
+      "bytes": 31731,
+      "sha256": "886c5b9e6a8622c7d794efd6887b6f1f32f194fe7a4554629d3d94f7320f8752"
+    },
+    {
+      "file": "fabrication/FABRICATION_NOTES.md",
+      "bytes": 1987,
+      "sha256": "4d8a5ec3617a17cefea903c0e96aab6a0a3af84784a26a574882f2e7a48c6262"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-B_Cu.gbl",
+      "bytes": 135220,
+      "sha256": "16d08f06c8471e699243b58560a62007c6b15d5f275dae39cb511c4c6566c71d"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-B_Mask.gbs",
+      "bytes": 2955,
+      "sha256": "fd09302d17a26ab4ce5326b95cc21f6ec6fb61736e127709360304f16cacdd27"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-B_Paste.gbp",
+      "bytes": 1298,
+      "sha256": "4c27faf69d768f96b86d660715a9bcb03c1227f981f48491b2bf2625dd4bf88f"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-B_Silkscreen.gbo",
+      "bytes": 67626,
+      "sha256": "cda444bf1869d04488ea2b4194703f45a12ed2d006e60174aea118f9d7682f58"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-Edge_Cuts.gm1",
+      "bytes": 797,
+      "sha256": "d6a11a90744d183d168dd11fbef575fe4509914c1169bcf61410bed3c6bc752d"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-F_Cu.gtl",
+      "bytes": 396206,
+      "sha256": "8fcf2287f1e1089de485e545121e61593ff5b825caf2004df6ce7a366c65d7dc"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-F_Mask.gts",
+      "bytes": 12638,
+      "sha256": "226fff65b556a8241e19dcf7fb3d050834d82b9828858d3ee2d417fcc88f5b0b"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-F_Paste.gtp",
+      "bytes": 14301,
+      "sha256": "b8619b0393c97b6e9d1d23c95dc71acb4062d39da5a08e11ee5be2bf5b591a5d"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-F_Silkscreen.gto",
+      "bytes": 64834,
+      "sha256": "5e27db69eb9a0a5ba19f90b9fff8aec395ca27b97fa71f69e2d10c7d0f9f310a"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-In1_Cu.g1",
+      "bytes": 106616,
+      "sha256": "b533383b8fc4951f58883f2c19b5da54a2061f252a00f2e227f841eb5785f14a"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-In2_Cu.g2",
+      "bytes": 234000,
+      "sha256": "e65180af764386e99a702bade121bd394334bdae938f6a78bdccda7adfafe8d2"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-job.gbrjob",
+      "bytes": 3894,
+      "sha256": "14b03e2f95f86a14d0f2ee4980a38d43cba43487118709b04deb0d4774d3e65c"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-NPTH.drl",
+      "bytes": 407,
+      "sha256": "76ca3c3dc99a5a346c79208d973c5fc54949e64032666d7d080c8aa4adeaec76"
+    },
+    {
+      "file": "fabrication/Osiris_PDB_RevA-PTH.drl",
+      "bytes": 4636,
+      "sha256": "45d310e2d61e47d29785d242b29574fcfd4f2fc0f8934356f09265130bb420d6"
+    },
+    {
+      "file": "Osiris_PDB_RevA_JLCPCB_Gerbers.zip",
+      "bytes": 226383,
+      "sha256": "c8f753ef0f1934907b1db698ff27d08bcd15ad05e94da0fd51cb97c72c529dd6"
+    },
+    {
+      "file": "RELEASE_REVIEW.md",
+      "bytes": 13886,
+      "sha256": "1e2ade6f789456bb21f15eef27e03f2f2c6547de730a4c33a6970a28629a6954"
+    },
+    {
+      "file": "source_snapshot/fp-lib-table",
+      "bytes": 173,
+      "sha256": "dd3929d8cafbb9d40b7e7d00ed220ec8cc685682b71c9bf80e85db9ab778adf0"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_3DModels.3dshapes/DGN0008C.stl",
+      "bytes": 121684,
+      "sha256": "673a3b4b25749b021f9c5b16baa0b2d8e42d2d2dea04b9f299bc5b15714c79d1"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_3DModels.3dshapes/DGS0010A.stl",
+      "bytes": 139334,
+      "sha256": "8b2f35a1d6a1237553d326b3b727ca656003bc8b814e70526d700d657bed2534"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_3DModels.3dshapes/MS_10-MSOP_ADI.step",
+      "bytes": 185279,
+      "sha256": "4207d31c20af532d5589e362bb15bbb5f0d79b055034af9385fbab0466e00a57"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_3DModels.3dshapes/SOT353-1.step",
+      "bytes": 281427,
+      "sha256": "2260ec34b9897aa63647c0905e001ee13d8a5ba646fb6b6213299e81c9cb102b"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/AMASS_XT60PW-F_1x02_P7.20mm_Horizontal.kicad_mod",
+      "bytes": 7009,
+      "sha256": "b3b4fccc7fdda4fb836e538a128581d3beb86e50b3c7bb66a6909783afb9b013"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/BSC070N10NS5_TDSON8.kicad_mod",
+      "bytes": 8303,
+      "sha256": "748b74fe90c321c02fc6749b0d73b7ba7c6838ed2e51b8e1a559f5c2c29ac317"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/C_Rect_L7.2mm_W4.5mm_P5.00mm_JLC.kicad_mod",
+      "bytes": 2320,
+      "sha256": "d9ffb6ce195a9718e566aec610411cf0ee6b2e4007d9f05d249c687d21c6997e"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/Connector_MKDSP25_2_15mm.kicad_mod",
+      "bytes": 1979,
+      "sha256": "91bea7930d4c69c3bc8c8672282b5015755f89261c2792b1271e35240a7241cf"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/CP_Elec_Panasonic_G16_10x16.5.kicad_mod",
+      "bytes": 994,
+      "sha256": "d559a5d42c931105044229636b10dcb7513fefc79e8d51735279d3cda1a78eff"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/DGN0008C_N.kicad_mod",
+      "bytes": 29648,
+      "sha256": "fcb4c4f8f4f2acd0b15927e437ed1a66ef8d190bd187f4ed8e5c7241d1b31e35"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/FUSC9830X318N.kicad_mod",
+      "bytes": 1493,
+      "sha256": "48fe617b2e20354db9b00ffc239a1cd1f27ef5ac4b2436bf9db99852a9c48229"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/Fuse_SCHURTER_UHS_8.4x9.4mm.kicad_mod",
+      "bytes": 1168,
+      "sha256": "e472177629825b9a259da66feebb867a28e18b795bf546e0b390c0f68d470d33"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/ISC015N06NM5LF2_TDSON8FL.kicad_mod",
+      "bytes": 9945,
+      "sha256": "bcdb1c3f8b39119684cde40ba9719d40a18699232db5bd6bcccbe9668b38a38c"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/MKDSP25_2_15mm_PROVISIONAL.kicad_mod",
+      "bytes": 2125,
+      "sha256": "9a95328cb565a1c4e3c44c83c3585ed7e1ea362d19922bec5ed5546834be371a"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/MS_10-MSOP_ADI.kicad_mod",
+      "bytes": 14561,
+      "sha256": "d232c41f6b6837f38fe6d1d9d2408e681f0d43b6433bdd6acbfd48f3e3fc3572"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/OH_FC4L64_OHM.kicad_mod",
+      "bytes": 4288,
+      "sha256": "6a91fab7b0f8fc7c685a1694514d973deb65d0d877e4c2156bb640121bb8ac03"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/SCHURTER_UHS_8.4x9.4mm_PROVISIONAL.kicad_mod",
+      "bytes": 1028,
+      "sha256": "b26f6bf1d0bdbc49c46cb222e39e19e052eafcb8168dcaf696e3109ca2dd2999"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/STPST10H100SB_DPAK.kicad_mod",
+      "bytes": 4711,
+      "sha256": "206234a8414c9c342edf874fd9145865ce5703cbb41147aef4a0fc4be337ee66"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Footprints.pretty/VSSOP10_DGS_TEX.kicad_mod",
+      "bytes": 15139,
+      "sha256": "0e72418c6da4e20b3c75fc52cd6e466b572df53963ff358929506154b0ef0e20"
+    },
+    {
+      "file": "source_snapshot/Libraries/PDB_Symbols.kicad_sym",
+      "bytes": 58517,
+      "sha256": "ffe112146e41c1865742da4682c8d674506ea6532407a295350c2c34959dbc64"
+    },
+    {
+      "file": "source_snapshot/Osiris_PDB_RevA.kicad_pcb",
+      "bytes": 1285663,
+      "sha256": "9f4080f22e91516d5c2b4251b11da288ffc02e1870233301006ca7d4986bddc1"
+    },
+    {
+      "file": "source_snapshot/Osiris_PDB_RevA.kicad_pro",
+      "bytes": 17762,
+      "sha256": "da564e34846b6ccbd1d60a760a0fdcb25f73229e7466391670c808b6d179a65c"
+    },
+    {
+      "file": "source_snapshot/Osiris_PDB_RevA.kicad_sch",
+      "bytes": 341165,
+      "sha256": "559042f06fa07fb4d6ec8e8fb66c3c8064c70fede4c81c230ce13352107a54fd"
+    },
+    {
+      "file": "source_snapshot/README.md",
+      "bytes": 1970,
+      "sha256": "3c22ef527b9a078c375747786019dc5388362ea7f82e8de840baaee2c5047875"
+    },
+    {
+      "file": "source_snapshot/sym-lib-table",
+      "bytes": 168,
+      "sha256": "f62718fa64222ebed9befa0af85c8436b33e8bd2d463ce7b194709d61dac77ae"
+    }
+  ],
+  "note": "Manifest and full review ZIP are excluded from package-file hashes to avoid self-reference."
+}

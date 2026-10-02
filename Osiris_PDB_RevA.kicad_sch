@@ -4577,7 +4577,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
+			(property "Footprint" "PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4621,7 +4621,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
+			(property "ki_fp_filters" "Connector*:*_1x??_* PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -8813,6 +8813,24 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0a696b28-fb1c-4810-815e-b7d50f412b5c")
+		(property "MPN" "C2012X7R1H105K125AB"
+			(at 345.44 78.74 0)
+			(hide yes)
+			(effects (font (size 1 1)))
+		)
+
+		(property "Manufacturer" "TDK"
+			(at 345.44 78.74 0)
+			(hide yes)
+			(effects (font (size 1 1)))
+		)
+
+		(property "Selection_Status" "Prototype selection: 1 uF 50 V X7R 10%, 0805. Nominal specifications verified against manufacturer; installed bias/ripple validation pending."
+			(at 345.44 78.74 0)
+			(hide yes)
+			(effects (font (size 1 1)))
+		)
+
 		(property "Reference" "C18"
 			(at 349.25 77.47 0)
 			(show_name no)
@@ -8846,7 +8864,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1H105K125AB"
 			(at 345.44 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -10112,7 +10130,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm"
+		(property "Footprint" "PDB_Footprints:C_Rect_L7.2mm_W4.5mm_P5.00mm_JLC"
 			(at 355.6 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -10933,7 +10951,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm"
+		(property "Footprint" "PDB_Footprints:C_Rect_L7.2mm_W4.5mm_P5.00mm_JLC"
 			(at 140.97 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -12124,7 +12142,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm"
+		(property "Footprint" "PDB_Footprints:C_Rect_L7.2mm_W4.5mm_P5.00mm_JLC"
 			(at 322.58 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -12557,7 +12575,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
+		(property "Footprint" "PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
 			(at 388.62 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -14262,7 +14280,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm"
+		(property "Footprint" "PDB_Footprints:C_Rect_L7.2mm_W4.5mm_P5.00mm_JLC"
 			(at 30.48 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -15323,7 +15341,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm"
+		(property "Footprint" "PDB_Footprints:C_Rect_L7.2mm_W4.5mm_P5.00mm_JLC"
 			(at 129.54 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -16259,6 +16277,12 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b91532a8-f4cc-4fb8-a13f-6a38825123d9")
+		(property "Assembly_Note" "Mount one Keystone 3568 holder at F1. Supply one Littelfuse 029707.5WXNV separately and insert after soldering. Do not treat blade fuse as an SMT placement."
+			(at 40.64 38.1 0)
+			(hide yes)
+			(effects (font (size 1 1)))
+		)
+
 		(property "Reference" "F1"
 			(at 40.64 30.48 90)
 			(show_name no)
@@ -16345,7 +16369,7 @@
 				)
 			)
 		)
-		(property "Holder_Manufacturer" "Keystone Electronics"
+		(property "Holder_Manufacturer" "Keystone"
 			(at 40.64 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -16426,7 +16450,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Rect_L7.2mm_W4.5mm_P5.00mm"
+		(property "Footprint" "PDB_Footprints:C_Rect_L7.2mm_W4.5mm_P5.00mm_JLC"
 			(at 347.98 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -18057,6 +18081,18 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e7c6d47c-055b-49e1-8ae5-bfe5883643aa")
+		(property "MPN" "SMBJ24CA"
+			(at 300.99 78.74 0)
+			(hide yes)
+			(effects (font (size 1 1)))
+		)
+
+		(property "Manufacturer" "Bourns"
+			(at 300.99 78.74 0)
+			(hide yes)
+			(effects (font (size 1 1)))
+		)
+
 		(property "Reference" "D5"
 			(at 304.8 77.47 90)
 			(show_name no)
@@ -18090,7 +18126,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.bourns.com/docs/product-datasheets/smbj.pdf"
 			(at 300.99 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -18149,6 +18185,24 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e9b97c4b-c6d3-473a-be7e-d35121fd6261")
+		(property "MPN" "C0805C104K5RACTU"
+			(at 363.22 78.74 0)
+			(hide yes)
+			(effects (font (size 1 1)))
+		)
+
+		(property "Manufacturer" "KEMET"
+			(at 363.22 78.74 0)
+			(hide yes)
+			(effects (font (size 1 1)))
+		)
+
+		(property "Selection_Status" "Prototype selection: 100 nF 50 V X7R 10%, 0805. Nominal specifications verified against manufacturer; installed transient validation pending."
+			(at 363.22 78.74 0)
+			(hide yes)
+			(effects (font (size 1 1)))
+		)
+
 		(property "Reference" "C19"
 			(at 367.03 77.47 0)
 			(show_name no)
@@ -18182,7 +18236,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://search.kemet.com/download/specsheet/C0805C104K5RACTU"
 			(at 363.22 76.2 0)
 			(hide yes)
 			(show_name no)

@@ -1739,7 +1739,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_AMASS:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
+		(property "Footprint" "PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1783,7 +1783,7 @@
 				)
 			)
 		)
-		(property "ki_fp_filters" "Connector*:*_1x??_*"
+		(property "ki_fp_filters" "Connector*:*_1x??_* PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
 			(at 0 0 0)
 			(show_name no)
 			(do_not_autoplace no)

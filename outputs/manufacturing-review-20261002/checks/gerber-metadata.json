@@ -1,0 +1,191 @@
+{
+  "layer_stack": "<LayerStack Osiris_PDB_RevA [top copper, top mask, top silk, top paste, bottom copper, bottom mask, bottom silk, bottom paste, inner_1 copper, inner_2 copper, mechanical outline] and 2 drill layers>",
+  "outline_aperture_bounds_mm": [
+    127.55000000000001,
+    65.05000000000001
+  ],
+  "files": [
+    {
+      "file": "Osiris_PDB_RevA-B_Cu.gbl",
+      "objects": 314,
+      "bounds_mm": [
+        [
+          88.0005,
+          -131.9995
+        ],
+        [
+          214.4995,
+          -68.0005
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-B_Mask.gbs",
+      "objects": 44,
+      "bounds_mm": [
+        [
+          93.85000000000001,
+          -130.35
+        ],
+        [
+          208.610978,
+          -78.35000000000001
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-B_Paste.gbp",
+      "objects": 4,
+      "bounds_mm": [
+        [
+          157.26000000000002,
+          -108.925
+        ],
+        [
+          160.66,
+          -106.075
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-B_Silkscreen.gbo",
+      "objects": 1254,
+      "bounds_mm": [
+        [
+          93.85000000000001,
+          -130.35
+        ],
+        [
+          208.610978,
+          -78.35000000000001
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-Edge_Cuts.gm1",
+      "objects": 10,
+      "bounds_mm": [
+        [
+          87.475,
+          -132.525
+        ],
+        [
+          215.025,
+          -67.475
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-F_Cu.gtl",
+      "objects": 660,
+      "bounds_mm": [
+        [
+          88.0005,
+          -131.9995
+        ],
+        [
+          213.560461,
+          -68.0005
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-F_Mask.gts",
+      "objects": 198,
+      "bounds_mm": [
+        [
+          93.85000000000001,
+          -130.35
+        ],
+        [
+          208.610978,
+          -68.8
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-F_Paste.gtp",
+      "objects": 178,
+      "bounds_mm": [
+        [
+          124.95,
+          -123.65
+        ],
+        [
+          176.4,
+          -68.8
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-F_Silkscreen.gto",
+      "objects": 1148,
+      "bounds_mm": [
+        [
+          89.78999999999999,
+          -130.35
+        ],
+        [
+          212.670978,
+          -68.8
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-In1_Cu.g1",
+      "objects": 242,
+      "bounds_mm": [
+        [
+          88.0005,
+          -131.9995
+        ],
+        [
+          214.4995,
+          -68.0005
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-In2_Cu.g2",
+      "objects": 243,
+      "bounds_mm": [
+        [
+          88.0005,
+          -131.9995
+        ],
+        [
+          214.4995,
+          -68.0005
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-NPTH.drl",
+      "objects": 4,
+      "bounds_mm": [
+        [
+          131.11,
+          -130.35
+        ],
+        [
+          179.31,
+          -86.4
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-PTH.drl",
+      "objects": 241,
+      "bounds_mm": [
+        [
+          94.65,
+          -131.5
+        ],
+        [
+          207.811,
+          -68.44999999999999
+        ]
+      ]
+    }
+  ]
+}
