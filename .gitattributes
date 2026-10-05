@@ -7,3 +7,4 @@
 
 # Preserve the byte-exact manufacturing release and its SHA-256 manifest.
 outputs/manufacturing-review-20261002/** -text -whitespace
+outputs/low-copper-prototype-20261005/** -text -whitespace

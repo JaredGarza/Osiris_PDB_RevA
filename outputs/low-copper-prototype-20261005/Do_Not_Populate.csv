@@ -1,0 +1,3 @@
+Designator,Value,Reason
+R17,4k7,DNP: host owns pull-up to its switched 3.3 V rail. No local pull-up is allowed with an independently powered host.
+R18,4k7,DNP: host owns pull-up to its switched 3.3 V rail. No local pull-up is allowed with an independently powered host.

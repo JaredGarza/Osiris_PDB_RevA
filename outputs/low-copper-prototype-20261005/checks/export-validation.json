@@ -1,0 +1,209 @@
+{
+  "files": [
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-B_Cu.gbl",
+      "objects": 388,
+      "bounds_mm": [
+        [
+          88.0005,
+          -131.9995
+        ],
+        [
+          214.4995,
+          -68.0005
+        ]
+      ],
+      "parser_warnings": []
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-B_Mask.gbs",
+      "objects": 44,
+      "bounds_mm": [
+        [
+          93.85000000000001,
+          -130.35
+        ],
+        [
+          208.610978,
+          -78.35000000000001
+        ]
+      ],
+      "parser_warnings": []
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-B_Paste.gbp",
+      "objects": 4,
+      "bounds_mm": [
+        [
+          157.26000000000002,
+          -108.925
+        ],
+        [
+          160.66,
+          -106.075
+        ]
+      ],
+      "parser_warnings": []
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-B_Silkscreen.gbo",
+      "objects": 1319,
+      "bounds_mm": [
+        [
+          124.87309499999999,
+          -125.367914
+        ],
+        [
+          187.23981899999998,
+          -83.710714
+        ]
+      ],
+      "parser_warnings": []
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-Edge_Cuts.gm1",
+      "objects": 10,
+      "bounds_mm": [
+        [
+          87.475,
+          -132.525
+        ],
+        [
+          215.025,
+          -67.475
+        ]
+      ],
+      "parser_warnings": []
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-F_Cu.gtl",
+      "objects": 712,
+      "bounds_mm": [
+        [
+          88.0005,
+          -131.9995
+        ],
+        [
+          213.560461,
+          -68.0005
+        ]
+      ],
+      "parser_warnings": []
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-F_Mask.gts",
+      "objects": 198,
+      "bounds_mm": [
+        [
+          93.85000000000001,
+          -130.35
+        ],
+        [
+          208.610978,
+          -68.8
+        ]
+      ],
+      "parser_warnings": []
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-F_Paste.gtp",
+      "objects": 178,
+      "bounds_mm": [
+        [
+          124.95,
+          -123.65
+        ],
+        [
+          176.4,
+          -68.8
+        ]
+      ],
+      "parser_warnings": []
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-F_Silkscreen.gto",
+      "objects": 950,
+      "bounds_mm": [
+        [
+          89.78999999999999,
+          -127.19481900000001
+        ],
+        [
+          212.670978,
+          -71.244047
+        ]
+      ],
+      "parser_warnings": []
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-In1_Cu.g1",
+      "objects": 264,
+      "bounds_mm": [
+        [
+          88.0005,
+          -131.9995
+        ],
+        [
+          214.4995,
+          -68.0005
+        ]
+      ],
+      "parser_warnings": []
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-In2_Cu.g2",
+      "objects": 319,
+      "bounds_mm": [
+        [
+          88.0005,
+          -131.9995
+        ],
+        [
+          214.4995,
+          -68.0005
+        ]
+      ],
+      "parser_warnings": []
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-NPTH.drl",
+      "objects": 4,
+      "bounds_mm": [
+        [
+          131.11,
+          -130.35
+        ],
+        [
+          179.31,
+          -86.4
+        ]
+      ],
+      "parser_warnings": [
+        "C:\\Users\\Jared\\Desktop\\PCB\\Osiris_PDB_REV1.1_LowCopper_Prototype\\outputs\\JLCPCB\\fabrication\\Osiris_PDB_REV1.1_LowCopper_Prototype-NPTH.drl:12 \"G90\": G90 header statement found after end of header"
+      ]
+    },
+    {
+      "name": "Osiris_PDB_REV1.1_LowCopper_Prototype-PTH.drl",
+      "objects": 263,
+      "bounds_mm": [
+        [
+          94.65,
+          -131.5
+        ],
+        [
+          207.811,
+          -68.44999999999999
+        ]
+      ],
+      "parser_warnings": [
+        "C:\\Users\\Jared\\Desktop\\PCB\\Osiris_PDB_REV1.1_LowCopper_Prototype\\outputs\\JLCPCB\\fabrication\\Osiris_PDB_REV1.1_LowCopper_Prototype-PTH.drl:26 \"G90\": G90 header statement found after end of header"
+      ]
+    }
+  ],
+  "job_copper_mm": [
+    0.035,
+    0.0175,
+    0.0175,
+    0.035
+  ]
+}

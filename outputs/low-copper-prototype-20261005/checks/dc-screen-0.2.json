@@ -1,0 +1,46 @@
+{
+  "pitch_mm": 0.2,
+  "geometry_sha256": {
+    "original": "2d40c37f7d5c3140b84c0489cf2b804be11688472fc1ffcf2a63fcfba27b3175",
+    "widened": "77d316117acfa9c785a0425634d48945bc92610e70814e047c8e84a933a23350"
+  },
+  "assumptions": "Room-temperature copper; nominal thickness; 25 um via plating; ideal terminal contacts; no thermal/contact/fuse model; raster approximation.",
+  "cases": [
+    {
+      "board": "original",
+      "outer_oz": 2,
+      "inner_oz": 2,
+      "input_mohm": 0.1597611692811833,
+      "esc_mohm": 0.3893070694418904,
+      "ground_mohm": 0.2852069029091355,
+      "copper_loop_mohm": 0.8342751416322092
+    },
+    {
+      "board": "widened",
+      "outer_oz": 2,
+      "inner_oz": 1,
+      "input_mohm": 0.13930820627984844,
+      "esc_mohm": 0.40205305549691167,
+      "ground_mohm": 0.5207783814431112,
+      "copper_loop_mohm": 1.0621396432198713
+    },
+    {
+      "board": "widened",
+      "outer_oz": 2,
+      "inner_oz": 0.5,
+      "input_mohm": 0.14780575189784576,
+      "esc_mohm": 0.446281677559117,
+      "ground_mohm": 0.7434091866910166,
+      "copper_loop_mohm": 1.3374966161479793
+    },
+    {
+      "board": "widened",
+      "outer_oz": 1,
+      "inner_oz": 0.5,
+      "input_mohm": 0.2598528879542859,
+      "esc_mohm": 0.7799636636248498,
+      "ground_mohm": 1.031837367286755,
+      "copper_loop_mohm": 2.0716539188658905
+    }
+  ]
+}

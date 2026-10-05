@@ -1,0 +1,32 @@
+Drill report for Osiris_PDB_REV1.1_LowCopper_Prototype.kicad_pcb
+Created on 2026-10-05T12:06:53
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  In1.Cu                    in1
+    L3 :  In2.Cu                    in2
+    L4 :  B.Cu                      back
+
+
+Drill file 'Osiris_PDB_REV1.1_LowCopper_Prototype-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.300mm  0.0118"  (178 holes))
+    T2  0.400mm  0.0157"  (6 holes))
+    T3  0.600mm  0.0236"  (43 holes))
+    T4  0.600mm  0.0236"  (2 holes)  (with 2 slots)
+    T5  0.750mm  0.0295"  (12 holes))
+    T6  1.600mm  0.0630"  (16 holes))
+    T7  1.780mm  0.0701"  (4 holes))
+    T8  2.700mm  0.1063"  (2 holes))
+
+    Total plated holes count 263
+
+
+Drill file 'Osiris_PDB_REV1.1_LowCopper_Prototype-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  3.200mm  0.1260"  (4 holes))
+
+    Total unplated holes count 4
