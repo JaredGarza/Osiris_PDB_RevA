@@ -5,11 +5,11 @@
 	(uuid "6f58a31e-2d20-46d6-8900-dedce2deebb4")
 	(paper "A3")
 	(title_block
-		(title "Osiris PDB - Phoenix lab board")
-		(date "2026-10-01")
-		(rev "A-P6-PROTOTYPE")
+		(title "Osiris PDB - XT60 prototype")
+		(date "2026-10-08")
+		(rev "1.1-XT60-PROTOTYPE")
 		(comment 1 "J1 common input; J3 ESC output; J4 protected Osiris avionics output")
-		(comment 2 "4-layer 2 oz prototype - physical qualification pending")
+		(comment 2 "4-layer 1 oz outer / 0.5 oz inner XT60 prototype - current qualification pending")
 	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
@@ -4577,7 +4577,7 @@
 					)
 				)
 			)
-			(property "Footprint" "PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
+			(property "Footprint" "PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal_EdgeMounted"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4621,7 +4621,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "Connector*:*_1x??_* PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
+			(property "ki_fp_filters" "Connector*:*_1x??_* PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal_EdgeMounted"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5262,7 +5262,7 @@
 		)
 		(uuid "09098225-cbcd-4efc-a9db-d8c934599b60")
 	)
-	(text "J3 ESC OUTPUT ONLY. F2/D5/C17-C19 bypass the separate J4 avionics branch.\nPhoenix lab PCB routes ESC positive on F.Cu and return through ground copper.\nJ1 pack interface, fuse land pattern, copper, fault current and heating need verification."
+	(text "J3 ESC OUTPUT ONLY. F2/D5/C17-C19 bypass the separate J4 avionics branch.\nXT60 prototype uses parallel ESC positive copper and ground return copper.\nJ1 pack interface, fuse land pattern, copper, fault current and heating need verification."
 		(exclude_from_sim no)
 		(at 255.27 97.79 0)
 		(effects
@@ -5306,7 +5306,7 @@
 		)
 		(uuid "b463680a-ea80-4e87-8a91-b8eb62cbdacf")
 	)
-	(text "PHOENIX LAB PCB: J1 input, J3 ESC output after F2, J4 Osiris avionics output after F1.\nPlanning load: 50 A ESC + 5 A J1 avionics allowance; design targets 60 A ESC continuous / 100 A for 30 s.\nThese currents are not yet qualified by the saved copper, terminals, fuse or pack connector."
+	(text "XT60 PROTOTYPE PCB: J1 input, J3 ESC output after F2, J4 Osiris avionics output after F1.\nPlanning load: 50 A ESC + 5 A J1 avionics allowance; previous targets 60 A ESC continuous / 100 A for 30 s are NOT supported by XT60PW-F ratings.\nThese currents are not yet qualified by the saved copper, terminals, fuse or pack connector."
 		(exclude_from_sim no)
 		(at 20.32 276.86 0)
 		(effects
@@ -5317,7 +5317,7 @@
 		)
 		(uuid "baf512ac-f1e8-4c97-ac82-b706648f6be4")
 	)
-	(text "DEDICATED ESC POWER  |  4S / 60 A CONTINUOUS / 100 A FOR 30 s (PROVISIONAL)"
+	(text "DEDICATED ESC POWER  |  4S / XT60 PROTOTYPE / CURRENT TO BE QUALIFIED"
 		(exclude_from_sim no)
 		(at 255.27 91.44 0)
 		(effects
@@ -10682,7 +10682,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "470u 35V HYBRID"
+		(property "Value" "330u 50V HYBRID"
 			(at 326.39 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10704,7 +10704,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/Panasonic_ZS.pdf"
+		(property "Datasheet" "${KIPRJMOD}/Datasheets/Panasonic_ZL.pdf"
 			(at 322.58 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -10715,7 +10715,7 @@
 				)
 			)
 		)
-		(property "Description" "Local supplemental ESC capacitor: 470 uF, 35 V, hybrid, 11 mOhm ESR at 100 kHz, 4 Arms at 100 kHz/125 C. Preserve the ESC manufacturer-required capacitor at the ESC."
+		(property "Description" "Supplemental ESC capacitor, 330 uF 50 V hybrid, G16 10 x 16.5 mm; 12 mOhm at 100 kHz/20 C, 5 Arms at 100 kHz/125 C. Preserve ESC manufacturer-required capacitor at ESC."
 			(at 326.39 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10726,7 +10726,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Selected EEHZS1V471P G16; 10 mm diameter, 16.5 mm height. Additional ESC-side capacitor and harness transient/ripple tests required."
+		(property "Selection_Status" "Voltage rating increased to 50 V; same G16 footprint. Nominal capacitance reduced from 470 to 330 uF. Validate installed harness transient/ripple and bulk capacitance."
 			(at 322.58 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -10752,7 +10752,7 @@
 			)
 		)
 	
-		(property "MPN" "EEHZS1V471P"
+		(property "MPN" "EEHZL1H331P"
 			(at 0 0 0)
 			(effects (font (size 1.27 1.27)) (hide yes))
 		)
@@ -12575,7 +12575,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal"
+		(property "Footprint" "PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal_EdgeMounted"
 			(at 388.62 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -17958,7 +17958,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PDB_Symbols:Conn_01x02_Phoenix")
+		(lib_id "PDB_Symbols:XT60PW_F")
 		(at 17.78 40.64 180)
 		(unit 1)
 		(body_style 1)
@@ -17979,7 +17979,7 @@
 				)
 			)
 		)
-		(property "Value" "MKDSP 25/2-15.00"
+		(property "Value" "XT60PW-F"
 			(at 17.78 35.56 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17989,7 +17989,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PDB_Footprints:Connector_MKDSP25_2_15mm"
+		(property "Footprint" "PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal_EdgeMounted"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -18000,7 +18000,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.phoenixcontact.com/en-ca/products/printed-circuit-board-terminal-mkdsp-25-2-1500-1932588"
+		(property "Datasheet" "${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -18011,7 +18011,7 @@
 				)
 			)
 		)
-		(property "Description" "4S battery input; pin 1 GND, pin 2 VBAT_RAW. Phoenix Contact 1932588 terminal; footprint and assembly require verification."
+		(property "Description" "AMASS board-mounted XT60PW-F. Pin 1 GND, pin 2 positive."
 			(at 17.78 35.56 0)
 			(hide yes)
 			(show_name no)
@@ -18022,7 +18022,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Drawing checked 2026-10-01: 15 mm pole pitch, 3.8 mm paired pins, 12.5 mm row pitch, 1.6 mm holes. 125 A part rating is conditional on conductor and temperature; assembly and harness qualification required."
+		(property "Selection_Status" "XT60PW-F rated 45 A, momentary 60 A with duration unspecified. Old 60 A continuous / 100 A burst board targets not supported."
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -18033,7 +18033,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Phoenix Contact"
+		(property "Manufacturer" "AMASS"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -18044,7 +18044,7 @@
 				)
 			)
 		)
-		(property "MPN" "1932588"
+		(property "MPN" "XT60PW-F"
 			(at 17.78 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -18081,7 +18081,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e7c6d47c-055b-49e1-8ae5-bfe5883643aa")
-		(property "MPN" "SMBJ24CA"
+		(property "MPN" "SMBJ18CA"
 			(at 300.99 78.74 0)
 			(hide yes)
 			(effects (font (size 1 1)))
@@ -18104,7 +18104,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMBJ24CA"
+		(property "Value" "SMBJ18CA"
 			(at 304.8 80.01 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18137,7 +18137,7 @@
 				)
 			)
 		)
-		(property "Description" "Bidirectional 24 V TVS candidate for local ESC connector ringing control; validate pulse energy and clamp voltage on the installed harness."
+		(property "Description" "4S ESC transient suppressor: 18 V standoff; 29.2 V clamp at 20.6 A 10/1000 us; 38.0 V at 103 A 8/20 us. Same SMB footprint."
 			(at 304.8 77.47 90)
 			(hide yes)
 			(show_name no)
@@ -18148,7 +18148,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "SMBJ24CA retained for local ringing control. Clamp is not a 35 V ceiling; verify installed 4S harness waveforms and pulse energy."
+		(property "Selection_Status" "Selected for confirmed 4S 16.8 V supply and 50 V C17. Clamp and pulse energy depend on installed harness and temperature; not a sustained overvoltage regulator."
 			(at 300.99 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -18351,7 +18351,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PDB_Symbols:Conn_01x02_Phoenix")
+		(lib_id "PDB_Symbols:XT60PW_F")
 		(at 388.62 72.39 0)
 		(unit 1)
 		(body_style 1)
@@ -18372,7 +18372,7 @@
 				)
 			)
 		)
-		(property "Value" "MKDSP 25/2-15.00"
+		(property "Value" "XT60PW-F"
 			(at 388.62 67.31 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18382,7 +18382,7 @@
 				)
 			)
 		)
-		(property "Footprint" "PDB_Footprints:Connector_MKDSP25_2_15mm"
+		(property "Footprint" "PDB_Footprints:AMASS_XT60PW-F_1x02_P7.20mm_Horizontal_EdgeMounted"
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -18393,7 +18393,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.phoenixcontact.com/en-ca/products/printed-circuit-board-terminal-mkdsp-25-2-1500-1932588"
+		(property "Datasheet" "${KIPRJMOD}/Datasheets/AMASS_XT60PW-F.pdf"
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -18404,7 +18404,7 @@
 				)
 			)
 		)
-		(property "Description" "Dedicated ESC output after F2; pin 1 GND, pin 2 ESC_VBAT. Phoenix Contact 1932588 terminal; footprint and assembly require verification."
+		(property "Description" "AMASS board-mounted XT60PW-F. Pin 1 GND, pin 2 positive."
 			(at 388.62 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -18415,7 +18415,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Drawing checked 2026-10-01: 15 mm pole pitch, 3.8 mm paired pins, 12.5 mm row pitch, 1.6 mm holes. 125 A part rating is conditional on conductor and temperature; assembly and harness qualification required."
+		(property "Selection_Status" "XT60PW-F rated 45 A, momentary 60 A with duration unspecified. Old 60 A continuous / 100 A burst board targets not supported."
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -18426,7 +18426,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Phoenix Contact"
+		(property "Manufacturer" "AMASS"
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -18437,7 +18437,7 @@
 				)
 			)
 		)
-		(property "MPN" "1932588"
+		(property "MPN" "XT60PW-F"
 			(at 388.62 50.8 0)
 			(hide yes)
 			(show_name no)

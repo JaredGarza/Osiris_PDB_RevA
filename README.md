@@ -1,32 +1,11 @@
-# Osiris PDB REV1.1 — Low Copper Prototype
+# Osiris PDB REV1.1 XT60 prototype
 
-Prepared October 5, 2026 from the current Osiris_PDB_RevA project.
+Updated October 8, 2026. J1 battery input and J3 ESC output now use AMASS XT60PW-F, matching J4. Finished board is 82.5 x 65.0 mm. The four mounting holes and remaining circuit placements are retained. Open Osiris_PDB_RevA.kicad_pro; keep Libraries and the library tables alongside the project.
 
-**Selected prototype specification: 1 oz outer / 0.5 oz inner, four-layer FR-4, 1.6 mm total thickness. This is the lowest standard copper combination listed by JLCPCB, not a demonstrated minimum for the board's current targets. The 60 A continuous / 100 A for 30 seconds targets remain unqualified.**
+**XT60PW-F is rated 45 A, with 60 A momentary and no stated duration. The previous 60 A continuous / 100 A for 30 s targets are not supported by this connector. A 5 A avionics allowance leaves a 40 A connector-based ESC ceiling; revised PCB ampacity is unqualified. F2 remains 100 A and does not establish overload protection of the 45 A connector.**
 
-Open `Osiris_PDB_RevA.kicad_pro`. This branch keeps the repository's original project filenames, with the revised low-copper PCB in place. Keep the local Libraries folder and library tables beside the project. The schematic and component placement remain the same as the source design. The bottom silkscreen identifies this board as `LC TEST 1/0.5oz`.
+Four layers, 1.6 mm FR-4, ENIG, retained low-copper prototype choice of 1 oz outer / 0.5 oz inner. DRC, schematic parity and ERC passed with zero reported issues. These checks establish CAD consistency, not thermal/current capability.
 
-The input and ESC positive pours were widened on the top and supplemented with parallel bottom pours. The sharp top-zone step near J3 was removed. In1 remains an uninterrupted ground-plane zone; In2 now carries ground in its unused left, lower and right regions rather than filling those regions with positive copper. Added 22 vias: five distributed ESC ties, fourteen return-path ties and three local capacitor/test-point ground ties. Three short ground tracks connect the latter pads to their new vias. Existing routed tracks, vias, footprint positions, pad geometry and part selections were preserved.
+Latest manufacturing files: [outputs/jlcpcb-rev1.1](outputs/jlcpcb-rev1.1). Upload Gerbers.zip intact for PCB fabrication, BOM.csv for assembly parts, and Pick_and_Place.csv for assembly placement. This folder contains only those three files. Verify exact manufacturer part matches and orientations in the factory preview; LCSC selections remain unconfirmed. The procurement workbook and grouped live calculation inputs are in [engineering](engineering). Earlier output packages should not be used for this board. No order was submitted.
 
-All-severity PCB DRC, unconnected-item checks, schematic parity and schematic ERC passed with zero reported issues. Thirteen Gerber/drill files were independently parsed, and exported copper artwork was visually reviewed. The Gerber job specifies 35 / 17.5 / 17.5 / 35 µm copper. The generic dielectric entries maintain nominal 1.6 mm thickness; use the manufacturer's standard compatible stackup rather than treating those entries as a controlled dielectric requirement.
-
-## Quotation files
-
-Use `outputs/low-copper-prototype-20261005/Osiris_PDB_REV1.1_LowCopper_Prototype_Gerbers.zip` for PCB upload. The same directory contains the unchanged BOM/CPL, assembly instructions, fabrication notes and checks; start with `START_HERE.md`. Earlier manufacturing packages retained in this repository describe the original board and must not be used for this revision. Select **1 oz outer and 0.5 oz inner explicitly** on the quote page; Gerber artwork alone does not establish copper weight. No order has been placed, and no savings amount has been verified.
-
-## Resistance screening and test limits
-
-A nominal room-temperature DC grid model compared the original and widened layouts. It includes positive paths and the ESC ground return, sheet-copper conductance and nominal 25 µm plated via barrels. It assumes ideal connector terminals and excludes fuse/contact/solder resistance, enclosure behavior and thermal coupling. Pads were simplified to rectangles/circles. This is a screening model, not a certified field solver or thermal simulation.
-
-| Layout | Outer / inner | Estimated copper loop resistance | Estimated copper-only loss at 60 A |
-|---|---|---:|---:|
-| Original | 2 / 2 oz | 0.83 mΩ | 3.0 W |
-| Widened | 2 / 1 oz | 1.06 mΩ | 3.8 W |
-| Widened | 2 / 0.5 oz | 1.34 mΩ | 4.8 W |
-| **Selected lowest-copper prototype** | **1 / 0.5 oz** | **2.07 mΩ** | **7.5 W** |
-
-The selected prototype's estimated copper loop resistance is approximately **2.5 times the original** despite widening. Its approximate copper-only drop is 124 mV at 60 A. These figures do not include the fuse's substantial additional loss, and copper resistance increases with temperature. A preliminary 0.25 mm grid and the final 0.20 mm grid gave similar loop estimates, but that numerical agreement does not validate the model assumptions. Raw results are in `outputs/low-copper-prototype-20261005/checks/dc-screen-0.2.json`; that file records the geometry hashes.
-
-Load/temperature measurements are required before accepting this copper choice for the current targets. Test both positive and ground drop, fuse/connector/via-region temperatures, and avionics behavior in the actual enclosure and ambient conditions. Input current can reach 65 A continuous or 105 A burst with a simultaneous 5 A avionics load; the model table above considers the 60 A ESC loop alone. Establish component-based temperature limits and measure steady-state behavior before attempting the target burst. If the lowest-copper prototype fails those requirements, use the measured results to select a heavier build or revise the layout further. This review cannot establish the lowest electrically adequate copper weight without those results.
-
-Manufacturer copper options: [JLCPCB copper-weight guide](https://jlcpcb.com/help/article/jlcpcb-copper-weight). Current availability and price depend on the selected manufacturing/assembly service.
+The former 2.07 mOhm screening estimate applies only to the old copper geometry. The revised layout needs new resistance extraction or four-wire measurements, thermal qualification, transient measurements and fuse/harness/connector coordination. Protection corrections: D5 SMBJ18CA, C17 330 uF / 50 V EEHZL1H331P; retry is C3=100 nF (550 ms), gate ramp is C1=22 nF. Host I2C1 pull-ups R74/R75 are 4.7 kOhm. Use the three-wire data harness described in [HOST_INTERFACE.md](HOST_INTERFACE.md). A tested portable INA228 driver is in Firmware, pending target integration and physical verification. See [PROTECTION_FIX_STATUS.md](PROTECTION_FIX_STATUS.md) for unresolved pack interruption/startup/SOA items and the engineering workbook for formulas and input assumptions.
