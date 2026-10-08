@@ -8634,7 +8634,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C17414.html"
 			(at 304.8 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -8667,7 +8667,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Rev-B candidate; MPN pending distributor check"
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 304.8 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -8678,7 +8678,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0710KL"
+		(property "MPN" "0805W8F1002T5E"
 			(at 304.8 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -8689,7 +8689,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 304.8 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -8813,19 +8813,19 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0a696b28-fb1c-4810-815e-b7d50f412b5c")
-		(property "MPN" "C2012X7R1H105K125AB"
+		(property "MPN" "CC0805KKX7R9BB105"
 			(at 345.44 78.74 0)
 			(hide yes)
 			(effects (font (size 1 1)))
 		)
 
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "YAGEO"
 			(at 345.44 78.74 0)
 			(hide yes)
 			(effects (font (size 1 1)))
 		)
 
-		(property "Selection_Status" "Prototype selection: 1 uF 50 V X7R 10%, 0805. Nominal specifications verified against manufacturer; installed bias/ripple validation pending."
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 345.44 78.74 0)
 			(hide yes)
 			(effects (font (size 1 1)))
@@ -8864,7 +8864,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1H105K125AB"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C91185.html"
 			(at 345.44 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -9636,7 +9636,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C17797.html"
 			(at 266.7 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -9658,7 +9658,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 266.7 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -9669,7 +9669,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-07680KL"
+		(property "MPN" "0805W8F6803T5E"
 			(at 266.7 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -9680,7 +9680,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 266.7 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -9749,7 +9749,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C17673.html"
 			(at 226.06 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -9771,7 +9771,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 226.06 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -9782,7 +9782,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-074K7L"
+		(property "MPN" "0805W8F4701T5E"
 			(at 226.06 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -9793,7 +9793,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 226.06 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -10507,7 +10507,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07100RL"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C17408.html"
 			(at 332.74 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -10530,7 +10530,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Yageo"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 332.74 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -10542,7 +10542,7 @@
 				(justify left)
 			)
 		)
-		(property "MPN" "RC0805FR-07100RL"
+		(property "MPN" "0805W8F1000T5E"
 			(at 332.74 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -10554,7 +10554,7 @@
 				(justify left)
 			)
 		)
-		(property "Selection_Status" "Selected: VBUS filter with C14. Allow 1 ms settling before valid measurements."
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 332.74 233.68 0)
 			(hide yes)
 			(show_name no)
@@ -12039,7 +12039,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-072ML"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C26112.html"
 			(at 163.83 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12061,7 +12061,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 163.83 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12072,7 +12072,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-072ML"
+		(property "MPN" "0805W8F2004T5E"
 			(at 163.83 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -12083,7 +12083,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 163.83 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -13374,7 +13374,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C17414.html"
 			(at 327.66 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -13407,7 +13407,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Rev-B candidate; MPN pending distributor check"
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 327.66 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -13418,7 +13418,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0710KL"
+		(property "MPN" "0805W8F1002T5E"
 			(at 327.66 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -13429,7 +13429,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 327.66 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -13813,7 +13813,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1H105K125AB"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C91185.html"
 			(at 289.56 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -13835,7 +13835,7 @@
 				)
 			)
 		)
-		(property "MPN" "C2012X7R1H105K125AB"
+		(property "MPN" "CC0805KKX7R9BB105"
 			(at 289.56 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -13846,7 +13846,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "YAGEO"
 			(at 289.56 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -13857,7 +13857,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Nominal specification verified; DC-bias and circuit validation pending"
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 289.56 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -15469,7 +15469,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C17539.html"
 			(at 238.76 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -15491,7 +15491,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 238.76 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -15502,7 +15502,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-07200KL"
+		(property "MPN" "0805W8F2003T5E"
 			(at 238.76 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -15513,7 +15513,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 238.76 111.76 0)
 			(hide yes)
 			(show_name no)
@@ -15993,7 +15993,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C17415.html"
 			(at 327.66 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -16015,7 +16015,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 327.66 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -16026,7 +16026,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0710RL"
+		(property "MPN" "0805W8F100JT5E"
 			(at 327.66 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -16037,7 +16037,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 327.66 175.26 0)
 			(hide yes)
 			(show_name no)
@@ -17145,7 +17145,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-071KL"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C17513.html"
 			(at 91.44 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -17167,7 +17167,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 91.44 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -17178,7 +17178,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-071KL"
+		(property "MPN" "0805W8F1001T5E"
 			(at 91.44 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -17189,7 +17189,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "A-P2 U3 feedback network; layout and assembled transient verification required."
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 91.44 220.98 0)
 			(hide yes)
 			(show_name no)
@@ -17374,7 +17374,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C17560.html"
 			(at 243.84 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -17407,7 +17407,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "U1 GATE directly drives Q1/Q2. R4 is in series with C1 to ground, per LTC4368 Figure 7."
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 243.84 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -17418,7 +17418,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0722KL"
+		(property "MPN" "0805W8F2202T5E"
 			(at 243.84 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -17429,7 +17429,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 243.84 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -17576,7 +17576,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C17415.html"
 			(at 327.66 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -17598,7 +17598,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Package assigned; MPN and power/tolerance validation pending"
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 327.66 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -17609,7 +17609,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0710RL"
+		(property "MPN" "0805W8F100JT5E"
 			(at 327.66 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -17620,7 +17620,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 327.66 195.58 0)
 			(hide yes)
 			(show_name no)
@@ -18185,19 +18185,19 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e9b97c4b-c6d3-473a-be7e-d35121fd6261")
-		(property "MPN" "C0805C104K5RACTU"
+		(property "MPN" "CC0805KRX7R9BB104"
 			(at 363.22 78.74 0)
 			(hide yes)
 			(effects (font (size 1 1)))
 		)
 
-		(property "Manufacturer" "KEMET"
+		(property "Manufacturer" "YAGEO"
 			(at 363.22 78.74 0)
 			(hide yes)
 			(effects (font (size 1 1)))
 		)
 
-		(property "Selection_Status" "Prototype selection: 100 nF 50 V X7R 10%, 0805. Nominal specifications verified against manufacturer; installed transient validation pending."
+		(property "Selection_Status" "Selected; verified package and ratings; LCSC stock snapshot 2026-10-08"
 			(at 363.22 78.74 0)
 			(hide yes)
 			(effects (font (size 1 1)))
@@ -18236,7 +18236,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://search.kemet.com/download/specsheet/C0805C104K5RACTU"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C49678.html"
 			(at 363.22 76.2 0)
 			(hide yes)
 			(show_name no)
