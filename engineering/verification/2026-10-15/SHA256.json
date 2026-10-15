@@ -1,10 +1,10 @@
 {
-  "Osiris_PDB_RevA.kicad_sch": "d1abeb181b98bb6b739e7eede8f17eb6904c07db565ebd2f4efa26a7ce8caa39",
-  "Osiris_PDB_RevA.kicad_pcb": "14a49b690c046c1297ae0402b02011296a054bbf8f64603d2f6c9968695d31ae",
+  "Osiris_PDB_RevA.kicad_sch": "3207508478b5b3232664c64d624a200934ca11f4a9ed9ea058a6acf0d2d06d1b",
+  "Osiris_PDB_RevA.kicad_pcb": "5a6468bba107869482a3799476492ed1ec5fc6b781ad7e58dda61d2c7af5271c",
   "Osiris_PDB_RevA.kicad_pro": "da564e34846b6ccbd1d60a760a0fdcb25f73229e7466391670c808b6d179a65c",
-  "outputs/jlcpcb-rev1.1/BOM.csv": "ecbb30e41f5bad2f67467324b7767f63c5cf4f4963c46f48396d7515250d551e",
+  "outputs/jlcpcb-rev1.1/BOM.csv": "06395383188e73e0b7098c367484254479be23cd76f13cfcbc52e78f725e55aa",
   "outputs/jlcpcb-rev1.1/Gerbers.zip": "12c883eca63b11ca2f0f49a46ab28f55dc3571bcdc26d00b4852e3136efc792c",
   "outputs/jlcpcb-rev1.1/Pick_and_Place.csv": "9a5b966d4e1fe35589ddcfd24e614ca1c99b0f5634980acabb4e00e82f5110ef",
-  "engineering/PnP.xlsx": "554a4620933a0ed5fd2be6b4a8469afc74118e843e1dc011b5b1952197386376",
-  "engineering/JLCPCB_BOM_Stock_5_Boards.xlsx": "6510f7c0467c41b6b2e0451df36597737b713a4c01cb2444b5156d1771c3f528"
+  "engineering/PnP.xlsx": "16714ec48a2492c6ce1b0a547efa58f19bc6642deb5a40b30a5d1a8ce4b67e25",
+  "engineering/JLCPCB_BOM_Stock_5_Boards.xlsx": "545b0e3a78820dc48ba2c461cf8b0a397023c0cec4748c65ade54250387e04d5"
 }

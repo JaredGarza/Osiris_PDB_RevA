@@ -3550,7 +3550,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/Bourns_SMAJ_TVS.pdf"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C28092.html"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3576,7 +3576,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Bourns"
+		(property "Manufacturer" "RUILON"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8355,7 +8355,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/Bourns_SMAJ_TVS.pdf"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C28092.html"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -8381,7 +8381,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "Bourns"
+		(property "Manufacturer" "RUILON"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -16212,7 +16212,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/products/detail/vishay-dale/CRCW25121K00FKEGHP/2222092"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/vishay-dale/CRCW25121K00FKEGHP/2222612"
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
