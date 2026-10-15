@@ -1,0 +1,196 @@
+{
+  "parsed_files": [
+    {
+      "file": "Osiris_PDB_RevA-B_Cu.gbl",
+      "objects": 384,
+      "bounds": [
+        [
+          110.5005,
+          -131.9995
+        ],
+        [
+          191.9995,
+          -68.0005
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-B_Mask.gbs",
+      "objects": 36,
+      "bounds": [
+        [
+          111.85,
+          -130.35
+        ],
+        [
+          191.15,
+          -82.05000000000001
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-B_Paste.gbp",
+      "objects": 4,
+      "bounds": [
+        [
+          157.26000000000002,
+          -108.925
+        ],
+        [
+          160.66,
+          -106.075
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-B_Silkscreen.gbo",
+      "objects": 1365,
+      "bounds": [
+        [
+          111.85,
+          -130.35
+        ],
+        [
+          191.15,
+          -82.05000000000001
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-Edge_Cuts.gm1",
+      "objects": 4,
+      "bounds": [
+        [
+          109.975,
+          -132.525
+        ],
+        [
+          192.525,
+          -67.475
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-F_Cu.gtl",
+      "objects": 713,
+      "bounds": [
+        [
+          110.5005,
+          -131.9995
+        ],
+        [
+          191.9995,
+          -68.0005
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-F_Mask.gts",
+      "objects": 192,
+      "bounds": [
+        [
+          111.85,
+          -130.35
+        ],
+        [
+          191.15,
+          -68.4
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-F_Paste.gtp",
+      "objects": 180,
+      "bounds": [
+        [
+          124.95,
+          -123.65
+        ],
+        [
+          176.4,
+          -68.4
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-F_Silkscreen.gto",
+      "objects": 1194,
+      "bounds": [
+        [
+          111.85,
+          -130.35
+        ],
+        [
+          191.15,
+          -68.4
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-In1_Cu.g1",
+      "objects": 256,
+      "bounds": [
+        [
+          110.5005,
+          -131.9995
+        ],
+        [
+          191.9995,
+          -68.0005
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-In2_Cu.g2",
+      "objects": 315,
+      "bounds": [
+        [
+          110.5005,
+          -131.9995
+        ],
+        [
+          191.9995,
+          -68.0005
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-NPTH.drl",
+      "objects": 4,
+      "bounds": [
+        [
+          131.11,
+          -130.35
+        ],
+        [
+          179.31,
+          -86.4
+        ]
+      ]
+    },
+    {
+      "file": "Osiris_PDB_RevA-PTH.drl",
+      "objects": 255,
+      "bounds": [
+        [
+          112.15,
+          -131.5
+        ],
+        [
+          191.36,
+          -68.44999999999999
+        ]
+      ]
+    }
+  ],
+  "warnings": [
+    "outputs\\ina238-capbank-20261015\\gerbers\\Osiris_PDB_RevA-NPTH.drl:12 \"G90\": G90 header statement found after end of header",
+    "outputs\\ina238-capbank-20261015\\gerbers\\Osiris_PDB_RevA-PTH.drl:24 \"G90\": G90 header statement found after end of header"
+  ],
+  "copper_um": [
+    35,
+    17.5,
+    17.5,
+    35
+  ]
+}

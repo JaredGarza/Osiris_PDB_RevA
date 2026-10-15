@@ -5151,7 +5151,7 @@
 					)
 				)
 			)
-			(property "Description" "Unpolarized capacitor"
+			(property "Description" "Polarized hybrid aluminum electrolytic capacitor"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5173,7 +5173,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "PDB_Footprints:CP_Elec_Panasonic_G16_10x16.5"
+			(property "ki_fp_filters" "PDB_Footprints:CP_Elec_Panasonic_G16*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -5185,6 +5185,7 @@
 				)
 			)
 			(symbol "CP_Elec_Panasonic_0_1"
+ (text "+" (at -3.2 2 0) (effects (font (size 1 1))))
 				(polyline
 					(pts
 						(xy -2.032 0.762) (xy 2.032 0.762)
@@ -5250,7 +5251,336 @@
 			)
 			(embedded_fonts no)
 		)
-	)
+
+(symbol "PDB_Symbols:INA238AIDGSR"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 20.32 10.16 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Value" "INA238AIDGSR"
+				(at 20.32 7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.524 1.524)
+					)
+				)
+			)
+			(property "Footprint" "PDB_Footprints:VSSOP10_DGS_TEX"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Datasheet" "https://www.ti.com/lit/gpn/ina228"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "INA238AIDGSR"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "VSSOP10_DGS_TEX VSSOP10_DGS_TEX-M VSSOP10_DGS_TEX-L"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "INA238AIDGSR_0_1"
+				(polyline
+					(pts
+						(xy 7.62 5.08) (xy 7.62 -15.24)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 7.62 -15.24) (xy 33.02 -15.24)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 33.02 5.08) (xy 7.62 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 33.02 -15.24) (xy 33.02 5.08)
+					)
+					(stroke
+						(width 0.127)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at 0 0 0)
+					(length 7.62)
+					(name "A1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -2.54 0)
+					(length 7.62)
+					(name "A0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 0 -5.08 0)
+					(length 7.62)
+					(name "ALERT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 0 -7.62 0)
+					(length 7.62)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -10.16 0)
+					(length 7.62)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 40.64 -10.16 180)
+					(length 7.62)
+					(name "VS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 40.64 -7.62 180)
+					(length 7.62)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 40.64 -5.08 180)
+					(length 7.62)
+					(name "VBUS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 40.64 -2.54 180)
+					(length 7.62)
+					(name "IN-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 40.64 0 180)
+					(length 7.62)
+					(name "IN+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+)
 	(text "STATUS / OPTIONAL PULL-UPS"
 		(exclude_from_sim no)
 		(at 297.18 114.3 0)
@@ -9280,7 +9610,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805JR-0722ML"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C3000557.html"
 			(at 213.36 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -9324,7 +9654,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805JR-0722ML"
+		(property "MPN" "FRG0805J226TS"
 			(at 213.36 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -9335,7 +9665,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "FOJAN"
 			(at 213.36 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -9405,7 +9735,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X7R1H106K160AC"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C89632.html"
 			(at 314.96 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -9427,7 +9757,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 314.96 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -9438,7 +9768,7 @@
 				)
 			)
 		)
-		(property "MPN" "C3216X7R1H106K160AC"
+		(property "MPN" "CL31B106KBHNNNE"
 			(at 314.96 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -10142,7 +10472,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529C0105J189"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/epcos-tdk-electronics/B32529C0105J000/592697"
 			(at 355.6 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -10177,7 +10507,7 @@
 				(justify left)
 			)
 		)
-		(property "MPN" "B32529C0105J189"
+		(property "MPN" "B32529C0105J000"
 			(at 355.6 241.3 0)
 			(hide yes)
 			(show_name no)
@@ -10682,7 +11012,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "330u 50V HYBRID"
+		(property "Value" "220u 50V HYBRID"
 			(at 326.39 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10693,7 +11023,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "PDB_Footprints:CP_Elec_Panasonic_G16_10x16.5"
+		(property "Footprint" "PDB_Footprints:CP_Elec_Panasonic_G16_10x16.5_ZS"
 			(at 323.5452 80.01 0)
 			(hide yes)
 			(show_name no)
@@ -10704,7 +11034,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/Panasonic_ZL.pdf"
+		(property "Datasheet" "${KIPRJMOD}/Datasheets/Panasonic_ZS_2026.pdf"
 			(at 322.58 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -10715,7 +11045,7 @@
 				)
 			)
 		)
-		(property "Description" "Supplemental ESC capacitor, 330 uF 50 V hybrid, G16 10 x 16.5 mm; 12 mOhm at 100 kHz/20 C, 5 Arms at 100 kHz/125 C. Preserve ESC manufacturer-required capacitor at ESC."
+		(property "Description" "220 uF 50 V hybrid; two parallel parts C17/C20 total 440 uF. Each 13 mOhm at 100 kHz/20 C, 3.7 Arms at 100 kHz/125 C."
 			(at 326.39 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -10726,7 +11056,7 @@
 				)
 			)
 		)
-		(property "Selection_Status" "Voltage rating increased to 50 V; same G16 footprint. Nominal capacitance reduced from 470 to 330 uF. Validate installed harness transient/ripple and bulk capacitance."
+		(property "Selection_Status" "Two-part ESC capacitor bank. Verify installed transient, inrush, ripple and mechanical vibration. Standard P part, not vibration-proof V part."
 			(at 322.58 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -10752,7 +11082,7 @@
 			)
 		)
 	
-		(property "MPN" "EEHZL1H331P"
+		(property "MPN" "EEHZS1H221P"
 			(at 0 0 0)
 			(effects (font (size 1.27 1.27)) (hide yes))
 		)
@@ -10963,7 +11293,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529C0105J189"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/epcos-tdk-electronics/B32529C0105J000/592697"
 			(at 140.97 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -10998,7 +11328,7 @@
 				(justify left)
 			)
 		)
-		(property "MPN" "B32529C0105J189"
+		(property "MPN" "B32529C0105J000"
 			(at 140.97 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -11389,7 +11719,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-071K58L"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2692700.html"
 			(at 91.44 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -11411,7 +11741,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "RESI"
 			(at 91.44 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -11422,7 +11752,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-071K58L"
+		(property "MPN" "PTFR0805B1K58P9"
 			(at 91.44 200.66 0)
 			(hide yes)
 			(show_name no)
@@ -11574,7 +11904,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PDB_Symbols:INA228AIDGSR")
+		(lib_id "PDB_Symbols:INA238AIDGSR")
 		(at 251.46 187.96 0)
 		(unit 1)
 		(body_style 1)
@@ -11595,7 +11925,7 @@
 				)
 			)
 		)
-		(property "Value" "INA228AIDGSR"
+		(property "Value" "INA238AIDGSR"
 			(at 271.78 176.53 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11617,7 +11947,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/INA228.pdf"
+		(property "Datasheet" "${KIPRJMOD}/Datasheets/INA238.pdf"
 			(at 251.46 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -11629,7 +11959,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "85 V 16-bit I2C current/voltage/power monitor. Same DGS pinout as INA228; use the INA238 firmware driver."
 			(at 271.78 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -11651,7 +11981,7 @@
 				)
 			)
 		)
-		(property "MPN" "INA228AIDGSR"
+		(property "MPN" "INA238AIDGSR"
 			(at 251.46 187.96 0)
 			(hide yes)
 			(show_name no)
@@ -11700,7 +12030,9 @@
 				)
 			)
 		)
-	)
+
+ (property "Selection_Status" "INA238 substitution: 16-bit resolution, 0x40 address; not firmware-compatible with INA228 driver." (at 0 0 0) (effects (font (size 1.27 1.27)) (hide yes)))
+)
 	(symbol
 		(lib_id "PDB_Symbols:BSC070N10NS5")
 		(at 86.36 33.02 270)
@@ -12154,7 +12486,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529C0105J189"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/epcos-tdk-electronics/B32529C0105J000/592697"
 			(at 322.58 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -12189,7 +12521,7 @@
 				(justify left)
 			)
 		)
-		(property "MPN" "B32529C0105J189"
+		(property "MPN" "B32529C0105J000"
 			(at 322.58 162.56 0)
 			(hide yes)
 			(show_name no)
@@ -12351,7 +12683,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C14663.html"
 			(at 144.78 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -12373,7 +12705,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0603C104K4RACTU"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 144.78 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -12384,7 +12716,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "KEMET"
+		(property "Manufacturer" "YAGEO"
 			(at 144.78 193.04 0)
 			(hide yes)
 			(show_name no)
@@ -12789,7 +13121,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0754K9L"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C17747.html"
 			(at 167.64 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -12833,7 +13165,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0754K9L"
+		(property "MPN" "0805W8F5492T5E"
 			(at 167.64 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -12844,7 +13176,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "UNI-ROYAL"
 			(at 167.64 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -12993,7 +13325,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-0711K8L"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C2933290.html"
 			(at 154.94 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -13037,7 +13369,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-0711K8L"
+		(property "MPN" "FRC0805F1182TS"
 			(at 154.94 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -13048,7 +13380,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "FOJAN"
 			(at 154.94 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -13118,7 +13450,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C14663.html"
 			(at 187.96 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -13140,7 +13472,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0603C104K4RACTU"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 187.96 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -13151,7 +13483,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "KEMET"
+		(property "Manufacturer" "YAGEO"
 			(at 187.96 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -13578,7 +13910,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C2012X7R1A106K125AC"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C3039694.html"
 			(at 114.3 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -13600,7 +13932,7 @@
 				)
 			)
 		)
-		(property "MPN" "C2012X7R1A106K125AC"
+		(property "MPN" "CL21B106KAYQNNE"
 			(at 114.3 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -13611,7 +13943,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 114.3 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -14292,7 +14624,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529C0105J189"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/epcos-tdk-electronics/B32529C0105J000/592697"
 			(at 30.48 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -14327,7 +14659,7 @@
 				(justify left)
 			)
 		)
-		(property "MPN" "B32529C0105J189"
+		(property "MPN" "B32529C0105J000"
 			(at 30.48 104.14 0)
 			(hide yes)
 			(show_name no)
@@ -14887,7 +15219,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C14663.html"
 			(at 292.1 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -14909,7 +15241,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0603C104K4RACTU"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 292.1 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -14920,7 +15252,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "KEMET"
+		(property "Manufacturer" "YAGEO"
 			(at 292.1 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -15238,7 +15570,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/KEMET_C0603C104K4RACTU.pdf"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C14663.html"
 			(at 109.22 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -15260,7 +15592,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "KEMET"
+		(property "Manufacturer" "YAGEO"
 			(at 109.22 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -15271,7 +15603,7 @@
 				)
 			)
 		)
-		(property "MPN" "C0603C104K4RACTU"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 109.22 210.82 0)
 			(hide yes)
 			(show_name no)
@@ -15353,7 +15685,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529C0105J189"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/epcos-tdk-electronics/B32529C0105J000/592697"
 			(at 129.54 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -15388,7 +15720,7 @@
 				(justify left)
 			)
 		)
-		(property "MPN" "B32529C0105J189"
+		(property "MPN" "B32529C0105J000"
 			(at 129.54 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -16195,7 +16527,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C1608X7R1H104K080AA"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C14663.html"
 			(at 309.88 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -16217,7 +16549,7 @@
 				)
 			)
 		)
-		(property "MPN" "C1608X7R1H104K080AA"
+		(property "MPN" "CC0603KRX7R9BB104"
 			(at 309.88 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -16228,7 +16560,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "YAGEO"
 			(at 309.88 185.42 0)
 			(hide yes)
 			(show_name no)
@@ -16462,7 +16794,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/film/rfi_general/info?part_no=B32529C0105J189"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/epcos-tdk-electronics/B32529C0105J000/592697"
 			(at 347.98 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -16497,7 +16829,7 @@
 				(justify left)
 			)
 		)
-		(property "MPN" "B32529C0105J189"
+		(property "MPN" "B32529C0105J000"
 			(at 347.98 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -16660,7 +16992,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/docs/20043/crcwhpe3.pdf"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/vishay-dale/CRCW25121K00FKEGHP/2222092"
 			(at 115.57 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -16695,7 +17027,7 @@
 				(justify left)
 			)
 		)
-		(property "MPN" "CRCW25121001FKEGHP"
+		(property "MPN" "CRCW25121K00FKEGHP"
 			(at 115.57 115.57 0)
 			(hide yes)
 			(show_name no)
@@ -16779,7 +17111,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X7R1H106K160AC"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C89632.html"
 			(at 20.32 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -16801,7 +17133,7 @@
 				)
 			)
 		)
-		(property "MPN" "C3216X7R1H106K160AC"
+		(property "MPN" "CL31B106KBHNNNE"
 			(at 20.32 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -16812,7 +17144,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "TDK"
+		(property "Manufacturer" "Samsung Electro-Mechanics"
 			(at 20.32 190.5 0)
 			(hide yes)
 			(show_name no)
@@ -17020,7 +17352,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://yageogroup.com/component-documentation/download/specsheet/RC0805FR-07237KL"
+		(property "Datasheet" "https://www.lcsc.com/product-detail/C51048252.html"
 			(at 154.94 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -17064,7 +17396,7 @@
 				)
 			)
 		)
-		(property "MPN" "RC0805FR-07237KL"
+		(property "MPN" "FRC0805F2373TS"
 			(at 154.94 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -17075,7 +17407,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "YAGEO"
+		(property "Manufacturer" "FOJAN"
 			(at 154.94 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -18586,7 +18918,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/Datasheets/LTC4368 (Rev C).pdf"
+		(property "Datasheet" "https://www.digikey.com/en/products/detail/analog-devices-inc/LTC4368HMS-1-WTRPBF/12385846"
 			(at 175.26 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -18620,7 +18952,7 @@
 				)
 			)
 		)
-		(property "MPN" "LTC4368HMS-1#TRPBF"
+		(property "MPN" "LTC4368HMS-1#WTRPBF"
 			(at 175.26 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -18755,4 +19087,111 @@
 		)
 	)
 	(embedded_fonts no)
+
+(symbol
+		(lib_id "PDB_Symbols:CP_Elec_Panasonic")
+		(at 345.44 101.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8a712950-ad7b-4bff-952a-ca820efcdcb1")
+		(property "Reference" "C20"
+			(at 349.25 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "220u 50V HYBRID"
+			(at 349.25 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PDB_Footprints:CP_Elec_Panasonic_G16_10x16.5_ZS"
+			(at 346.4052 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "${KIPRJMOD}/Datasheets/Panasonic_ZS_2026.pdf"
+			(at 345.44 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "220 uF 50 V hybrid; two parallel parts C17/C20 total 440 uF. Each 13 mOhm at 100 kHz/20 C, 3.7 Arms at 100 kHz/125 C."
+			(at 349.25 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Selection_Status" "Two-part ESC capacitor bank. Verify installed transient, inrush, ripple and mechanical vibration. Standard P part, not vibration-proof V part."
+			(at 345.44 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6987fd5e-22ce-4c57-aa2a-4d778e20ac28")
+		)
+		(pin "2"
+			(uuid "910537d4-ee56-4ff1-91d7-0f219ea3d2a9")
+		)
+		(instances
+			(project "Osiris_PDB_RevA"
+				(path "/6f58a31e-2d20-46d6-8900-dedce2deebb4"
+					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+
+		(property "MPN" "EEHZS1H221P"
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+
+		(property "Manufacturer" "Panasonic"
+			(at 0 0 0)
+			(effects (font (size 1.27 1.27)) (hide yes))
+		)
+	)
+(wire (pts (xy 345.44 95.25) (xy 345.44 97.79)) (stroke (width 0) (type default)) (uuid "8ffcf150-0e66-41e6-9143-4b24ae847757"))
+(label "ESC_VBAT" (at 345.44 95.25 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "74fda7e6-012e-4337-9320-5762bf428a95"))
+(wire (pts (xy 345.44 105.41) (xy 345.44 110.49)) (stroke (width 0) (type default)) (uuid "1c0feccc-95dd-4f10-b66b-c006db9c5826"))
+(label "GND" (at 345.44 110.49 0) (effects (font (size 1.016 1.016)) (justify left bottom)) (uuid "d59d35d1-4eb8-4938-9eca-05c3a4ee35df"))
 )

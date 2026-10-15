@@ -1,0 +1,32 @@
+{
+  "board_outline_mm": [
+    82.5,
+    65.0
+  ],
+  "fitted_parts_per_board": 57,
+  "BOM_groups": 39,
+  "DRC_violations": 0,
+  "unconnected": 0,
+  "schematic_parity_issues": 0,
+  "only_new_netlist_pins": {
+    "C20.1": "ESC_VBAT",
+    "C20.2": "GND"
+  },
+  "existing_component_centers_unchanged": true,
+  "existing_pads_unchanged_except_C17": true,
+  "C20_position_mm": [
+    172.3,
+    74.8
+  ],
+  "cap_bank_nominal_uF": 440,
+  "capacitor_land_mm": {
+    "pad_length": 4.1,
+    "pad_width": 2.0,
+    "gap": 4.6,
+    "center_pitch": 8.7
+  },
+  "new_ground_vias": 6,
+  "new_ground_tracks": 6,
+  "moved_ground_stitch_vias": 1,
+  "firmware_tests": "INA238 and legacy INA228 passed MSVC /W4 /WX /std:c11"
+}

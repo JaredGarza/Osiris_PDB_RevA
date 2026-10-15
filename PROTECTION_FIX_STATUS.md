@@ -1,5 +1,7 @@
 # Osiris PDB REV1.1 protection corrections
 
+October 15 update: U2 is now INA238 and C17/C20 are two parallel 220 uF / 50 V EEHZS1H221P parts, with corrected Panasonic lands and revised routing. The new bank is 440 uF and 62.09 mJ at 16.8 V. See [current implementation](engineering/INA238_CAPACITOR_BANK_2026-10-15.md). The October 8 analysis below is retained as historical engineering context; its single ZL capacitor and INA228 references are superseded. Existing unclosed system qualifications remain open.
+
 October 8, 2026. Revision stays 1.1; outline and copper build stay 82.5 x 65 mm, four layers, 1 oz outer / 0.5 oz inner. These are engineering corrections, not a full electrical qualification or flight release.
 
 | Item | Implemented correction | Remaining evidence |

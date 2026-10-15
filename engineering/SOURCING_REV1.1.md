@@ -1,3 +1,5 @@
+October 15 update: U2 is INA238AIDGSR and C17/C20 are two parallel EEHZS1H221P parts. See INA238_CAPACITOR_BANK_2026-10-15.md. Older retained-part statements below are historical.
+
 # REV1.1 procurement substitutions
 
 Checked October 8, 2026. Updated 14 fitted components across 11 MPN groups. Values, packages, copper routing and board size are unchanged. Resistors are 0805, 1%, 125 mW, 150 V; 10 ohm parts have 200 ppm/K TCR and the others 100 ppm/K. Capacitors are 0805, X7R, 50 V, 10%. Stock is a reported snapshot, not a guarantee of future availability or JLC assembly stock. Confirm exact parts at order time.

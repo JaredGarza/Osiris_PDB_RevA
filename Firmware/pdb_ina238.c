@@ -1,0 +1,53 @@
+#include "pdb_ina238.h"
+#include <math.h>
+#define PDB_ADDRESS 0x40u
+#define SHUNT_CAL 4096u
+#define ADC_CONFIG 0xFB6Au /* continuous V/I/T, 1052 us each, 16 averages */
+static bool read16(pdb_ina238 *d,uint8_t reg,uint16_t *v){
+ uint8_t b[2];if(!d->read(d->context,PDB_ADDRESS,reg,b,2))return false;
+ *v=(uint16_t)(((uint16_t)b[0]<<8)|b[1]);return true;
+}
+static bool write16(pdb_ina238 *d,uint8_t reg,uint16_t v){
+ uint8_t b[2]={(uint8_t)(v>>8),(uint8_t)v};return d->write(d->context,PDB_ADDRESS,reg,b,2);
+}
+static bool read_signed16(pdb_ina238 *d,uint8_t reg,int32_t *v){
+ uint16_t raw;if(!read16(d,reg,&raw))return false;
+ *v=(raw&0x8000u)?(int32_t)raw-65536:(int32_t)raw;return true;
+}
+static pdb_status configuration(pdb_ina238 *d){
+ uint16_t c,a,s;
+ if(!read16(d,0,&c)||!read16(d,1,&a)||!read16(d,2,&s)){d->configured=false;return PDB_IO_ERROR;}
+ if(c!=0||a!=ADC_CONFIG||s!=SHUNT_CAL){d->configured=false;return PDB_CONFIG_LOST;}
+ return PDB_OK;
+}
+double pdb_ina238_current_lsb(const pdb_ina238 *d){
+ return d && isfinite(d->shunt_ohms) && d->shunt_ohms>0 ? SHUNT_CAL/(819200000.0*d->shunt_ohms):NAN;
+}
+pdb_status pdb_ina238_init(pdb_ina238 *d){
+ uint16_t manufacturer,id;
+ if(!d||!d->read||!d->write||!isfinite(d->shunt_ohms)||d->shunt_ohms<=0)return PDB_BAD_ARGUMENT;
+ d->configured=false;
+ if(!read16(d,0x3E,&manufacturer)||!read16(d,0x3F,&id))return PDB_IO_ERROR;
+ if(manufacturer!=0x5449u||(id&0xFFF0u)!=0x2380u)return PDB_WRONG_DEVICE;
+ /* Stop conversions while programming; never use ADCRANGE=1 on this board. */
+ if(!write16(d,1,0)||!write16(d,0,0)||!write16(d,2,SHUNT_CAL)||!write16(d,1,ADC_CONFIG))return PDB_IO_ERROR;
+ {pdb_status status=configuration(d);if(status!=PDB_OK)return status;}
+ d->configured=true;return PDB_OK;
+}
+pdb_status pdb_ina238_sample(pdb_ina238 *d,pdb_sample *s){
+ uint16_t flags,bus;int32_t current,shunt;pdb_status status;
+ if(!s)return PDB_BAD_ARGUMENT;
+ s->valid=false;s->current_a=NAN;s->bus_v=NAN;s->shunt_v=NAN;s->diagnostic=0;
+ if(!d||!d->read||!d->configured)return PDB_CONFIG_LOST;
+ if(!isfinite(d->shunt_ohms)||d->shunt_ohms<=0){d->configured=false;return PDB_BAD_ARGUMENT;}
+ status=configuration(d);if(status!=PDB_OK)return status;
+ if(!read16(d,0x0B,&flags))return PDB_IO_ERROR;
+ s->diagnostic=flags;
+ if(!(flags&1u)||(flags&0x200u))return PDB_SENSOR_FAULT; /* MEMSTAT / MATHOF */
+ if(!(flags&2u))return PDB_NOT_READY;
+ if(!read_signed16(d,7,&current)||!read16(d,5,&bus)||!read_signed16(d,4,&shunt))return PDB_IO_ERROR;
+ /* Reject clipping rather than silently presenting it as a real current. */
+ if(current==32767||current==-32768||shunt==32767||shunt==-32768||bus==65535)return PDB_SENSOR_FAULT;
+ status=configuration(d);if(status!=PDB_OK)return status;
+ s->current_a=current*pdb_ina238_current_lsb(d);s->bus_v=bus*0.003125;s->shunt_v=shunt*0.000005;s->valid=true;return PDB_OK;
+}
