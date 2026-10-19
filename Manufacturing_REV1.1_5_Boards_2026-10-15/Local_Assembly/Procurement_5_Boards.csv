@@ -1,0 +1,7 @@
+﻿Designator,Description,MPN,Per_board,Fitted_for_5_boards,Buy_quantity_including_spares,Reference_unit_USD,Reference_order_USD
+C1,22 nF 100 V C0G 5% TDK,C2012C0G2A223J125AC,1,5,100,0.1236,12.36
+F1,MINI fuse holder (blade fuse supplied separately) Keystone,3568,1,5,6,1.31,7.86
+F2,UHS 100A 50V SCHURTER,3-140-177,1,5,6,1.074,6.444000000000001
+R5,5m Ohmite,FC4L64R005FER,1,5,100,1.2092,120.92
+R19,1k Vishay,CRCW25121K00FKEGHP,1,5,100,0.3296,32.96
+U1,LTC4368HMS-1-PBF Analog Devices,LTC4368HMS-1#WTRPBF,1,5,6,9.9,59.400000000000006

@@ -5,6 +5,6 @@
   "outputs/jlcpcb-rev1.1/BOM.csv": "06395383188e73e0b7098c367484254479be23cd76f13cfcbc52e78f725e55aa",
   "outputs/jlcpcb-rev1.1/Gerbers.zip": "12c883eca63b11ca2f0f49a46ab28f55dc3571bcdc26d00b4852e3136efc792c",
   "outputs/jlcpcb-rev1.1/Pick_and_Place.csv": "9a5b966d4e1fe35589ddcfd24e614ca1c99b0f5634980acabb4e00e82f5110ef",
-  "engineering/PnP.xlsx": "16714ec48a2492c6ce1b0a547efa58f19bc6642deb5a40b30a5d1a8ce4b67e25",
+  "engineering/PnP.xlsx": "261dba3a45c87f30819917ee3aecc27133a1113cfa8130eb9d6fb1ac5b452014",
   "engineering/JLCPCB_BOM_Stock_5_Boards.xlsx": "545b0e3a78820dc48ba2c461cf8b0a397023c0cec4748c65ade54250387e04d5"
 }
